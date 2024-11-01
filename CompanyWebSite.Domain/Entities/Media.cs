@@ -11,7 +11,7 @@ namespace CompanyWebSite.Domain.Entities
         public int Id { get; set; }
         public string? FilePath { get; set; }
         public string? MediaType { get; set; }
-        public int ServiceId { get; set; }
-        public Service Service { get; set; }
+        public int? ServiceId { get; set; }
+        public Service? Service { get; set; }
     }
 }

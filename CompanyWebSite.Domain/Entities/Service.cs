@@ -9,7 +9,8 @@ namespace CompanyWebSite.Domain.Entities
     public class Service : BaseEntity
     {
         public string? ServiceSummary { get; set; }
-        public ICollection<Category>? Categories { get; set; }
+        public ICollection<ServiceCategory>? ServiceCategories { get; set; }
         public ICollection<Media>? MediaItems { get; set; }
+        public ICollection<Highlight>? Highlights { get; set; }
     }
 }

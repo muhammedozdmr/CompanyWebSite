@@ -24,7 +24,30 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.Author).HasMaxLength(250);
             builder.Property(x => x.AuthorTitle).HasMaxLength(150);
             builder.Property(x => x.PublishDate).IsRequired();
-            builder.HasMany(x => x.Categories).WithMany(x => x.Blogs).UsingEntity(j=>j.ToTable("BlogCategories"));
+            builder.HasMany(x => x.BlogCategories)
+           .WithMany(x => x.Blogs)
+           .UsingEntity<Dictionary<string, object>>(
+               "BlogCategoryMapping", // Geçici tabloya isim veriyoruz
+               j => j.HasOne<BlogCategory>().WithMany().HasForeignKey("BlogCategoriesId"),
+               j => j.HasOne<Blog>().WithMany().HasForeignKey("BlogId"),
+               j =>
+               {
+                   j.HasData(
+                       new { BlogId = 1, BlogCategoriesId = 1 },
+                       new { BlogId = 1, BlogCategoriesId = 2 },
+                       new { BlogId = 2, BlogCategoriesId = 3 },
+                       new { BlogId = 2, BlogCategoriesId = 2 },
+                       new { BlogId = 3, BlogCategoriesId = 4 },
+                       new { BlogId = 3, BlogCategoriesId = 5 },
+                       new { BlogId = 4, BlogCategoriesId = 6 },
+                       new { BlogId = 4, BlogCategoriesId = 7 },
+                       new { BlogId = 5, BlogCategoriesId = 8 },
+                       new { BlogId = 5, BlogCategoriesId = 9 },
+                       new { BlogId = 6, BlogCategoriesId = 10 },
+                       new { BlogId = 6, BlogCategoriesId = 11 }
+                   );
+               }
+           );
             builder.HasData(
         new Blog
         {
@@ -37,8 +60,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             AuthorImageUrl = "images/author.jpg",
             Author = "Muhammed Özdemir",
             AuthorTitle = "Yazılım Geliştirici",
-            PublishDate = new DateTime(2023, 11, 15),
-            Categories = new List<Category> { new Category { Id = 1, Name = "Yazılım" }, new Category { Id = 2, Name = "Geliştirme" } }
+            PublishDate = new DateTime(2023, 11, 15)
         },
         new Blog
         {
@@ -51,8 +73,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             AuthorImageUrl = "images/author.jpg",
             Author = "Muhammed Özdemir",
             AuthorTitle = "Yazılım Geliştirici",
-            PublishDate = new DateTime(2024, 2, 5),
-            Categories = new List<Category> { new Category { Id = 3, Name = "Mobil Uygulama" }, new Category { Id = 4, Name = "Geliştirme" } }
+            PublishDate = new DateTime(2024, 2, 5)
         },
         new Blog
         {
@@ -65,8 +86,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             AuthorImageUrl = "images/author.jpg",
             Author = "Muhammed Özdemir",
             AuthorTitle = "Yazılım Geliştirici",
-            PublishDate = new DateTime(2024, 4, 18),
-            Categories = new List<Category> { new Category { Id = 5, Name = "API" }, new Category { Id = 6, Name = "Veri Güvenliği" } }
+            PublishDate = new DateTime(2024, 4, 18)
         },
         new Blog
         {
@@ -79,8 +99,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             AuthorImageUrl = "images/author.jpg",
             Author = "Muhammed Özdemir",
             AuthorTitle = "Yazılım Geliştirici",
-            PublishDate = new DateTime(2024, 6, 12),
-            Categories = new List<Category> { new Category { Id = 7, Name = "ERP" }, new Category { Id = 8, Name = "İşletme Yönetimi" } }
+            PublishDate = new DateTime(2024, 6, 12)
         },
         new Blog
         {
@@ -93,8 +112,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             AuthorImageUrl = "images/author.jpg",
             Author = "Muhammed Özdemir",
             AuthorTitle = "Yazılım Geliştirici",
-            PublishDate = new DateTime(2024, 8, 20),
-            Categories = new List<Category> { new Category { Id = 9, Name = "Oyun Geliştirme" }, new Category { Id = 10, Name = "Teknoloji" } }
+            PublishDate = new DateTime(2024, 8, 20)
         },
         new Blog
         {
@@ -107,8 +125,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             AuthorImageUrl = "images/author.jpg",
             Author = "Muhammed Özdemir",
             AuthorTitle = "Yazılım Geliştirici",
-            PublishDate = new DateTime(2024, 10, 29),
-            Categories = new List<Category> { new Category { Id = 11, Name = "Web Geliştirme" }, new Category { Id = 12, Name = "PWA" } }
+            PublishDate = new DateTime(2024, 10, 29)
         }
     );
         }

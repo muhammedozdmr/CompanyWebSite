@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace CompanyWebSite.DataAccess.EntityConfiguration
 {
     public class ServiceConfiguration : IEntityTypeConfiguration<Service>
-    {
+    { //TODO: ServiceConfiguration sınıfını çoka çok ilişkiyi konfigure etmek için kullanabilirsiniz.
         public void Configure(EntityTypeBuilder<Service> builder)
         {
             builder.ToTable(nameof(Service));
@@ -20,8 +20,23 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.Slug).HasMaxLength(100);
             builder.Property(x => x.IsActive).HasDefaultValue(true);
             builder.Property(x => x.ServiceSummary).HasMaxLength(250);
-            builder.HasMany(x => x.Categories).WithMany(x => x.Services).UsingEntity(y => y.ToTable("ServiceCategories"));
+            builder.HasMany(x => x.ServiceCategories).WithMany(x => x.Services).UsingEntity<Dictionary<string,object>>("ServiceCategory",
+                j => j.HasOne<ServiceCategory>().WithMany().HasForeignKey("ServiceCategoryId"), // `ServiceCategoryId` FK'sı
+               j => j.HasOne<Service>().WithMany().HasForeignKey("ServiceId"), // `ServiceId` FK'sı
+                j =>j.HasData(
+                new {ServiceId = 1, ServiceCategoryId = 1},
+                new {ServiceId = 2, ServiceCategoryId = 2},
+                new {ServiceId = 3, ServiceCategoryId = 3},
+                new {ServiceId = 4, ServiceCategoryId = 4},
+                new {ServiceId = 5, ServiceCategoryId = 5},
+                new {ServiceId = 6, ServiceCategoryId = 6},
+                new {ServiceId = 7, ServiceCategoryId = 7},
+                new {ServiceId = 8, ServiceCategoryId = 8},
+                new {ServiceId = 9, ServiceCategoryId = 9},
+                new {ServiceId = 10, ServiceCategoryId = 10}
+                ));
             builder.HasMany(x => x.MediaItems).WithOne(y => y.Service).HasForeignKey(y => y.ServiceId);
+            builder.HasMany(x => x.Highlights).WithOne(y => y.Service).HasForeignKey(y => y.ServiceId);
 
             builder.HasData
             (
@@ -29,181 +44,91 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                 {
                     Id = 1,
                     DefaultTitle = "Web Geliştirme",
-                    DefaultContent = "Profesyonel web geliştirme hizmetleri sunarak web projenizi planlamanıza, oluşturmanıza, yönetmenize ve pazarlamanıza yardımcı oluyoruz.",
+                    DefaultContent = "Web geliştirme, işletmelerin dijital varlığını güçlendirmek için stratejik bir süreçtir. İhtiyaçlarınızı ve hedeflerinizi analiz ederek kullanıcı dostu, modern ve ölçeklenebilir web çözümleri sunuyoruz. Tasarım ve kullanıcı deneyiminden performansa kadar tüm aşamalarda yanınızdayız. Kod kalitesi, SEO uyumu ve güvenlik önceliklerimiz arasında yer alır. Profesyonel ekibimiz, işletmenizin çevrimiçi ortamda başarıya ulaşması için en uygun çözümleri sunmaya hazırdır.",
                     IsActive = true,
                     Slug = "web-development",
-                    ServiceSummary = "Web projeleri için profesyonel web geliştirme hizmetleri sunuyoruz.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 1, Name = "Web Geliştirme" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 1, FilePath = "images/web-dev-icon.jpg", MediaType = "icon", ServiceId = 1 },
-                new Media { Id = 2, FilePath = "images/web-dev-image.jpg", MediaType = "image", ServiceId = 1 }
-                    }
+                    ServiceSummary = "Profesyonel web geliştirme ile modern, kullanıcı dostu ve ölçeklenebilir web siteleri sunuyoruz."
                 },
                 new Service
                 {
                     Id = 2,
                     DefaultTitle = "Mobil Uygulama Geliştirme",
-                    DefaultContent = "Mobil uygulama geliştirme sürecini destekleyen kapsamlı hizmetler sunuyoruz. iOS ve Android platformlarında kullanıcı dostu uygulamalar geliştirin.",
+                    DefaultContent = "Mobil cihazlar günümüzde kullanıcı deneyiminin merkezi haline gelmiştir. İOS ve Android platformlarında yüksek performanslı, kullanıcı dostu uygulamalar geliştiriyoruz. Kullanıcı alışkanlıklarını analiz ederek, etkileşimi artıracak ve kullanıcıyı çeken tasarımlar sunuyoruz. Uygulamalarımız, güvenlik ve hız odaklı geliştirilirken, kolay güncellenebilir ve ölçeklenebilir yapısıyla da uzun vadeli bir çözüm sağlar. Dijital dünyada işinizi büyütmeniz için yanınızdayız.",
                     IsActive = true,
                     Slug = "mobile-app-development",
-                    ServiceSummary = "Kullanıcı dostu mobil uygulama geliştirme hizmetleri sunuyoruz.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 2, Name = "Mobil Geliştirme" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 3, FilePath = "images/mobile-dev-icon.jpg", MediaType = "icon", ServiceId = 2 },
-                new Media { Id = 4, FilePath = "images/mobile-dev-image.jpg", MediaType = "image", ServiceId = 2 }
-                    }
+                    ServiceSummary = "iOS ve Android platformlarına uygun, kullanıcı odaklı mobil uygulama geliştirme hizmetleri sağlıyoruz."
                 },
                 new Service
                 {
                     Id = 3,
                     DefaultTitle = "Oyun Geliştirme",
-                    DefaultContent = "İleri teknolojilerle oyun geliştirme hizmetleri sunarak eğlenceli ve interaktif oyunlar yaratmanıza yardımcı oluyoruz.",
+                    DefaultContent = "Oyun geliştirme, hem teknik hem de yaratıcı bir süreçtir. Eğlenceli, etkileyici ve yüksek performanslı oyunlar yaratmak için gelişmiş teknolojilerden yararlanıyoruz. Unity ve Unreal Engine gibi güçlü araçlarla çalışarak, hedef kitlenizin beklentilerini karşılayacak grafik kalitesine ve akıcı oynanışa sahip oyunlar geliştiriyoruz. Oyuncuların ilgisini çeken, duygusal bağ kurabilecekleri ve tekrar oynama isteği uyandıran oyunlar yaratma sürecinde her aşamada yanınızdayız.",
                     IsActive = true,
                     Slug = "game-development",
-                    ServiceSummary = "İnteraktif oyun geliştirme hizmetleri sunuyoruz.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 3, Name = "Oyun Geliştirme" }
+                    ServiceSummary = "İleri teknolojilerle oyun tasarımı yaparak eğlenceli ve etkileşimli oyun deneyimleri sunuyoruz."
                     },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 5, FilePath = "images/game-dev-icon.jpg", MediaType = "icon", ServiceId = 3 },
-                new Media { Id = 6, FilePath = "images/game-dev-image.jpg", MediaType = "image", ServiceId = 3 }
-                    }
-                },
                 new Service
                 {
                     Id = 4,
                     DefaultTitle = "API Entegrasyonu",
-                    DefaultContent = "Farklı sistemlerin entegrasyonunu sağlayarak veri akışını optimize eden API geliştirme ve entegrasyon hizmetleri sunuyoruz.",
+                    DefaultContent = "API entegrasyonu, farklı sistemlerin birbiriyle güvenli ve verimli bir şekilde iletişim kurmasını sağlar. İşletmenizdeki veri akışını optimize ederek süreçleri daha etkin hale getirmek için API geliştirme ve entegrasyon hizmetleri sunuyoruz. Kapsamlı güvenlik önlemleri ile hassas verilerinizi koruyarak verimli bir altyapı oluşturuyoruz. Tüm sistemlerinizin uyum içinde çalışmasını sağlayarak iş akışlarınızı hızlandırıyor ve maliyetlerinizi düşürüyoruz.",
                     IsActive = true,
                     Slug = "api-integration",
-                    ServiceSummary = "Veri akışını optimize eden API entegrasyon hizmetleri.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 4, Name = "API Entegrasyonu" }
+                    ServiceSummary = "API entegrasyonu ile veri akışını optimize ediyor, sistemler arası bağlantıları güvenli hale getiriyoruz."
                     },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 7, FilePath = "images/api-icon.jpg", MediaType = "icon", ServiceId = 4 },
-                new Media { Id = 8, FilePath = "images/api-image.jpg", MediaType = "image", ServiceId = 4 }
-                    }
-                },
                 new Service
                 {
                     Id = 5,
                     DefaultTitle = "CRM Çözümleri",
-                    DefaultContent = "Müşteri ilişkilerini geliştirmek ve süreçleri yönetmek için kapsamlı CRM çözümleri sunuyoruz.",
+                    DefaultContent = "Müşteri ilişkileri yönetimi, başarılı bir işin temelidir. Müşterilerinizle güçlü ve uzun vadeli ilişkiler kurmanıza yardımcı olan CRM çözümlerimiz, müşteri memnuniyetini artırarak işinizi büyütür. Satış, pazarlama ve müşteri hizmetleri süreçlerinizi optimize eden, tüm müşteri verilerini tek bir platformda toplayan ve analiz eden bir sistem sunuyoruz. İşinizi daha iyi tanımanızı ve hedeflerinize daha hızlı ulaşmanızı sağlamak için buradayız.",
                     IsActive = true,
                     Slug = "crm-solutions",
-                    ServiceSummary = "Kapsamlı CRM çözümleri ile müşteri ilişkilerini yönetin.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 5, Name = "CRM Çözümleri" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 9, FilePath = "images/crm-icon.jpg", MediaType = "icon", ServiceId = 5 },
-                new Media { Id = 10, FilePath = "images/crm-image.jpg", MediaType = "image", ServiceId = 5 }
-                    }
+                    ServiceSummary = "Müşteri ilişkilerini yönetmek için kapsamlı ve kullanımı kolay CRM çözümleri sunuyoruz."  
                 },
                 new Service
                 {
                     Id = 6,
                     DefaultTitle = "ERP Çözümleri",
-                    DefaultContent = "İş süreçlerini yönetmek ve verimliliği artırmak için gelişmiş ERP çözümleri sunuyoruz.",
+                    DefaultContent = "İş süreçlerinizi dijitalleştirerek yönetiminizi kolaylaştıran ERP çözümlerimizle işletmenizin verimliliğini artırıyoruz. Finans, insan kaynakları, tedarik zinciri gibi departmanları tek bir sistemde birleştirerek iş süreçlerinizi optimize ediyoruz. ERP çözümlerimiz sayesinde maliyetleri düşürürken, karar alma sürecinizi hızlandırıyor ve departmanlar arasında anlık veri paylaşımını mümkün kılıyoruz. Sürdürülebilir büyüme için ideal bir çözüm sunuyoruz.",
                     IsActive = true,
                     Slug = "erp-solutions",
-                    ServiceSummary = "İş süreçlerini yöneten gelişmiş ERP çözümleri.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 6, Name = "ERP Çözümleri" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 11, FilePath = "images/erp-icon.jpg", MediaType = "icon", ServiceId = 6 },
-                new Media { Id = 12, FilePath = "images/erp-image.jpg", MediaType = "image", ServiceId = 6 }
-                    }
+                    ServiceSummary = "Verimliliği artıran ve iş süreçlerini optimize eden, esnek ve güçlü ERP çözümleri sunuyoruz."
                 },
                 new Service
                 {
                     Id = 7,
                     DefaultTitle = "Veritabanı Yönetim Sistemleri",
-                    DefaultContent = "Güvenli ve ölçeklenebilir veritabanı yönetim sistemleriyle verilerinizi etkin şekilde yönetin.",
+                    DefaultContent = "Verilerin güvenliği ve erişilebilirliği her işletme için kritik öneme sahiptir. Güçlü, güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin bir şekilde yönetmenize yardımcı oluyoruz. Veritabanı yapılarınızı optimize ederek performansı artırırken, verilerinizi sürekli erişilebilir ve güvenli tutmak için gelişmiş güvenlik protokollerini kullanıyoruz. İşletmenizin büyümesi ve karar süreçlerini hızlandırması için verilerinizi en iyi şekilde yönetiyoruz.",
                     IsActive = true,
                     Slug = "database-management",
-                    ServiceSummary = "Verilerinizi etkin şekilde yönetmeniz için veritabanı çözümleri.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 7, Name = "Veritabanı Yönetimi" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 13, FilePath = "images/db-icon.jpg", MediaType = "icon", ServiceId = 7 },
-                new Media { Id = 14, FilePath = "images/db-image.jpg", MediaType = "image", ServiceId = 7 }
-                    }
+                    ServiceSummary = "Güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin şekilde yönetmenize yardımcı oluyoruz."
                 },
                 new Service
                 {
                     Id = 8,
                     DefaultTitle = "Sistem Analizi ve Tasarımı",
-                    DefaultContent = "İş süreçlerinizi analiz ederek ihtiyaçlarınıza uygun sistem tasarımları sunuyoruz.",
+                    DefaultContent = "İşletmenizin ihtiyaçlarına uygun sistemler tasarlamak için kapsamlı bir analiz süreci yürütüyoruz. Mevcut süreçlerinizi değerlendirerek iş akışınızı optimize edecek sistem çözümleri sunuyoruz. İhtiyaçlarınıza göre özel olarak tasarlanmış, kullanımı kolay ve sürdürülebilir sistemler geliştiriyoruz. Sistem tasarımı sırasında performans, güvenlik ve ölçeklenebilirlik gibi unsurları önceliklendirerek, işletmenizin dijital dönüşüm sürecine katkıda bulunuyoruz.",
                     IsActive = true,
                     Slug = "system-analysis",
-                    ServiceSummary = "İş süreçlerinize özel sistem analizi ve tasarım hizmetleri.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 8, Name = "Sistem Analizi" }
+                    ServiceSummary = "İş süreçlerinize uygun sistem tasarımı yaparak, etkin ve ölçeklenebilir çözümler sunuyoruz."
                     },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 15, FilePath = "images/system-analysis-icon.jpg", MediaType = "icon", ServiceId = 8 },
-                new Media { Id = 16, FilePath = "images/system-analysis-image.jpg", MediaType = "image", ServiceId = 8 }
-                    }
-                },
                 new Service
                 {
                     Id = 9,
                     DefaultTitle = "Proje Yönetimi",
-                    DefaultContent = "Projelerinizi etkin bir şekilde yönetmenize yardımcı olacak profesyonel proje yönetimi çözümleri sunuyoruz.",
+                    DefaultContent = "Projelerinizi başarıyla tamamlamanızı sağlayacak stratejik proje yönetim çözümlerimizle, kaynaklarınızı etkin bir şekilde kullanmanızı sağlıyoruz. Planlama, izleme, kontrol ve kapanış süreçlerinde size destek olarak hedeflerinize ulaşmanıza yardımcı oluyoruz. Ekibinizle yakın çalışarak zamanında ve bütçe dahilinde projeler tamamlamanızı sağlarken, kaliteyi de garanti ediyoruz. Başarılı projeler için tüm adımlarda yanınızdayız.",
                     IsActive = true,
                     Slug = "project-management",
-                    ServiceSummary = "Projelerinizi başarıya ulaştırmak için proje yönetimi çözümleri.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 9, Name = "Proje Yönetimi" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 17, FilePath = "images/project-management-icon.jpg", MediaType = "icon", ServiceId = 9 },
-                new Media { Id = 18, FilePath = "images/project-management-image.jpg", MediaType = "image", ServiceId = 9 }
-                    }
+                    ServiceSummary = "Projelerinizi planlamak, takip etmek ve başarıya ulaştırmak için profesyonel yönetim çözümleri sağlıyoruz."
                 },
                 new Service
                 {
                     Id = 10,
                     DefaultTitle = "Bulut Çözümleri",
-                    DefaultContent = "Veri depolama ve yönetimi için ölçeklenebilir ve güvenilir bulut çözümleri sunuyoruz.",
+                    DefaultContent = "Dijital veri depolama ve yönetimi için güvenli ve ölçeklenebilir bulut çözümleri sunuyoruz. Verilerinize her yerden kolayca erişim sağlarken, güvenlik ve maliyet avantajı sunan bulut altyapılarımızla işinizi büyütmenize destek oluyoruz. İş yükünüzü hafifletmek ve esneklik sağlamak için bulut çözümlerimizde en son teknolojileri kullanıyoruz. Bulut altyapımız sayesinde verilerinizi güvenle saklayın ve işletmenizi daha çevik hale getirin.",
                     IsActive = true,
                     Slug = "cloud-solutions",
-                    ServiceSummary = "Güvenilir ve ölçeklenebilir bulut çözümleri ile verilerinizi yönetin.",
-                    Categories = new List<Category>
-                    {
-                new Category { Id = 10, Name = "Bulut Çözümleri" }
-                    },
-                    MediaItems = new List<Media>
-                    {
-                new Media { Id = 19, FilePath = "images/cloud-icon.jpg", MediaType = "icon", ServiceId = 10 },
-                new Media { Id = 20, FilePath = "images/cloud-image.jpg", MediaType = "image", ServiceId = 10 }
-                    }
+                    ServiceSummary = "Güvenilir, esnek ve ölçeklenebilir bulut çözümlerimizle verilerinizi güvenle yönetmenizi sağlıyoruz."    
                 }
             );
         }

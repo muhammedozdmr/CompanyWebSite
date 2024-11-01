@@ -13,6 +13,6 @@ namespace CompanyWebSite.Domain.Entities
         public string? Author { get; set; }
         public string? AuthorTitle { get; set; }
         public DateTime PublishDate { get; set; }
-        public ICollection<Category>? Categories { get; set; }
+        public ICollection<BlogCategory>? BlogCategories { get; set; }
     }
 }
