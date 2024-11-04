@@ -10,5 +10,7 @@ namespace CompanyWebSite.Domain.Entities
     {
         public int? Year { get; set; }
         public string? YearDescription { get; set; }
+        public int? AboutId { get; set; }
+        public About About { get; set; }
     }
 }

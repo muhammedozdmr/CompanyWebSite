@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace CompanyWebSite.DataAccess.EntityConfiguration
 {
     public class ServiceConfiguration : IEntityTypeConfiguration<Service>
-    { //TODO: ServiceConfiguration sınıfını çoka çok ilişkiyi konfigure etmek için kullanabilirsiniz.
+    {
         public void Configure(EntityTypeBuilder<Service> builder)
         {
             builder.ToTable(nameof(Service));
@@ -20,7 +20,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.Slug).HasMaxLength(100);
             builder.Property(x => x.IsActive).HasDefaultValue(true);
             builder.Property(x => x.ServiceSummary).HasMaxLength(250);
-            builder.HasMany(x => x.ServiceCategories).WithMany(x => x.Services).UsingEntity<Dictionary<string,object>>("ServiceCategory",
+            builder.HasMany(x => x.ServiceCategories).WithMany(x => x.Services).UsingEntity<Dictionary<string,object>>("ServiceCategoryMapping",
                 j => j.HasOne<ServiceCategory>().WithMany().HasForeignKey("ServiceCategoryId"), // `ServiceCategoryId` FK'sı
                j => j.HasOne<Service>().WithMany().HasForeignKey("ServiceId"), // `ServiceId` FK'sı
                 j =>j.HasData(

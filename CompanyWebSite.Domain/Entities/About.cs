@@ -11,5 +11,6 @@ namespace CompanyWebSite.Domain.Entities
         public string? Summary { get; set; }
         public int CompanyInfoId { get; set; }
         public CompanyInfo? CompanyInfo { get; set; }
+        public IEnumerable<History> Histories { get; set; }
     }
 }

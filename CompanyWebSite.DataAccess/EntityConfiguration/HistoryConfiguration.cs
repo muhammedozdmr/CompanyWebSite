@@ -21,6 +21,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.IsActive).IsRequired();
             builder.Property(h => h.Year).IsRequired();
             builder.Property(h => h.YearDescription).IsRequired().HasMaxLength(500);
+            builder.HasOne(h => h.About).WithMany().HasForeignKey(h => h.AboutId).OnDelete(DeleteBehavior.Cascade);
 
             builder.HasData(
                 new History
@@ -31,7 +32,8 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     IsActive = true,
                     Slug = "our-history",
                     Year = 2023,
-                    YearDescription = "TechLiberty Software Solutions, 29 Ekim 2023 tarihinde, özel sektördeki ERP çözümlerinin eksikliklerini gidermek amacıyla kuruldu. Kurucumuz, sektördeki firmaların verimliliğini artırmak ve dijital dönüşümlerine katkıda bulunmak için yeni nesil yazılım çözümleri geliştirme hedefiyle yola çıktı."
+                    YearDescription = "TechLiberty Software Solutions, 29 Ekim 2023 tarihinde, özel sektördeki ERP çözümlerinin eksikliklerini gidermek amacıyla kuruldu. Kurucumuz, sektördeki firmaların verimliliğini artırmak ve dijital dönüşümlerine katkıda bulunmak için yeni nesil yazılım çözümleri geliştirme hedefiyle yola çıktı.",
+                    AboutId = 1
                 },
                 new History
                 {
@@ -41,7 +43,8 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     IsActive = true,
                     Slug = "expanding-our-vision",
                     Year = 2024,
-                    YearDescription = "TechLiberty, kurucusunun sevgili köpeği Gofret’ten ilham alınarak geliştirdiği 'Gof Games' projesini duyurdu. Bu oyun, oyunculara hem eğlenceli hem de duygusal bir deneyim sunmayı hedefliyor. Aynı zamanda, ERP çözümleri alanında sektördeki işletmelere değer katan yazılımlar geliştirme sürecine hız verdik. Mevcut ERP sistemlerindeki eksiklikleri gidermek için daha esnek, kullanımı kolay ve güçlü bir çözüm üzerinde çalışıyoruz."
+                    YearDescription = "TechLiberty, kurucusunun sevgili köpeği Gofret’ten ilham alınarak geliştirdiği 'Gof Games' projesini duyurdu. Bu oyun, oyunculara hem eğlenceli hem de duygusal bir deneyim sunmayı hedefliyor. Aynı zamanda, ERP çözümleri alanında sektördeki işletmelere değer katan yazılımlar geliştirme sürecine hız verdik. Mevcut ERP sistemlerindeki eksiklikleri gidermek için daha esnek, kullanımı kolay ve güçlü bir çözüm üzerinde çalışıyoruz.",
+                    AboutId = 1
                 },
                 new History
                 {
@@ -51,7 +54,8 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     IsActive = true,
                     Slug = "ongoing-innovation",
                     Year = 2024,
-                    YearDescription = "TechLiberty olarak teknoloji ve inovasyonu işimizin merkezine koyduk. Şirketlerin dijital dönüşümlerine destek olmak, süreçlerini optimize etmek ve onlara değer katmak için sürekli yenilikçi çözümler sunuyoruz. Mevcut projelerimize ek olarak, küçük ve orta ölçekli işletmelere yönelik veri odaklı ERP çözümleri ile sektörün ihtiyaçlarını karşılamaya devam ediyoruz."
+                    YearDescription = "TechLiberty olarak teknoloji ve inovasyonu işimizin merkezine koyduk. Şirketlerin dijital dönüşümlerine destek olmak, süreçlerini optimize etmek ve onlara değer katmak için sürekli yenilikçi çözümler sunuyoruz. Mevcut projelerimize ek olarak, küçük ve orta ölçekli işletmelere yönelik veri odaklı ERP çözümleri ile sektörün ihtiyaçlarını karşılamaya devam ediyoruz.",
+                    AboutId = 1
                 }
             );
         }
