@@ -21,7 +21,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.IsActive).IsRequired();
             builder.Property(h => h.Year).IsRequired();
             builder.Property(h => h.YearDescription).IsRequired().HasMaxLength(500);
-            builder.HasOne(h => h.About).WithMany().HasForeignKey(h => h.AboutId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(h => h.About).WithMany(a=>a.Histories).HasForeignKey(h => h.AboutId).OnDelete(DeleteBehavior.Cascade);
 
             builder.HasData(
                 new History

@@ -13,9 +13,9 @@ namespace CompanyWebSite.Business.Repository
     {
         protected readonly CompanyWebSiteContext _context;
         protected readonly DbSet<T> _dbSet;
-        public BaseRepository(CompanyWebSiteContext dbContext)
+        public BaseRepository(CompanyWebSiteContext context)
         {
-            _context = dbContext;
+            _context = context;
             _dbSet = _context.Set<T>();
         }
         public async Task AddAsync(T entity)
@@ -46,6 +46,7 @@ namespace CompanyWebSite.Business.Repository
 
         public async Task UpdateAsync(T entity)
         {
+            await _context.SaveChangesAsync();
             _dbSet.Update(entity);
             await _context.SaveChangesAsync();
         }

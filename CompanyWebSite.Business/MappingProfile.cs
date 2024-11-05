@@ -18,16 +18,21 @@ namespace CompanyWebSite.Business
             .ForMember(dest => dest.DefaultContent, opt => opt.MapFrom(src => src.DefaultContent))
             .ForMember(dest => dest.Slug, opt => opt.MapFrom(src => src.Slug))
             .ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.IsActive))
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
             .ForMember(dest => dest.Summary, opt => opt.MapFrom(src => src.Summary))
             .ForMember(dest => dest.ButtonName, opt => opt.Ignore()) // ButtonName dışarıdan atanabilir
             .ForMember(dest => dest.CustomerCount, opt => opt.Ignore()) // Varsayılan olarak 15 olacak
             .ForMember(dest => dest.CustomerSatisfaction, opt => opt.Ignore())// Varsayılan olarak 100 olacak
-            .ForMember(dest => dest.CompanyInfoId, opt => opt.MapFrom(src => src.CompanyInfoId)).ReverseMap();
+            .ForMember(dest => dest.CompanyInfoId, opt => opt.MapFrom(src => src.CompanyInfoId))
+            .ForMember(dest=>dest.Histories,opt=>opt.MapFrom(src=>src.Histories)).ReverseMap();
+
+            // Update işlemi için özel bir mapping profili tanımlayın
+            CreateMap<AboutDto, About>()
+                .ForMember(dest => dest.Histories, opt => opt.Ignore());
+
             CreateMap<History, HistoryDto>().ReverseMap();
             CreateMap<Blog, BlogDto>().ReverseMap();
             CreateMap<BlogCategory, BlogCategoryDto>().ReverseMap();
-            CreateMap<Service, ServiceDto>().ReverseMap();
+            CreateMap<Service, ServiceDto>().ForMember(dest=>dest.ServiceHighlights,opt=>opt.MapFrom(src=>src.Highlights)).ForMember(dest=>dest.ServiceMediaItems,opt=>opt.MapFrom(src=>src.MediaItems)).ForMember(dest=>dest.ServiceCategories,opt=>opt.MapFrom(src=>src.ServiceCategories)).ReverseMap();
             CreateMap<ServiceCategory, ServiceCategoryDto>().ReverseMap();
             CreateMap<Media, MediaDto>().ReverseMap();
             CreateMap<Highlight, HighlightDto>().ReverseMap();

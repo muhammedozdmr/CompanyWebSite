@@ -42,8 +42,8 @@ namespace CompanyWebSite.API.Controllers
             return CreatedAtAction(nameof(GetAboutById), new { id = aboutDto.Id }, aboutDto);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAbout(int id, [FromBody] AboutDto aboutDto)
+        [HttpPut]
+        public async Task<IActionResult> UpdateAbout([FromBody] AboutDto aboutDto)
         {
             if (!ModelState.IsValid)
             {

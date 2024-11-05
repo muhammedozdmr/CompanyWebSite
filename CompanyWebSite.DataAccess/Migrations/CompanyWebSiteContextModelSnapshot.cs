@@ -874,9 +874,6 @@ namespace CompanyWebSite.DataAccess.Migrations
                     b.Property<int?>("AboutId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("AboutId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("DefaultContent")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -907,8 +904,6 @@ namespace CompanyWebSite.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AboutId");
-
-                    b.HasIndex("AboutId1");
 
                     b.ToTable("History", (string)null);
 
@@ -1544,7 +1539,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Software development is the process of creating programs that provide a solution to a problem. Technological advancements have brought significant changes in software development processes..."
+                            Value = "Software development is the process of creating programs that provide a solution to a problem. Technological advancements have brought significant changes in software development processes, enabling developers to design user-friendly interfaces, build efficient algorithms, and ensure secure data management."
                         },
                         new
                         {
@@ -1553,7 +1548,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Softwareentwicklung ist der Prozess der Erstellung von Programmen, die eine Lösung für ein Problem bieten. Technologische Fortschritte haben bedeutende Veränderungen in den Softwareentwicklungsprozessen mit sich gebracht..."
+                            Value = "Softwareentwicklung ist der Prozess der Erstellung von Programmen, die eine Lösung für ein Problem bieten. Technologische Fortschritte haben bedeutende Veränderungen in den Softwareentwicklungsprozessen mit sich gebracht, die es Entwicklern ermöglichen, benutzerfreundliche Schnittstellen zu entwerfen, effiziente Algorithmen zu erstellen und eine sichere Datenverwaltung zu gewährleisten."
                         },
                         new
                         {
@@ -1562,7 +1557,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Разработка программного обеспечения - это процесс создания программ, обеспечивающих решение проблемы. Технологические достижения внесли значительные изменения в процессы разработки программного обеспечения..."
+                            Value = "Разработка программного обеспечения - это процесс создания программ, обеспечивающих решение проблемы. Технологический прогресс внес значительные изменения в процессы разработки ПО, позволяя разработчикам создавать удобные интерфейсы, разрабатывать эффективные алгоритмы и обеспечивать безопасное управление данными."
                         },
                         new
                         {
@@ -1598,7 +1593,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "The process of developing a mobile application includes various stages from design to user experience. To create a successful mobile app, it is essential to understand user needs and offer solutions..."
+                            Value = "Developing a mobile application involves several stages, from design to user experience. Understanding user needs and delivering value-driven solutions are crucial for creating a successful app. Security and cross-platform compatibility are also vital factors for long-term success."
                         },
                         new
                         {
@@ -1607,7 +1602,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Der Prozess der Entwicklung einer mobilen Anwendung umfasst verschiedene Phasen vom Design bis zur Benutzererfahrung. Um eine erfolgreiche mobile App zu erstellen, ist es wichtig, die Bedürfnisse der Benutzer zu verstehen..."
+                            Value = "Die Entwicklung einer mobilen Anwendung umfasst mehrere Phasen, vom Design bis zur Benutzererfahrung. Das Verständnis der Benutzerbedürfnisse und das Anbieten wertschöpfender Lösungen sind entscheidend für die erfolgreiche Entwicklung einer App. Sicherheit und plattformübergreifende Kompatibilität sind ebenfalls wichtige Faktoren für den langfristigen Erfolg."
                         },
                         new
                         {
@@ -1616,7 +1611,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Процесс разработки мобильного приложения включает в себя различные этапы, от дизайна до пользовательского опыта. Чтобы создать успешное мобильное приложение, важно понимать потребности пользователей..."
+                            Value = "Разработка мобильного приложения включает в себя несколько этапов, от дизайна до пользовательского опыта. Понимание потребностей пользователей и предоставление решений, ориентированных на ценность, имеют решающее значение для создания успешного приложения. Безопасность и кроссплатформенная совместимость также являются важными факторами для долгосрочного успеха."
                         },
                         new
                         {
@@ -1652,7 +1647,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "API integration enables different software systems to interact with each other, maintaining data security and functionality during data sharing..."
+                            Value = "API integration facilitates data sharing between different systems, ensuring both functionality and data security. Sensitive data must be protected with encryption and secure APIs to prevent data leaks and performance issues."
                         },
                         new
                         {
@@ -1661,7 +1656,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Die API-Integration ermöglicht es verschiedenen Softwaresystemen, miteinander zu interagieren, wobei die Datensicherheit und Funktionalität beim Datenaustausch gewährleistet wird..."
+                            Value = "Die API-Integration ermöglicht den Datenaustausch zwischen verschiedenen Systemen und gewährleistet sowohl Funktionalität als auch Datensicherheit. Sensible Daten müssen mit Verschlüsselung und sicheren APIs geschützt werden, um Datenlecks und Leistungsprobleme zu vermeiden."
                         },
                         new
                         {
@@ -1670,7 +1665,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Интеграция API позволяет различным программным системам взаимодействовать друг с другом, поддерживая безопасность данных и функциональность при обмене данными..."
+                            Value = "Интеграция API облегчает обмен данными между различными системами, обеспечивая как функциональность, так и безопасность данных. Конфиденциальные данные должны защищаться с помощью шифрования и безопасных API, чтобы предотвратить утечки данных и проблемы с производительностью."
                         },
                         new
                         {
@@ -1706,7 +1701,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "ERP systems allow businesses to manage their operations more efficiently. These systems integrate various departments such as finance, human resources, and supply chain into one platform..."
+                            Value = "ERP systems allow businesses to manage their operations more efficiently. By integrating departments like finance, human resources, and supply chain, businesses can centralize their data management."
                         },
                         new
                         {
@@ -1715,7 +1710,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "ERP-Systeme ermöglichen es Unternehmen, ihre Abläufe effizienter zu verwalten. Diese Systeme integrieren verschiedene Abteilungen wie Finanzen, Personalwesen und Lieferkette in eine Plattform..."
+                            Value = "ERP-Systeme ermöglichen es Unternehmen, ihre Abläufe effizienter zu verwalten. Durch die Integration von Abteilungen wie Finanzen, Personalwesen und Lieferkette können Unternehmen ihre Datenverwaltung zentralisieren."
                         },
                         new
                         {
@@ -1724,7 +1719,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "ERP-системы позволяют компаниям более эффективно управлять своими операциями. Эти системы интегрируют различные отделы, такие как финансы, кадры и цепочка поставок, в одну платформу..."
+                            Value = "ERP-системы позволяют компаниям более эффективно управлять своими операциями. Интеграция таких отделов, как финансы, кадры и цепочка поставок, позволяет компаниям централизовать управление данными."
                         },
                         new
                         {
@@ -1760,7 +1755,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Technologies used in the game development world are rapidly evolving, presenting new opportunities. Unity and Unreal Engine game engines provide developers with superior performance..."
+                            Value = "Game development technologies are advancing rapidly, providing new opportunities. Engines like Unity and Unreal Engine offer high performance and visuals."
                         },
                         new
                         {
@@ -1769,7 +1764,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Die in der Spieleentwicklungswelt verwendeten Technologien entwickeln sich rasant weiter und bieten neue Möglichkeiten. Unity- und Unreal Engine-Spiel-Engines bieten Entwicklern überlegene Leistung..."
+                            Value = "Die Technologien in der Spieleentwicklung schreiten schnell voran und bieten neue Möglichkeiten. Engines wie Unity und Unreal Engine bieten hohe Leistung und visuelle Qualität."
                         },
                         new
                         {
@@ -1778,7 +1773,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Технологии, используемые в мире разработки игр, быстро развиваются, представляя новые возможности. Игровые движки Unity и Unreal Engine обеспечивают разработчикам высокую производительность..."
+                            Value = "Технологии разработки игр быстро развиваются, предоставляя новые возможности. Движки, такие как Unity и Unreal Engine, предлагают высокую производительность и визуальные эффекты."
                         },
                         new
                         {
@@ -1814,7 +1809,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Progressive Web Apps (PWA) are a type of web application that enhances the user experience. PWAs work like native apps on mobile devices, offering fast loading times, offline access..."
+                            Value = "Progressive Web Apps (PWA) are web applications that enhance user experience with fast load times, offline access, and push notifications."
                         },
                         new
                         {
@@ -1823,7 +1818,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Progressive Web Apps (PWA) sind eine Art von Webanwendung, die das Benutzererlebnis verbessert. PWAs funktionieren wie native Apps auf mobilen Geräten und bieten schnelle Ladezeiten..."
+                            Value = "Progressive Web Apps (PWA) sind Webanwendungen, die das Benutzererlebnis mit schnellen Ladezeiten, Offline-Zugang und Push-Benachrichtigungen verbessern."
                         },
                         new
                         {
@@ -1832,7 +1827,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Blog",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Прогрессивные веб-приложения (PWA) - это тип веб-приложений, улучшающих пользовательский опыт. PWA работают как родные приложения на мобильных устройствах, обеспечивая быстрое время загрузки..."
+                            Value = "Прогрессивные веб-приложения (PWA) - это веб-приложения, которые улучшают пользовательский опыт благодаря быстрой загрузке, офлайн-доступу и push-уведомлениям."
                         },
                         new
                         {
@@ -2111,7 +2106,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "FAQ",
                             Key = "Answer",
                             LanguageId = 2,
-                            Value = "You can reach us by email (info@techliberty.co) or phone (+90 (543) 233 33 32). You can also contact us through our social media accounts."
+                            Value = "You can reach us by email (info@techliberty.co) or phone (+90 (543) 233 33 32). You can also c us through our social media accounts."
                         },
                         new
                         {
@@ -2543,7 +2538,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Here you can find details about the growth of TechLiberty, our vision, and projects since our founding."
+                            Value = "Discover TechLiberty's growth, vision, and key projects from our inception to now."
                         },
                         new
                         {
@@ -2552,7 +2547,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Hier finden Sie Details über das Wachstum von TechLiberty, unsere Vision und Projekte seit unserer Gründung."
+                            Value = "Entdecken Sie TechLibertys Wachstum, Vision und wichtige Projekte von Anfang an bis heute."
                         },
                         new
                         {
@@ -2561,7 +2556,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Здесь вы найдете подробности о росте TechLiberty, нашем видении и проектах с момента основания."
+                            Value = "Узнайте о росте, видении и ключевых проектах компании TechLiberty с момента основания."
                         },
                         new
                         {
@@ -2570,7 +2565,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 2,
-                            Value = "TechLiberty Software Solutions was founded on October 29, 2023, with the aim of addressing shortcomings in ERP solutions in the private sector. Our founder set out with the goal of developing next-generation software solutions to increase the efficiency of industry companies and contribute to their digital transformation."
+                            Value = "TechLiberty Software Solutions was founded on October 29, 2023, to address ERP shortcomings in the private sector, aiming for digital transformation."
                         },
                         new
                         {
@@ -2579,7 +2574,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 3,
-                            Value = "TechLiberty Software Solutions wurde am 29. Oktober 2023 mit dem Ziel gegründet, die Mängel der ERP-Lösungen im privaten Sektor zu beheben. Unser Gründer verfolgte das Ziel, die Effizienz der Unternehmen in der Branche zu steigern und deren digitale Transformation durch die Entwicklung von Softwarelösungen der nächsten Generation zu unterstützen."
+                            Value = "TechLiberty Software Solutions wurde am 29. Oktober 2023 gegründet, um ERP-Lücken im privaten Sektor zu schließen und die digitale Transformation zu fördern."
                         },
                         new
                         {
@@ -2588,7 +2583,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 4,
-                            Value = "TechLiberty Software Solutions была основана 29 октября 2023 года с целью устранения недостатков ERP-решений в частном секторе. Наш основатель стремился повысить эффективность компаний отрасли и способствовать их цифровой трансформации, разрабатывая программные решения нового поколения."
+                            Value = "TechLiberty Software Solutions основана 29 октября 2023 года для устранения недостатков ERP в частном секторе, нацеленного на цифровую трансформацию."
                         },
                         new
                         {
@@ -2597,7 +2592,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultTitle",
                             LanguageId = 2,
-                            Value = "Our Company History"
+                            Value = "Expanding Our Vision"
                         },
                         new
                         {
@@ -2606,7 +2601,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultTitle",
                             LanguageId = 3,
-                            Value = "Die Geschichte unseres Unternehmens"
+                            Value = "Unsere Vision erweitern"
                         },
                         new
                         {
@@ -2615,7 +2610,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultTitle",
                             LanguageId = 4,
-                            Value = "История нашей компании"
+                            Value = "Расширение нашего видения"
                         },
                         new
                         {
@@ -2624,7 +2619,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Here you can find details about the growth of TechLiberty, our vision, and projects since our founding."
+                            Value = "Explore the journey of TechLiberty's growth, vision, and achievements since the foundation."
                         },
                         new
                         {
@@ -2633,7 +2628,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Hier finden Sie Details über das Wachstum von TechLiberty, unsere Vision und Projekte seit unserer Gründung."
+                            Value = "Erfahren Sie mehr über TechLibertys Wachstum, Vision und Erfolge seit der Gründung."
                         },
                         new
                         {
@@ -2642,7 +2637,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Здесь вы найдете подробности о росте TechLiberty, нашем видении и проектах с момента основания."
+                            Value = "Узнайте о пути роста, видении и достижениях TechLiberty с момента основания."
                         },
                         new
                         {
@@ -2651,7 +2646,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 2,
-                            Value = "TechLiberty announced the 'Gof Games' project, inspired by the founder's beloved dog, Gofret, aiming to offer both fun and emotional experiences. We also accelerated our work on developing flexible and powerful ERP solutions."
+                            Value = "In 2024, 'Gof Games' was launched, inspired by the founder's dog Gofret, aiming for fun and emotion in gaming."
                         },
                         new
                         {
@@ -2660,7 +2655,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 3,
-                            Value = "TechLiberty kündigte das Projekt 'Gof Games' an, inspiriert vom geliebten Hund des Gründers, Gofret, und bot den Spielern sowohl Spaß als auch emotionale Erlebnisse. Wir haben auch unsere Arbeit an der Entwicklung flexibler und leistungsstarker ERP-Lösungen beschleunigt."
+                            Value = "2024 wurde 'Gof Games' inspiriert vom Hund des Gründers Gofret ins Leben gerufen und strebt nach Spaß und Emotion im Gaming."
                         },
                         new
                         {
@@ -2669,7 +2664,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 4,
-                            Value = "TechLiberty анонсировала проект 'Gof Games', вдохновленный любимой собакой основателя Гофрет, с целью предложить игрокам как веселые, так и эмоциональные переживания. Мы также ускорили работу над созданием гибких и мощных ERP-решений."
+                            Value = "В 2024 году был запущен 'Gof Games', вдохновленный собакой основателя Гофрет, для веселья и эмоций в играх."
                         },
                         new
                         {
@@ -2678,7 +2673,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultTitle",
                             LanguageId = 2,
-                            Value = "Our Company History"
+                            Value = "Ongoing Innovation"
                         },
                         new
                         {
@@ -2687,7 +2682,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultTitle",
                             LanguageId = 3,
-                            Value = "Die Geschichte unseres Unternehmens"
+                            Value = "Laufende Innovation"
                         },
                         new
                         {
@@ -2696,7 +2691,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultTitle",
                             LanguageId = 4,
-                            Value = "История нашей компании"
+                            Value = "Непрерывные инновации"
                         },
                         new
                         {
@@ -2705,7 +2700,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Here you can find details about the growth of TechLiberty, our vision, and projects since our founding."
+                            Value = "Explore TechLiberty's journey in offering innovative solutions for digital transformation."
                         },
                         new
                         {
@@ -2714,7 +2709,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Hier finden Sie Details über das Wachstum von TechLiberty, unsere Vision und Projekte seit unserer Gründung."
+                            Value = "Erkunden Sie TechLibertys Reise bei der Bereitstellung innovativer Lösungen für die digitale Transformation."
                         },
                         new
                         {
@@ -2723,7 +2718,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Здесь вы найдете подробности о росте TechLiberty, нашем видении и проектах с момента основания."
+                            Value = "Исследуйте путь TechLiberty в предоставлении инновационных решений для цифровой трансформации."
                         },
                         new
                         {
@@ -2732,7 +2727,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 2,
-                            Value = "At TechLiberty, we focus on placing technology and innovation at the center of our business. We offer innovative solutions to support the digital transformation of companies and optimize their processes."
+                            Value = "TechLiberty focuses on innovation and technology at its core, aiming to support companies’ digital transformations."
                         },
                         new
                         {
@@ -2741,7 +2736,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 3,
-                            Value = "Bei TechLiberty legen wir den Schwerpunkt auf Technologie und Innovation im Zentrum unseres Geschäfts. Wir bieten innovative Lösungen zur Unterstützung der digitalen Transformation von Unternehmen und zur Optimierung ihrer Prozesse."
+                            Value = "TechLiberty konzentriert sich auf Innovation und Technologie und unterstützt die digitale Transformation von Unternehmen."
                         },
                         new
                         {
@@ -2750,7 +2745,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "History",
                             Key = "YearDescription",
                             LanguageId = 4,
-                            Value = "В компании TechLiberty мы делаем акцент на технологии и инновации в центре нашего бизнеса. Мы предлагаем инновационные решения для поддержки цифровой трансформации компаний и оптимизации их процессов."
+                            Value = "TechLiberty сосредотачивается на инновациях и технологиях, поддерживая цифровую трансформацию компаний."
                         },
                         new
                         {
@@ -2786,7 +2781,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We offer professional web development services to help you plan, create, manage, and market your web project."
+                            Value = "Web development is a strategic process to strengthen your digital presence. We analyze your needs and goals to offer user-friendly, modern, and scalable web solutions. Our professional team supports you at every stage, from design and user experience to performance, prioritizing code quality, SEO compliance, and security to help your business succeed online."
                         },
                         new
                         {
@@ -2795,7 +2790,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten professionelle Webentwicklungsdienste an, um Ihnen bei der Planung, Erstellung, Verwaltung und Vermarktung Ihres Webprojekts zu helfen."
+                            Value = "Webentwicklung ist ein strategischer Prozess zur Stärkung Ihrer digitalen Präsenz. Wir analysieren Ihre Bedürfnisse und Ziele, um benutzerfreundliche, moderne und skalierbare Weblösungen anzubieten. Unser professionelles Team unterstützt Sie in jeder Phase, von Design und Benutzererfahrung bis zur Leistung, wobei wir Codequalität, SEO-Konformität und Sicherheit priorisieren, um Ihrem Unternehmen online zum Erfolg zu verhelfen."
                         },
                         new
                         {
@@ -2804,7 +2799,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предлагаем профессиональные услуги веб-разработки, чтобы помочь вам спланировать, создать, управлять и продвигать ваш веб-проект."
+                            Value = "Веб-разработка - это стратегический процесс, направленный на укрепление вашего цифрового присутствия. Мы анализируем ваши потребности и цели, чтобы предложить удобные, современные и масштабируемые веб-решения. Наша профессиональная команда поддерживает вас на каждом этапе, от проектирования и пользовательского опыта до производительности, уделяя первоочередное внимание качеству кода, соответствию SEO и безопасности, чтобы помочь вашему бизнесу добиться успеха в Интернете."
                         },
                         new
                         {
@@ -2813,7 +2808,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "We offer professional web development services for web projects."
+                            Value = "We offer professional web development to deliver modern, user-friendly, and scalable websites."
                         },
                         new
                         {
@@ -2822,7 +2817,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Wir bieten professionelle Webentwicklungsdienste für Webprojekte an."
+                            Value = "Wir bieten professionelle Webentwicklung, um moderne, benutzerfreundliche und skalierbare Websites bereitzustellen."
                         },
                         new
                         {
@@ -2831,7 +2826,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Мы предлагаем профессиональные услуги веб-разработки для веб-проектов."
+                            Value = "Мы предлагаем профессиональную веб-разработку для создания современных, удобных и масштабируемых веб-сайтов."
                         },
                         new
                         {
@@ -2867,7 +2862,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We offer comprehensive services to support mobile app development for iOS and Android platforms."
+                            Value = "Mobile app development has become central to user experience today. We develop high-performance, user-friendly applications on iOS and Android. By analyzing user habits, we deliver designs that enhance engagement and capture attention. Our applications focus on security, speed, and are built for easy updates and scalability, offering a long-term solution for growth in the digital world."
                         },
                         new
                         {
@@ -2876,7 +2871,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten umfassende Dienstleistungen zur Unterstützung der mobilen App-Entwicklung für iOS- und Android-Plattformen an."
+                            Value = "Die Entwicklung mobiler Apps ist heute zentral für das Benutzererlebnis. Wir entwickeln leistungsstarke, benutzerfreundliche Anwendungen für iOS und Android. Durch die Analyse der Benutzergewohnheiten bieten wir Designs, die das Engagement steigern und die Aufmerksamkeit fesseln. Unsere Anwendungen sind sicher, schnell und bieten einfache Updates und Skalierbarkeit als langfristige Lösung für das Wachstum in der digitalen Welt."
                         },
                         new
                         {
@@ -2885,7 +2880,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предлагаем комплексные услуги по поддержке разработки мобильных приложений для платформ iOS и Android."
+                            Value = "Разработка мобильных приложений стала центральным элементом пользовательского опыта сегодня. Мы разрабатываем высокопроизводительные, удобные приложения для iOS и Android. Анализируя привычки пользователей, мы создаем дизайны, которые повышают вовлеченность и привлекают внимание. Наши приложения сосредоточены на безопасности, скорости и имеют легкую масштабируемость и обновления, предлагая долгосрочное решение для роста в цифровом мире."
                         },
                         new
                         {
@@ -2894,7 +2889,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "We provide user-friendly mobile app development services."
+                            Value = "User-centered mobile app development for iOS and Android."
                         },
                         new
                         {
@@ -2903,7 +2898,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Wir bieten benutzerfreundliche mobile App-Entwicklungsdienste an."
+                            Value = "Benutzerzentrierte mobile App-Entwicklung für iOS und Android."
                         },
                         new
                         {
@@ -2912,7 +2907,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Мы предоставляем удобные услуги по разработке мобильных приложений."
+                            Value = "Разработка мобильных приложений для iOS и Android, ориентированная на пользователя."
                         },
                         new
                         {
@@ -2948,7 +2943,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We provide game development services using advanced technologies to help you create fun and interactive games."
+                            Value = "Game development is both a technical and creative process. We leverage advanced technologies to create fun, immersive, and high-performance games. Working with powerful tools like Unity and Unreal Engine, we develop games that meet your target audience's expectations with quality graphics and smooth gameplay. We focus on creating games that captivate players, foster emotional connections, and encourage repeated play."
                         },
                         new
                         {
@@ -2957,7 +2952,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten Spieleentwicklungsdienste mit fortschrittlichen Technologien an, um Ihnen bei der Erstellung von lustigen und interaktiven Spielen zu helfen."
+                            Value = "Die Spieleentwicklung ist sowohl ein technischer als auch ein kreativer Prozess. Wir nutzen fortschrittliche Technologien, um unterhaltsame, immersive und leistungsstarke Spiele zu entwickeln. Mit leistungsstarken Tools wie Unity und Unreal Engine erstellen wir Spiele, die den Erwartungen Ihrer Zielgruppe mit hochwertiger Grafik und reibungslosem Gameplay gerecht werden. Wir konzentrieren uns darauf, Spiele zu entwickeln, die Spieler fesseln, emotionale Verbindungen fördern und zum erneuten Spielen anregen."
                         },
                         new
                         {
@@ -2966,7 +2961,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предоставляем услуги по разработке игр с использованием передовых технологий, чтобы помочь вам создать веселые и интерактивные игры."
+                            Value = "Разработка игр - это одновременно технический и творческий процесс. Мы используем передовые технологии для создания увлекательных, захватывающих и высокопроизводительных игр. Работая с такими мощными инструментами, как Unity и Unreal Engine, мы разрабатываем игры, которые соответствуют ожиданиям вашей целевой аудитории благодаря качественной графике и плавному игровому процессу. Мы сосредоточены на создании игр, которые привлекают игроков, способствуют эмоциональной связи и побуждают к повторной игре."
                         },
                         new
                         {
@@ -2975,7 +2970,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "We offer interactive game development services."
+                            Value = "Engaging game development using advanced technologies."
                         },
                         new
                         {
@@ -2984,7 +2979,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Wir bieten interaktive Spieleentwicklungsdienste an."
+                            Value = "Fesselnde Spieleentwicklung mit fortschrittlichen Technologien."
                         },
                         new
                         {
@@ -2993,7 +2988,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Мы предлагаем услуги по разработке интерактивных игр."
+                            Value = "Увлекательная разработка игр с использованием передовых технологий."
                         },
                         new
                         {
@@ -3029,7 +3024,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We provide API development and integration services to optimize data flow between different systems."
+                            Value = "API integration allows different systems to communicate securely and efficiently. We offer API development and integration services to streamline data flow and enhance process efficiency in your business, prioritizing security for sensitive data and building a stable infrastructure."
                         },
                         new
                         {
@@ -3038,7 +3033,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten API-Entwicklungs- und Integrationsdienste an, um den Datenfluss zwischen verschiedenen Systemen zu optimieren."
+                            Value = "Die API-Integration ermöglicht es verschiedenen Systemen, sicher und effizient zu kommunizieren. Wir bieten API-Entwicklungs- und Integrationsdienste zur Optimierung des Datenflusses und zur Verbesserung der Prozesseffizienz in Ihrem Unternehmen an, wobei die Sicherheit sensibler Daten und eine stabile Infrastruktur im Vordergrund stehen."
                         },
                         new
                         {
@@ -3047,7 +3042,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предоставляем услуги по разработке и интеграции API для оптимизации потоков данных между различными системами."
+                            Value = "Интеграция API позволяет различным системам безопасно и эффективно взаимодействовать. Мы предлагаем услуги по разработке и интеграции API для оптимизации потоков данных и повышения эффективности процессов в вашем бизнесе, уделяя приоритетное внимание безопасности конфиденциальных данных и созданию стабильной инфраструктуры."
                         },
                         new
                         {
@@ -3056,7 +3051,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "Data flow optimization with API integration services."
+                            Value = "API integration for secure and optimized data flow."
                         },
                         new
                         {
@@ -3065,7 +3060,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Datenflussoptimierung mit API-Integrationsdiensten."
+                            Value = "API-Integration für sicheren und optimierten Datenfluss."
                         },
                         new
                         {
@@ -3074,7 +3069,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Оптимизация потоков данных с помощью услуг по интеграции API."
+                            Value = "Интеграция API для безопасного и оптимизированного потока данных."
                         },
                         new
                         {
@@ -3110,7 +3105,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We offer comprehensive CRM solutions to improve customer relationships and manage processes."
+                            Value = "CRM is essential for building strong, lasting relationships with your customers. Our CRM solutions enhance customer satisfaction and optimize your sales, marketing, and service processes. We offer a system that consolidates all customer data in one platform, helping you to grow your business and reach your goals faster."
                         },
                         new
                         {
@@ -3119,7 +3114,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten umfassende CRM-Lösungen zur Verbesserung der Kundenbeziehungen und zur Prozessverwaltung."
+                            Value = "CRM ist entscheidend für den Aufbau starker, dauerhafter Beziehungen zu Ihren Kunden. Unsere CRM-Lösungen steigern die Kundenzufriedenheit und optimieren Ihre Verkaufs-, Marketing- und Serviceprozesse. Wir bieten ein System, das alle Kundendaten auf einer Plattform konsolidiert und Ihnen hilft, Ihr Geschäft auszubauen und Ihre Ziele schneller zu erreichen."
                         },
                         new
                         {
@@ -3128,7 +3123,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предлагаем комплексные CRM-решения для улучшения отношений с клиентами и управления процессами."
+                            Value = "CRM играет ключевую роль в построении прочных и долгосрочных отношений с клиентами. Наши CRM-решения повышают удовлетворенность клиентов и оптимизируют ваши процессы продаж, маркетинга и обслуживания. Мы предлагаем систему, которая объединяет все данные о клиентах на одной платформе, помогая вам развивать бизнес и быстрее достигать целей."
                         },
                         new
                         {
@@ -3146,7 +3141,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Umfassende CRM-Lösungen zur Verwaltung von Kundenbeziehungen."
+                            Value = "Umfassende CRM-Lösungen für das Kundenmanagement."
                         },
                         new
                         {
@@ -3191,7 +3186,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We offer advanced ERP solutions to manage business processes and increase efficiency."
+                            Value = "Our ERP solutions help to digitize and streamline your business processes for greater efficiency. By integrating finance, HR, and supply chain functions in a single system, we enhance your operational workflow, reduce costs, and speed up decision-making. ERP is an ideal solution for sustainable growth."
                         },
                         new
                         {
@@ -3200,7 +3195,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten fortschrittliche ERP-Lösungen zur Verwaltung von Geschäftsprozessen und zur Steigerung der Effizienz."
+                            Value = "Unsere ERP-Lösungen helfen, Ihre Geschäftsprozesse für mehr Effizienz zu digitalisieren und zu optimieren. Durch die Integration von Finanz-, HR- und Lieferkettenfunktionen in einem einzigen System verbessern wir Ihren operativen Workflow, senken die Kosten und beschleunigen die Entscheidungsfindung. ERP ist eine ideale Lösung für nachhaltiges Wachstum."
                         },
                         new
                         {
@@ -3209,7 +3204,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предлагаем современные ERP-решения для управления бизнес-процессами и повышения эффективности."
+                            Value = "Наши ERP-решения помогают оцифровать и оптимизировать ваши бизнес-процессы для повышения эффективности. Интегрируя финансы, HR и цепочку поставок в одну систему, мы улучшаем рабочий процесс, сокращаем расходы и ускоряем принятие решений. ERP - это идеальное решение для устойчивого роста."
                         },
                         new
                         {
@@ -3218,7 +3213,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "Advanced ERP solutions for managing business processes."
+                            Value = "Efficient ERP solutions for sustainable business growth."
                         },
                         new
                         {
@@ -3227,7 +3222,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Fortschrittliche ERP-Lösungen zur Verwaltung von Geschäftsprozessen."
+                            Value = "Effiziente ERP-Lösungen für nachhaltiges Unternehmenswachstum."
                         },
                         new
                         {
@@ -3236,7 +3231,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Современные ERP-решения для управления бизнес-процессами."
+                            Value = "Эффективные ERP-решения для устойчивого роста бизнеса."
                         },
                         new
                         {
@@ -3272,7 +3267,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "Manage your data efficiently with secure and scalable database management systems."
+                            Value = "Data security and accessibility are critical for every business. Our database management systems help you efficiently manage your data with secure, scalable solutions, ensuring performance optimization and continuous data availability."
                         },
                         new
                         {
@@ -3281,7 +3276,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Verwalten Sie Ihre Daten effizient mit sicheren und skalierbaren Datenbankverwaltungssystemen."
+                            Value = "Datensicherheit und Zugänglichkeit sind für jedes Unternehmen von entscheidender Bedeutung. Unsere Datenbankverwaltungssysteme helfen Ihnen, Ihre Daten effizient mit sicheren, skalierbaren Lösungen zu verwalten, die Leistungsoptimierung und kontinuierliche Datenverfügbarkeit gewährleisten."
                         },
                         new
                         {
@@ -3290,7 +3285,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Управляйте своими данными эффективно с помощью безопасных и масштабируемых систем управления базами данных."
+                            Value = "Безопасность и доступность данных критически важны для любого бизнеса. Наши системы управления базами данных помогают эффективно управлять вашими данными с помощью безопасных, масштабируемых решений, обеспечивая оптимизацию производительности и непрерывную доступность данных."
                         },
                         new
                         {
@@ -3299,7 +3294,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "Database solutions for effective data management."
+                            Value = "Secure and scalable database solutions for effective data management."
                         },
                         new
                         {
@@ -3308,7 +3303,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Datenbanklösungen für eine effektive Datenverwaltung."
+                            Value = "Sichere und skalierbare Datenbanklösungen für ein effektives Datenmanagement."
                         },
                         new
                         {
@@ -3317,7 +3312,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Решения для эффективного управления данными."
+                            Value = "Безопасные и масштабируемые решения для эффективного управления данными."
                         },
                         new
                         {
@@ -3353,7 +3348,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We analyze your business processes and provide system designs tailored to your needs."
+                            Value = "We conduct a comprehensive analysis to create systems tailored to your business needs. Our solutions prioritize performance, security, and scalability, supporting your digital transformation goals."
                         },
                         new
                         {
@@ -3362,7 +3357,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir analysieren Ihre Geschäftsprozesse und bieten maßgeschneiderte Systemdesigns."
+                            Value = "Wir führen eine umfassende Analyse durch, um Systeme zu erstellen, die auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Unsere Lösungen priorisieren Leistung, Sicherheit und Skalierbarkeit und unterstützen Ihre digitalen Transformationsziele."
                         },
                         new
                         {
@@ -3371,7 +3366,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы анализируем ваши бизнес-процессы и предоставляем системы, адаптированные к вашим потребностям."
+                            Value = "Мы проводим всесторонний анализ для создания систем, адаптированных к потребностям вашего бизнеса. Наши решения уделяют приоритетное внимание производительности, безопасности и масштабируемости, поддерживая цели вашей цифровой трансформации."
                         },
                         new
                         {
@@ -3380,7 +3375,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "Customized system analysis and design services."
+                            Value = "Customized system analysis and design for digital transformation."
                         },
                         new
                         {
@@ -3389,7 +3384,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Individuelle Systemanalyse- und Design-Dienstleistungen."
+                            Value = "Individuelle Systemanalyse und -design für die digitale Transformation."
                         },
                         new
                         {
@@ -3398,7 +3393,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Услуги по анализу и проектированию систем, адаптированные к вашим потребностям."
+                            Value = "Индивидуальный анализ и проектирование систем для цифровой трансформации."
                         },
                         new
                         {
@@ -3434,7 +3429,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We provide professional project management solutions to help you manage your projects effectively."
+                            Value = "Our project management solutions ensure effective use of resources and on-time delivery within budget, focusing on quality at every stage for successful project completion."
                         },
                         new
                         {
@@ -3443,7 +3438,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten professionelle Projektmanagement-Lösungen an, um Ihnen zu helfen, Ihre Projekte effektiv zu verwalten."
+                            Value = "Unsere Projektmanagementlösungen gewährleisten eine effektive Ressourcennutzung und pünktliche Lieferung innerhalb des Budgets, wobei in jeder Phase auf Qualität geachtet wird, um eine erfolgreiche Projektdurchführung sicherzustellen."
                         },
                         new
                         {
@@ -3452,7 +3447,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предоставляем профессиональные решения для эффективного управления проектами."
+                            Value = "Наши решения для управления проектами обеспечивают эффективное использование ресурсов и своевременную доставку в рамках бюджета, уделяя внимание качеству на каждом этапе для успешного завершения проекта."
                         },
                         new
                         {
@@ -3461,7 +3456,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "Project management solutions for successful project delivery."
+                            Value = "Strategic project management solutions for quality delivery."
                         },
                         new
                         {
@@ -3470,7 +3465,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Projektmanagementlösungen für eine erfolgreiche Projektabwicklung."
+                            Value = "Strategische Projektmanagementlösungen für hochwertige Lieferung."
                         },
                         new
                         {
@@ -3479,7 +3474,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Решения для успешного управления проектами."
+                            Value = "Стратегические решения для управления проектами с акцентом на качество."
                         },
                         new
                         {
@@ -3515,7 +3510,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 2,
-                            Value = "We provide scalable and reliable cloud solutions for data storage and management."
+                            Value = "We provide secure and scalable cloud solutions for data storage and management, offering flexibility and ease of access from anywhere while ensuring data security."
                         },
                         new
                         {
@@ -3524,7 +3519,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 3,
-                            Value = "Wir bieten skalierbare und zuverlässige Cloud-Lösungen zur Datenspeicherung und -verwaltung."
+                            Value = "Wir bieten sichere und skalierbare Cloud-Lösungen zur Datenspeicherung und -verwaltung und bieten Flexibilität und einfachen Zugriff von überall, während die Datensicherheit gewährleistet wird."
                         },
                         new
                         {
@@ -3533,7 +3528,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "DefaultContent",
                             LanguageId = 4,
-                            Value = "Мы предоставляем масштабируемые и надежные облачные решения для хранения и управления данными."
+                            Value = "Мы предоставляем безопасные и масштабируемые облачные решения для хранения и управления данными, обеспечивая гибкость и доступ из любого места при сохранении безопасности данных."
                         },
                         new
                         {
@@ -3542,7 +3537,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 2,
-                            Value = "Reliable and scalable cloud solutions for data management."
+                            Value = "Flexible and secure cloud solutions for data management."
                         },
                         new
                         {
@@ -3551,7 +3546,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 3,
-                            Value = "Zuverlässige und skalierbare Cloud-Lösungen zur Datenverwaltung."
+                            Value = "Flexible und sichere Cloud-Lösungen für das Datenmanagement."
                         },
                         new
                         {
@@ -3560,7 +3555,1384 @@ namespace CompanyWebSite.DataAccess.Migrations
                             EntityName = "Service",
                             Key = "ServiceSummary",
                             LanguageId = 4,
-                            Value = "Надежные и масштабируемые облачные решения для управления данными."
+                            Value = "Гибкие и безопасные облачные решения для управления данными."
+                        },
+                        new
+                        {
+                            Id = 238,
+                            EntityId = 1,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Web Development"
+                        },
+                        new
+                        {
+                            Id = 239,
+                            EntityId = 1,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Webentwicklung"
+                        },
+                        new
+                        {
+                            Id = 240,
+                            EntityId = 1,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Веб-разработка"
+                        },
+                        new
+                        {
+                            Id = 241,
+                            EntityId = 2,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Mobile Development"
+                        },
+                        new
+                        {
+                            Id = 242,
+                            EntityId = 2,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Mobile Entwicklung"
+                        },
+                        new
+                        {
+                            Id = 243,
+                            EntityId = 2,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Разработка мобильных приложений"
+                        },
+                        new
+                        {
+                            Id = 244,
+                            EntityId = 3,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Game Development"
+                        },
+                        new
+                        {
+                            Id = 245,
+                            EntityId = 3,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Spieleentwicklung"
+                        },
+                        new
+                        {
+                            Id = 246,
+                            EntityId = 3,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Разработка игр"
+                        },
+                        new
+                        {
+                            Id = 247,
+                            EntityId = 4,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "API Integration"
+                        },
+                        new
+                        {
+                            Id = 248,
+                            EntityId = 4,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "API-Integration"
+                        },
+                        new
+                        {
+                            Id = 249,
+                            EntityId = 4,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Интеграция API"
+                        },
+                        new
+                        {
+                            Id = 250,
+                            EntityId = 5,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "CRM Solutions"
+                        },
+                        new
+                        {
+                            Id = 251,
+                            EntityId = 5,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "CRM-Lösungen"
+                        },
+                        new
+                        {
+                            Id = 252,
+                            EntityId = 5,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "CRM-решения"
+                        },
+                        new
+                        {
+                            Id = 253,
+                            EntityId = 6,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "ERP Solutions"
+                        },
+                        new
+                        {
+                            Id = 254,
+                            EntityId = 6,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "ERP-Lösungen"
+                        },
+                        new
+                        {
+                            Id = 255,
+                            EntityId = 6,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "ERP-решения"
+                        },
+                        new
+                        {
+                            Id = 256,
+                            EntityId = 7,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Database Management"
+                        },
+                        new
+                        {
+                            Id = 257,
+                            EntityId = 7,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Datenbankverwaltung"
+                        },
+                        new
+                        {
+                            Id = 258,
+                            EntityId = 7,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Управление базами данных"
+                        },
+                        new
+                        {
+                            Id = 259,
+                            EntityId = 8,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "System Analysis"
+                        },
+                        new
+                        {
+                            Id = 260,
+                            EntityId = 8,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Systemanalyse"
+                        },
+                        new
+                        {
+                            Id = 261,
+                            EntityId = 8,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Анализ систем"
+                        },
+                        new
+                        {
+                            Id = 262,
+                            EntityId = 9,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Project Management"
+                        },
+                        new
+                        {
+                            Id = 263,
+                            EntityId = 9,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Projektmanagement"
+                        },
+                        new
+                        {
+                            Id = 264,
+                            EntityId = 9,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Управление проектами"
+                        },
+                        new
+                        {
+                            Id = 265,
+                            EntityId = 10,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Cloud Solutions"
+                        },
+                        new
+                        {
+                            Id = 266,
+                            EntityId = 10,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Cloud-Lösungen"
+                        },
+                        new
+                        {
+                            Id = 267,
+                            EntityId = 10,
+                            EntityName = "ServiceCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Облачные решения"
+                        },
+                        new
+                        {
+                            Id = 268,
+                            EntityId = 1,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Software"
+                        },
+                        new
+                        {
+                            Id = 269,
+                            EntityId = 1,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Software"
+                        },
+                        new
+                        {
+                            Id = 270,
+                            EntityId = 1,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Программное обеспечение"
+                        },
+                        new
+                        {
+                            Id = 271,
+                            EntityId = 2,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Development"
+                        },
+                        new
+                        {
+                            Id = 272,
+                            EntityId = 2,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Entwicklung"
+                        },
+                        new
+                        {
+                            Id = 273,
+                            EntityId = 2,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Разработка"
+                        },
+                        new
+                        {
+                            Id = 274,
+                            EntityId = 3,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Mobile Application"
+                        },
+                        new
+                        {
+                            Id = 275,
+                            EntityId = 3,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Mobile Anwendung"
+                        },
+                        new
+                        {
+                            Id = 276,
+                            EntityId = 3,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Мобильное приложение"
+                        },
+                        new
+                        {
+                            Id = 277,
+                            EntityId = 4,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "API"
+                        },
+                        new
+                        {
+                            Id = 278,
+                            EntityId = 4,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "API"
+                        },
+                        new
+                        {
+                            Id = 279,
+                            EntityId = 4,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "API"
+                        },
+                        new
+                        {
+                            Id = 280,
+                            EntityId = 5,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Data Security"
+                        },
+                        new
+                        {
+                            Id = 281,
+                            EntityId = 5,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Datensicherheit"
+                        },
+                        new
+                        {
+                            Id = 282,
+                            EntityId = 5,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Безопасность данных"
+                        },
+                        new
+                        {
+                            Id = 283,
+                            EntityId = 6,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "ERP"
+                        },
+                        new
+                        {
+                            Id = 284,
+                            EntityId = 6,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "ERP"
+                        },
+                        new
+                        {
+                            Id = 285,
+                            EntityId = 6,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "ERP"
+                        },
+                        new
+                        {
+                            Id = 286,
+                            EntityId = 7,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Business Management"
+                        },
+                        new
+                        {
+                            Id = 287,
+                            EntityId = 7,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Geschäftsführung"
+                        },
+                        new
+                        {
+                            Id = 288,
+                            EntityId = 7,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Управление бизнесом"
+                        },
+                        new
+                        {
+                            Id = 289,
+                            EntityId = 8,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Game Development"
+                        },
+                        new
+                        {
+                            Id = 290,
+                            EntityId = 8,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Spieleentwicklung"
+                        },
+                        new
+                        {
+                            Id = 291,
+                            EntityId = 8,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Разработка игр"
+                        },
+                        new
+                        {
+                            Id = 292,
+                            EntityId = 9,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Technology"
+                        },
+                        new
+                        {
+                            Id = 293,
+                            EntityId = 9,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Technologie"
+                        },
+                        new
+                        {
+                            Id = 294,
+                            EntityId = 9,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Технология"
+                        },
+                        new
+                        {
+                            Id = 295,
+                            EntityId = 10,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "Web Development"
+                        },
+                        new
+                        {
+                            Id = 296,
+                            EntityId = 10,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "Webentwicklung"
+                        },
+                        new
+                        {
+                            Id = 297,
+                            EntityId = 10,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "Веб-разработка"
+                        },
+                        new
+                        {
+                            Id = 298,
+                            EntityId = 11,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 2,
+                            Value = "PWA"
+                        },
+                        new
+                        {
+                            Id = 299,
+                            EntityId = 11,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 3,
+                            Value = "PWA"
+                        },
+                        new
+                        {
+                            Id = 300,
+                            EntityId = 11,
+                            EntityName = "BlogCategory",
+                            Key = "Name",
+                            LanguageId = 4,
+                            Value = "PWA"
+                        },
+                        new
+                        {
+                            Id = 301,
+                            EntityId = 1,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Modern and user-friendly web solutions"
+                        },
+                        new
+                        {
+                            Id = 302,
+                            EntityId = 1,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Moderne und benutzerfreundliche Weblösungen"
+                        },
+                        new
+                        {
+                            Id = 303,
+                            EntityId = 1,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Современные и удобные веб-решения"
+                        },
+                        new
+                        {
+                            Id = 304,
+                            EntityId = 2,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "SEO-compliant web development"
+                        },
+                        new
+                        {
+                            Id = 305,
+                            EntityId = 2,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "SEO-konforme Webentwicklung"
+                        },
+                        new
+                        {
+                            Id = 306,
+                            EntityId = 2,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Веб-разработка, соответствующая требованиям SEO"
+                        },
+                        new
+                        {
+                            Id = 307,
+                            EntityId = 3,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "High-performance and security-focused"
+                        },
+                        new
+                        {
+                            Id = 308,
+                            EntityId = 3,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Leistungsstark und sicherheitsorientiert"
+                        },
+                        new
+                        {
+                            Id = 309,
+                            EntityId = 3,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Ориентированность на высокую производительность и безопасность"
+                        },
+                        new
+                        {
+                            Id = 310,
+                            EntityId = 4,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Development for iOS and Android platforms"
+                        },
+                        new
+                        {
+                            Id = 311,
+                            EntityId = 4,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Entwicklung für iOS- und Android-Plattformen"
+                        },
+                        new
+                        {
+                            Id = 312,
+                            EntityId = 4,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Разработка для платформ iOS и Android"
+                        },
+                        new
+                        {
+                            Id = 313,
+                            EntityId = 5,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "User-friendly and interactive design"
+                        },
+                        new
+                        {
+                            Id = 314,
+                            EntityId = 5,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Benutzerfreundliches und interaktives Design"
+                        },
+                        new
+                        {
+                            Id = 315,
+                            EntityId = 5,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Удобный и интерактивный дизайн"
+                        },
+                        new
+                        {
+                            Id = 316,
+                            EntityId = 6,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Easily updatable and scalable structure"
+                        },
+                        new
+                        {
+                            Id = 317,
+                            EntityId = 6,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Leicht aktualisierbare und skalierbare Struktur"
+                        },
+                        new
+                        {
+                            Id = 318,
+                            EntityId = 6,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Легко обновляемая и масштабируемая структура"
+                        },
+                        new
+                        {
+                            Id = 319,
+                            EntityId = 7,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Fun and high-performance games"
+                        },
+                        new
+                        {
+                            Id = 320,
+                            EntityId = 7,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Spaßige und leistungsstarke Spiele"
+                        },
+                        new
+                        {
+                            Id = 321,
+                            EntityId = 7,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Веселые и высокопроизводительные игры"
+                        },
+                        new
+                        {
+                            Id = 322,
+                            EntityId = 8,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Development with tools like Unity and Unreal Engine"
+                        },
+                        new
+                        {
+                            Id = 323,
+                            EntityId = 8,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Entwicklung mit Werkzeugen wie Unity und Unreal Engine"
+                        },
+                        new
+                        {
+                            Id = 324,
+                            EntityId = 8,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Разработка с использованием Unity и Unreal Engine"
+                        },
+                        new
+                        {
+                            Id = 325,
+                            EntityId = 9,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Game design ensuring replayability"
+                        },
+                        new
+                        {
+                            Id = 326,
+                            EntityId = 9,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Spieldesign, das die Wiederspielbarkeit sicherstellt"
+                        },
+                        new
+                        {
+                            Id = 327,
+                            EntityId = 9,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Дизайн игры, обеспечивающий повторное прохождение"
+                        },
+                        new
+                        {
+                            Id = 328,
+                            EntityId = 10,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Efficient and secure data flow"
+                        },
+                        new
+                        {
+                            Id = 329,
+                            EntityId = 10,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Effizienter und sicherer Datenfluss"
+                        },
+                        new
+                        {
+                            Id = 330,
+                            EntityId = 10,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Эффективный и безопасный поток данных"
+                        },
+                        new
+                        {
+                            Id = 331,
+                            EntityId = 11,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Compatibility across different systems"
+                        },
+                        new
+                        {
+                            Id = 332,
+                            EntityId = 11,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Kompatibilität zwischen verschiedenen Systemen"
+                        },
+                        new
+                        {
+                            Id = 333,
+                            EntityId = 11,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Совместимость между различными системами"
+                        },
+                        new
+                        {
+                            Id = 334,
+                            EntityId = 12,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Security-focused integration"
+                        },
+                        new
+                        {
+                            Id = 335,
+                            EntityId = 12,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Sicherheitsorientierte Integration"
+                        },
+                        new
+                        {
+                            Id = 336,
+                            EntityId = 12,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Интеграция с фокусом на безопасность"
+                        },
+                        new
+                        {
+                            Id = 337,
+                            EntityId = 13,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Solutions that strengthen customer relationships"
+                        },
+                        new
+                        {
+                            Id = 338,
+                            EntityId = 13,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Lösungen, die Kundenbeziehungen stärken"
+                        },
+                        new
+                        {
+                            Id = 339,
+                            EntityId = 13,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Решения для укрепления отношений с клиентами"
+                        },
+                        new
+                        {
+                            Id = 340,
+                            EntityId = 14,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Optimization of sales, marketing, and services"
+                        },
+                        new
+                        {
+                            Id = 341,
+                            EntityId = 14,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Optimierung von Vertrieb, Marketing und Dienstleistungen"
+                        },
+                        new
+                        {
+                            Id = 342,
+                            EntityId = 14,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Оптимизация продаж, маркетинга и услуг"
+                        },
+                        new
+                        {
+                            Id = 343,
+                            EntityId = 15,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Analysis of all customer data"
+                        },
+                        new
+                        {
+                            Id = 344,
+                            EntityId = 15,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Analyse aller Kundendaten"
+                        },
+                        new
+                        {
+                            Id = 345,
+                            EntityId = 15,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Анализ всех данных о клиентах"
+                        },
+                        new
+                        {
+                            Id = 346,
+                            EntityId = 16,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Inter-departmental data integration"
+                        },
+                        new
+                        {
+                            Id = 347,
+                            EntityId = 16,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Abteilungsübergreifende Datenintegration"
+                        },
+                        new
+                        {
+                            Id = 348,
+                            EntityId = 16,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Интеграция данных между отделами"
+                        },
+                        new
+                        {
+                            Id = 349,
+                            EntityId = 17,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Structure optimizing business processes"
+                        },
+                        new
+                        {
+                            Id = 350,
+                            EntityId = 17,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Struktur zur Optimierung von Geschäftsprozessen"
+                        },
+                        new
+                        {
+                            Id = 351,
+                            EntityId = 17,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Структура, оптимизирующая бизнес-процессы"
+                        },
+                        new
+                        {
+                            Id = 352,
+                            EntityId = 18,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Accelerating decision-making processes"
+                        },
+                        new
+                        {
+                            Id = 353,
+                            EntityId = 18,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Beschleunigung von Entscheidungsprozessen"
+                        },
+                        new
+                        {
+                            Id = 354,
+                            EntityId = 18,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Ускорение процесса принятия решений"
+                        },
+                        new
+                        {
+                            Id = 355,
+                            EntityId = 19,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Robust and secure database infrastructure"
+                        },
+                        new
+                        {
+                            Id = 356,
+                            EntityId = 19,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Robuste und sichere Datenbankinfrastruktur"
+                        },
+                        new
+                        {
+                            Id = 357,
+                            EntityId = 19,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Надежная и безопасная инфраструктура базы данных"
+                        },
+                        new
+                        {
+                            Id = 358,
+                            EntityId = 20,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Optimized for high performance"
+                        },
+                        new
+                        {
+                            Id = 359,
+                            EntityId = 20,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Optimiert für hohe Leistung"
+                        },
+                        new
+                        {
+                            Id = 360,
+                            EntityId = 20,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Оптимизировано для высокой производительности"
+                        },
+                        new
+                        {
+                            Id = 361,
+                            EntityId = 21,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Continuous accessibility of data"
+                        },
+                        new
+                        {
+                            Id = 362,
+                            EntityId = 21,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Kontinuierliche Datenzugänglichkeit"
+                        },
+                        new
+                        {
+                            Id = 363,
+                            EntityId = 21,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Непрерывная доступность данных"
+                        },
+                        new
+                        {
+                            Id = 364,
+                            EntityId = 22,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Custom design tailored to business processes"
+                        },
+                        new
+                        {
+                            Id = 365,
+                            EntityId = 22,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Maßgeschneidertes Design für Geschäftsprozesse"
+                        },
+                        new
+                        {
+                            Id = 366,
+                            EntityId = 22,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Индивидуальный дизайн, адаптированный к бизнес-процессам"
+                        },
+                        new
+                        {
+                            Id = 367,
+                            EntityId = 23,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Comprehensive analysis and performance optimization"
+                        },
+                        new
+                        {
+                            Id = 368,
+                            EntityId = 23,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Umfassende Analyse und Leistungsoptimierung"
+                        },
+                        new
+                        {
+                            Id = 369,
+                            EntityId = 23,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Комплексный анализ и оптимизация производительности"
+                        },
+                        new
+                        {
+                            Id = 370,
+                            EntityId = 24,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Scalable and reliable solutions"
+                        },
+                        new
+                        {
+                            Id = 371,
+                            EntityId = 24,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Skalierbare und zuverlässige Lösungen"
+                        },
+                        new
+                        {
+                            Id = 372,
+                            EntityId = 24,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Масштабируемые и надежные решения"
+                        },
+                        new
+                        {
+                            Id = 373,
+                            EntityId = 25,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Strategic management solutions for projects"
+                        },
+                        new
+                        {
+                            Id = 374,
+                            EntityId = 25,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Strategische Managementlösungen für Projekte"
+                        },
+                        new
+                        {
+                            Id = 375,
+                            EntityId = 25,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Стратегические решения для управления проектами"
+                        },
+                        new
+                        {
+                            Id = 376,
+                            EntityId = 26,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Timely and on-budget delivery"
+                        },
+                        new
+                        {
+                            Id = 377,
+                            EntityId = 26,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Rechtzeitige und budgetgerechte Lieferung"
+                        },
+                        new
+                        {
+                            Id = 378,
+                            EntityId = 26,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Своевременная доставка в рамках бюджета"
+                        },
+                        new
+                        {
+                            Id = 379,
+                            EntityId = 27,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Management with a focus on quality"
+                        },
+                        new
+                        {
+                            Id = 380,
+                            EntityId = 27,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Management mit Fokus auf Qualität"
+                        },
+                        new
+                        {
+                            Id = 381,
+                            EntityId = 27,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Управление с акцентом на качество"
+                        },
+                        new
+                        {
+                            Id = 382,
+                            EntityId = 28,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Secure and flexible cloud infrastructure"
+                        },
+                        new
+                        {
+                            Id = 383,
+                            EntityId = 28,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Sichere und flexible Cloud-Infrastruktur"
+                        },
+                        new
+                        {
+                            Id = 384,
+                            EntityId = 28,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Безопасная и гибкая облачная инфраструктура"
+                        },
+                        new
+                        {
+                            Id = 385,
+                            EntityId = 29,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Access from anywhere with data security"
+                        },
+                        new
+                        {
+                            Id = 386,
+                            EntityId = 29,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Zugang von überall mit Datensicherheit"
+                        },
+                        new
+                        {
+                            Id = 387,
+                            EntityId = 29,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Доступ отовсюду с безопасностью данных"
+                        },
+                        new
+                        {
+                            Id = 388,
+                            EntityId = 30,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 2,
+                            Value = "Scalable solutions to lighten workload"
+                        },
+                        new
+                        {
+                            Id = 389,
+                            EntityId = 30,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 3,
+                            Value = "Skalierbare Lösungen zur Entlastung der Arbeitslast"
+                        },
+                        new
+                        {
+                            Id = 390,
+                            EntityId = 30,
+                            EntityName = "Highlight",
+                            Key = "Content",
+                            LanguageId = 4,
+                            Value = "Масштабируемые решения для уменьшения рабочей нагрузки"
                         });
                 });
 
@@ -3676,13 +5048,9 @@ namespace CompanyWebSite.DataAccess.Migrations
             modelBuilder.Entity("CompanyWebSite.Domain.Entities.History", b =>
                 {
                     b.HasOne("CompanyWebSite.Domain.Entities.About", "About")
-                        .WithMany()
+                        .WithMany("Histories")
                         .HasForeignKey("AboutId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("CompanyWebSite.Domain.Entities.About", null)
-                        .WithMany("Histories")
-                        .HasForeignKey("AboutId1");
 
                     b.Navigation("About");
                 });

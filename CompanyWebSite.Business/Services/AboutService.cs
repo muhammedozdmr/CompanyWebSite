@@ -115,9 +115,28 @@ namespace CompanyWebSite.Business.Services
             var about = await _baseAboutRepository.GetByIdAsync(aboutDto.Id);
             if (about != null)
             {
+                // About'u güncelle
                 _mapper.Map(aboutDto, about);
                 await _baseAboutRepository.UpdateAsync(about);
+
+                // Histories güncellemesi
+                foreach (var historyDto in aboutDto.Histories)
+                {
+                    var history = await _baseHistoryRepository.GetByIdAsync(historyDto.Id);
+                    if (history != null)
+                    {
+                        _mapper.Map(historyDto, history);
+                        await _baseHistoryRepository.UpdateAsync(history);
+                    }
+                    else
+                    {
+                        // Yeni History ekleme işlemi
+                        var newHistory = _mapper.Map<History>(historyDto);
+                        await _baseHistoryRepository.AddAsync(newHistory);
+                    }
+                }
             }
         }
+
     }
 }

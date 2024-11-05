@@ -109,341 +109,341 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     Value = "TechLiberty Software Solutions - надежный партнер в процессах цифровой трансформации бизнеса, предлагающий мобильные приложения, веб-проекты, разработку игр и корпоративные решения.",
                     LanguageId = 4 // Russian
                 },
-        // Blog Id = 1 Translations
-        new Translation
-        {
-            Id = 10,
-            EntityName = "Blog",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Fundamentals of Software Development",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 11,
-            EntityName = "Blog",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Grundlagen der Softwareentwicklung",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 12,
-            EntityName = "Blog",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Основы разработки программного обеспечения",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 13,
-            EntityName = "Blog",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Software development is the process of creating programs that provide a solution to a problem. Technological advancements have brought significant changes in software development processes...",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 14,
-            EntityName = "Blog",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Softwareentwicklung ist der Prozess der Erstellung von Programmen, die eine Lösung für ein Problem bieten. Technologische Fortschritte haben bedeutende Veränderungen in den Softwareentwicklungsprozessen mit sich gebracht...",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 15,
-            EntityName = "Blog",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Разработка программного обеспечения - это процесс создания программ, обеспечивающих решение проблемы. Технологические достижения внесли значительные изменения в процессы разработки программного обеспечения...",
-            LanguageId = 4 // Russian
-        },
+// Blog Id = 1 Translations
+new Translation
+{
+    Id = 10,
+    EntityName = "Blog",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Fundamentals of Software Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 11,
+    EntityName = "Blog",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Grundlagen der Softwareentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 12,
+    EntityName = "Blog",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Основы разработки программного обеспечения",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 13,
+    EntityName = "Blog",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Software development is the process of creating programs that provide a solution to a problem. Technological advancements have brought significant changes in software development processes, enabling developers to design user-friendly interfaces, build efficient algorithms, and ensure secure data management.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 14,
+    EntityName = "Blog",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Softwareentwicklung ist der Prozess der Erstellung von Programmen, die eine Lösung für ein Problem bieten. Technologische Fortschritte haben bedeutende Veränderungen in den Softwareentwicklungsprozessen mit sich gebracht, die es Entwicklern ermöglichen, benutzerfreundliche Schnittstellen zu entwerfen, effiziente Algorithmen zu erstellen und eine sichere Datenverwaltung zu gewährleisten.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 15,
+    EntityName = "Blog",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Разработка программного обеспечения - это процесс создания программ, обеспечивающих решение проблемы. Технологический прогресс внес значительные изменения в процессы разработки ПО, позволяя разработчикам создавать удобные интерфейсы, разрабатывать эффективные алгоритмы и обеспечивать безопасное управление данными.",
+    LanguageId = 4 // Russian
+},
 
-        // Blog Id = 2 Translations
-        new Translation
-        {
-            Id = 16,
-            EntityName = "Blog",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Important Tips for Mobile App Development",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 17,
-            EntityName = "Blog",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Wichtige Tipps für die Entwicklung mobiler Apps",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 18,
-            EntityName = "Blog",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Важные советы по разработке мобильных приложений",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 19,
-            EntityName = "Blog",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "The process of developing a mobile application includes various stages from design to user experience. To create a successful mobile app, it is essential to understand user needs and offer solutions...",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 20,
-            EntityName = "Blog",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Der Prozess der Entwicklung einer mobilen Anwendung umfasst verschiedene Phasen vom Design bis zur Benutzererfahrung. Um eine erfolgreiche mobile App zu erstellen, ist es wichtig, die Bedürfnisse der Benutzer zu verstehen...",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 21,
-            EntityName = "Blog",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Процесс разработки мобильного приложения включает в себя различные этапы, от дизайна до пользовательского опыта. Чтобы создать успешное мобильное приложение, важно понимать потребности пользователей...",
-            LanguageId = 4 // Russian
-        },
+// Blog Id = 2 Translations
+new Translation
+{
+    Id = 16,
+    EntityName = "Blog",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Important Tips for Mobile App Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 17,
+    EntityName = "Blog",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Wichtige Tipps für die Entwicklung mobiler Apps",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 18,
+    EntityName = "Blog",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Важные советы по разработке мобильных приложений",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 19,
+    EntityName = "Blog",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Developing a mobile application involves several stages, from design to user experience. Understanding user needs and delivering value-driven solutions are crucial for creating a successful app. Security and cross-platform compatibility are also vital factors for long-term success.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 20,
+    EntityName = "Blog",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Die Entwicklung einer mobilen Anwendung umfasst mehrere Phasen, vom Design bis zur Benutzererfahrung. Das Verständnis der Benutzerbedürfnisse und das Anbieten wertschöpfender Lösungen sind entscheidend für die erfolgreiche Entwicklung einer App. Sicherheit und plattformübergreifende Kompatibilität sind ebenfalls wichtige Faktoren für den langfristigen Erfolg.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 21,
+    EntityName = "Blog",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Разработка мобильного приложения включает в себя несколько этапов, от дизайна до пользовательского опыта. Понимание потребностей пользователей и предоставление решений, ориентированных на ценность, имеют решающее значение для создания успешного приложения. Безопасность и кроссплатформенная совместимость также являются важными факторами для долгосрочного успеха.",
+    LanguageId = 4 // Russian
+},
 
-        // Blog Id = 3 Translations
-        new Translation
-        {
-            Id = 22,
-            EntityName = "Blog",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "API Integration and Data Security",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 23,
-            EntityName = "Blog",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "API-Integration und Datensicherheit",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 24,
-            EntityName = "Blog",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "Интеграция API и безопасность данных",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 25,
-            EntityName = "Blog",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "API integration enables different software systems to interact with each other, maintaining data security and functionality during data sharing...",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 26,
-            EntityName = "Blog",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Die API-Integration ermöglicht es verschiedenen Softwaresystemen, miteinander zu interagieren, wobei die Datensicherheit und Funktionalität beim Datenaustausch gewährleistet wird...",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 27,
-            EntityName = "Blog",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Интеграция API позволяет различным программным системам взаимодействовать друг с другом, поддерживая безопасность данных и функциональность при обмене данными...",
-            LanguageId = 4 // Russian
-        },
+// Blog Id = 3 Translations
+new Translation
+{
+    Id = 22,
+    EntityName = "Blog",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "API Integration and Data Security",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 23,
+    EntityName = "Blog",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "API-Integration und Datensicherheit",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 24,
+    EntityName = "Blog",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Интеграция API и безопасность данных",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 25,
+    EntityName = "Blog",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "API integration facilitates data sharing between different systems, ensuring both functionality and data security. Sensitive data must be protected with encryption and secure APIs to prevent data leaks and performance issues.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 26,
+    EntityName = "Blog",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Die API-Integration ermöglicht den Datenaustausch zwischen verschiedenen Systemen und gewährleistet sowohl Funktionalität als auch Datensicherheit. Sensible Daten müssen mit Verschlüsselung und sicheren APIs geschützt werden, um Datenlecks und Leistungsprobleme zu vermeiden.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 27,
+    EntityName = "Blog",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Интеграция API облегчает обмен данными между различными системами, обеспечивая как функциональность, так и безопасность данных. Конфиденциальные данные должны защищаться с помощью шифрования и безопасных API, чтобы предотвратить утечки данных и проблемы с производительностью.",
+    LanguageId = 4 // Russian
+},
 
-        // Blog Id = 4 Translations
-        new Translation
-        {
-            Id = 28,
-            EntityName = "Blog",
-            EntityId = 4,
-            Key = "DefaultTitle",
-            Value = "Benefits of ERP Systems for Businesses",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 29,
-            EntityName = "Blog",
-            EntityId = 4,
-            Key = "DefaultTitle",
-            Value = "Vorteile von ERP-Systemen für Unternehmen",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 30,
-            EntityName = "Blog",
-            EntityId = 4,
-            Key = "DefaultTitle",
-            Value = "Преимущества ERP-систем для бизнеса",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 31,
-            EntityName = "Blog",
-            EntityId = 4,
-            Key = "DefaultContent",
-            Value = "ERP systems allow businesses to manage their operations more efficiently. These systems integrate various departments such as finance, human resources, and supply chain into one platform...",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 32,
-            EntityName = "Blog",
-            EntityId = 4,
-            Key = "DefaultContent",
-            Value = "ERP-Systeme ermöglichen es Unternehmen, ihre Abläufe effizienter zu verwalten. Diese Systeme integrieren verschiedene Abteilungen wie Finanzen, Personalwesen und Lieferkette in eine Plattform...",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 33,
-            EntityName = "Blog",
-            EntityId = 4,
-            Key = "DefaultContent",
-            Value = "ERP-системы позволяют компаниям более эффективно управлять своими операциями. Эти системы интегрируют различные отделы, такие как финансы, кадры и цепочка поставок, в одну платформу...",
-            LanguageId = 4 // Russian
-        },
+// Blog Id = 4 Translations
+new Translation
+{
+    Id = 28,
+    EntityName = "Blog",
+    EntityId = 4,
+    Key = "DefaultTitle",
+    Value = "Benefits of ERP Systems for Businesses",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 29,
+    EntityName = "Blog",
+    EntityId = 4,
+    Key = "DefaultTitle",
+    Value = "Vorteile von ERP-Systemen für Unternehmen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 30,
+    EntityName = "Blog",
+    EntityId = 4,
+    Key = "DefaultTitle",
+    Value = "Преимущества ERP-систем для бизнеса",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 31,
+    EntityName = "Blog",
+    EntityId = 4,
+    Key = "DefaultContent",
+    Value = "ERP systems allow businesses to manage their operations more efficiently. By integrating departments like finance, human resources, and supply chain, businesses can centralize their data management.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 32,
+    EntityName = "Blog",
+    EntityId = 4,
+    Key = "DefaultContent",
+    Value = "ERP-Systeme ermöglichen es Unternehmen, ihre Abläufe effizienter zu verwalten. Durch die Integration von Abteilungen wie Finanzen, Personalwesen und Lieferkette können Unternehmen ihre Datenverwaltung zentralisieren.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 33,
+    EntityName = "Blog",
+    EntityId = 4,
+    Key = "DefaultContent",
+    Value = "ERP-системы позволяют компаниям более эффективно управлять своими операциями. Интеграция таких отделов, как финансы, кадры и цепочка поставок, позволяет компаниям централизовать управление данными.",
+    LanguageId = 4 // Russian
+},
 
-        // Blog Id = 5 Translations
-        new Translation
-        {
-            Id = 34,
-            EntityName = "Blog",
-            EntityId = 5,
-            Key = "DefaultTitle",
-            Value = "Leading Technologies in Game Development",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 35,
-            EntityName = "Blog",
-            EntityId = 5,
-            Key = "DefaultTitle",
-            Value = "Führende Technologien in der Spieleentwicklung",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 36,
-            EntityName = "Blog",
-            EntityId = 5,
-            Key = "DefaultTitle",
-            Value = "Передовые технологии в разработке игр",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 37,
-            EntityName = "Blog",
-            EntityId = 5,
-            Key = "DefaultContent",
-            Value = "Technologies used in the game development world are rapidly evolving, presenting new opportunities. Unity and Unreal Engine game engines provide developers with superior performance...",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 38,
-            EntityName = "Blog",
-            EntityId = 5,
-            Key = "DefaultContent",
-            Value = "Die in der Spieleentwicklungswelt verwendeten Technologien entwickeln sich rasant weiter und bieten neue Möglichkeiten. Unity- und Unreal Engine-Spiel-Engines bieten Entwicklern überlegene Leistung...",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 39,
-            EntityName = "Blog",
-            EntityId = 5,
-            Key = "DefaultContent",
-            Value = "Технологии, используемые в мире разработки игр, быстро развиваются, представляя новые возможности. Игровые движки Unity и Unreal Engine обеспечивают разработчикам высокую производительность...",
-            LanguageId = 4 // Russian
-        },
+// Blog Id = 5 Translations
+new Translation
+{
+    Id = 34,
+    EntityName = "Blog",
+    EntityId = 5,
+    Key = "DefaultTitle",
+    Value = "Leading Technologies in Game Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 35,
+    EntityName = "Blog",
+    EntityId = 5,
+    Key = "DefaultTitle",
+    Value = "Führende Technologien in der Spieleentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 36,
+    EntityName = "Blog",
+    EntityId = 5,
+    Key = "DefaultTitle",
+    Value = "Передовые технологии в разработке игр",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 37,
+    EntityName = "Blog",
+    EntityId = 5,
+    Key = "DefaultContent",
+    Value = "Game development technologies are advancing rapidly, providing new opportunities. Engines like Unity and Unreal Engine offer high performance and visuals.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 38,
+    EntityName = "Blog",
+    EntityId = 5,
+    Key = "DefaultContent",
+    Value = "Die Technologien in der Spieleentwicklung schreiten schnell voran und bieten neue Möglichkeiten. Engines wie Unity und Unreal Engine bieten hohe Leistung und visuelle Qualität.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 39,
+    EntityName = "Blog",
+    EntityId = 5,
+    Key = "DefaultContent",
+    Value = "Технологии разработки игр быстро развиваются, предоставляя новые возможности. Движки, такие как Unity и Unreal Engine, предлагают высокую производительность и визуальные эффекты.",
+    LanguageId = 4 // Russian
+},
 
-        // Blog Id = 6 Translations
-        new Translation
-        {
-            Id = 40,
-            EntityName = "Blog",
-            EntityId = 6,
-            Key = "DefaultTitle",
-            Value = "Web Development Trend: Progressive Web Apps",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 41,
-            EntityName = "Blog",
-            EntityId = 6,
-            Key = "DefaultTitle",
-            Value = "Web-Entwicklungstrend: Progressive Web Apps",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 42,
-            EntityName = "Blog",
-            EntityId = 6,
-            Key = "DefaultTitle",
-            Value = "Тренд веб-разработки: Прогрессивные веб-приложения",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 43,
-            EntityName = "Blog",
-            EntityId = 6,
-            Key = "DefaultContent",
-            Value = "Progressive Web Apps (PWA) are a type of web application that enhances the user experience. PWAs work like native apps on mobile devices, offering fast loading times, offline access...",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 44,
-            EntityName = "Blog",
-            EntityId = 6,
-            Key = "DefaultContent",
-            Value = "Progressive Web Apps (PWA) sind eine Art von Webanwendung, die das Benutzererlebnis verbessert. PWAs funktionieren wie native Apps auf mobilen Geräten und bieten schnelle Ladezeiten...",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 45,
-            EntityName = "Blog",
-            EntityId = 6,
-            Key = "DefaultContent",
-            Value = "Прогрессивные веб-приложения (PWA) - это тип веб-приложений, улучшающих пользовательский опыт. PWA работают как родные приложения на мобильных устройствах, обеспечивая быстрое время загрузки...",
-            LanguageId = 4 // Russian
-        },
+// Blog Id = 6 Translations
+new Translation
+{
+    Id = 40,
+    EntityName = "Blog",
+    EntityId = 6,
+    Key = "DefaultTitle",
+    Value = "Web Development Trend: Progressive Web Apps",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 41,
+    EntityName = "Blog",
+    EntityId = 6,
+    Key = "DefaultTitle",
+    Value = "Web-Entwicklungstrend: Progressive Web Apps",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 42,
+    EntityName = "Blog",
+    EntityId = 6,
+    Key = "DefaultTitle",
+    Value = "Тренд веб-разработки: Прогрессивные веб-приложения",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 43,
+    EntityName = "Blog",
+    EntityId = 6,
+    Key = "DefaultContent",
+    Value = "Progressive Web Apps (PWA) are web applications that enhance user experience with fast load times, offline access, and push notifications.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 44,
+    EntityName = "Blog",
+    EntityId = 6,
+    Key = "DefaultContent",
+    Value = "Progressive Web Apps (PWA) sind Webanwendungen, die das Benutzererlebnis mit schnellen Ladezeiten, Offline-Zugang und Push-Benachrichtigungen verbessern.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 45,
+    EntityName = "Blog",
+    EntityId = 6,
+    Key = "DefaultContent",
+    Value = "Прогрессивные веб-приложения (PWA) - это веб-приложения, которые улучшают пользовательский опыт благодаря быстрой загрузке, офлайн-доступу и push-уведомлениям.",
+    LanguageId = 4 // Russian
+},
         new Translation
         {
             Id = 46,
@@ -726,7 +726,7 @@ new Translation
     EntityName = "FAQ",
     EntityId = 3,
     Key = "Answer",
-    Value = "You can reach us by email (info@techliberty.co) or phone (+90 (543) 233 33 32). You can also contact us through our social media accounts.",
+    Value = "You can reach us by email (info@techliberty.co) or phone (+90 (543) 233 33 32). You can also c us through our social media accounts.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1139,502 +1139,503 @@ new Translation
     Value = "Мы обеспечиваем безопасность данных с помощью протоколов безопасности и передовых методов. Мы принимаем такие меры, как шифрование данных, безопасные API и контроль доступа.",
     LanguageId = 4 // Russian
 },
-        // History Id = 1 Translations
-        new Translation
-        {
-            Id = 121,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Our Company History",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 122,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Die Geschichte unseres Unternehmens",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 123,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "История нашей компании",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 124,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Here you can find details about the growth of TechLiberty, our vision, and projects since our founding.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 125,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Hier finden Sie Details über das Wachstum von TechLiberty, unsere Vision und Projekte seit unserer Gründung.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 126,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Здесь вы найдете подробности о росте TechLiberty, нашем видении и проектах с момента основания.",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 127,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "YearDescription",
-            Value = "TechLiberty Software Solutions was founded on October 29, 2023, with the aim of addressing shortcomings in ERP solutions in the private sector. Our founder set out with the goal of developing next-generation software solutions to increase the efficiency of industry companies and contribute to their digital transformation.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 128,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "YearDescription",
-            Value = "TechLiberty Software Solutions wurde am 29. Oktober 2023 mit dem Ziel gegründet, die Mängel der ERP-Lösungen im privaten Sektor zu beheben. Unser Gründer verfolgte das Ziel, die Effizienz der Unternehmen in der Branche zu steigern und deren digitale Transformation durch die Entwicklung von Softwarelösungen der nächsten Generation zu unterstützen.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 129,
-            EntityName = "History",
-            EntityId = 1,
-            Key = "YearDescription",
-            Value = "TechLiberty Software Solutions была основана 29 октября 2023 года с целью устранения недостатков ERP-решений в частном секторе. Наш основатель стремился повысить эффективность компаний отрасли и способствовать их цифровой трансформации, разрабатывая программные решения нового поколения.",
-            LanguageId = 4 // Russian
-        },
+// History Id = 1 Translations
+new Translation
+{
+    Id = 121,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Our Company History",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 122,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Die Geschichte unseres Unternehmens",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 123,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "История нашей компании",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 124,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Discover TechLiberty's growth, vision, and key projects from our inception to now.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 125,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Entdecken Sie TechLibertys Wachstum, Vision und wichtige Projekte von Anfang an bis heute.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 126,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Узнайте о росте, видении и ключевых проектах компании TechLiberty с момента основания.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 127,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "YearDescription",
+    Value = "TechLiberty Software Solutions was founded on October 29, 2023, to address ERP shortcomings in the private sector, aiming for digital transformation.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 128,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "YearDescription",
+    Value = "TechLiberty Software Solutions wurde am 29. Oktober 2023 gegründet, um ERP-Lücken im privaten Sektor zu schließen und die digitale Transformation zu fördern.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 129,
+    EntityName = "History",
+    EntityId = 1,
+    Key = "YearDescription",
+    Value = "TechLiberty Software Solutions основана 29 октября 2023 года для устранения недостатков ERP в частном секторе, нацеленного на цифровую трансформацию.",
+    LanguageId = 4 // Russian
+},
 
-        // History Id = 2 Translations
-        new Translation
-        {
-            Id = 130,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Our Company History",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 131,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Die Geschichte unseres Unternehmens",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 132,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "История нашей компании",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 133,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Here you can find details about the growth of TechLiberty, our vision, and projects since our founding.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 134,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Hier finden Sie Details über das Wachstum von TechLiberty, unsere Vision und Projekte seit unserer Gründung.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 135,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Здесь вы найдете подробности о росте TechLiberty, нашем видении и проектах с момента основания.",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 136,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "YearDescription",
-            Value = "TechLiberty announced the 'Gof Games' project, inspired by the founder's beloved dog, Gofret, aiming to offer both fun and emotional experiences. We also accelerated our work on developing flexible and powerful ERP solutions.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 137,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "YearDescription",
-            Value = "TechLiberty kündigte das Projekt 'Gof Games' an, inspiriert vom geliebten Hund des Gründers, Gofret, und bot den Spielern sowohl Spaß als auch emotionale Erlebnisse. Wir haben auch unsere Arbeit an der Entwicklung flexibler und leistungsstarker ERP-Lösungen beschleunigt.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 138,
-            EntityName = "History",
-            EntityId = 2,
-            Key = "YearDescription",
-            Value = "TechLiberty анонсировала проект 'Gof Games', вдохновленный любимой собакой основателя Гофрет, с целью предложить игрокам как веселые, так и эмоциональные переживания. Мы также ускорили работу над созданием гибких и мощных ERP-решений.",
-            LanguageId = 4 // Russian
-        },
+// History Id = 2 Translations
+new Translation
+{
+    Id = 130,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Expanding Our Vision",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 131,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Unsere Vision erweitern",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 132,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Расширение нашего видения",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 133,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Explore the journey of TechLiberty's growth, vision, and achievements since the foundation.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 134,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Erfahren Sie mehr über TechLibertys Wachstum, Vision und Erfolge seit der Gründung.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 135,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Узнайте о пути роста, видении и достижениях TechLiberty с момента основания.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 136,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "YearDescription",
+    Value = "In 2024, 'Gof Games' was launched, inspired by the founder's dog Gofret, aiming for fun and emotion in gaming.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 137,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "YearDescription",
+    Value = "2024 wurde 'Gof Games' inspiriert vom Hund des Gründers Gofret ins Leben gerufen und strebt nach Spaß und Emotion im Gaming.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 138,
+    EntityName = "History",
+    EntityId = 2,
+    Key = "YearDescription",
+    Value = "В 2024 году был запущен 'Gof Games', вдохновленный собакой основателя Гофрет, для веселья и эмоций в играх.",
+    LanguageId = 4 // Russian
+},
 
-        // History Id = 3 Translations
-        new Translation
-        {
-            Id = 139,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "Our Company History",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 140,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "Die Geschichte unseres Unternehmens",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 141,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "История нашей компании",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 142,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Here you can find details about the growth of TechLiberty, our vision, and projects since our founding.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 143,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Hier finden Sie Details über das Wachstum von TechLiberty, unsere Vision und Projekte seit unserer Gründung.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 144,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Здесь вы найдете подробности о росте TechLiberty, нашем видении и проектах с момента основания.",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 145,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "YearDescription",
-            Value = "At TechLiberty, we focus on placing technology and innovation at the center of our business. We offer innovative solutions to support the digital transformation of companies and optimize their processes.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 146,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "YearDescription",
-            Value = "Bei TechLiberty legen wir den Schwerpunkt auf Technologie und Innovation im Zentrum unseres Geschäfts. Wir bieten innovative Lösungen zur Unterstützung der digitalen Transformation von Unternehmen und zur Optimierung ihrer Prozesse.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 147,
-            EntityName = "History",
-            EntityId = 3,
-            Key = "YearDescription",
-            Value = "В компании TechLiberty мы делаем акцент на технологии и инновации в центре нашего бизнеса. Мы предлагаем инновационные решения для поддержки цифровой трансформации компаний и оптимизации их процессов.",
-            LanguageId = 4 // Russian
-        },
-        // Service Id = 1 Translations
-        new Translation
-        {
-            Id = 148,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Web Development",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 149,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Webentwicklung",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 150,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "DefaultTitle",
-            Value = "Веб-разработка",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 151,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "We offer professional web development services to help you plan, create, manage, and market your web project.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 152,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Wir bieten professionelle Webentwicklungsdienste an, um Ihnen bei der Planung, Erstellung, Verwaltung und Vermarktung Ihres Webprojekts zu helfen.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 153,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "DefaultContent",
-            Value = "Мы предлагаем профессиональные услуги веб-разработки, чтобы помочь вам спланировать, создать, управлять и продвигать ваш веб-проект.",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 154,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "ServiceSummary",
-            Value = "We offer professional web development services for web projects.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 155,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "ServiceSummary",
-            Value = "Wir bieten professionelle Webentwicklungsdienste für Webprojekte an.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 156,
-            EntityName = "Service",
-            EntityId = 1,
-            Key = "ServiceSummary",
-            Value = "Мы предлагаем профессиональные услуги веб-разработки для веб-проектов.",
-            LanguageId = 4 // Russian
-        },
+// History Id = 3 Translations
+new Translation
+{
+    Id = 139,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Ongoing Innovation",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 140,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Laufende Innovation",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 141,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Непрерывные инновации",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 142,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Explore TechLiberty's journey in offering innovative solutions for digital transformation.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 143,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Erkunden Sie TechLibertys Reise bei der Bereitstellung innovativer Lösungen für die digitale Transformation.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 144,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Исследуйте путь TechLiberty в предоставлении инновационных решений для цифровой трансформации.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 145,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "YearDescription",
+    Value = "TechLiberty focuses on innovation and technology at its core, aiming to support companies’ digital transformations.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 146,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "YearDescription",
+    Value = "TechLiberty konzentriert sich auf Innovation und Technologie und unterstützt die digitale Transformation von Unternehmen.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 147,
+    EntityName = "History",
+    EntityId = 3,
+    Key = "YearDescription",
+    Value = "TechLiberty сосредотачивается на инновациях и технологиях, поддерживая цифровую трансформацию компаний.",
+    LanguageId = 4 // Russian
+},
 
-        // Service Id = 2 Translations
-        new Translation
-        {
-            Id = 157,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Mobile App Development",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 158,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Mobile App Entwicklung",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 159,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "DefaultTitle",
-            Value = "Разработка мобильных приложений",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 160,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "We offer comprehensive services to support mobile app development for iOS and Android platforms.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 161,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Wir bieten umfassende Dienstleistungen zur Unterstützung der mobilen App-Entwicklung für iOS- und Android-Plattformen an.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 162,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "DefaultContent",
-            Value = "Мы предлагаем комплексные услуги по поддержке разработки мобильных приложений для платформ iOS и Android.",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 163,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "ServiceSummary",
-            Value = "We provide user-friendly mobile app development services.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 164,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "ServiceSummary",
-            Value = "Wir bieten benutzerfreundliche mobile App-Entwicklungsdienste an.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 165,
-            EntityName = "Service",
-            EntityId = 2,
-            Key = "ServiceSummary",
-            Value = "Мы предоставляем удобные услуги по разработке мобильных приложений.",
-            LanguageId = 4 // Russian
-        },
+// Service Id = 1 Translations
+new Translation
+{
+    Id = 148,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Web Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 149,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Webentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 150,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "DefaultTitle",
+    Value = "Веб-разработка",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 151,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Web development is a strategic process to strengthen your digital presence. We analyze your needs and goals to offer user-friendly, modern, and scalable web solutions. Our professional team supports you at every stage, from design and user experience to performance, prioritizing code quality, SEO compliance, and security to help your business succeed online.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 152,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Webentwicklung ist ein strategischer Prozess zur Stärkung Ihrer digitalen Präsenz. Wir analysieren Ihre Bedürfnisse und Ziele, um benutzerfreundliche, moderne und skalierbare Weblösungen anzubieten. Unser professionelles Team unterstützt Sie in jeder Phase, von Design und Benutzererfahrung bis zur Leistung, wobei wir Codequalität, SEO-Konformität und Sicherheit priorisieren, um Ihrem Unternehmen online zum Erfolg zu verhelfen.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 153,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "DefaultContent",
+    Value = "Веб-разработка - это стратегический процесс, направленный на укрепление вашего цифрового присутствия. Мы анализируем ваши потребности и цели, чтобы предложить удобные, современные и масштабируемые веб-решения. Наша профессиональная команда поддерживает вас на каждом этапе, от проектирования и пользовательского опыта до производительности, уделяя первоочередное внимание качеству кода, соответствию SEO и безопасности, чтобы помочь вашему бизнесу добиться успеха в Интернете.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 154,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "ServiceSummary",
+    Value = "We offer professional web development to deliver modern, user-friendly, and scalable websites.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 155,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "ServiceSummary",
+    Value = "Wir bieten professionelle Webentwicklung, um moderne, benutzerfreundliche und skalierbare Websites bereitzustellen.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 156,
+    EntityName = "Service",
+    EntityId = 1,
+    Key = "ServiceSummary",
+    Value = "Мы предлагаем профессиональную веб-разработку для создания современных, удобных и масштабируемых веб-сайтов.",
+    LanguageId = 4 // Russian
+},
 
-        // Service Id = 3 Translations
-        new Translation
-        {
-            Id = 166,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "Game Development",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 167,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "Spieleentwicklung",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 168,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "DefaultTitle",
-            Value = "Разработка игр",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 169,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "We provide game development services using advanced technologies to help you create fun and interactive games.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 170,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Wir bieten Spieleentwicklungsdienste mit fortschrittlichen Technologien an, um Ihnen bei der Erstellung von lustigen und interaktiven Spielen zu helfen.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 171,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "DefaultContent",
-            Value = "Мы предоставляем услуги по разработке игр с использованием передовых технологий, чтобы помочь вам создать веселые и интерактивные игры.",
-            LanguageId = 4 // Russian
-        },
-        new Translation
-        {
-            Id = 172,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "ServiceSummary",
-            Value = "We offer interactive game development services.",
-            LanguageId = 2 // English
-        },
-        new Translation
-        {
-            Id = 173,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "ServiceSummary",
-            Value = "Wir bieten interaktive Spieleentwicklungsdienste an.",
-            LanguageId = 3 // German
-        },
-        new Translation
-        {
-            Id = 174,
-            EntityName = "Service",
-            EntityId = 3,
-            Key = "ServiceSummary",
-            Value = "Мы предлагаем услуги по разработке интерактивных игр.",
-            LanguageId = 4 // Russian
-        },
+// Service Id = 2 Translations
+new Translation
+{
+    Id = 157,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Mobile App Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 158,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Mobile App Entwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 159,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "DefaultTitle",
+    Value = "Разработка мобильных приложений",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 160,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Mobile app development has become central to user experience today. We develop high-performance, user-friendly applications on iOS and Android. By analyzing user habits, we deliver designs that enhance engagement and capture attention. Our applications focus on security, speed, and are built for easy updates and scalability, offering a long-term solution for growth in the digital world.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 161,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Die Entwicklung mobiler Apps ist heute zentral für das Benutzererlebnis. Wir entwickeln leistungsstarke, benutzerfreundliche Anwendungen für iOS und Android. Durch die Analyse der Benutzergewohnheiten bieten wir Designs, die das Engagement steigern und die Aufmerksamkeit fesseln. Unsere Anwendungen sind sicher, schnell und bieten einfache Updates und Skalierbarkeit als langfristige Lösung für das Wachstum in der digitalen Welt.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 162,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "DefaultContent",
+    Value = "Разработка мобильных приложений стала центральным элементом пользовательского опыта сегодня. Мы разрабатываем высокопроизводительные, удобные приложения для iOS и Android. Анализируя привычки пользователей, мы создаем дизайны, которые повышают вовлеченность и привлекают внимание. Наши приложения сосредоточены на безопасности, скорости и имеют легкую масштабируемость и обновления, предлагая долгосрочное решение для роста в цифровом мире.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 163,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "ServiceSummary",
+    Value = "User-centered mobile app development for iOS and Android.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 164,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "ServiceSummary",
+    Value = "Benutzerzentrierte mobile App-Entwicklung für iOS und Android.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 165,
+    EntityName = "Service",
+    EntityId = 2,
+    Key = "ServiceSummary",
+    Value = "Разработка мобильных приложений для iOS и Android, ориентированная на пользователя.",
+    LanguageId = 4 // Russian
+},
+
+// Service Id = 3 Translations
+new Translation
+{
+    Id = 166,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Game Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 167,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Spieleentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 168,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "DefaultTitle",
+    Value = "Разработка игр",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 169,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Game development is both a technical and creative process. We leverage advanced technologies to create fun, immersive, and high-performance games. Working with powerful tools like Unity and Unreal Engine, we develop games that meet your target audience's expectations with quality graphics and smooth gameplay. We focus on creating games that captivate players, foster emotional connections, and encourage repeated play.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 170,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Die Spieleentwicklung ist sowohl ein technischer als auch ein kreativer Prozess. Wir nutzen fortschrittliche Technologien, um unterhaltsame, immersive und leistungsstarke Spiele zu entwickeln. Mit leistungsstarken Tools wie Unity und Unreal Engine erstellen wir Spiele, die den Erwartungen Ihrer Zielgruppe mit hochwertiger Grafik und reibungslosem Gameplay gerecht werden. Wir konzentrieren uns darauf, Spiele zu entwickeln, die Spieler fesseln, emotionale Verbindungen fördern und zum erneuten Spielen anregen.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 171,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "DefaultContent",
+    Value = "Разработка игр - это одновременно технический и творческий процесс. Мы используем передовые технологии для создания увлекательных, захватывающих и высокопроизводительных игр. Работая с такими мощными инструментами, как Unity и Unreal Engine, мы разрабатываем игры, которые соответствуют ожиданиям вашей целевой аудитории благодаря качественной графике и плавному игровому процессу. Мы сосредоточены на создании игр, которые привлекают игроков, способствуют эмоциональной связи и побуждают к повторной игре.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 172,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "ServiceSummary",
+    Value = "Engaging game development using advanced technologies.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 173,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "ServiceSummary",
+    Value = "Fesselnde Spieleentwicklung mit fortschrittlichen Technologien.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 174,
+    EntityName = "Service",
+    EntityId = 3,
+    Key = "ServiceSummary",
+    Value = "Увлекательная разработка игр с использованием передовых технологий.",
+    LanguageId = 4 // Russian
+},
 // Service Id = 4 Translations
 new Translation
 {
@@ -1669,7 +1670,7 @@ new Translation
     EntityName = "Service",
     EntityId = 4,
     Key = "DefaultContent",
-    Value = "We provide API development and integration services to optimize data flow between different systems.",
+    Value = "API integration allows different systems to communicate securely and efficiently. We offer API development and integration services to streamline data flow and enhance process efficiency in your business, prioritizing security for sensitive data and building a stable infrastructure.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1678,7 +1679,7 @@ new Translation
     EntityName = "Service",
     EntityId = 4,
     Key = "DefaultContent",
-    Value = "Wir bieten API-Entwicklungs- und Integrationsdienste an, um den Datenfluss zwischen verschiedenen Systemen zu optimieren.",
+    Value = "Die API-Integration ermöglicht es verschiedenen Systemen, sicher und effizient zu kommunizieren. Wir bieten API-Entwicklungs- und Integrationsdienste zur Optimierung des Datenflusses und zur Verbesserung der Prozesseffizienz in Ihrem Unternehmen an, wobei die Sicherheit sensibler Daten und eine stabile Infrastruktur im Vordergrund stehen.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1687,7 +1688,7 @@ new Translation
     EntityName = "Service",
     EntityId = 4,
     Key = "DefaultContent",
-    Value = "Мы предоставляем услуги по разработке и интеграции API для оптимизации потоков данных между различными системами.",
+    Value = "Интеграция API позволяет различным системам безопасно и эффективно взаимодействовать. Мы предлагаем услуги по разработке и интеграции API для оптимизации потоков данных и повышения эффективности процессов в вашем бизнесе, уделяя приоритетное внимание безопасности конфиденциальных данных и созданию стабильной инфраструктуры.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -1696,7 +1697,7 @@ new Translation
     EntityName = "Service",
     EntityId = 4,
     Key = "ServiceSummary",
-    Value = "Data flow optimization with API integration services.",
+    Value = "API integration for secure and optimized data flow.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1705,7 +1706,7 @@ new Translation
     EntityName = "Service",
     EntityId = 4,
     Key = "ServiceSummary",
-    Value = "Datenflussoptimierung mit API-Integrationsdiensten.",
+    Value = "API-Integration für sicheren und optimierten Datenfluss.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1714,7 +1715,7 @@ new Translation
     EntityName = "Service",
     EntityId = 4,
     Key = "ServiceSummary",
-    Value = "Оптимизация потоков данных с помощью услуг по интеграции API.",
+    Value = "Интеграция API для безопасного и оптимизированного потока данных.",
     LanguageId = 4 // Russian
 },
 
@@ -1752,7 +1753,7 @@ new Translation
     EntityName = "Service",
     EntityId = 5,
     Key = "DefaultContent",
-    Value = "We offer comprehensive CRM solutions to improve customer relationships and manage processes.",
+    Value = "CRM is essential for building strong, lasting relationships with your customers. Our CRM solutions enhance customer satisfaction and optimize your sales, marketing, and service processes. We offer a system that consolidates all customer data in one platform, helping you to grow your business and reach your goals faster.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1761,7 +1762,7 @@ new Translation
     EntityName = "Service",
     EntityId = 5,
     Key = "DefaultContent",
-    Value = "Wir bieten umfassende CRM-Lösungen zur Verbesserung der Kundenbeziehungen und zur Prozessverwaltung.",
+    Value = "CRM ist entscheidend für den Aufbau starker, dauerhafter Beziehungen zu Ihren Kunden. Unsere CRM-Lösungen steigern die Kundenzufriedenheit und optimieren Ihre Verkaufs-, Marketing- und Serviceprozesse. Wir bieten ein System, das alle Kundendaten auf einer Plattform konsolidiert und Ihnen hilft, Ihr Geschäft auszubauen und Ihre Ziele schneller zu erreichen.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1770,7 +1771,7 @@ new Translation
     EntityName = "Service",
     EntityId = 5,
     Key = "DefaultContent",
-    Value = "Мы предлагаем комплексные CRM-решения для улучшения отношений с клиентами и управления процессами.",
+    Value = "CRM играет ключевую роль в построении прочных и долгосрочных отношений с клиентами. Наши CRM-решения повышают удовлетворенность клиентов и оптимизируют ваши процессы продаж, маркетинга и обслуживания. Мы предлагаем систему, которая объединяет все данные о клиентах на одной платформе, помогая вам развивать бизнес и быстрее достигать целей.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -1788,7 +1789,7 @@ new Translation
     EntityName = "Service",
     EntityId = 5,
     Key = "ServiceSummary",
-    Value = "Umfassende CRM-Lösungen zur Verwaltung von Kundenbeziehungen.",
+    Value = "Umfassende CRM-Lösungen für das Kundenmanagement.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1835,7 +1836,7 @@ new Translation
     EntityName = "Service",
     EntityId = 6,
     Key = "DefaultContent",
-    Value = "We offer advanced ERP solutions to manage business processes and increase efficiency.",
+    Value = "Our ERP solutions help to digitize and streamline your business processes for greater efficiency. By integrating finance, HR, and supply chain functions in a single system, we enhance your operational workflow, reduce costs, and speed up decision-making. ERP is an ideal solution for sustainable growth.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1844,7 +1845,7 @@ new Translation
     EntityName = "Service",
     EntityId = 6,
     Key = "DefaultContent",
-    Value = "Wir bieten fortschrittliche ERP-Lösungen zur Verwaltung von Geschäftsprozessen und zur Steigerung der Effizienz.",
+    Value = "Unsere ERP-Lösungen helfen, Ihre Geschäftsprozesse für mehr Effizienz zu digitalisieren und zu optimieren. Durch die Integration von Finanz-, HR- und Lieferkettenfunktionen in einem einzigen System verbessern wir Ihren operativen Workflow, senken die Kosten und beschleunigen die Entscheidungsfindung. ERP ist eine ideale Lösung für nachhaltiges Wachstum.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1853,7 +1854,7 @@ new Translation
     EntityName = "Service",
     EntityId = 6,
     Key = "DefaultContent",
-    Value = "Мы предлагаем современные ERP-решения для управления бизнес-процессами и повышения эффективности.",
+    Value = "Наши ERP-решения помогают оцифровать и оптимизировать ваши бизнес-процессы для повышения эффективности. Интегрируя финансы, HR и цепочку поставок в одну систему, мы улучшаем рабочий процесс, сокращаем расходы и ускоряем принятие решений. ERP - это идеальное решение для устойчивого роста.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -1862,7 +1863,7 @@ new Translation
     EntityName = "Service",
     EntityId = 6,
     Key = "ServiceSummary",
-    Value = "Advanced ERP solutions for managing business processes.",
+    Value = "Efficient ERP solutions for sustainable business growth.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1871,7 +1872,7 @@ new Translation
     EntityName = "Service",
     EntityId = 6,
     Key = "ServiceSummary",
-    Value = "Fortschrittliche ERP-Lösungen zur Verwaltung von Geschäftsprozessen.",
+    Value = "Effiziente ERP-Lösungen für nachhaltiges Unternehmenswachstum.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1880,10 +1881,9 @@ new Translation
     EntityName = "Service",
     EntityId = 6,
     Key = "ServiceSummary",
-    Value = "Современные ERP-решения для управления бизнес-процессами.",
+    Value = "Эффективные ERP-решения для устойчивого роста бизнеса.",
     LanguageId = 4 // Russian
 },
-
 // Service Id = 7 Translations
 new Translation
 {
@@ -1918,7 +1918,7 @@ new Translation
     EntityName = "Service",
     EntityId = 7,
     Key = "DefaultContent",
-    Value = "Manage your data efficiently with secure and scalable database management systems.",
+    Value = "Data security and accessibility are critical for every business. Our database management systems help you efficiently manage your data with secure, scalable solutions, ensuring performance optimization and continuous data availability.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1927,7 +1927,7 @@ new Translation
     EntityName = "Service",
     EntityId = 7,
     Key = "DefaultContent",
-    Value = "Verwalten Sie Ihre Daten effizient mit sicheren und skalierbaren Datenbankverwaltungssystemen.",
+    Value = "Datensicherheit und Zugänglichkeit sind für jedes Unternehmen von entscheidender Bedeutung. Unsere Datenbankverwaltungssysteme helfen Ihnen, Ihre Daten effizient mit sicheren, skalierbaren Lösungen zu verwalten, die Leistungsoptimierung und kontinuierliche Datenverfügbarkeit gewährleisten.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1936,7 +1936,7 @@ new Translation
     EntityName = "Service",
     EntityId = 7,
     Key = "DefaultContent",
-    Value = "Управляйте своими данными эффективно с помощью безопасных и масштабируемых систем управления базами данных.",
+    Value = "Безопасность и доступность данных критически важны для любого бизнеса. Наши системы управления базами данных помогают эффективно управлять вашими данными с помощью безопасных, масштабируемых решений, обеспечивая оптимизацию производительности и непрерывную доступность данных.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -1945,7 +1945,7 @@ new Translation
     EntityName = "Service",
     EntityId = 7,
     Key = "ServiceSummary",
-    Value = "Database solutions for effective data management.",
+    Value = "Secure and scalable database solutions for effective data management.",
     LanguageId = 2 // English
 },
 new Translation
@@ -1954,7 +1954,7 @@ new Translation
     EntityName = "Service",
     EntityId = 7,
     Key = "ServiceSummary",
-    Value = "Datenbanklösungen für eine effektive Datenverwaltung.",
+    Value = "Sichere und skalierbare Datenbanklösungen für ein effektives Datenmanagement.",
     LanguageId = 3 // German
 },
 new Translation
@@ -1963,9 +1963,10 @@ new Translation
     EntityName = "Service",
     EntityId = 7,
     Key = "ServiceSummary",
-    Value = "Решения для эффективного управления данными.",
+    Value = "Безопасные и масштабируемые решения для эффективного управления данными.",
     LanguageId = 4 // Russian
 },
+
 // Service Id = 8 Translations
 new Translation
 {
@@ -2000,7 +2001,7 @@ new Translation
     EntityName = "Service",
     EntityId = 8,
     Key = "DefaultContent",
-    Value = "We analyze your business processes and provide system designs tailored to your needs.",
+    Value = "We conduct a comprehensive analysis to create systems tailored to your business needs. Our solutions prioritize performance, security, and scalability, supporting your digital transformation goals.",
     LanguageId = 2 // English
 },
 new Translation
@@ -2009,7 +2010,7 @@ new Translation
     EntityName = "Service",
     EntityId = 8,
     Key = "DefaultContent",
-    Value = "Wir analysieren Ihre Geschäftsprozesse und bieten maßgeschneiderte Systemdesigns.",
+    Value = "Wir führen eine umfassende Analyse durch, um Systeme zu erstellen, die auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind. Unsere Lösungen priorisieren Leistung, Sicherheit und Skalierbarkeit und unterstützen Ihre digitalen Transformationsziele.",
     LanguageId = 3 // German
 },
 new Translation
@@ -2018,7 +2019,7 @@ new Translation
     EntityName = "Service",
     EntityId = 8,
     Key = "DefaultContent",
-    Value = "Мы анализируем ваши бизнес-процессы и предоставляем системы, адаптированные к вашим потребностям.",
+    Value = "Мы проводим всесторонний анализ для создания систем, адаптированных к потребностям вашего бизнеса. Наши решения уделяют приоритетное внимание производительности, безопасности и масштабируемости, поддерживая цели вашей цифровой трансформации.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -2027,7 +2028,7 @@ new Translation
     EntityName = "Service",
     EntityId = 8,
     Key = "ServiceSummary",
-    Value = "Customized system analysis and design services.",
+    Value = "Customized system analysis and design for digital transformation.",
     LanguageId = 2 // English
 },
 new Translation
@@ -2036,7 +2037,7 @@ new Translation
     EntityName = "Service",
     EntityId = 8,
     Key = "ServiceSummary",
-    Value = "Individuelle Systemanalyse- und Design-Dienstleistungen.",
+    Value = "Individuelle Systemanalyse und -design für die digitale Transformation.",
     LanguageId = 3 // German
 },
 new Translation
@@ -2045,7 +2046,7 @@ new Translation
     EntityName = "Service",
     EntityId = 8,
     Key = "ServiceSummary",
-    Value = "Услуги по анализу и проектированию систем, адаптированные к вашим потребностям.",
+    Value = "Индивидуальный анализ и проектирование систем для цифровой трансформации.",
     LanguageId = 4 // Russian
 },
 
@@ -2083,7 +2084,7 @@ new Translation
     EntityName = "Service",
     EntityId = 9,
     Key = "DefaultContent",
-    Value = "We provide professional project management solutions to help you manage your projects effectively.",
+    Value = "Our project management solutions ensure effective use of resources and on-time delivery within budget, focusing on quality at every stage for successful project completion.",
     LanguageId = 2 // English
 },
 new Translation
@@ -2092,7 +2093,7 @@ new Translation
     EntityName = "Service",
     EntityId = 9,
     Key = "DefaultContent",
-    Value = "Wir bieten professionelle Projektmanagement-Lösungen an, um Ihnen zu helfen, Ihre Projekte effektiv zu verwalten.",
+    Value = "Unsere Projektmanagementlösungen gewährleisten eine effektive Ressourcennutzung und pünktliche Lieferung innerhalb des Budgets, wobei in jeder Phase auf Qualität geachtet wird, um eine erfolgreiche Projektdurchführung sicherzustellen.",
     LanguageId = 3 // German
 },
 new Translation
@@ -2101,7 +2102,7 @@ new Translation
     EntityName = "Service",
     EntityId = 9,
     Key = "DefaultContent",
-    Value = "Мы предоставляем профессиональные решения для эффективного управления проектами.",
+    Value = "Наши решения для управления проектами обеспечивают эффективное использование ресурсов и своевременную доставку в рамках бюджета, уделяя внимание качеству на каждом этапе для успешного завершения проекта.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -2110,7 +2111,7 @@ new Translation
     EntityName = "Service",
     EntityId = 9,
     Key = "ServiceSummary",
-    Value = "Project management solutions for successful project delivery.",
+    Value = "Strategic project management solutions for quality delivery.",
     LanguageId = 2 // English
 },
 new Translation
@@ -2119,7 +2120,7 @@ new Translation
     EntityName = "Service",
     EntityId = 9,
     Key = "ServiceSummary",
-    Value = "Projektmanagementlösungen für eine erfolgreiche Projektabwicklung.",
+    Value = "Strategische Projektmanagementlösungen für hochwertige Lieferung.",
     LanguageId = 3 // German
 },
 new Translation
@@ -2128,7 +2129,7 @@ new Translation
     EntityName = "Service",
     EntityId = 9,
     Key = "ServiceSummary",
-    Value = "Решения для успешного управления проектами.",
+    Value = "Стратегические решения для управления проектами с акцентом на качество.",
     LanguageId = 4 // Russian
 },
 
@@ -2166,7 +2167,7 @@ new Translation
     EntityName = "Service",
     EntityId = 10,
     Key = "DefaultContent",
-    Value = "We provide scalable and reliable cloud solutions for data storage and management.",
+    Value = "We provide secure and scalable cloud solutions for data storage and management, offering flexibility and ease of access from anywhere while ensuring data security.",
     LanguageId = 2 // English
 },
 new Translation
@@ -2175,7 +2176,7 @@ new Translation
     EntityName = "Service",
     EntityId = 10,
     Key = "DefaultContent",
-    Value = "Wir bieten skalierbare und zuverlässige Cloud-Lösungen zur Datenspeicherung und -verwaltung.",
+    Value = "Wir bieten sichere und skalierbare Cloud-Lösungen zur Datenspeicherung und -verwaltung und bieten Flexibilität und einfachen Zugriff von überall, während die Datensicherheit gewährleistet wird.",
     LanguageId = 3 // German
 },
 new Translation
@@ -2184,7 +2185,7 @@ new Translation
     EntityName = "Service",
     EntityId = 10,
     Key = "DefaultContent",
-    Value = "Мы предоставляем масштабируемые и надежные облачные решения для хранения и управления данными.",
+    Value = "Мы предоставляем безопасные и масштабируемые облачные решения для хранения и управления данными, обеспечивая гибкость и доступ из любого места при сохранении безопасности данных.",
     LanguageId = 4 // Russian
 },
 new Translation
@@ -2193,7 +2194,7 @@ new Translation
     EntityName = "Service",
     EntityId = 10,
     Key = "ServiceSummary",
-    Value = "Reliable and scalable cloud solutions for data management.",
+    Value = "Flexible and secure cloud solutions for data management.",
     LanguageId = 2 // English
 },
 new Translation
@@ -2202,7 +2203,7 @@ new Translation
     EntityName = "Service",
     EntityId = 10,
     Key = "ServiceSummary",
-    Value = "Zuverlässige und skalierbare Cloud-Lösungen zur Datenverwaltung.",
+    Value = "Flexible und sichere Cloud-Lösungen für das Datenmanagement.",
     LanguageId = 3 // German
 },
 new Translation
@@ -2211,9 +2212,1484 @@ new Translation
     EntityName = "Service",
     EntityId = 10,
     Key = "ServiceSummary",
-    Value = "Надежные и масштабируемые облачные решения для управления данными.",
+    Value = "Гибкие и безопасные облачные решения для управления данными.",
+    LanguageId = 4 // Russian
+},
+// ServiceCategory Id = 1 Translations
+new Translation
+{
+    Id = 238,
+    EntityName = "ServiceCategory",
+    EntityId = 1,
+    Key = "Name",
+    Value = "Web Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 239,
+    EntityName = "ServiceCategory",
+    EntityId = 1,
+    Key = "Name",
+    Value = "Webentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 240,
+    EntityName = "ServiceCategory",
+    EntityId = 1,
+    Key = "Name",
+    Value = "Веб-разработка",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 2 Translations
+new Translation
+{
+    Id = 241,
+    EntityName = "ServiceCategory",
+    EntityId = 2,
+    Key = "Name",
+    Value = "Mobile Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 242,
+    EntityName = "ServiceCategory",
+    EntityId = 2,
+    Key = "Name",
+    Value = "Mobile Entwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 243,
+    EntityName = "ServiceCategory",
+    EntityId = 2,
+    Key = "Name",
+    Value = "Разработка мобильных приложений",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 3 Translations
+new Translation
+{
+    Id = 244,
+    EntityName = "ServiceCategory",
+    EntityId = 3,
+    Key = "Name",
+    Value = "Game Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 245,
+    EntityName = "ServiceCategory",
+    EntityId = 3,
+    Key = "Name",
+    Value = "Spieleentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 246,
+    EntityName = "ServiceCategory",
+    EntityId = 3,
+    Key = "Name",
+    Value = "Разработка игр",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 4 Translations
+new Translation
+{
+    Id = 247,
+    EntityName = "ServiceCategory",
+    EntityId = 4,
+    Key = "Name",
+    Value = "API Integration",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 248,
+    EntityName = "ServiceCategory",
+    EntityId = 4,
+    Key = "Name",
+    Value = "API-Integration",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 249,
+    EntityName = "ServiceCategory",
+    EntityId = 4,
+    Key = "Name",
+    Value = "Интеграция API",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 5 Translations
+new Translation
+{
+    Id = 250,
+    EntityName = "ServiceCategory",
+    EntityId = 5,
+    Key = "Name",
+    Value = "CRM Solutions",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 251,
+    EntityName = "ServiceCategory",
+    EntityId = 5,
+    Key = "Name",
+    Value = "CRM-Lösungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 252,
+    EntityName = "ServiceCategory",
+    EntityId = 5,
+    Key = "Name",
+    Value = "CRM-решения",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 6 Translations
+new Translation
+{
+    Id = 253,
+    EntityName = "ServiceCategory",
+    EntityId = 6,
+    Key = "Name",
+    Value = "ERP Solutions",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 254,
+    EntityName = "ServiceCategory",
+    EntityId = 6,
+    Key = "Name",
+    Value = "ERP-Lösungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 255,
+    EntityName = "ServiceCategory",
+    EntityId = 6,
+    Key = "Name",
+    Value = "ERP-решения",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 7 Translations
+new Translation
+{
+    Id = 256,
+    EntityName = "ServiceCategory",
+    EntityId = 7,
+    Key = "Name",
+    Value = "Database Management",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 257,
+    EntityName = "ServiceCategory",
+    EntityId = 7,
+    Key = "Name",
+    Value = "Datenbankverwaltung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 258,
+    EntityName = "ServiceCategory",
+    EntityId = 7,
+    Key = "Name",
+    Value = "Управление базами данных",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 8 Translations
+new Translation
+{
+    Id = 259,
+    EntityName = "ServiceCategory",
+    EntityId = 8,
+    Key = "Name",
+    Value = "System Analysis",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 260,
+    EntityName = "ServiceCategory",
+    EntityId = 8,
+    Key = "Name",
+    Value = "Systemanalyse",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 261,
+    EntityName = "ServiceCategory",
+    EntityId = 8,
+    Key = "Name",
+    Value = "Анализ систем",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 9 Translations
+new Translation
+{
+    Id = 262,
+    EntityName = "ServiceCategory",
+    EntityId = 9,
+    Key = "Name",
+    Value = "Project Management",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 263,
+    EntityName = "ServiceCategory",
+    EntityId = 9,
+    Key = "Name",
+    Value = "Projektmanagement",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 264,
+    EntityName = "ServiceCategory",
+    EntityId = 9,
+    Key = "Name",
+    Value = "Управление проектами",
+    LanguageId = 4 // Russian
+},
+
+// ServiceCategory Id = 10 Translations
+new Translation
+{
+    Id = 265,
+    EntityName = "ServiceCategory",
+    EntityId = 10,
+    Key = "Name",
+    Value = "Cloud Solutions",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 266,
+    EntityName = "ServiceCategory",
+    EntityId = 10,
+    Key = "Name",
+    Value = "Cloud-Lösungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 267,
+    EntityName = "ServiceCategory",
+    EntityId = 10,
+    Key = "Name",
+    Value = "Облачные решения",
+    LanguageId = 4 // Russian
+},
+// BlogCategory Id = 1 Translations
+new Translation
+{
+    Id = 268,
+    EntityName = "BlogCategory",
+    EntityId = 1,
+    Key = "Name",
+    Value = "Software",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 269,
+    EntityName = "BlogCategory",
+    EntityId = 1,
+    Key = "Name",
+    Value = "Software",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 270,
+    EntityName = "BlogCategory",
+    EntityId = 1,
+    Key = "Name",
+    Value = "Программное обеспечение",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 2 Translations
+new Translation
+{
+    Id = 271,
+    EntityName = "BlogCategory",
+    EntityId = 2,
+    Key = "Name",
+    Value = "Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 272,
+    EntityName = "BlogCategory",
+    EntityId = 2,
+    Key = "Name",
+    Value = "Entwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 273,
+    EntityName = "BlogCategory",
+    EntityId = 2,
+    Key = "Name",
+    Value = "Разработка",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 3 Translations
+new Translation
+{
+    Id = 274,
+    EntityName = "BlogCategory",
+    EntityId = 3,
+    Key = "Name",
+    Value = "Mobile Application",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 275,
+    EntityName = "BlogCategory",
+    EntityId = 3,
+    Key = "Name",
+    Value = "Mobile Anwendung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 276,
+    EntityName = "BlogCategory",
+    EntityId = 3,
+    Key = "Name",
+    Value = "Мобильное приложение",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 4 Translations
+new Translation
+{
+    Id = 277,
+    EntityName = "BlogCategory",
+    EntityId = 4,
+    Key = "Name",
+    Value = "API",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 278,
+    EntityName = "BlogCategory",
+    EntityId = 4,
+    Key = "Name",
+    Value = "API",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 279,
+    EntityName = "BlogCategory",
+    EntityId = 4,
+    Key = "Name",
+    Value = "API",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 5 Translations
+new Translation
+{
+    Id = 280,
+    EntityName = "BlogCategory",
+    EntityId = 5,
+    Key = "Name",
+    Value = "Data Security",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 281,
+    EntityName = "BlogCategory",
+    EntityId = 5,
+    Key = "Name",
+    Value = "Datensicherheit",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 282,
+    EntityName = "BlogCategory",
+    EntityId = 5,
+    Key = "Name",
+    Value = "Безопасность данных",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 6 Translations
+new Translation
+{
+    Id = 283,
+    EntityName = "BlogCategory",
+    EntityId = 6,
+    Key = "Name",
+    Value = "ERP",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 284,
+    EntityName = "BlogCategory",
+    EntityId = 6,
+    Key = "Name",
+    Value = "ERP",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 285,
+    EntityName = "BlogCategory",
+    EntityId = 6,
+    Key = "Name",
+    Value = "ERP",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 7 Translations
+new Translation
+{
+    Id = 286,
+    EntityName = "BlogCategory",
+    EntityId = 7,
+    Key = "Name",
+    Value = "Business Management",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 287,
+    EntityName = "BlogCategory",
+    EntityId = 7,
+    Key = "Name",
+    Value = "Geschäftsführung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 288,
+    EntityName = "BlogCategory",
+    EntityId = 7,
+    Key = "Name",
+    Value = "Управление бизнесом",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 8 Translations
+new Translation
+{
+    Id = 289,
+    EntityName = "BlogCategory",
+    EntityId = 8,
+    Key = "Name",
+    Value = "Game Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 290,
+    EntityName = "BlogCategory",
+    EntityId = 8,
+    Key = "Name",
+    Value = "Spieleentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 291,
+    EntityName = "BlogCategory",
+    EntityId = 8,
+    Key = "Name",
+    Value = "Разработка игр",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 9 Translations
+new Translation
+{
+    Id = 292,
+    EntityName = "BlogCategory",
+    EntityId = 9,
+    Key = "Name",
+    Value = "Technology",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 293,
+    EntityName = "BlogCategory",
+    EntityId = 9,
+    Key = "Name",
+    Value = "Technologie",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 294,
+    EntityName = "BlogCategory",
+    EntityId = 9,
+    Key = "Name",
+    Value = "Технология",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 10 Translations
+new Translation
+{
+    Id = 295,
+    EntityName = "BlogCategory",
+    EntityId = 10,
+    Key = "Name",
+    Value = "Web Development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 296,
+    EntityName = "BlogCategory",
+    EntityId = 10,
+    Key = "Name",
+    Value = "Webentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 297,
+    EntityName = "BlogCategory",
+    EntityId = 10,
+    Key = "Name",
+    Value = "Веб-разработка",
+    LanguageId = 4 // Russian
+},
+
+// BlogCategory Id = 11 Translations
+new Translation
+{
+    Id = 298,
+    EntityName = "BlogCategory",
+    EntityId = 11,
+    Key = "Name",
+    Value = "PWA",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 299,
+    EntityName = "BlogCategory",
+    EntityId = 11,
+    Key = "Name",
+    Value = "PWA",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 300,
+    EntityName = "BlogCategory",
+    EntityId = 11,
+    Key = "Name",
+    Value = "PWA",
+    LanguageId = 4 // Russian
+},
+// Highlight Id = 1 Translations
+new Translation
+{
+    Id = 301,
+    EntityName = "Highlight",
+    EntityId = 1,
+    Key = "Content",
+    Value = "Modern and user-friendly web solutions",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 302,
+    EntityName = "Highlight",
+    EntityId = 1,
+    Key = "Content",
+    Value = "Moderne und benutzerfreundliche Weblösungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 303,
+    EntityName = "Highlight",
+    EntityId = 1,
+    Key = "Content",
+    Value = "Современные и удобные веб-решения",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 2 Translations
+new Translation
+{
+    Id = 304,
+    EntityName = "Highlight",
+    EntityId = 2,
+    Key = "Content",
+    Value = "SEO-compliant web development",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 305,
+    EntityName = "Highlight",
+    EntityId = 2,
+    Key = "Content",
+    Value = "SEO-konforme Webentwicklung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 306,
+    EntityName = "Highlight",
+    EntityId = 2,
+    Key = "Content",
+    Value = "Веб-разработка, соответствующая требованиям SEO",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 3 Translations
+new Translation
+{
+    Id = 307,
+    EntityName = "Highlight",
+    EntityId = 3,
+    Key = "Content",
+    Value = "High-performance and security-focused",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 308,
+    EntityName = "Highlight",
+    EntityId = 3,
+    Key = "Content",
+    Value = "Leistungsstark und sicherheitsorientiert",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 309,
+    EntityName = "Highlight",
+    EntityId = 3,
+    Key = "Content",
+    Value = "Ориентированность на высокую производительность и безопасность",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 4 Translations
+new Translation
+{
+    Id = 310,
+    EntityName = "Highlight",
+    EntityId = 4,
+    Key = "Content",
+    Value = "Development for iOS and Android platforms",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 311,
+    EntityName = "Highlight",
+    EntityId = 4,
+    Key = "Content",
+    Value = "Entwicklung für iOS- und Android-Plattformen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 312,
+    EntityName = "Highlight",
+    EntityId = 4,
+    Key = "Content",
+    Value = "Разработка для платформ iOS и Android",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 5 Translations
+new Translation
+{
+    Id = 313,
+    EntityName = "Highlight",
+    EntityId = 5,
+    Key = "Content",
+    Value = "User-friendly and interactive design",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 314,
+    EntityName = "Highlight",
+    EntityId = 5,
+    Key = "Content",
+    Value = "Benutzerfreundliches und interaktives Design",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 315,
+    EntityName = "Highlight",
+    EntityId = 5,
+    Key = "Content",
+    Value = "Удобный и интерактивный дизайн",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 6 Translations
+new Translation
+{
+    Id = 316,
+    EntityName = "Highlight",
+    EntityId = 6,
+    Key = "Content",
+    Value = "Easily updatable and scalable structure",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 317,
+    EntityName = "Highlight",
+    EntityId = 6,
+    Key = "Content",
+    Value = "Leicht aktualisierbare und skalierbare Struktur",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 318,
+    EntityName = "Highlight",
+    EntityId = 6,
+    Key = "Content",
+    Value = "Легко обновляемая и масштабируемая структура",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 7 Translations
+new Translation
+{
+    Id = 319,
+    EntityName = "Highlight",
+    EntityId = 7,
+    Key = "Content",
+    Value = "Fun and high-performance games",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 320,
+    EntityName = "Highlight",
+    EntityId = 7,
+    Key = "Content",
+    Value = "Spaßige und leistungsstarke Spiele",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 321,
+    EntityName = "Highlight",
+    EntityId = 7,
+    Key = "Content",
+    Value = "Веселые и высокопроизводительные игры",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 8 Translations
+new Translation
+{
+    Id = 322,
+    EntityName = "Highlight",
+    EntityId = 8,
+    Key = "Content",
+    Value = "Development with tools like Unity and Unreal Engine",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 323,
+    EntityName = "Highlight",
+    EntityId = 8,
+    Key = "Content",
+    Value = "Entwicklung mit Werkzeugen wie Unity und Unreal Engine",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 324,
+    EntityName = "Highlight",
+    EntityId = 8,
+    Key = "Content",
+    Value = "Разработка с использованием Unity и Unreal Engine",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 9 Translations
+new Translation
+{
+    Id = 325,
+    EntityName = "Highlight",
+    EntityId = 9,
+    Key = "Content",
+    Value = "Game design ensuring replayability",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 326,
+    EntityName = "Highlight",
+    EntityId = 9,
+    Key = "Content",
+    Value = "Spieldesign, das die Wiederspielbarkeit sicherstellt",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 327,
+    EntityName = "Highlight",
+    EntityId = 9,
+    Key = "Content",
+    Value = "Дизайн игры, обеспечивающий повторное прохождение",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 10 Translations
+new Translation
+{
+    Id = 328,
+    EntityName = "Highlight",
+    EntityId = 10,
+    Key = "Content",
+    Value = "Efficient and secure data flow",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 329,
+    EntityName = "Highlight",
+    EntityId = 10,
+    Key = "Content",
+    Value = "Effizienter und sicherer Datenfluss",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 330,
+    EntityName = "Highlight",
+    EntityId = 10,
+    Key = "Content",
+    Value = "Эффективный и безопасный поток данных",
+    LanguageId = 4 // Russian
+},
+// Highlight Id = 11 Translations
+new Translation
+{
+    Id = 331,
+    EntityName = "Highlight",
+    EntityId = 11,
+    Key = "Content",
+    Value = "Compatibility across different systems",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 332,
+    EntityName = "Highlight",
+    EntityId = 11,
+    Key = "Content",
+    Value = "Kompatibilität zwischen verschiedenen Systemen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 333,
+    EntityName = "Highlight",
+    EntityId = 11,
+    Key = "Content",
+    Value = "Совместимость между различными системами",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 12 Translations
+new Translation
+{
+    Id = 334,
+    EntityName = "Highlight",
+    EntityId = 12,
+    Key = "Content",
+    Value = "Security-focused integration",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 335,
+    EntityName = "Highlight",
+    EntityId = 12,
+    Key = "Content",
+    Value = "Sicherheitsorientierte Integration",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 336,
+    EntityName = "Highlight",
+    EntityId = 12,
+    Key = "Content",
+    Value = "Интеграция с фокусом на безопасность",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 13 Translations
+new Translation
+{
+    Id = 337,
+    EntityName = "Highlight",
+    EntityId = 13,
+    Key = "Content",
+    Value = "Solutions that strengthen customer relationships",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 338,
+    EntityName = "Highlight",
+    EntityId = 13,
+    Key = "Content",
+    Value = "Lösungen, die Kundenbeziehungen stärken",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 339,
+    EntityName = "Highlight",
+    EntityId = 13,
+    Key = "Content",
+    Value = "Решения для укрепления отношений с клиентами",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 14 Translations
+new Translation
+{
+    Id = 340,
+    EntityName = "Highlight",
+    EntityId = 14,
+    Key = "Content",
+    Value = "Optimization of sales, marketing, and services",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 341,
+    EntityName = "Highlight",
+    EntityId = 14,
+    Key = "Content",
+    Value = "Optimierung von Vertrieb, Marketing und Dienstleistungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 342,
+    EntityName = "Highlight",
+    EntityId = 14,
+    Key = "Content",
+    Value = "Оптимизация продаж, маркетинга и услуг",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 15 Translations
+new Translation
+{
+    Id = 343,
+    EntityName = "Highlight",
+    EntityId = 15,
+    Key = "Content",
+    Value = "Analysis of all customer data",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 344,
+    EntityName = "Highlight",
+    EntityId = 15,
+    Key = "Content",
+    Value = "Analyse aller Kundendaten",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 345,
+    EntityName = "Highlight",
+    EntityId = 15,
+    Key = "Content",
+    Value = "Анализ всех данных о клиентах",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 16 Translations
+new Translation
+{
+    Id = 346,
+    EntityName = "Highlight",
+    EntityId = 16,
+    Key = "Content",
+    Value = "Inter-departmental data integration",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 347,
+    EntityName = "Highlight",
+    EntityId = 16,
+    Key = "Content",
+    Value = "Abteilungsübergreifende Datenintegration",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 348,
+    EntityName = "Highlight",
+    EntityId = 16,
+    Key = "Content",
+    Value = "Интеграция данных между отделами",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 17 Translations
+new Translation
+{
+    Id = 349,
+    EntityName = "Highlight",
+    EntityId = 17,
+    Key = "Content",
+    Value = "Structure optimizing business processes",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 350,
+    EntityName = "Highlight",
+    EntityId = 17,
+    Key = "Content",
+    Value = "Struktur zur Optimierung von Geschäftsprozessen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 351,
+    EntityName = "Highlight",
+    EntityId = 17,
+    Key = "Content",
+    Value = "Структура, оптимизирующая бизнес-процессы",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 18 Translations
+new Translation
+{
+    Id = 352,
+    EntityName = "Highlight",
+    EntityId = 18,
+    Key = "Content",
+    Value = "Accelerating decision-making processes",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 353,
+    EntityName = "Highlight",
+    EntityId = 18,
+    Key = "Content",
+    Value = "Beschleunigung von Entscheidungsprozessen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 354,
+    EntityName = "Highlight",
+    EntityId = 18,
+    Key = "Content",
+    Value = "Ускорение процесса принятия решений",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 19 Translations
+new Translation
+{
+    Id = 355,
+    EntityName = "Highlight",
+    EntityId = 19,
+    Key = "Content",
+    Value = "Robust and secure database infrastructure",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 356,
+    EntityName = "Highlight",
+    EntityId = 19,
+    Key = "Content",
+    Value = "Robuste und sichere Datenbankinfrastruktur",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 357,
+    EntityName = "Highlight",
+    EntityId = 19,
+    Key = "Content",
+    Value = "Надежная и безопасная инфраструктура базы данных",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 20 Translations
+new Translation
+{
+    Id = 358,
+    EntityName = "Highlight",
+    EntityId = 20,
+    Key = "Content",
+    Value = "Optimized for high performance",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 359,
+    EntityName = "Highlight",
+    EntityId = 20,
+    Key = "Content",
+    Value = "Optimiert für hohe Leistung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 360,
+    EntityName = "Highlight",
+    EntityId = 20,
+    Key = "Content",
+    Value = "Оптимизировано для высокой производительности",
+    LanguageId = 4 // Russian
+},
+// Highlight Id = 21 Translations
+new Translation
+{
+    Id = 361,
+    EntityName = "Highlight",
+    EntityId = 21,
+    Key = "Content",
+    Value = "Continuous accessibility of data",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 362,
+    EntityName = "Highlight",
+    EntityId = 21,
+    Key = "Content",
+    Value = "Kontinuierliche Datenzugänglichkeit",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 363,
+    EntityName = "Highlight",
+    EntityId = 21,
+    Key = "Content",
+    Value = "Непрерывная доступность данных",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 22 Translations
+new Translation
+{
+    Id = 364,
+    EntityName = "Highlight",
+    EntityId = 22,
+    Key = "Content",
+    Value = "Custom design tailored to business processes",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 365,
+    EntityName = "Highlight",
+    EntityId = 22,
+    Key = "Content",
+    Value = "Maßgeschneidertes Design für Geschäftsprozesse",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 366,
+    EntityName = "Highlight",
+    EntityId = 22,
+    Key = "Content",
+    Value = "Индивидуальный дизайн, адаптированный к бизнес-процессам",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 23 Translations
+new Translation
+{
+    Id = 367,
+    EntityName = "Highlight",
+    EntityId = 23,
+    Key = "Content",
+    Value = "Comprehensive analysis and performance optimization",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 368,
+    EntityName = "Highlight",
+    EntityId = 23,
+    Key = "Content",
+    Value = "Umfassende Analyse und Leistungsoptimierung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 369,
+    EntityName = "Highlight",
+    EntityId = 23,
+    Key = "Content",
+    Value = "Комплексный анализ и оптимизация производительности",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 24 Translations
+new Translation
+{
+    Id = 370,
+    EntityName = "Highlight",
+    EntityId = 24,
+    Key = "Content",
+    Value = "Scalable and reliable solutions",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 371,
+    EntityName = "Highlight",
+    EntityId = 24,
+    Key = "Content",
+    Value = "Skalierbare und zuverlässige Lösungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 372,
+    EntityName = "Highlight",
+    EntityId = 24,
+    Key = "Content",
+    Value = "Масштабируемые и надежные решения",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 25 Translations
+new Translation
+{
+    Id = 373,
+    EntityName = "Highlight",
+    EntityId = 25,
+    Key = "Content",
+    Value = "Strategic management solutions for projects",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 374,
+    EntityName = "Highlight",
+    EntityId = 25,
+    Key = "Content",
+    Value = "Strategische Managementlösungen für Projekte",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 375,
+    EntityName = "Highlight",
+    EntityId = 25,
+    Key = "Content",
+    Value = "Стратегические решения для управления проектами",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 26 Translations
+new Translation
+{
+    Id = 376,
+    EntityName = "Highlight",
+    EntityId = 26,
+    Key = "Content",
+    Value = "Timely and on-budget delivery",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 377,
+    EntityName = "Highlight",
+    EntityId = 26,
+    Key = "Content",
+    Value = "Rechtzeitige und budgetgerechte Lieferung",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 378,
+    EntityName = "Highlight",
+    EntityId = 26,
+    Key = "Content",
+    Value = "Своевременная доставка в рамках бюджета",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 27 Translations
+new Translation
+{
+    Id = 379,
+    EntityName = "Highlight",
+    EntityId = 27,
+    Key = "Content",
+    Value = "Management with a focus on quality",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 380,
+    EntityName = "Highlight",
+    EntityId = 27,
+    Key = "Content",
+    Value = "Management mit Fokus auf Qualität",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 381,
+    EntityName = "Highlight",
+    EntityId = 27,
+    Key = "Content",
+    Value = "Управление с акцентом на качество",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 28 Translations
+new Translation
+{
+    Id = 382,
+    EntityName = "Highlight",
+    EntityId = 28,
+    Key = "Content",
+    Value = "Secure and flexible cloud infrastructure",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 383,
+    EntityName = "Highlight",
+    EntityId = 28,
+    Key = "Content",
+    Value = "Sichere und flexible Cloud-Infrastruktur",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 384,
+    EntityName = "Highlight",
+    EntityId = 28,
+    Key = "Content",
+    Value = "Безопасная и гибкая облачная инфраструктура",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 29 Translations
+new Translation
+{
+    Id = 385,
+    EntityName = "Highlight",
+    EntityId = 29,
+    Key = "Content",
+    Value = "Access from anywhere with data security",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 386,
+    EntityName = "Highlight",
+    EntityId = 29,
+    Key = "Content",
+    Value = "Zugang von überall mit Datensicherheit",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 387,
+    EntityName = "Highlight",
+    EntityId = 29,
+    Key = "Content",
+    Value = "Доступ отовсюду с безопасностью данных",
+    LanguageId = 4 // Russian
+},
+
+// Highlight Id = 30 Translations
+new Translation
+{
+    Id = 388,
+    EntityName = "Highlight",
+    EntityId = 30,
+    Key = "Content",
+    Value = "Scalable solutions to lighten workload",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 389,
+    EntityName = "Highlight",
+    EntityId = 30,
+    Key = "Content",
+    Value = "Skalierbare Lösungen zur Entlastung der Arbeitslast",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 390,
+    EntityName = "Highlight",
+    EntityId = 30,
+    Key = "Content",
+    Value = "Масштабируемые решения для уменьшения рабочей нагрузки",
     LanguageId = 4 // Russian
 }
+
             );
         }
 
