@@ -20,7 +20,7 @@ namespace CompanyWebSite.Business.Services
         private readonly ITranslationService _translationService;
         private readonly IMapper _mapper;
 
-        public AboutService(IBaseRepository<About> baseAboutRepository,IBaseRepository<History> baseHistoryRepository,ILanguageRepository languageRepository,ITranslationService translationService, IMapper mapper)
+        public AboutService(IBaseRepository<About> baseAboutRepository, IBaseRepository<History> baseHistoryRepository, ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper)
         {
             _mapper = mapper;
             _baseAboutRepository = baseAboutRepository;
@@ -31,7 +31,7 @@ namespace CompanyWebSite.Business.Services
         public async Task AddAboutAsync(AboutDto aboutDto)
         {
             var about = _mapper.Map<About>(aboutDto);
-            about.Slug = SlugHelper.GenerateSlug(aboutDto.DefaultTitleAbout);
+            about.Slug = SlugHelper.GenerateSlug(aboutDto.DefaultTitle);
             await _baseAboutRepository.AddAsync(about);
         }
 
@@ -46,26 +46,22 @@ namespace CompanyWebSite.Business.Services
             var histories = await _baseHistoryRepository.GetAllAsync();
             if (languageCode == "tr")
             {
-                var aboutDtosMap = _mapper.Map<IEnumerable<AboutDto>>(abouts).ToList();
+                var aboutDtosMap = _mapper.Map<IEnumerable<AboutDto>>(abouts);
+                var historyMap = _mapper.Map<IEnumerable<HistoryDto>>(histories);
                 foreach (var aboutDto in aboutDtosMap)
                 {
-                    var history=histories.FirstOrDefault(x => x.AboutId == aboutDto.Id);
-                    if (history != null)
-                    {
-                        aboutDto.DefaultTitleHistory = history.DefaultTitle;
-                        aboutDto.DefaultContentHistory = history.DefaultContent;
-                        aboutDto.YearDescription = history.YearDescription;
-                    }
+                    aboutDto.Histories = historyMap;
                 }
                 return aboutDtosMap;
 
             }
             var language = await _languageRepository.GetByCodeAsync(languageCode);
-            if(language == null)
+            if (language == null)
             {
                 throw new Exception("Language not found");
             }
-            var aboutDtos = _mapper.Map<IEnumerable<AboutDto>>(abouts);
+            var aboutDtos = _mapper.Map<IEnumerable<AboutDto>>(abouts).ToList();
+            var historyDtos = _mapper.Map<IEnumerable<HistoryDto>>(histories).ToList();
             foreach (var aboutDto in aboutDtos)
             {
                 var aboutTranslations = await _translationService.GetTranslationAsync("About", aboutDto.Id, language.Code);
@@ -73,29 +69,37 @@ namespace CompanyWebSite.Business.Services
                 {
                     if (aboutTranslation.Key == "DefaultTitle")
                     {
-                        aboutDto.DefaultTitleAbout = aboutTranslation.Value;
+                        aboutDto.DefaultTitle = aboutTranslation.Value;
                     }
                     else if (aboutTranslation.Value == "DefaultContent")
                     {
-                        aboutDto.DefaultContentAbout = aboutTranslation.Value;
+                        aboutDto.DefaultContent = aboutTranslation.Value;
                     }
                 }
-                var historyTranslations = await _translationService.GetTranslationAsync("History", aboutDto.Id, language.Code);
-                foreach (var historyTranslation in historyTranslations)
+                var translatedHistories = new List<HistoryDto>();
+
+                foreach (var historyDto in historyDtos)
                 {
-                    if(historyTranslation.Key == "DefaultTitle")
+                    var historyTranslations = await _translationService.GetTranslationAsync("History", aboutDto.Id, language.Code);
+
+                    foreach (var historyTranslation in historyTranslations)
                     {
-                        aboutDto.DefaultTitleHistory = historyTranslation.Value;
+                        if (historyTranslation.Key == "DefaultTitle")
+                        {
+                            historyDto.DefaultTitle = historyTranslation.Value;
+                        }
+                        else if (historyTranslation.Key == "DefaultContent")
+                        {
+                            historyDto.DefaultContent = historyTranslation.Value;
+                        }
+                        else if (historyTranslation.Key == "YearDescription")
+                        {
+                            historyDto.YearDescription = historyTranslation.Value;
+                        }
                     }
-                    else if (historyTranslation.Key == "DefaultContent")
-                    {
-                        aboutDto.DefaultContentHistory = historyTranslation.Value;
-                    }
-                    else if(historyTranslation.Key == "YearDescription")
-                    {
-                        aboutDto.YearDescription = historyTranslation.Value;
-                    }
+                    translatedHistories.Add(historyDto);
                 }
+                aboutDto.Histories = translatedHistories;
             }
             return aboutDtos;
         }
@@ -108,10 +112,10 @@ namespace CompanyWebSite.Business.Services
 
         public async Task UpdateAboutAsync(AboutDto aboutDto)
         {
-           var about = await _baseAboutRepository.GetByIdAsync(aboutDto.Id);
+            var about = await _baseAboutRepository.GetByIdAsync(aboutDto.Id);
             if (about != null)
             {
-               _mapper.Map(aboutDto, about);
+                _mapper.Map(aboutDto, about);
                 await _baseAboutRepository.UpdateAsync(about);
             }
         }
