@@ -7,6 +7,7 @@ using CompanyWebSite.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -126,15 +127,70 @@ namespace CompanyWebSite.Business.Services
         }
 
 
-        //TODO: Devam et
-        public Task<ServiceDto> GetServiceByIdAsync(int id)
+        
+        public async Task<ServiceDto> GetServiceByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var service = await _baseServiceRepository.GetByIdAsync(id);
+            return _mapper.Map<ServiceDto>(service);
         }
 
-        public Task UpdateServiceAsync(ServiceDto serviceDto)
+        public async Task UpdateServiceAsync(ServiceDto serviceDto)
         {
-            throw new NotImplementedException();
+            var service = await _baseServiceRepository.GetByIdAsync(serviceDto.Id);
+            if (service != null)
+            {
+                _mapper.Map(serviceDto, service);
+                await _baseServiceRepository.UpdateAsync(service);
+
+                if(serviceDto.ServiceCategories == null || serviceDto.ServiceMediaItems == null || serviceDto.ServiceHighlights == null)
+                {
+                    throw new Exception("Service Categories or Media Items or Highlights is null");
+                }
+
+                foreach (var serviceCategoryDto in serviceDto.ServiceCategories)
+                {
+                    var serviceCategory = await _baseServiceCategoryRepository.GetByIdAsync(serviceDto.Id);
+                    if (serviceCategory != null)
+                    {
+                        _mapper.Map(serviceCategoryDto, serviceCategory);
+                        await _baseServiceCategoryRepository.UpdateAsync(serviceCategory);
+                    }
+                    else
+                    {
+                        var newCategory = _mapper.Map<ServiceCategory>(serviceCategoryDto);
+                        await _baseServiceCategoryRepository.AddAsync(newCategory);
+                    }
+                }
+                foreach(var serviceMediaDto in serviceDto.ServiceMediaItems)
+                {
+                    var media = await _baseMediaRepository.GetByIdAsync(serviceMediaDto.Id);
+                    if (media != null)
+                    {
+                        _mapper.Map(serviceMediaDto, media);
+                        await _baseMediaRepository.UpdateAsync(media);
+                    }
+                    else
+                    {
+                        var newMedia = _mapper.Map<Media>(serviceMediaDto);
+                        await _baseMediaRepository.AddAsync(newMedia);
+                    }
+                }
+                foreach (var serviceHighlightDto in serviceDto.ServiceHighlights)
+                {
+                    var highlight = await _baseHighlightRepository.GetByIdAsync(serviceHighlightDto.Id);
+                    if (highlight != null)
+                    {
+                        _mapper.Map(serviceHighlightDto, highlight);
+                        await _baseHighlightRepository.UpdateAsync(highlight);
+                    }
+                    else
+                    {
+                        var newHighlight = _mapper.Map<Highlight>(serviceHighlightDto);
+                        await _baseHighlightRepository.AddAsync(newHighlight);
+                    }
+                }
+            }
+
         }
     }
 }

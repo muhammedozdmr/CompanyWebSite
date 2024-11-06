@@ -8,7 +8,7 @@ namespace CompanyWebSite.Domain.Entities
 {
     public class Blog : BaseEntity
     {
-        public string? ImgageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         public string? AuthorImageUrl { get; set; }
         public string? Author { get; set; }
         public string? AuthorTitle { get; set; }

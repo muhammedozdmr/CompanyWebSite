@@ -37,7 +37,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     CompanyArea = "Sağlık ve Teknoloji Hizmetleri Limited Şirketi",
                     CreateDate = new DateTime(2023, 10, 29),
                     Residence = "İstanbul / Türkiye",
-                    Address = "Küplüce Mahallesi 5. Zeytinlik Sokak No:13/A",
+                    Address = "Küplüce Mahallesi 5. Zeytinlik Sokak No:13/A 34676 Üsküdar",
                     Email = "info@techliberty.co",
                     Phone = "+90 (543) 233 33 32",
                     LinkedIn = "https://linkedin.com/company/techlibertyco",

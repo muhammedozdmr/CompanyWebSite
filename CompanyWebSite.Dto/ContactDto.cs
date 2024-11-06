@@ -14,5 +14,6 @@ namespace CompanyWebSite.Dto
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
         public string? WorkingHours { get; set; }
+        public IEnumerable<ContactFormDto> ContactForm { get; set; }
     }
 }

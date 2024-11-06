@@ -506,7 +506,7 @@ new Translation
     EntityName = "CompanyInfo",
     EntityId = 1,
     Key = "Address",
-    Value = "Küplüce Mahallesi 5. Zeytinlik Sokak No:13/A",
+    Value = "5th Zeytinlik Street No:13/A, 34676 Küplüce Neighborhood, Üsküdar",
     LanguageId = 2 // English
 },
 new Translation
@@ -515,7 +515,7 @@ new Translation
     EntityName = "CompanyInfo",
     EntityId = 1,
     Key = "Address",
-    Value = "Küplüce Mahallesi 5. Zeytinlik Straße Nr.13/A",
+    Value = "5. Zeytinlik Straße Nr.13/A, 34676 Küplüce Viertel, Üsküdar",
     LanguageId = 3 // German
 },
 new Translation
@@ -524,7 +524,7 @@ new Translation
     EntityName = "CompanyInfo",
     EntityId = 1,
     Key = "Address",
-    Value = "Кюплюдже Махаллеси 5. Зейтинлик Сокак No:13/A",
+    Value = "Улица 5-я Зейтинлик, дом 13/A, 34676, район Кюплюдже, Ускюдар",
     LanguageId = 4 // Russian
 },
         // FAQ Id = 1 Translations

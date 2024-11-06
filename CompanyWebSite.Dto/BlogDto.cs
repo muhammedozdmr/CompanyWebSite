@@ -9,8 +9,8 @@ namespace CompanyWebSite.Dto
     public class BlogDto
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; } // Blog yazısının tam metni
+        public string DefaultTitle { get; set; }
+        public string DefaultContent { get; set; } // Blog yazısının tam metni
         public string Author { get; set; }
         public string AuthorTitle { get; set; }
         public DateTime PublishDate { get; set; }

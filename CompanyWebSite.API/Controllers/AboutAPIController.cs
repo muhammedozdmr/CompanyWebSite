@@ -6,10 +6,10 @@ namespace CompanyWebSite.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AboutController : Controller
+    public class AboutAPIController : Controller
     {
         private readonly IAboutService _aboutService;
-        public AboutController(IAboutService aboutService)
+        public AboutAPIController(IAboutService aboutService)
         {
             _aboutService = aboutService;
         }
