@@ -31,6 +31,8 @@ namespace CompanyWebSite.DataAccess
         public DbSet<ServiceCategory>? ServiceCategories { get; set; }
         public DbSet<Highlight> Highlights { get; set; }
         public DbSet<Media> MediaItems { get; set; }
+        public DbSet<NavbarItem> NavbarItems { get; set; }
+        public DbSet<Newsletter> Newsletters { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,6 +49,7 @@ namespace CompanyWebSite.DataAccess
             modelBuilder.ApplyConfiguration(new ServiceCategoryConfiguration());
             modelBuilder.ApplyConfiguration(new MediaConfiguration());
             modelBuilder.ApplyConfiguration(new HighlightConfiguration());
+            modelBuilder.ApplyConfiguration(new NavbarItemConfiguration());
         }
     }
 }

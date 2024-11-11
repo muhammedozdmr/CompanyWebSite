@@ -20,7 +20,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.Slug).HasMaxLength(100).IsRequired();
             builder.Property(x => x.IsActive).IsRequired();
             builder.Property(h => h.Year).IsRequired();
-            builder.Property(h => h.YearDescription).IsRequired().HasMaxLength(500);
+            builder.Property(h => h.YearDescription).IsRequired().HasMaxLength(2000);
             builder.HasOne(h => h.About).WithMany(a=>a.Histories).HasForeignKey(h => h.AboutId).OnDelete(DeleteBehavior.Cascade);
 
             builder.HasData(
@@ -55,6 +55,17 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     Slug = "ongoing-innovation",
                     Year = 2024,
                     YearDescription = "TechLiberty olarak teknoloji ve inovasyonu işimizin merkezine koyduk. Şirketlerin dijital dönüşümlerine destek olmak, süreçlerini optimize etmek ve onlara değer katmak için sürekli yenilikçi çözümler sunuyoruz. Mevcut projelerimize ek olarak, küçük ve orta ölçekli işletmelere yönelik veri odaklı ERP çözümleri ile sektörün ihtiyaçlarını karşılamaya devam ediyoruz.",
+                    AboutId = 1
+                },
+                new History
+                {
+                    Id = 4,
+                    DefaultTitle = "Şirketimizin Tarihi",
+                    DefaultContent = "TechLiberty'nin kuruluşundan bu yana hedeflediğimiz vizyon ve projelerle büyümemize dair detayları burada bulabilirsiniz.",
+                    IsActive = true,
+                    Slug = "construction-innovation",
+                    Year = 2024,
+                    YearDescription = "Şantiye Bul projesi, küçük ve orta ölçekli işletmeleri (KOBİ) büyük şantiyeler ve inşaat projeleriyle bir araya getirmeyi hedefleyen yenilikçi bir girişimdir. Bu proje, devlet kontrol mekanizmalarının etkinliğini en üst seviyeye çıkararak, KOBİ'lerin kalkınmasını desteklemeyi ve ülke genelinde daha güvenli ve kaliteli yapılar inşa edilmesini sağlamayı amaçlamaktadır. Şantiye Bul projesi ile birlikte, deprem risklerini azaltmak, kaçak yapılaşmayı önlemek, ucuz işçilikle oluşan riskleri minimuma indirmek ve düşük kaliteli malzeme kullanımını kontrol altına almak mümkün hale gelecektir. Böylece, hem sektör standartları yükselecek hem de ülke çapında daha sağlam, güvenilir ve sürdürülebilir yapılar ortaya çıkacaktır. Bu girişim, Türkiye’nin inşaat sektöründe kaliteyi ve güvenliği artırmak adına atılan önemli bir adımdır.",
                     AboutId = 1
                 }
             );

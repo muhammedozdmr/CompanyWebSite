@@ -3688,8 +3688,117 @@ new Translation
     Key = "Content",
     Value = "Масштабируемые решения для уменьшения рабочей нагрузки",
     LanguageId = 4 // Russian
-}
+},
+                
+                //History Id = 4 Translations
+                new Translation
+{
+    Id = 391,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "YearDescription",
+    Value = "The Şantiye Bul project is an innovative initiative aimed at connecting small and medium-sized enterprises (SMEs) with large construction sites and projects. This project seeks to maximize the efficiency of state control mechanisms, support the development of SMEs, and ensure the construction of safer and higher quality buildings nationwide. Through Şantiye Bul, it is possible to reduce earthquake risks, prevent illegal construction, minimize the risks associated with cheap labor, and control the use of low-quality materials. As a result, industry standards will improve, and more solid, reliable, and sustainable buildings will be established across the country. This initiative is an important step towards enhancing quality and safety in Turkey's construction sector.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 392,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "YearDescription",
+    Value = "Das Projekt Şantiye Bul ist eine innovative Initiative, die darauf abzielt, kleine und mittlere Unternehmen (KMU) mit großen Baustellen und Bauprojekten zu verbinden. Dieses Projekt strebt an, die Effizienz der staatlichen Kontrollmechanismen zu maximieren, die Entwicklung von KMU zu unterstützen und den Bau sichererer und hochwertigerer Gebäude im ganzen Land zu gewährleisten. Durch Şantiye Bul wird es möglich, Erdbebenrisiken zu verringern, illegale Bebauung zu verhindern, die mit billiger Arbeit verbundenen Risiken zu minimieren und die Verwendung minderwertiger Materialien zu kontrollieren. Dadurch werden die Branchenstandards verbessert, und es entstehen landesweit solidere, zuverlässigere und nachhaltigere Gebäude. Diese Initiative ist ein wichtiger Schritt zur Verbesserung der Qualität und Sicherheit im türkischen Bausektor.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 393,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "YearDescription",
+    Value = "Проект Şantiye Bul — это инновационная инициатива, направленная на объединение малых и средних предприятий (МСП) с крупными строительными объектами и проектами. Этот проект направлен на максимальное повышение эффективности государственных контрольных механизмов, поддержку развития МСП и обеспечение строительства более безопасных и качественных зданий по всей стране. Благодаря Şantiye Bul станет возможным уменьшение рисков землетрясений, предотвращение незаконного строительства, минимизация рисков, связанных с дешевой рабочей силой, и контроль за использованием некачественных материалов. В результате стандарты в отрасли будут улучшены, и по всей стране появятся более прочные, надежные и устойчивые здания. Эта инициатива является важным шагом к повышению качества и безопасности в строительной отрасли Турции.",
+    LanguageId = 4 // Russian
+},
+// DefaultTitle Translations
+new Translation
+{
+    Id = 394,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "DefaultTitle",
+    Value = "Our Company History",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 395,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "DefaultTitle",
+    Value = "Die Geschichte unseres Unternehmens",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 396,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "DefaultTitle",
+    Value = "История нашей компании",
+    LanguageId = 4 // Russian
+},
 
+// DefaultContent Translations
+new Translation
+{
+    Id = 397,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "DefaultContent",
+    Value = "Discover details about our growth, vision, and projects at TechLiberty since our foundation.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 398,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "DefaultContent",
+    Value = "Entdecken Sie Details über unser Wachstum, unsere Vision und Projekte bei TechLiberty seit unserer Gründung.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 399,
+    EntityName = "History",
+    EntityId = 4,
+    Key = "DefaultContent",
+    Value = "Узнайте подробнее о нашем росте, видении и проектах в TechLiberty с момента основания.",
+    LanguageId = 4 // Russian
+},
+                //Translations for NavbarItem
+                new Translation { Id = 400, EntityName = "NavbarItem", EntityId = 1, Key = "Name", Value = "Home", LanguageId = 2 },
+    new Translation { Id = 401, EntityName = "NavbarItem", EntityId = 1, Key = "Name", Value = "Startseite", LanguageId = 3 },
+    new Translation { Id = 402, EntityName = "NavbarItem", EntityId = 1, Key = "Name", Value = "Главная", LanguageId = 4 },
+    
+    new Translation { Id = 403, EntityName = "NavbarItem", EntityId = 2, Key = "Name", Value = "About Us", LanguageId = 2 },
+    new Translation { Id = 404, EntityName = "NavbarItem", EntityId = 2, Key = "Name", Value = "Über uns", LanguageId = 3 },
+    new Translation { Id = 405, EntityName = "NavbarItem", EntityId = 2, Key = "Name", Value = "О нас", LanguageId = 4 },
+    
+    new Translation { Id = 406, EntityName = "NavbarItem", EntityId = 3, Key = "Name", Value = "Services", LanguageId = 2 },
+    new Translation { Id = 407, EntityName = "NavbarItem", EntityId = 3, Key = "Name", Value = "Dienstleistungen", LanguageId = 3 },
+    new Translation { Id = 408, EntityName = "NavbarItem", EntityId = 3, Key = "Name", Value = "Услуги", LanguageId = 4 },
+    
+    new Translation { Id = 409, EntityName = "NavbarItem", EntityId = 4, Key = "Name", Value = "Blog", LanguageId = 2 },
+    new Translation { Id = 410, EntityName = "NavbarItem", EntityId = 4, Key = "Name", Value = "Blog", LanguageId = 3 },
+    new Translation { Id = 411, EntityName = "NavbarItem", EntityId = 4, Key = "Name", Value = "Блог", LanguageId = 4 },
+
+    new Translation { Id = 412, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "Contact", LanguageId = 2 },
+    new Translation { Id = 413, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "Kontakt", LanguageId = 3 },
+    new Translation { Id = 414, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "Контакт", LanguageId = 4 },
+
+    new Translation { Id = 415, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "FAQ", LanguageId = 2 },
+    new Translation { Id = 416, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "FAQ", LanguageId = 3 },
+    new Translation { Id = 417, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "Вопросы и ответы", LanguageId = 4 }
             );
         }
 

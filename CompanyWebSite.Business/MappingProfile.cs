@@ -40,6 +40,8 @@ namespace CompanyWebSite.Business
             CreateMap<FAQ, FAQDto>().ReverseMap();
             CreateMap<Language, LanguageDto>().ReverseMap();
             CreateMap<Translation, TranslationDto>().ReverseMap();
+            CreateMap<NavbarItem, NavbarItemDto>().ReverseMap();
+            CreateMap<Newsletter, NewsletterDto>().ReverseMap();
         }
     }
 }
