@@ -10,8 +10,7 @@ namespace CompanyWebSite.Dto
     public class ContactDto
     {
         public int Id { get; set; }
-        public string? WorkingHours { get; set; } // Çalışma saatleri
-        public IEnumerable<CompanyInfoDto> CompanyInfo { get; set; }
-        public IEnumerable<ContactFormDto> ContactForm { get; set; }
+        public IEnumerable<CompanyInfoDto>? CompanyInfos { get; set; }
+        public IEnumerable<ContactFormDto>? ContactForms { get; set; }
     }
 }

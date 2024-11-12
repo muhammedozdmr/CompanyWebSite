@@ -1,13 +1,8 @@
-﻿using CompanyWebSite.Business.Services.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CompanyWebSite.Business.Services.Interface;
 
-namespace CompanyWebSite.Business.Services.Test
+namespace CompanyWebSite.Business.Services.Test;
+
+public interface IMainTestService : IAboutService, IBlogService, ICompanyInfoService, IContactService,IFAQService, IHomeService, INavbarAndFooterService, INavbarItemService, INewsletterService, IServiceService
 {
-    public interface IMainTestService : IHomeService,IAboutService,IServiceService,IBlogService, IContactService,IFAQService
-    {
-    }
+    
 }

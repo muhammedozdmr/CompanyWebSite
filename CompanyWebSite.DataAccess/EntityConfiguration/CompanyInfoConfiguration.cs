@@ -35,6 +35,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     CompanyLogoUrl = "images/company_logo.jpg",
                     CompanyName = "TechLiberty",
                     CompanyArea = "Sağlık ve Teknoloji Hizmetleri Limited Şirketi",
+                    WorkingHours = "Pazartesi - Cuma: 09:00 - 18:00",
                     CreateDate = new DateTime(2023, 10, 29),
                     Residence = "İstanbul / Türkiye",
                     Address = "Küplüce Mahallesi 5. Zeytinlik Sokak No:13/A 34676 Üsküdar",

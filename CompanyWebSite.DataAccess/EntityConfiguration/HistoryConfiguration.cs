@@ -44,6 +44,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     Slug = "expanding-our-vision",
                     Year = 2024,
                     YearDescription = "TechLiberty, kurucusunun sevgili köpeği Gofret’ten ilham alınarak geliştirdiği 'Gof Games' projesini duyurdu. Bu oyun, oyunculara hem eğlenceli hem de duygusal bir deneyim sunmayı hedefliyor. Aynı zamanda, ERP çözümleri alanında sektördeki işletmelere değer katan yazılımlar geliştirme sürecine hız verdik. Mevcut ERP sistemlerindeki eksiklikleri gidermek için daha esnek, kullanımı kolay ve güçlü bir çözüm üzerinde çalışıyoruz.",
+                    ProjectUrl = "https://www.gofgames.com.tr",
                     AboutId = 1
                 },
                 new History
@@ -66,6 +67,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     Slug = "construction-innovation",
                     Year = 2024,
                     YearDescription = "Şantiye Bul projesi, küçük ve orta ölçekli işletmeleri (KOBİ) büyük şantiyeler ve inşaat projeleriyle bir araya getirmeyi hedefleyen yenilikçi bir girişimdir. Bu proje, devlet kontrol mekanizmalarının etkinliğini en üst seviyeye çıkararak, KOBİ'lerin kalkınmasını desteklemeyi ve ülke genelinde daha güvenli ve kaliteli yapılar inşa edilmesini sağlamayı amaçlamaktadır. Şantiye Bul projesi ile birlikte, deprem risklerini azaltmak, kaçak yapılaşmayı önlemek, ucuz işçilikle oluşan riskleri minimuma indirmek ve düşük kaliteli malzeme kullanımını kontrol altına almak mümkün hale gelecektir. Böylece, hem sektör standartları yükselecek hem de ülke çapında daha sağlam, güvenilir ve sürdürülebilir yapılar ortaya çıkacaktır. Bu girişim, Türkiye’nin inşaat sektöründe kaliteyi ve güvenliği artırmak adına atılan önemli bir adımdır.",
+                    ProjectUrl = "https://www.santiyebul.com",
                     AboutId = 1
                 }
             );

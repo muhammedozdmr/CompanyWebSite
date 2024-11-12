@@ -3792,13 +3792,202 @@ new Translation
     new Translation { Id = 410, EntityName = "NavbarItem", EntityId = 4, Key = "Name", Value = "Blog", LanguageId = 3 },
     new Translation { Id = 411, EntityName = "NavbarItem", EntityId = 4, Key = "Name", Value = "Блог", LanguageId = 4 },
 
-    new Translation { Id = 412, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "Contact", LanguageId = 2 },
+    new Translation { Id = 412, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "ContactForm", LanguageId = 2 },
     new Translation { Id = 413, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "Kontakt", LanguageId = 3 },
     new Translation { Id = 414, EntityName = "NavbarItem", EntityId = 5, Key = "Name", Value = "Контакт", LanguageId = 4 },
 
     new Translation { Id = 415, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "FAQ", LanguageId = 2 },
     new Translation { Id = 416, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "FAQ", LanguageId = 3 },
-    new Translation { Id = 417, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "Вопросы и ответы", LanguageId = 4 }
+    new Translation { Id = 417, EntityName = "NavbarItem", EntityId = 6, Key = "Name", Value = "Вопросы и ответы", LanguageId = 4 },
+    new Translation
+    {
+        Id = 418,
+        EntityName = "CompanyInfo",
+        EntityId = 1,
+        Key = "WorkingHours",
+        Value = "Monday - Friday: 9:00 AM - 6:00 PM",
+        LanguageId = 2 // English
+    },
+    new Translation
+    {
+        Id = 419,
+        EntityName = "CompanyInfo",
+        EntityId = 1,
+        Key = "WorkingHours",
+        Value = "Montag - Freitag: 9:00 - 18:00 Uhr",
+        LanguageId = 3 // German
+    },
+    new Translation
+    {
+        Id = 420,
+        EntityName = "CompanyInfo",
+        EntityId = 1,
+        Key = "WorkingHours",
+        Value = "Понедельник - Пятница: 9:00 - 18:00",
+        LanguageId = 4 // Russian
+    },
+                new Translation
+{
+    Id = 421,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "FullNamePlaceholder",
+    Value = "Your Full Name",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 422,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "FullNamePlaceholder",
+    Value = "Ihr vollständiger Name",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 423,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "FullNamePlaceholder",
+    Value = "Ваше полное имя",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 424,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "EmailPlaceholder",
+    Value = "Your Email Address",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 425,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "EmailPlaceholder",
+    Value = "Ihre E-Mail-Adresse",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 426,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "EmailPlaceholder",
+    Value = "Ваш адрес электронной почты",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 427,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "PhonePlaceholder",
+    Value = "Your Phone Number",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 428,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "PhonePlaceholder",
+    Value = "Ihre Telefonnummer",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 429,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "PhonePlaceholder",
+    Value = "Ваш номер телефона",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 430,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "SubjectPlaceholder",
+    Value = "Subject",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 431,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "SubjectPlaceholder",
+    Value = "Betreff",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 432,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "SubjectPlaceholder",
+    Value = "Тема",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 433,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "MessagePlaceholder",
+    Value = "Your Message",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 434,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "MessagePlaceholder",
+    Value = "Ihre Nachricht",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 435,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "MessagePlaceholder",
+    Value = "Ваше сообщение",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 436,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "SendButton",
+    Value = "Send Message",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 437,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "SendButton",
+    Value = "Nachricht senden",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 438,
+    EntityName = "ContactForm",
+    EntityId = 1,
+    Key = "SendButton",
+    Value = "Отправить сообщение",
+    LanguageId = 4 // Russian
+}
             );
         }
 

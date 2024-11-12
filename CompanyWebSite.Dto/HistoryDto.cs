@@ -15,5 +15,6 @@ namespace CompanyWebSite.Dto
         public string? Slug { get; set; }
         public int? Year { get; set; }
         public string? YearDescription { get; set; }
+        public string? ProjectUrl { get; set; }
     }
 }

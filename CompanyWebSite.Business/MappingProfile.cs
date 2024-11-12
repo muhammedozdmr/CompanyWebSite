@@ -36,12 +36,13 @@ namespace CompanyWebSite.Business
             CreateMap<ServiceCategory, ServiceCategoryDto>().ReverseMap();
             CreateMap<Media, MediaDto>().ReverseMap();
             CreateMap<Highlight, HighlightDto>().ReverseMap();
-            CreateMap<Contact, ContactDto>().ReverseMap();
+            CreateMap<ContactForm, ContactFormDto>().ReverseMap();
             CreateMap<FAQ, FAQDto>().ReverseMap();
             CreateMap<Language, LanguageDto>().ReverseMap();
             CreateMap<Translation, TranslationDto>().ReverseMap();
             CreateMap<NavbarItem, NavbarItemDto>().ReverseMap();
             CreateMap<Newsletter, NewsletterDto>().ReverseMap();
+            CreateMap<CompanyInfo, CompanyInfoDto>().ReverseMap();
         }
     }
 }

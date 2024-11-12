@@ -12,6 +12,7 @@ namespace CompanyWebSite.Domain.Entities
         public string? CompanyLogoUrl { get; set; } // Resim URL'si
         public string? CompanyName { get; set; } // Company Name
         public string? CompanyArea { get; set; } // Şirket Ünvanı
+        public string? WorkingHours { get; set; } // Çalışma saatleri
         public DateTime? CreateDate { get; set; } // Kuruluş tarihi
         public string? Residence { get; set; } // İkamet yeri (Şehir/Ülke)
         public string? Address { get; set; } // Adres

@@ -13,52 +13,41 @@ namespace CompanyWebSite.Business.Services
 {
     public class ContactService : IContactService
     {
-        private readonly IBaseRepository<Contact> _baseContactRepository;
+        private readonly IContactFormService _contactFormService;
+        private readonly ICompanyInfoService _companyInfoService;
+        private readonly ILanguageRepository _languageRepository;
+        private readonly ITranslationService _translationService;
         private readonly IMapper _mapper;
-        public ContactService(IBaseRepository<Contact> baseContactRepository, IMapper mapper)
+
+        public ContactService(IContactFormService contactFormService, ICompanyInfoService companyInfoService, ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper)
         {
-            _baseContactRepository = baseContactRepository;
+            _contactFormService = contactFormService;
+            _companyInfoService = companyInfoService;
+            _languageRepository = languageRepository;
+            _translationService = translationService;
             _mapper = mapper;
         }
 
-        //TODO: Contact da ContactDto kontrol et ContactForm işlemini unutma
-        public async Task AddContactAsync(ContactDto contactDto)
-        {
-            var contact = _mapper.Map<Contact>(contactDto);
-            await _baseContactRepository.AddAsync(contact);
-        }
-
-        public async Task DeleteContactAsync(int id)
-        {
-            await _baseContactRepository.DeleteAsync(id);
-        }
 
         public async Task<IEnumerable<ContactDto>> GetContactAllAsync(string languageCode)
         {
-            var contacts = await _baseContactRepository.GetAllAsync();
-            var conatcsDtosMap = _mapper.Map<IEnumerable<ContactDto>>(contacts);
-            return conatcsDtosMap;
-        }
+            var companyInfo = await _companyInfoService.GetCompanyInfoAllAsync(languageCode);
+            var contactForm = await _contactFormService.GetContactFormAllAsync(languageCode);
 
-        public async Task<ContactDto> GetContactByIdAsync(int id)
-        {
-            var contact = await _baseContactRepository.GetByIdAsync(id);
-            var contactDto = _mapper.Map<ContactDto>(contact);
+            var contactDto = new List<ContactDto>
+            {
+                new ContactDto
+                {
+                    CompanyInfos = companyInfo,
+                    ContactForms = contactForm
+                }
+            };
             return contactDto;
         }
 
-        public async Task UpdateContactAsync(ContactDto contactDto)
+        public async Task AddContactAsync(ContactFormDto contactDto)
         {
-            var contact = await _baseContactRepository.GetByIdAsync(contactDto.Id);
-            if(contact != null)
-            {
-                contact = _mapper.Map<Contact>(contactDto);
-                await _baseContactRepository.UpdateAsync(contact);
-            }
-            else
-            {
-                throw new Exception("Contact not found");
-            }
+            await _contactFormService.AddContactFormAsync(contactDto);
         }
     }
 }

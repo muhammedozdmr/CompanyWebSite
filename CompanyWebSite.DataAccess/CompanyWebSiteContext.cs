@@ -21,7 +21,7 @@ namespace CompanyWebSite.DataAccess
         public DbSet<Blog>? Blogs { get; set; }
         public DbSet<Category>? Categories { get; set; }
         public DbSet<CompanyInfo>? CompanyInfos { get; set; }
-        public DbSet<Contact>? Contacts { get; set; }
+        public DbSet<ContactForm>? Contacts { get; set; }
         public DbSet<Customer>? Customers { get; set; }
         public DbSet<History>? Histories { get; set; }
         public DbSet<Language>? Languages { get; set; }
