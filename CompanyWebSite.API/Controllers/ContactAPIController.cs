@@ -20,44 +20,15 @@ namespace CompanyWebSite.API.Controllers
             return await _contactService.GetContactAllAsync(languageCode);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ContactDto>> GetContactById(int id)
-        {
-            var contact = await _contactService.GetContactByIdAsync(id);
-            if (contact == null)
-            {
-                return NotFound();
-            }
-            return Ok(contact);
-        }
-
         [HttpPost]
-        public async Task<IActionResult> AddContact([FromBody] ContactDto contactDto)
+        public async Task<IActionResult> AddContactFormFromContact([FromBody] ContactFormDto contactFormDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            await _contactService.AddContactAsync(contactDto);
-            return CreatedAtAction(nameof(GetContactById), new { id = contactDto.Id }, contactDto);
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> UpdateContact([FromBody] ContactDto contactDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-            await _contactService.UpdateContactAsync(contactDto);
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteContact(int id)
-        {
-            await _contactService.DeleteContactAsync(id);
-            return NoContent();
+            await _contactService.AddContactAsync(contactFormDto);
+            return CreatedAtAction(nameof(GetAllContacts), new { id = contactFormDto.Id }, contactFormDto);
         }
     }
 }

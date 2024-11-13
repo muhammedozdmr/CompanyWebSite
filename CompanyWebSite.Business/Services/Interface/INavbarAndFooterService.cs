@@ -4,5 +4,5 @@ namespace CompanyWebSite.Business.Services.Interface;
 
 public interface INavbarAndFooterService
 {
-    public Task<IEnumerable<NavbarAndFooterDto>> GetFooterAllAsync(string languageCode);
+    public Task<IEnumerable<NavbarAndFooterDto>> GetNavbarAndFooterAllAsync(string languageCode);
 }

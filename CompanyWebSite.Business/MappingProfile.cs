@@ -43,6 +43,7 @@ namespace CompanyWebSite.Business
             CreateMap<NavbarItem, NavbarItemDto>().ReverseMap();
             CreateMap<Newsletter, NewsletterDto>().ReverseMap();
             CreateMap<CompanyInfo, CompanyInfoDto>().ReverseMap();
+            CreateMap<Footer, FooterDto>().ReverseMap();
         }
     }
 }

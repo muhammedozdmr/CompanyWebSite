@@ -84,11 +84,11 @@ namespace CompanyWebSite.Business.Services
                     {
                         serviceDto.DefaultTitle = serviceTranslation.Value;
                     }
-                    else if (serviceTranslation.Value == "DefaultContent")
+                    else if (serviceTranslation.Key == "DefaultContent")
                     {
                         serviceDto.DefaultContent = serviceTranslation.Value;
                     }
-                    else if (serviceTranslation.Value == "Summary")
+                    else if (serviceTranslation.Key == "Summary")
                     {
                         serviceDto.Summary = serviceTranslation.Value;
                     }

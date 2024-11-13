@@ -3987,7 +3987,123 @@ new Translation
     Key = "SendButton",
     Value = "Отправить сообщение",
     LanguageId = 4 // Russian
+},
+
+//Footer Translations
+// English Translations
+new Translation
+{
+    Id = 439,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "CompanyInfoTitle",
+    Value = "Where Can You Find Us?",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 440,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "NewsletterTitle",
+    Value = "Subscribe to Our Newsletter",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 441,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "NewsletterPlaceholder",
+    Value = "Enter your email address",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 442,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "QuickLinksTitle",
+    Value = "Quick Links",
+    LanguageId = 2 // English
+},
+
+// German Translations
+new Translation
+{
+    Id = 443,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "CompanyInfoTitle",
+    Value = "Wo Sie uns finden können?",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 444,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "NewsletterTitle",
+    Value = "Abonnieren Sie unseren Newsletter",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 445,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "NewsletterPlaceholder",
+    Value = "Geben Sie Ihre E-Mail-Adresse ein",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 446,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "QuickLinksTitle",
+    Value = "Schnellzugriff",
+    LanguageId = 3 // German
+},
+
+// Russian Translations
+new Translation
+{
+    Id = 447,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "CompanyInfoTitle",
+    Value = "Где нас найти?",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 448,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "NewsletterTitle",
+    Value = "Подписаться на нашу рассылку",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 449,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "NewsletterPlaceholder",
+    Value = "Введите ваш адрес электронной почты",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 450,
+    EntityName = "Footer",
+    EntityId = 1,
+    Key = "QuickLinksTitle",
+    Value = "Быстрые ссылки",
+    LanguageId = 4 // Russian
 }
+
             );
         }
 

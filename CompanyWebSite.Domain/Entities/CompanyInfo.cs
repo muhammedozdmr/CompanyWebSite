@@ -9,6 +9,7 @@ namespace CompanyWebSite.Domain.Entities
     public class CompanyInfo
     {
         public int Id { get; set; }
+        
         public string? CompanyLogoUrl { get; set; } // Resim URL'si
         public string? CompanyName { get; set; } // Company Name
         public string? CompanyArea { get; set; } // Şirket Ünvanı

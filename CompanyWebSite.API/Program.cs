@@ -24,6 +24,17 @@ builder.Services.AddScoped<ITranslationService, TranslationService>();
 builder.Services.AddScoped<ITranslationRepository, TranslationRepository>();
 builder.Services.AddScoped<ILanguageRepository, LanguageRepository>();
 builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IBlogService,BlogService>();
+builder.Services.AddScoped<ICompanyInfoService,CompanyInfoService>();
+builder.Services.AddScoped<IContactFormService, ContactFormService>();
+builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IFAQService, FAQService>();
+builder.Services.AddScoped<IHomeService, HomeService>();
+builder.Services.AddScoped<INavbarAndFooterService,NavbarAndFooterService>();
+builder.Services.AddScoped<INavbarItemService,NavbarItemService>();
+builder.Services.AddScoped<INewsletterService,NewsletterService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<IFooterService,FooterService>();
 
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 

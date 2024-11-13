@@ -10,9 +10,9 @@ namespace CompanyWebSite.Dto
     {
         public int Id { get; set; }
         
-        public IEnumerable<AboutDto> About { get; set; }
-        public IEnumerable<ServiceDto> Services { get; set; }
-        public IEnumerable<FAQDto> FQ { get; set; }
+        public IEnumerable<AboutDto>? About { get; set; }
+        public IEnumerable<ServiceDto>? Services { get; set; }
+        public IEnumerable<FAQDto>? FQ { get; set; }
         public string? ButtonName { get; set; }
         public int CustomerCount { get; set; } = 15;
         public int CustomerSatisfaction { get; set; } = 100;

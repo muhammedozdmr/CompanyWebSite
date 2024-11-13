@@ -71,9 +71,13 @@ namespace CompanyWebSite.Business.Services
                     {
                         aboutDto.DefaultTitle = aboutTranslation.Value;
                     }
-                    else if (aboutTranslation.Value == "DefaultContent")
+                    else if (aboutTranslation.Key == "DefaultContent")
                     {
                         aboutDto.DefaultContent = aboutTranslation.Value;
+                    }
+                    else if(aboutTranslation.Key == "Summary")
+                    {
+                        aboutDto.Summary = aboutTranslation.Value;
                     }
                 }
                 var translatedHistories = new List<HistoryDto>();

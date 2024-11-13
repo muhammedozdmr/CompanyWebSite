@@ -3,7 +3,7 @@ using CompanyWebSite.Dto;
 
 namespace CompanyWebSite.Business.Services.Test;
 
-public class MainTestService : IMainTestService
+public class TestService : ITestService
 {
     private readonly IAboutService _aboutService;
     private readonly IBlogService _blogService;
@@ -15,8 +15,9 @@ public class MainTestService : IMainTestService
     private readonly INavbarItemService _navbarItemService;
     private readonly INewsletterService _newsletterService;
     private readonly IServiceService _serviceService;
+    private readonly IContactFormService _contactFormService;
 
-    public MainTestService
+    public TestService
     (
         IAboutService aboutService
         , IBlogService blogService
@@ -28,6 +29,7 @@ public class MainTestService : IMainTestService
         , INavbarItemService navbarItemService
         , INewsletterService newsletterService 
         , IServiceService serviceService 
+        , IContactFormService contactFormService
     )
     {
         _aboutService = aboutService;
@@ -40,6 +42,7 @@ public class MainTestService : IMainTestService
         _navbarItemService = navbarItemService;
         _newsletterService = newsletterService;
         _serviceService = serviceService;
+        _contactFormService = contactFormService;
     }
 
     public async Task<IEnumerable<AboutDto>> GetAboutAllAsync(string languageCode)
@@ -157,9 +160,9 @@ public class MainTestService : IMainTestService
         return await _homeService.GetHomeAllAsync(languageCode);
     }
 
-    public async Task<IEnumerable<NavbarAndFooterDto>> GetFooterAllAsync(string languageCode)
+    public async Task<IEnumerable<NavbarAndFooterDto>> GetNavbarAndFooterAllAsync(string languageCode)
     {
-        return await _navbarAndFooterService.GetFooterAllAsync(languageCode);
+        return await _navbarAndFooterService.GetNavbarAndFooterAllAsync(languageCode);
     }
 
     public async Task<IEnumerable<NavbarItemDto>> GetNavbarItemAllAsync(string languageCode)
@@ -235,5 +238,30 @@ public class MainTestService : IMainTestService
     public async Task DeleteServiceAsync(int id)
     {
         await _serviceService.DeleteServiceAsync(id);
+    }
+
+    public async Task<IEnumerable<ContactFormDto>> GetContactFormAllAsync(string languageCode)
+    {
+        return await _contactFormService.GetContactFormAllAsync(languageCode);
+    }
+
+    public async Task<ContactFormDto> GetContactFormByIdAsync(int id)
+    {
+        return await _contactFormService.GetContactFormByIdAsync(id);
+    }
+
+    public async Task AddContactFormAsync(ContactFormDto contactFormDto)
+    {
+        await _contactFormService.AddContactFormAsync(contactFormDto);
+    }
+
+    public async Task UpdateContactFormAsync(ContactFormDto contactFormDto)
+    {
+        await _contactFormService.UpdateContactFormAsync(contactFormDto);
+    }
+
+    public async Task DeleteContactFormAsync(int id)
+    {
+        await _contactFormService.DeleteContactFormAsync(id);
     }
 }

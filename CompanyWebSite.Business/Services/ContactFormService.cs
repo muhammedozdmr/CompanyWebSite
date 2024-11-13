@@ -41,7 +41,7 @@ public class ContactFormService : IContactFormService
            var contactFormPlaceHolderTranslations = await _translationService.GetTranslationAsync("ContactForm", contactFormDto.Id, language.Code);
            foreach(var contactFormPlaceHolderTranslation in contactFormPlaceHolderTranslations)
            {
-               if (contactFormPlaceHolderTranslation.Key == "FullNamePlaceHolder")
+               if (contactFormPlaceHolderTranslation.Key == "FullNamePlaceholder")
                {
                    contactFormDto.DefaultFullNamePlaceholder = contactFormPlaceHolderTranslation.Value;
                }

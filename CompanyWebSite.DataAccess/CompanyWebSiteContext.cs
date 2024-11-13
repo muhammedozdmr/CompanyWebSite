@@ -34,6 +34,8 @@ namespace CompanyWebSite.DataAccess
         public DbSet<NavbarItem> NavbarItems { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
 
+        public DbSet<Footer> Footers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

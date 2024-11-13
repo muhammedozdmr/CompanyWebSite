@@ -45,9 +45,9 @@ namespace CompanyWebSite.Business.Services
             return contactDto;
         }
 
-        public async Task AddContactAsync(ContactFormDto contactDto)
+        public async Task AddContactAsync(ContactFormDto contactFormDto)
         {
-            await _contactFormService.AddContactFormAsync(contactDto);
+            await _contactFormService.AddContactFormAsync(contactFormDto);
         }
     }
 }

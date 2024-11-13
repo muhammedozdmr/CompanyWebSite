@@ -61,7 +61,7 @@ namespace CompanyWebSite.Business.Services
                     {
                         faqDto.Question = faqTranslation.Value;
                     }
-                    else if(faqTranslation.Value == "Answer")
+                    else if(faqTranslation.Key == "Answer")
                     {
                         faqDto.Answer = faqTranslation.Value;
                     }
