@@ -25,7 +25,7 @@ namespace CompanyWebSite.Business
             .ForMember(dest => dest.CompanyInfoId, opt => opt.MapFrom(src => src.CompanyInfoId))
             .ForMember(dest=>dest.Histories,opt=>opt.MapFrom(src=>src.Histories)).ReverseMap();
 
-            // Update işlemi için özel bir mapping profili tanımlayın
+            // Update işlemi için özel bir mapping profili tanımladık
             CreateMap<AboutDto, About>()
                 .ForMember(dest => dest.Histories, opt => opt.Ignore());
 
@@ -44,6 +44,7 @@ namespace CompanyWebSite.Business
             CreateMap<Newsletter, NewsletterDto>().ReverseMap();
             CreateMap<CompanyInfo, CompanyInfoDto>().ReverseMap();
             CreateMap<Footer, FooterDto>().ReverseMap();
+            CreateMap<SidePanel, SidePanelDto>().ReverseMap();
         }
     }
 }

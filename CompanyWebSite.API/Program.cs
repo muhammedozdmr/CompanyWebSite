@@ -30,11 +30,12 @@ builder.Services.AddScoped<IContactFormService, ContactFormService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IFAQService, FAQService>();
 builder.Services.AddScoped<IHomeService, HomeService>();
-builder.Services.AddScoped<INavbarAndFooterService,NavbarAndFooterService>();
+builder.Services.AddScoped<INavbarFooterSidePanelService,NavbarFooterSidePanelService>();
 builder.Services.AddScoped<INavbarItemService,NavbarItemService>();
 builder.Services.AddScoped<INewsletterService,NewsletterService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
 builder.Services.AddScoped<IFooterService,FooterService>();
+builder.Services.AddScoped<ISidePanelService, SidePanelService>();
 
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 

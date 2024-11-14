@@ -33,8 +33,8 @@ namespace CompanyWebSite.DataAccess
         public DbSet<Media> MediaItems { get; set; }
         public DbSet<NavbarItem> NavbarItems { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
-
         public DbSet<Footer> Footers { get; set; }
+        public DbSet<SidePanel> SidePanels { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -52,6 +52,8 @@ namespace CompanyWebSite.DataAccess
             modelBuilder.ApplyConfiguration(new MediaConfiguration());
             modelBuilder.ApplyConfiguration(new HighlightConfiguration());
             modelBuilder.ApplyConfiguration(new NavbarItemConfiguration());
+            modelBuilder.ApplyConfiguration(new FooterConfiguration());
+            modelBuilder.ApplyConfiguration(new SidePanelConfiguration());
         }
     }
 }

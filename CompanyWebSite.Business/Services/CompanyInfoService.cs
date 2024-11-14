@@ -61,6 +61,10 @@ namespace CompanyWebSite.Business.Services
                     {
                         companyInfoDto.Address = companyInfoTranslation.Value;
                     }
+                    else if(companyInfoTranslation.Key == "WorkingHours")
+                    {
+                        companyInfoDto.WorkingHours = companyInfoTranslation.Value;
+                    }
                 }
             }
             return companyInfoDtos;

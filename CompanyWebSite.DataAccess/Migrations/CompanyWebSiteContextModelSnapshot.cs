@@ -671,20 +671,34 @@ namespace CompanyWebSite.DataAccess.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CompanyInfoTitle")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("NewsletterPlaceholder")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("NewsletterTitle")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("QuickLinksTitle")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Footers");
+                    b.ToTable("Footer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CompanyInfoTitle = "Bizi Nerede Bulabilirsiniz?",
+                            NewsletterPlaceholder = "E-posta adresinizi girin",
+                            NewsletterTitle = "Bültenimize Abone Olun",
+                            QuickLinksTitle = "Kolay Erişim"
+                        });
                 });
 
             modelBuilder.Entity("CompanyWebSite.Domain.Entities.Highlight", b =>
@@ -1488,6 +1502,45 @@ namespace CompanyWebSite.DataAccess.Migrations
                         {
                             Id = 10,
                             Name = "Bulut Çözümleri"
+                        });
+                });
+
+            modelBuilder.Entity("CompanyWebSite.Domain.Entities.SidePanel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("SidePanelContactContent")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SidePanelContactTitle")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("SidePanelMainContent")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("SidePanelMainTitle")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SidePanel", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            SidePanelContactContent = "Yeni bir proje için destek mi arıyorsunuz? TechLiberty ekibi, ihtiyaçlarınıza uygun yaratıcı ve ölçeklenebilir çözümler üretmek için burada. Dijital dönüşüm yolculuğunuzda size rehberlik edelim. Bizimle iletişime geçin ve işletmenizi bir üst seviyeye taşıyacak iş birliği fırsatlarını konuşalım!",
+                            SidePanelContactTitle = "Birlikte Dijital Geleceği Şekillendirelim",
+                            SidePanelMainContent = "Dijital çözümlerle işinizi büyütün ve rakiplerinize karşı avantaj kazanın. İster startup olun, ister kurumsal bir şirket; ölçeklenebilir ve etkili çözümlerle işletmenize değer katıyoruz. TechLiberty’nin uzman ekibiyle projelerinizi başarıyla hayata geçirin.",
+                            SidePanelMainTitle = "Ölçeklenebilir Çözümlerle Büyümeye Hazırlanın"
                         });
                 });
 
@@ -5606,6 +5659,114 @@ namespace CompanyWebSite.DataAccess.Migrations
                             Key = "QuickLinksTitle",
                             LanguageId = 4,
                             Value = "Быстрые ссылки"
+                        },
+                        new
+                        {
+                            Id = 451,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelMainTitle",
+                            LanguageId = 2,
+                            Value = "Get Ready to Grow with Scalable Solutions"
+                        },
+                        new
+                        {
+                            Id = 452,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelMainContent",
+                            LanguageId = 2,
+                            Value = "Grow your business with digital solutions and gain an edge over your competitors. Whether you are a startup or a corporate company, we add value to your business with scalable and effective solutions. Bring your projects to life with TechLiberty's expert team."
+                        },
+                        new
+                        {
+                            Id = 453,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelContactTitle",
+                            LanguageId = 2,
+                            Value = "Let's Shape the Digital Future Together"
+                        },
+                        new
+                        {
+                            Id = 454,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelContactContent",
+                            LanguageId = 2,
+                            Value = "Looking for support for a new project? The TechLiberty team is here to create creative and scalable solutions tailored to your needs. Let us guide you on your digital transformation journey. Contact us to discuss collaboration opportunities that will elevate your business to the next level!"
+                        },
+                        new
+                        {
+                            Id = 455,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelMainTitle",
+                            LanguageId = 3,
+                            Value = "Bereit zum Wachstum mit skalierbaren Lösungen"
+                        },
+                        new
+                        {
+                            Id = 456,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelMainContent",
+                            LanguageId = 3,
+                            Value = "Wachsen Sie Ihr Geschäft mit digitalen Lösungen und verschaffen Sie sich einen Vorteil gegenüber Ihren Wettbewerbern. Ob Startup oder Unternehmensunternehmen, wir fügen Ihrem Unternehmen mit skalierbaren und effektiven Lösungen Wert hinzu. Bringen Sie Ihre Projekte mit dem Expertenteam von TechLiberty erfolgreich zum Leben."
+                        },
+                        new
+                        {
+                            Id = 457,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelContactTitle",
+                            LanguageId = 3,
+                            Value = "Lassen Sie uns gemeinsam die digitale Zukunft gestalten"
+                        },
+                        new
+                        {
+                            Id = 458,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelContactContent",
+                            LanguageId = 3,
+                            Value = "Suchen Sie Unterstützung für ein neues Projekt? Das Team von TechLiberty ist hier, um kreative und skalierbare Lösungen zu entwickeln, die auf Ihre Bedürfnisse zugeschnitten sind. Lassen Sie uns Sie auf Ihrer digitalen Transformationsreise begleiten. Kontaktieren Sie uns, um Kooperationsmöglichkeiten zu besprechen, die Ihr Unternehmen auf die nächste Stufe bringen!"
+                        },
+                        new
+                        {
+                            Id = 459,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelMainTitle",
+                            LanguageId = 4,
+                            Value = "Приготовьтесь к росту с масштабируемыми решениями"
+                        },
+                        new
+                        {
+                            Id = 460,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelMainContent",
+                            LanguageId = 4,
+                            Value = "Развивайте свой бизнес с помощью цифровых решений и получите преимущество перед конкурентами. Будь вы стартап или корпоративная компания, мы добавляем ценность вашему бизнесу с масштабируемыми и эффективными решениями. Реализуйте свои проекты с командой экспертов TechLiberty."
+                        },
+                        new
+                        {
+                            Id = 461,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelContactTitle",
+                            LanguageId = 4,
+                            Value = "Давайте вместе формировать цифровое будущее"
+                        },
+                        new
+                        {
+                            Id = 462,
+                            EntityId = 1,
+                            EntityName = "SidePanel",
+                            Key = "SidePanelContactContent",
+                            LanguageId = 4,
+                            Value = "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!"
                         });
                 });
 

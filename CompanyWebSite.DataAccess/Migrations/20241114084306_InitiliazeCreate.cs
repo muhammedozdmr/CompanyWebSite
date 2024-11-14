@@ -118,6 +118,22 @@ namespace CompanyWebSite.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Footer",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CompanyInfoTitle = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    NewsletterTitle = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    NewsletterPlaceholder = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    QuickLinksTitle = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Footer", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Language",
                 columns: table => new
                 {
@@ -151,6 +167,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SubscribedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -170,6 +187,22 @@ namespace CompanyWebSite.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ServiceCategory", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SidePanel",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SidePanelMainTitle = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    SidePanelMainContent = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    SidePanelContactTitle = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: true),
+                    SidePanelContactContent = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SidePanel", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -472,6 +505,11 @@ namespace CompanyWebSite.DataAccess.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Footer",
+                columns: new[] { "Id", "CompanyInfoTitle", "NewsletterPlaceholder", "NewsletterTitle", "QuickLinksTitle" },
+                values: new object[] { 1, "Bizi Nerede Bulabilirsiniz?", "E-posta adresinizi girin", "Bültenimize Abone Olun", "Kolay Erişim" });
+
+            migrationBuilder.InsertData(
                 table: "Language",
                 columns: new[] { "Id", "Code", "Name" },
                 values: new object[,]
@@ -528,6 +566,11 @@ namespace CompanyWebSite.DataAccess.Migrations
                     { 9, "Proje Yönetimi" },
                     { 10, "Bulut Çözümleri" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "SidePanel",
+                columns: new[] { "Id", "SidePanelContactContent", "SidePanelContactTitle", "SidePanelMainContent", "SidePanelMainTitle" },
+                values: new object[] { 1, "Yeni bir proje için destek mi arıyorsunuz? TechLiberty ekibi, ihtiyaçlarınıza uygun yaratıcı ve ölçeklenebilir çözümler üretmek için burada. Dijital dönüşüm yolculuğunuzda size rehberlik edelim. Bizimle iletişime geçin ve işletmenizi bir üst seviyeye taşıyacak iş birliği fırsatlarını konuşalım!", "Birlikte Dijital Geleceği Şekillendirelim", "Dijital çözümlerle işinizi büyütün ve rakiplerinize karşı avantaj kazanın. İster startup olun, ister kurumsal bir şirket; ölçeklenebilir ve etkili çözümlerle işletmenize değer katıyoruz. TechLiberty’nin uzman ekibiyle projelerinizi başarıyla hayata geçirin.", "Ölçeklenebilir Çözümlerle Büyümeye Hazırlanın" });
 
             migrationBuilder.InsertData(
                 table: "About",
@@ -1076,7 +1119,31 @@ namespace CompanyWebSite.DataAccess.Migrations
                     { 435, null, null, 1, "ContactForm", null, null, "MessagePlaceholder", 4, null, null, "Ваше сообщение" },
                     { 436, null, null, 1, "ContactForm", null, null, "SendButton", 2, null, null, "Send Message" },
                     { 437, null, null, 1, "ContactForm", null, null, "SendButton", 3, null, null, "Nachricht senden" },
-                    { 438, null, null, 1, "ContactForm", null, null, "SendButton", 4, null, null, "Отправить сообщение" }
+                    { 438, null, null, 1, "ContactForm", null, null, "SendButton", 4, null, null, "Отправить сообщение" },
+                    { 439, null, null, 1, "Footer", null, null, "CompanyInfoTitle", 2, null, null, "Where Can You Find Us?" },
+                    { 440, null, null, 1, "Footer", null, null, "NewsletterTitle", 2, null, null, "Subscribe to Our Newsletter" },
+                    { 441, null, null, 1, "Footer", null, null, "NewsletterPlaceholder", 2, null, null, "Enter your email address" },
+                    { 442, null, null, 1, "Footer", null, null, "QuickLinksTitle", 2, null, null, "Quick Links" },
+                    { 443, null, null, 1, "Footer", null, null, "CompanyInfoTitle", 3, null, null, "Wo Sie uns finden können?" },
+                    { 444, null, null, 1, "Footer", null, null, "NewsletterTitle", 3, null, null, "Abonnieren Sie unseren Newsletter" },
+                    { 445, null, null, 1, "Footer", null, null, "NewsletterPlaceholder", 3, null, null, "Geben Sie Ihre E-Mail-Adresse ein" },
+                    { 446, null, null, 1, "Footer", null, null, "QuickLinksTitle", 3, null, null, "Schnellzugriff" },
+                    { 447, null, null, 1, "Footer", null, null, "CompanyInfoTitle", 4, null, null, "Где нас найти?" },
+                    { 448, null, null, 1, "Footer", null, null, "NewsletterTitle", 4, null, null, "Подписаться на нашу рассылку" },
+                    { 449, null, null, 1, "Footer", null, null, "NewsletterPlaceholder", 4, null, null, "Введите ваш адрес электронной почты" },
+                    { 450, null, null, 1, "Footer", null, null, "QuickLinksTitle", 4, null, null, "Быстрые ссылки" },
+                    { 451, null, null, 1, "SidePanel", null, null, "SidePanelMainTitle", 2, null, null, "Get Ready to Grow with Scalable Solutions" },
+                    { 452, null, null, 1, "SidePanel", null, null, "SidePanelMainContent", 2, null, null, "Grow your business with digital solutions and gain an edge over your competitors. Whether you are a startup or a corporate company, we add value to your business with scalable and effective solutions. Bring your projects to life with TechLiberty's expert team." },
+                    { 453, null, null, 1, "SidePanel", null, null, "SidePanelContactTitle", 2, null, null, "Let's Shape the Digital Future Together" },
+                    { 454, null, null, 1, "SidePanel", null, null, "SidePanelContactContent", 2, null, null, "Looking for support for a new project? The TechLiberty team is here to create creative and scalable solutions tailored to your needs. Let us guide you on your digital transformation journey. Contact us to discuss collaboration opportunities that will elevate your business to the next level!" },
+                    { 455, null, null, 1, "SidePanel", null, null, "SidePanelMainTitle", 3, null, null, "Bereit zum Wachstum mit skalierbaren Lösungen" },
+                    { 456, null, null, 1, "SidePanel", null, null, "SidePanelMainContent", 3, null, null, "Wachsen Sie Ihr Geschäft mit digitalen Lösungen und verschaffen Sie sich einen Vorteil gegenüber Ihren Wettbewerbern. Ob Startup oder Unternehmensunternehmen, wir fügen Ihrem Unternehmen mit skalierbaren und effektiven Lösungen Wert hinzu. Bringen Sie Ihre Projekte mit dem Expertenteam von TechLiberty erfolgreich zum Leben." },
+                    { 457, null, null, 1, "SidePanel", null, null, "SidePanelContactTitle", 3, null, null, "Lassen Sie uns gemeinsam die digitale Zukunft gestalten" },
+                    { 458, null, null, 1, "SidePanel", null, null, "SidePanelContactContent", 3, null, null, "Suchen Sie Unterstützung für ein neues Projekt? Das Team von TechLiberty ist hier, um kreative und skalierbare Lösungen zu entwickeln, die auf Ihre Bedürfnisse zugeschnitten sind. Lassen Sie uns Sie auf Ihrer digitalen Transformationsreise begleiten. Kontaktieren Sie uns, um Kooperationsmöglichkeiten zu besprechen, die Ihr Unternehmen auf die nächste Stufe bringen!" },
+                    { 459, null, null, 1, "SidePanel", null, null, "SidePanelMainTitle", 4, null, null, "Приготовьтесь к росту с масштабируемыми решениями" },
+                    { 460, null, null, 1, "SidePanel", null, null, "SidePanelMainContent", 4, null, null, "Развивайте свой бизнес с помощью цифровых решений и получите преимущество перед конкурентами. Будь вы стартап или корпоративная компания, мы добавляем ценность вашему бизнесу с масштабируемыми и эффективными решениями. Реализуйте свои проекты с командой экспертов TechLiberty." },
+                    { 461, null, null, 1, "SidePanel", null, null, "SidePanelContactTitle", 4, null, null, "Давайте вместе формировать цифровое будущее" },
+                    { 462, null, null, 1, "SidePanel", null, null, "SidePanelContactContent", 4, null, null, "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!" }
                 });
 
             migrationBuilder.InsertData(
@@ -1179,6 +1246,9 @@ namespace CompanyWebSite.DataAccess.Migrations
                 name: "Customers");
 
             migrationBuilder.DropTable(
+                name: "Footer");
+
+            migrationBuilder.DropTable(
                 name: "Highlight");
 
             migrationBuilder.DropTable(
@@ -1189,6 +1259,9 @@ namespace CompanyWebSite.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "ServiceCategoryMapping");
+
+            migrationBuilder.DropTable(
+                name: "SidePanel");
 
             migrationBuilder.DropTable(
                 name: "Translation");

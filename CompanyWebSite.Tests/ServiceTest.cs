@@ -15,7 +15,7 @@ namespace CompanyWebSite.Tests
         private Mock<IContactService> _contactService;
         private Mock<IFAQService> _fAQService;
         private Mock<IHomeService> _homeService;
-        private Mock<INavbarAndFooterService> _navbarAndFooterService;
+        private Mock<INavbarFooterSidePanelService> _navbarAndFooterService;
         private Mock<INavbarItemService> _navbarItemService;
         private Mock<INewsletterService> _newsletterService;
         private Mock<IServiceService> _serviceService;
@@ -29,7 +29,7 @@ namespace CompanyWebSite.Tests
             _contactService = new Mock<IContactService>();
             _fAQService = new Mock<IFAQService>();
             _homeService = new Mock<IHomeService>();
-            _navbarAndFooterService = new Mock<INavbarAndFooterService>();
+            _navbarAndFooterService = new Mock<INavbarFooterSidePanelService>();
             _navbarItemService = new Mock<INavbarItemService>();
             _newsletterService = new Mock<INewsletterService>();
             _serviceService = new Mock<IServiceService>();
@@ -868,12 +868,12 @@ namespace CompanyWebSite.Tests
         #region Navbar And Footer Test
         //Navbar And Footer Test
 
-        private List<NavbarAndFooterDto> GetMockNavbarAndFooterData() => new List<NavbarAndFooterDto>
+        private List<NavbarFooterSidePanelDto> GetMockNavbarAndFooterData() => new List<NavbarFooterSidePanelDto>
         {
-            new NavbarAndFooterDto { Id = 1, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() },
-            new NavbarAndFooterDto { Id = 2, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() },
-            new NavbarAndFooterDto { Id = 3, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() },
-            new NavbarAndFooterDto { Id = 4, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() }
+            new NavbarFooterSidePanelDto { Id = 1, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() },
+            new NavbarFooterSidePanelDto { Id = 2, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() },
+            new NavbarFooterSidePanelDto { Id = 3, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() },
+            new NavbarFooterSidePanelDto { Id = 4, NavbarItems = GetMockNavbarItemData(), CompanyInfos = GetMockCompanyInfoData(), Newsletters = GetMockNewsletterData() }
         };
 
         [Theory]
@@ -886,16 +886,16 @@ namespace CompanyWebSite.Tests
         {
             //Arrange
             var mockNavbarAndFooters = GetMockNavbarAndFooterData();
-            _navbarAndFooterService.Setup(x => x.GetNavbarAndFooterAllAsync(languageCode)).ReturnsAsync(mockNavbarAndFooters);
+            _navbarAndFooterService.Setup(x => x.GetNavbarFooterSidePanelAllAsync(languageCode)).ReturnsAsync(mockNavbarAndFooters);
 
             //Act
-            var result = await _testService.GetNavbarAndFooterAllAsync(languageCode);
+            var result = await _testService.GetNavbarFooterSidePanelAllAsync(languageCode);
 
             //Assert
             Assert.NotNull(result); // Sonucun null olmadığını doğrula
             Assert.NotEmpty(result); // Listenin boş olmadığını doğrula
 
-            _navbarAndFooterService.Verify(x => x.GetNavbarAndFooterAllAsync(languageCode), Times.Once); // GetNavbarAndFooterAllAsync metodunun yalnızca bir kez çağrıldığını doğrula
+            _navbarAndFooterService.Verify(x => x.GetNavbarFooterSidePanelAllAsync(languageCode), Times.Once); // GetNavbarAndFooterAllAsync metodunun yalnızca bir kez çağrıldığını doğrula
         }
         #endregion
     }

@@ -11,7 +11,7 @@ public class TestService : ITestService
     private readonly IContactService _contactService;
     private readonly IFAQService _fAQService;
     private readonly IHomeService _homeService;
-    private readonly INavbarAndFooterService _navbarAndFooterService;
+    private readonly INavbarFooterSidePanelService _navbarAndFooterService;
     private readonly INavbarItemService _navbarItemService;
     private readonly INewsletterService _newsletterService;
     private readonly IServiceService _serviceService;
@@ -25,7 +25,7 @@ public class TestService : ITestService
         , IContactService contactService
         , IFAQService fAqService 
         , IHomeService homeService
-        , INavbarAndFooterService navbarAndFooterService
+        , INavbarFooterSidePanelService navbarAndFooterService
         , INavbarItemService navbarItemService
         , INewsletterService newsletterService 
         , IServiceService serviceService 
@@ -160,9 +160,9 @@ public class TestService : ITestService
         return await _homeService.GetHomeAllAsync(languageCode);
     }
 
-    public async Task<IEnumerable<NavbarAndFooterDto>> GetNavbarAndFooterAllAsync(string languageCode)
+    public async Task<IEnumerable<NavbarFooterSidePanelDto>> GetNavbarFooterSidePanelAllAsync(string languageCode)
     {
-        return await _navbarAndFooterService.GetNavbarAndFooterAllAsync(languageCode);
+        return await _navbarAndFooterService.GetNavbarFooterSidePanelAllAsync(languageCode);
     }
 
     public async Task<IEnumerable<NavbarItemDto>> GetNavbarItemAllAsync(string languageCode)

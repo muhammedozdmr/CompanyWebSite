@@ -4102,8 +4102,120 @@ new Translation
     Key = "QuickLinksTitle",
     Value = "Быстрые ссылки",
     LanguageId = 4 // Russian
-}
+},
+// English Translations
+new Translation
+{
+    Id = 451,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelMainTitle",
+    Value = "Get Ready to Grow with Scalable Solutions",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 452,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelMainContent",
+    Value = "Grow your business with digital solutions and gain an edge over your competitors. Whether you are a startup or a corporate company, we add value to your business with scalable and effective solutions. Bring your projects to life with TechLiberty's expert team.",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 453,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelContactTitle",
+    Value = "Let's Shape the Digital Future Together",
+    LanguageId = 2 // English
+},
+new Translation
+{
+    Id = 454,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelContactContent",
+    Value = "Looking for support for a new project? The TechLiberty team is here to create creative and scalable solutions tailored to your needs. Let us guide you on your digital transformation journey. Contact us to discuss collaboration opportunities that will elevate your business to the next level!",
+    LanguageId = 2 // English
+},
 
+// German Translations
+new Translation
+{
+    Id = 455,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelMainTitle",
+    Value = "Bereit zum Wachstum mit skalierbaren Lösungen",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 456,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelMainContent",
+    Value = "Wachsen Sie Ihr Geschäft mit digitalen Lösungen und verschaffen Sie sich einen Vorteil gegenüber Ihren Wettbewerbern. Ob Startup oder Unternehmensunternehmen, wir fügen Ihrem Unternehmen mit skalierbaren und effektiven Lösungen Wert hinzu. Bringen Sie Ihre Projekte mit dem Expertenteam von TechLiberty erfolgreich zum Leben.",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 457,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelContactTitle",
+    Value = "Lassen Sie uns gemeinsam die digitale Zukunft gestalten",
+    LanguageId = 3 // German
+},
+new Translation
+{
+    Id = 458,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelContactContent",
+    Value = "Suchen Sie Unterstützung für ein neues Projekt? Das Team von TechLiberty ist hier, um kreative und skalierbare Lösungen zu entwickeln, die auf Ihre Bedürfnisse zugeschnitten sind. Lassen Sie uns Sie auf Ihrer digitalen Transformationsreise begleiten. Kontaktieren Sie uns, um Kooperationsmöglichkeiten zu besprechen, die Ihr Unternehmen auf die nächste Stufe bringen!",
+    LanguageId = 3 // German
+},
+
+// Russian Translations
+new Translation
+{
+    Id = 459,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelMainTitle",
+    Value = "Приготовьтесь к росту с масштабируемыми решениями",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 460,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelMainContent",
+    Value = "Развивайте свой бизнес с помощью цифровых решений и получите преимущество перед конкурентами. Будь вы стартап или корпоративная компания, мы добавляем ценность вашему бизнесу с масштабируемыми и эффективными решениями. Реализуйте свои проекты с командой экспертов TechLiberty.",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 461,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelContactTitle",
+    Value = "Давайте вместе формировать цифровое будущее",
+    LanguageId = 4 // Russian
+},
+new Translation
+{
+    Id = 462,
+    EntityName = "SidePanel",
+    EntityId = 1,
+    Key = "SidePanelContactContent",
+    Value = "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!",
+    LanguageId = 4 // Russian
+}
             );
         }
 
