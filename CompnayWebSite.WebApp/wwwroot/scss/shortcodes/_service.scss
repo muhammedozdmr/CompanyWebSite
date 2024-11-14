@@ -1,0 +1,208 @@
+/*****************************
+  Services
+*****************************/
+.mygradient stop.start-color {stop-color: #D4D6D7;}
+.mygradient stop.end-color {stop-color: #D4D6D7;}
+
+.mygradient2 stop.start-color {stop-color: $gradient-1;}
+.mygradient2 stop.end-color {stop-color: $gradient-2;}
+
+/* Service Style 1 */
+.service-wrapper.service-style-1 {
+   position: relative;
+   margin: 0;
+   padding: 60px 40px;
+   background: $body-bg-color;
+   border: 1px solid $border-color-05;
+   border-radius: $radius-10;
+   transition: $transition-3;
+
+   .service-inner {
+      padding-left: 4px;
+      padding-bottom: 4px;
+      overflow: hidden;
+   }
+
+   .service-icon {
+      opacity: 1;
+      margin-bottom: 20px;
+      transition: $transition-3;
+
+      svg {
+         width: 70px;
+         fill: url(#mygradient);
+         transition: all 0.3s ease-in-out;
+      }
+   }
+
+   .bg-icon {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      opacity: 0;
+      transition: $transition-3;
+
+      svg {
+         width: 90px;
+         fill: url(#mygradient2);
+         transition: all 0.3s ease-in-out;
+      }
+   }
+
+   .service-content {
+
+      .service-title {
+         margin-bottom: 20px;
+      }
+      p {
+         margin-bottom: 0;
+      }
+      .service-links {
+         opacity: 0;
+         margin-top: 20px;
+         margin-bottom: -70px;
+         transition: $transition-3;
+
+         .btn-arrow {
+            border-color: $primary;
+
+            &:after {
+               border-color: $primary;
+            }
+         }
+      }
+   }
+
+   &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      margin: -3px;
+      opacity: 0;
+      border-radius: inherit;
+      transition: $transition-3;
+      background: linear-gradient(130deg, $gradient-1, $gradient-2, $gradient-3) 100%;
+   }
+
+
+   &:hover {
+      &:before {
+         opacity: 1;
+      }
+
+      .service-icon {
+         margin-top: -70px;
+         opacity: 0;
+      }
+
+      .bg-icon {
+         opacity: 0.2;
+      }
+
+      .service-content .service-links {
+         margin-bottom: 0;
+         opacity: 1;
+      }
+   }
+}
+
+/* Service Style 2 */
+.service-wrapper.service-style-2 {
+   position: relative;
+   margin: 0;
+   padding: 40px;
+   min-height: 450px;
+   background: $body-bg-color;
+   border: 1px solid $border-color-05;
+   transition: $transition-3;
+
+   .service-inner {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+   }
+
+   .service-content {
+      margin-top: auto;
+
+      .service-title {
+         margin-bottom: 25px;
+      }
+
+   }
+
+   .service-icon {
+      text-align: right;
+      margin-bottom: 20px;
+      transition: $transition-3;
+
+      svg {
+         width: 80px;
+         fill: url(#mygradient);
+         transition: all 0.3s ease-in-out;
+      }
+   }
+}
+
+/* Service Top Spacing */
+.services.grid-wrapper.service-top-space {
+   margin-top: 100px;
+}
+.service-wrapper.service-style-2.service-bottom-space {
+   margin-bottom: 100px;
+}
+
+.service-wrapper.service-style-2.service-top-space {
+   margin-top: 100px;
+}
+.service-wrapper.service-style-2.service-bottom-space {
+   margin-bottom: 100px;
+}
+
+/*Service Single*/
+.service-single{
+   .service-img{
+      img{
+          border-radius: $radius-10;
+      }
+   }
+}
+
+
+
+@media (max-width: 1200px) {
+  .service-wrapper.service-style-2{
+     padding: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .service-wrapper.service-style-2.service-top-space,
+  .service-wrapper.service-style-2.service-bottom-space{
+      margin-top: 0px;
+      margin-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+   .service-wrapper.service-style-1{
+      padding: 40px 20px;
+   }
+   .service-top-space{
+      margin-top: 50px;
+   }
+   .service-wrapper.service-style-2{
+      min-height: 350px;
+   }
+}
+@media (max-width: 575px) {
+   .service-top-space{
+      margin-top: 30px;
+   }
+
+   .services.grid-wrapper.service-top-space {
+      margin-top: 30px;
+   }
+}

@@ -1,0 +1,201 @@
+/*****************************
+  Button
+*****************************/
+.btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 160px;
+	height: 160px;
+	padding: 15px;
+	gap: 10px;
+	background-color: transparent;
+	border: 1px solid $border-color;
+	border-radius: 100%;
+	transition: all 0.35s ease-in-out;
+	position: relative;
+	z-index: 2;
+
+	.btn-effect {
+		position: absolute;
+		z-index: 0;
+		display: block;
+		width: 0px;
+		height: 0px;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		opacity: 1;
+		background-color: #fa4729;
+		transition: all 0.9s ease;
+		outline: none;
+	}
+
+	span {
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 400;
+		color: $white;
+		transition: all 0.35s ease-in-out;
+	}
+
+	svg {
+		path {
+			stroke: #ffffff;
+			transition: all 0.35s ease-in-out;
+		}
+	}
+
+	&:after{
+		position: absolute;
+		content: "";
+		right: -6px;
+		top: -6px;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		border: 1px solid $border-color;
+		transition: all 0.35s ease-in-out;
+		z-index: -1;
+		border-radius: 100%;
+	}
+
+	&:hover,
+	&:focus {
+		border: 1px solid $primary;
+		background: none;
+
+		span {
+			color: $primary;
+		}
+	
+		&:after {
+			border: 1px solid $primary;
+		}
+
+		svg path {
+			stroke: $primary;
+		}
+	}
+
+	&.arrow-down {
+		width: 128px;
+		height: 128px;
+
+		svg {
+			transform: rotate(90deg);
+			width: 37px;
+    	height: 40px;
+
+			path {
+				stroke: $white;
+			}
+		}
+
+		&:before {
+			left: 8px;
+			top: 8px;
+			right: 8px;
+			bottom: 8px;
+		}
+
+		&:hover {
+			svg path {
+				stroke: $primary;
+			}
+		}
+	}
+}
+
+.btn-primary {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 400;
+	color: $white;
+	border: none;
+	padding: 10px 45px;
+	border-radius: $radius-50;
+	background-color: $primary;
+	background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+}
+
+/* Small Button Arrow ----------------*/
+.btn-arrow {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	padding-top: 4px;
+	padding-right: 4px;
+	background-color: transparent;
+	border: 1px solid $border-color-1;
+	border-radius: $radius-50;
+	transition: $transition-3;
+
+	svg {
+		position: relative;
+
+		path {
+			stroke: $body-color;
+			transition: $transition-3;
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: -4px;
+		bottom: -4px;
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		border: 1px solid $border-color-1;
+		transition: $transition-3;
+		border-radius: $radius-50;
+	}
+
+	&:before {
+/*		content: "";*/
+		position: absolute;
+		left: 3px;
+		right: 3px;
+		top: 3px;
+		bottom: 3px;
+		opacity: 0;
+		transform: scale(0.8);
+		border-radius: $radius-50;
+		background-color: $primary;
+		transition: $transition-3;
+		background: linear-gradient(170deg, $gradient-1 0%, $gradient-2 100%);
+	}
+
+	&:hover {
+		border: 1px solid $primary;
+
+		svg path {
+			stroke: #ffffff;
+		}
+
+		&:after {
+			border: 1px solid $primary;
+		}
+		
+		&:before {
+			opacity: 1;
+			transform: scale(1.0);
+		}
+	}
+}
+
+/* Button Hover Effect */
+.attract-hover {
+  display: inline-block;
+}
+
+.attract-hover-easing {
+  transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}

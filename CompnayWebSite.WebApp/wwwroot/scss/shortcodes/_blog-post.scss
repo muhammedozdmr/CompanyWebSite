@@ -1,0 +1,87 @@
+/*****************************
+	Blog Post
+*****************************/
+/* Blog Post Style 1 -------------------------*/
+.blog-post-wrapper.blog-style-1 {
+	position: relative;
+	padding: 40px 30px;
+	border: 1px solid $border-color-1;
+	background: $body-bg-color;
+	border-radius: $radius-10;
+
+	.post-meta {
+		margin-bottom: 15px;
+	}
+	.post-title {
+		margin-bottom: 35px;
+	}
+
+	.blog-post-img {
+		overflow: hidden;
+
+		img {
+			transform: scale(1.0);
+			transition: $transition-3;
+		}
+	}
+
+	.blog-action-info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 30px;
+
+		.post-category {
+			font-family: $font-base;
+			margin: 0;
+			font-size: 18px;
+			line-height: 28px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 3px;
+		right: 3px;
+		top: 0;
+		bottom: 3px;
+		margin: -4px;
+		z-index: -1;
+		opacity: 0;
+		border-radius: inherit;
+		transition: $transition-3;
+		background: linear-gradient(to right, $gradient-1, $gradient-2);
+	}
+
+	&:hover {
+
+		.blog-post-img {
+			img {
+				transform: scale(1.1);
+			}
+		}
+
+		.post-title a,
+		.post-title a:hover {
+			color: $white;
+		}
+
+		.blog-action-info {
+			.post-category a:hover {
+				color: $primary;
+			}
+		}
+
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
+.blog-post-wrapper.blog-style-1 .post-title a:hover,
+.blog-post-wrapper.blog-style-1 .post-title a:focus {
+	color: $white;
+}

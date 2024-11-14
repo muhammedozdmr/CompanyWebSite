@@ -1,0 +1,84 @@
+/*****************************
+  Steps
+*****************************/
+.steps-wrapper {
+   display: flex;
+   gap: 60px;
+   flex-direction: column;
+
+   .steps-item {
+      display: flex;
+      gap: 40px;
+
+      .step-arrow {
+         margin-top: 40px;
+         position: relative;
+
+         &:before {
+            content: "";
+            position: absolute;
+            left: 23px;
+            top: 90px;
+            bottom: -60px;
+            border-left: 1px dashed $border-color-1;
+         }
+      }
+
+      .step-number {
+         display: block;
+         font-size: 18px;
+         font-weight: 600;
+         margin-bottom: 15px;
+         text-transform: uppercase;
+         background: linear-gradient(160deg, $gradient-1 0%, $gradient-2 20%, $gradient-3 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+      .step-title {
+         padding-right: 25px;
+         margin-bottom: 20px;
+      }
+      p {
+         margin-bottom: 25px;
+      }
+      .step-image {
+         margin-top: 30px;
+      }
+   }
+
+   .steps-item:last-child {
+      .step-arrow:before {
+         content: normal;
+      }
+   }
+}
+
+@media (max-width: 1200px) {
+   .steps-wrapper {
+       .steps-item{
+          gap: 30px;
+          .step-title{
+             font-size: 36px;
+             line-height: 42px;
+          }
+       }
+   }
+}
+
+@media (max-width: 575px) {
+   .steps-wrapper{
+       .steps-item  {
+         .step-title{
+           font-size: 28px;
+           line-height: 38px;
+         }
+         .list-wrapper {
+            .list.col-2 {
+               li{
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,48 @@
+/*****************************
+	Select Custom
+*****************************/
+.nice-select {
+   font-size: inherit;
+   color: $body-color;
+   box-shadow: none;
+
+   .list {
+      width: 100%;
+
+      .option {
+         font-size: 18px;
+
+         &.selected {
+            color: #ffffff;
+            font-weight: 500;
+            background-color: $primary;
+            background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+         }
+      }
+   }
+
+   &.form-control {
+      width: 100%;
+      height: auto;
+   }
+
+   &:after {
+      width: 10px;
+      height: 10px;
+      right: 8px;
+      margin-top: -6px;
+      border-bottom-color: $body-color;
+      border-right-color: $body-color;
+   }
+}
+
+/*-------------------------*/
+/* Form Style Border */
+/*-------------------------*/
+.form-style-border {
+   .nice-select {
+      &:after {
+         right: 25px;
+      }
+   }
+}

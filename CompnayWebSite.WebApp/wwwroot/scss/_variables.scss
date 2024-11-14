@@ -1,0 +1,54 @@
+// Font family
+$font-base: 			"Jost", sans-serif;
+$font-hedding: 			"Russo One", sans-serif;
+$font-menu:				"Jost", sans-serif;
+
+// Colors
+$body-bg-color: 			#000000; // body BG
+$body-color: 				#D4D6D7; // body-text
+$primary:    				#77BEFF;
+$secondary:					#ffffff;
+$white:		   				#ffffff;
+$gray-1:			 		#f6f6f6; 	// bg light
+$gray-2:			 		#dfdfdf;
+$gray-3:			 		#d4d6d7;
+$gray-4:			 		#626262;
+$gray-5:			 		#eeeeee;
+$black: 	 	 			#000000;
+
+$gradient-1: 	 	 		#3663D8;
+$gradient-2: 	 	 		#77BEFF;
+$gradient-3: 	 	 		#00D1FF;
+
+
+// Border color
+$border-color: 				rgba(255, 255, 255, 0.15);
+$border-color-1: 			rgba(255, 255, 255, 0.1);
+$border-color-05: 			rgba(255, 255, 255, 0.05);
+
+// For button and input border radius
+$radius-3: 3px;
+$radius-4: 4px;
+$radius-5: 5px;
+$radius-6: 6px;
+$radius-8: 8px;
+$radius-10: 10px;
+$radius-15: 15px;
+$radius-20: 20px;
+$radius-50: 50px;
+$radius-80: 80px;
+$radius-100: 100%;
+
+// Box shadow sizes
+$box-shadow         : 2px 2px 4px 0px rgba(2, 45, 98, 0.1);
+$boxshadow-lg       : 5px 5px 24px 0px rgba(2, 45, 98, 0.1);
+
+
+/*Transition*/
+
+$transition:   all 0.25s ease-in-out;
+$transition-1: all 0.1s ease-in-out;
+$transition-2: all 0.2s ease-in-out;
+$transition-3: all 0.3s ease-in-out;
+$transition-4: all 0.4s ease-in-out;
+$transition-5: all 0.5s ease-in-out;

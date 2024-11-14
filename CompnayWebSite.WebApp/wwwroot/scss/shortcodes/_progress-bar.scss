@@ -1,0 +1,50 @@
+/*****************************
+  Progress Bar
+*****************************/
+
+.progress {
+  position: relative;
+  overflow: visible;
+  height: 10px;
+  border-radius: inherit;
+  margin-top: 65px;
+  border: 1px solid rgba($black,.2);
+  border-radius: 20px;
+  background-color: transparent;
+
+  .progress-bar {
+    background-color: $primary;
+    border-radius: 20px;
+    border: 1px solid $primary;
+    .progress-bar-title {
+      position: absolute;
+      left: 0;
+      top: -40px;
+      color: $black;
+      font-size: 20px;
+    }
+
+    .progress-bar-number {
+      position: absolute;
+      right: 0;
+      top: -40px;
+      color: $black;
+      font-size: 18px;
+    }
+  }
+}
+
+
+.bg-dark{
+	.progress {
+	  border: 1px solid rgba($white,.2);
+	  .progress-bar {
+	    .progress-bar-title {
+	      color: $white;
+	    }
+	    .progress-bar-number {
+	      color: $white;
+	    }
+	  }
+	}
+}

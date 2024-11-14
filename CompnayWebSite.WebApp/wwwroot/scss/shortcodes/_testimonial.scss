@@ -1,0 +1,209 @@
+/*****************************
+    Testimonial
+*****************************/
+#quote-1 stop.start-color,
+#quote-2 stop.start-color,
+#quote-3 stop.start-color,
+#quote-4 stop.start-color,
+#quote-5 stop.start-color,
+#quote-6 stop.start-color,
+#quote-7 stop.start-color,
+#quote-8 stop.start-color {
+  stop-color: $gradient-1;
+}
+
+#quote-1 stop.end-color,
+#quote-2 stop.end-color,
+#quote-3 stop.end-color,
+#quote-4 stop.end-color,
+#quote-5 stop.end-color,
+#quote-6 stop.end-color,
+#quote-7 stop.end-color,
+#quote-8 stop.end-color {
+  stop-color: $gradient-2;
+}
+
+/* Testimonial Style 1 -------------------*/
+.testimonial-wrapper.testimonial-style-1 {
+	text-align: center;
+	
+	.testimonial-quote {
+	    position: relative;
+	    display: inline-block;
+	}
+	
+	.quote-border {
+	    position: absolute;
+	    left: -5px;
+	    top: -5px;
+	}
+
+	.testimonial-content {
+	font-size: 24px;
+	line-height: 38px;
+	font-style: italic;
+	margin-top: 15px;
+	
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.testimonial-author {
+		margin-top: 30px;
+	
+		.author-info .author-name {
+			font-size: 24px;
+			margin-bottom: 10px;
+			background: linear-gradient(170deg, $gradient-1 0%, $gradient-2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.author-info .author-position {
+			font-size: 20px;
+		}
+	}
+}
+
+/* Big Arrow --------*/
+.big-testimonial-section .owl-carousel.carousel-arrow-big {
+  .owl-nav {
+    button {
+      margin-top: -34px;
+    }
+  }
+}
+
+
+/* Testimonial Style 2 -------------------*/
+.testimonial-items {
+	.testimonial-wrapper:nth-child(odd) {
+		margin-top: 40px;
+	}
+	.testimonial-wrapper:nth-child(even) {
+		margin-bottom: 40px;
+	}
+}
+
+.testimonial-section{
+	 .owl-item.active{
+      	.testimonial-wrapper.testimonial-style-2{
+      		&:before{
+      			 content: inherit;
+      			}
+      	}
+	 }
+	 .owl-item{
+			.testimonial-wrapper.testimonial-style-2{
+					&:before{
+						 content: "";
+			       width: 85%;
+			       height: 100%;
+			       border-radius: 100%;
+			       background-color: $black;
+			       position: absolute;
+			       left: inherit;
+			       top: 0px;
+			       right: 0px;
+			       bottom: 0px;
+			       filter: blur(55px);
+					}
+			}
+	 }
+	 .owl-item:nth-child(odd){
+	 		margin-top: 40px;
+	 }
+	 .owl-item:nth-child(even){
+	 		margin-bottom: 40px;
+	 }
+}
+
+
+.testimonial-wrapper.testimonial-style-2 {
+	position: relative;
+	padding: 40px;
+	border: 1px solid $border-color-05;
+	border-radius: $radius-10;
+	
+	.testimonial-quote {
+	    position: absolute;
+	    right: 20px;
+	    top: 15px;
+	}
+
+	.testimonial-ratings {
+		display: flex;
+		gap: 3px;
+		margin-top: 5px;
+
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 20px;
+			background: linear-gradient(170deg, $gradient-1 0%, $gradient-2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+
+	.testimonial-content {
+		font-size: 22px;
+    line-height: 32px;
+		font-style: italic;
+		margin-top: 30px;
+		
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.testimonial-author {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+		margin-top: 25px;
+
+		.author-name {
+			font-size: 22px;
+		  line-height: 32px;
+		  margin: 0;
+		  background: linear-gradient(170deg, $gradient-1 0%, $gradient-2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+
+
+@media (max-width: 1200px) {
+
+	.testimonial-wrapper.testimonial-style-1 .testimonial-content {
+		font-size: 24px;
+		line-height: 40px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.testimonial-wrapper.testimonial-style-1 .testimonial-content {
+		font-size: 22px;
+		line-height: 38px;
+	}
+
+	.testimonial-wrapper.testimonial-style-1 svg {
+	   width: 100px;
+	   height: 100px;
+	}
+	.testimonial-wrapper.testimonial-style-1 .quote-border {
+	   left: -3px;
+	   top: -3px;
+	}
+}
+
+@media (max-width: 479px) {
+	.testimonial-wrapper.testimonial-style-2 {
+		padding: 20px;
+	}
+}

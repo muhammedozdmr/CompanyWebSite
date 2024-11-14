@@ -1,0 +1,110 @@
+/*****************************
+  Find Job
+*****************************/
+.find-job-wrapper {
+
+	.find-job-item {
+		padding: 40px 0;
+		border-bottom: 1px solid rgba($white, 0.05);
+
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+		.job-title {
+			margin-bottom: 20px;
+			.awards-name {
+				margin-bottom: 0;
+			}
+		}
+
+		.job-details {
+			display: flex;
+			gap: 40px;
+
+			.job-image {
+				width: 300px;
+				flex: none;
+				overflow: hidden;
+				border-radius: $radius-8;
+
+				img {
+					transform: scale(1.0);
+					transition: $transition-3;
+				}
+			}
+			.job-content {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				width: 100%;
+				padding-right: 50px;
+			}
+			.job-location {
+				font-weight: 500;
+			}
+			.job-desc {
+				max-width: 680px;
+			}
+			.job-info {
+				display: flex;
+				gap: 50px;
+				margin-top: 10px;
+				padding-top: 15px;
+				border-top: 1px solid rgba($white, 0.05);
+
+				.info-item {
+					color: $white;
+					font-weight: 500;
+				}
+			}
+			.job-action {
+				align-self: center;
+				margin-left: auto;
+			}
+		}
+
+		&:hover {
+			.job-details .job-image img {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+
+
+
+@media (max-width: 1400px) {
+	.find-job-wrapper .find-job-item .job-details .job-content {padding-right: 0}
+	.find-job-wrapper .find-job-item .job-details .job-info {gap: 30px}
+}
+
+@media (max-width: 1200px) {
+
+	.find-job-wrapper .find-job-item .job-details {
+    display: flex;
+    gap: 30px;
+	}
+
+	.find-job-wrapper .find-job-item .job-details .job-action {
+		align-self: flex-start;
+	}
+}
+
+@media (max-width: 991px) {
+
+	.find-job-wrapper .find-job-item .job-details {
+		flex-wrap: wrap;
+	}
+	.find-job-wrapper .find-job-item .job-details .job-image {
+		width: 100%;
+	}
+	.find-job-wrapper .find-job-item .job-details .job-action {
+		margin-left: 0;
+	}
+}

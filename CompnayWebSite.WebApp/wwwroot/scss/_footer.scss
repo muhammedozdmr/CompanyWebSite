@@ -1,0 +1,212 @@
+/*****************************
+    Footer
+*****************************/
+.site-footer {
+    background-color:$black;
+    padding-top: 145px;
+    position: relative;
+    z-index: 9;
+
+    .footer-main > .container > .row {
+        --bs-gutter-y: 50px;
+    }
+
+    .widget-socail{
+        margin-top: 130px;
+    }
+
+    /*-------------------------*/
+    /* Footer Main */
+    /*-------------------------*/
+    .footer-padding {
+        padding: 80px 0;
+    }
+
+    /*-------------------------*/
+    /* Footer Copyright */
+    /*-------------------------*/
+    .footer-copyright {
+        border-top: 1px solid $border-color;
+        padding: 30px 0;
+
+        a {
+            color: $body-color;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        p {
+            color: $body-color;
+            margin: 0px;
+        }
+    }
+
+    /*-------------------------*/
+    /* Footer Dark CSS */
+    /*-------------------------*/
+    &.footer-dark {
+        .widget {
+            .widget-title {
+                color: $white;
+            }
+        }
+        .widget-menu li a {
+            color: $body-color;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        .widget-info {
+            .title {
+                color: $body-color;
+            }
+        }
+        .widget-newsletter {
+            .newsletter-form {
+                .form-control {
+                    color: $white;
+                    border-color: rgba($white,0.05);
+
+                    &:focus {
+                        border-color: $primary;
+                    }
+                    &::-ms-input-placeholder { 
+                      color: $body-color;
+                    }
+                    &::placeholder {
+                      color: $body-color;
+                    }
+                }
+            }
+        }
+
+        /* Footer Copyright */
+        .footer-copyright {
+            color: $white;
+            border-top-color: rgba($white,0.05);
+            margin-top: 80px;
+
+            > .container > .row {
+                --bs-gutter-y: 30px;
+            }
+
+            a { font-weight: 600;
+                color: $primary;
+                background: linear-gradient(60deg, $gradient-1 -20%, $gradient-2 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*-------------------------*/
+/* Footer Sticky */
+/*-------------------------*/
+.site-content {
+    position: relative;
+    z-index: 2;
+    background-color: $body-bg-color;
+}
+.site-footer.sticky-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+/*************************
+       Responsive
+*************************/
+@media (max-width: 1199px) {
+
+    .site-footer .widget-socail{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .site-footer .footer-main-inner {
+        display: flex;
+        gap: 50px 100px;
+
+        .footer-logo {width: 41.6666%;}
+        .footer-social {width: 20%;}
+        .footer-info {width: 38.3333%;}
+    }
+}
+
+@media (max-width: 991px) {
+    .site-footer {
+        padding-top: 90px;
+    }
+
+    .site-footer .footer-main-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px 0;
+
+        .footer-logo {width: 100%;}
+        .footer-social {width: 100%;}
+        .footer-info {width: 100%;}
+    }
+
+    /* Footer Social */
+    .site-footer .widget-menu ul.list-col-2 li,
+    .site-footer .widget-menu ul.list-col-3 li {
+        width: calc(50% - 8px);
+    }
+
+    .site-footer .widget-socail .socail-icon li a {
+        padding: 30px 0;
+    }
+    .site-footer .widget-socail .socail-icon {
+        border-top: 1px solid rgba($white,0.05);
+        border-bottom: 1px solid rgba($white,0.05);
+    }
+
+    /* Footer Sticky */
+    .site-content {
+        margin-bottom: 0 !important;
+    }
+    .site-footer.sticky-footer {
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .site-footer {
+        padding-top: 70px;
+    }
+
+    /* Footer Social */
+    .site-footer.footer-dark .widget-socail .socail-icon li {
+        border-right-color: rgba($white,0.05);
+
+        a i {
+            color: $white;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .site-footer {
+        padding-top: 50px;
+    }
+
+    .site-footer .widget-menu ul.list-col-2 li,
+    .site-footer .widget-menu ul.list-col-3 li {
+        width: 100%;
+    }
+}

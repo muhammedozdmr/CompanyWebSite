@@ -1,0 +1,93 @@
+/*****************************
+  Skill
+*****************************/
+.skill {
+	position: relative;
+	width: 100%;
+	height: 10px;
+	margin: 35px 0 20px 0;
+	border-radius: $radius-10;
+
+	&:not(:first-child) {
+		margin-top: 64px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:before {
+	    content: "";
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    border: 1px solid $border-color-1;
+	    border-radius: $radius-10;
+	}
+}
+
+.skill-bar {
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	border-radius: $radius-10;
+	padding: 0px;
+	background-color: $primary;
+	background: linear-gradient(175deg, $gradient-1 0%, $gradient-2 100%);
+	box-shadow: none;
+	transition: width .9s ease;
+	-webkit-transition: width .9s ease;
+	-o-transition: width .9s ease;
+	-ms-transition: width .9s ease;
+	-moz-transition: width .9s ease;
+	
+	.progress-number {
+		color: $body-color;
+		float: right;
+		margin-top: -18px;
+		position: absolute;
+		right: 0;
+		top: -20px;
+		font-size: 18px;
+		font-weight: 500;
+		right: 18px;
+	}
+	.progress-type {
+		color: $body-color;
+		float: right;
+		margin-top: -18px;
+		position: absolute;
+		right: 0;
+		top: -20px;
+		font-size: 18px;
+		font-weight: 500;
+	}
+}
+
+.progress-bar {
+	position: relative;
+	height: 100%;
+	border-radius: 4px;
+	padding: 0px;
+	background-color: $primary;
+	box-shadow: none;
+}
+.skill-title {
+	color: $body-color;
+	font-size: 18px;
+	font-weight: 500;
+	position: absolute;
+	text-align: left;
+	margin-left: 0;
+	margin-top: -40px;
+	> i {
+		margin-right: 8px;
+	}
+}
+
+/* Skill Style 2 ------------*/
+.skill-style-2 .skill-bar {
+	position: unset;
+}

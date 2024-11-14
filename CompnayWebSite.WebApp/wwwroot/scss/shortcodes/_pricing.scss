@@ -1,0 +1,208 @@
+/*****************************
+  Pricing
+*****************************/
+.pgs-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	.accordion-item {
+		padding: 35px 40px;
+		background: transparent;
+		border: 1px solid $border-color;
+    	border-radius: $radius-20;
+		
+		.accordion-header {
+			display: flex;
+		    align-items: center;
+		    gap: 130px;
+			margin: 0;
+			padding: 0;
+			cursor: pointer;
+
+			.package-info {
+				display: flex;
+				gap: 20px;
+				align-items: baseline;
+
+				.package-check {
+				    display: flex;
+				    align-items: center;
+				    justify-content: center;
+				    flex: 0 0 30px;
+				    height: 30px;
+				    width: 30px;
+				    border: 2px solid #8b87ab;
+				    border-radius: 100%;
+
+				    i {
+				    	opacity: 0;
+				    	background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+				    }
+				}
+			}
+
+			.package-price {
+				display: flex;
+				align-items: baseline;
+
+				.price {
+					font-size: 38px;
+					line-height: 48px;
+					margin: 0;
+				}
+
+				.period {
+					font-size: 18px;
+				}
+			}
+
+			.package-title {
+				margin-bottom: 5px;
+			}
+		}
+
+		/* Accordion Content */
+		.accordion-content {
+			display: none;
+			margin: 0;
+			margin-top: 30px;
+
+			.content-inner {
+				display: flex;
+
+				.pricing-link {
+					align-self: center;
+				}
+			}
+
+			.pricing-lists .pricing-lists {
+				display: flex;
+			    flex-wrap: wrap;
+			    gap: 25px 30px;
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+
+				li {
+					display: flex;
+				    align-items: center;
+				    gap: 20px;
+				    font-size: 20px;
+					width: calc(50% - 15px);
+				}
+			}
+
+			.pricing-link a {
+				width: 80px;
+				height: 80px;
+				display: flex;
+				position: relative;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid $white;
+				border-radius: $radius-50;
+				transition: $transition-3;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 5px;
+					right: 5px;
+					top: 5px;
+					bottom: 5px;
+					border-radius: $radius-50;
+					background-color: $white;
+				}
+
+				svg {
+					position: relative;
+					width: 23px;
+    				height: 25px;
+
+						path {
+							stroke: $primary;
+						}
+				}
+			}
+
+		}
+
+		/* Accordion Active Header */
+		&.is-active {
+			border: none;
+			background-color: $primary;
+			background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+
+			.accordion-header .package-name .package-title,
+			.accordion-header .package-name .package-discount {
+				color: $white;
+			}
+
+			.accordion-header .package-price .price,
+			.accordion-header .package-price .period {
+				color: $white;
+			}
+
+			.accordion-header .package-info .package-check {
+				background: $white;
+				border-color: $white;
+
+				i {
+					opacity: 1;
+				}
+			}
+
+			/* Accordion Active Content */
+			.accordion-content .pricing-lists li {
+				color: $white;
+			}
+		}
+	}
+
+
+	/* Accordion Light */
+	&.pgs-accordion-light {
+
+		.accordion-item:not(.accordion-item.is-active) {
+			border-color: rgba(255,255,255,0.2);
+
+			.package-info .package-discount {
+				color: $white;
+			}
+
+			.package-info .package-check {
+				border-color: $white;
+			}
+
+			.package-price .period {
+				color: $white;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+
+	.pgs-accordion .accordion-item .accordion-content .pricing-lists .pricing-lists {gap: 10px;}
+	.pgs-accordion .accordion-item .accordion-content .pricing-lists .pricing-lists li {width: 100%;}
+}
+
+@media (max-width: 767px) {
+
+	.pgs-accordion .accordion-item .accordion-header {
+		display: flex;
+		align-items: flex-start;
+		gap: 5px;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 575px) {
+
+	.pgs-accordion .accordion-item .accordion-content .content-inner {flex-direction: column; gap: 25px;}
+	.pgs-accordion .accordion-item .accordion-content .content-inner .pricing-link {align-self: flex-start;}
+}

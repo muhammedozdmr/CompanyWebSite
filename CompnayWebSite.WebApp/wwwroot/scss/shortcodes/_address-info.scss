@@ -1,0 +1,132 @@
+/*****************************
+  Address Info
+*****************************/
+.address-info-wrapper {
+
+	.address-info-title {
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 20px;
+	}
+	
+	.address-info-list {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 15px;
+		flex-direction: column;
+		list-style-type: none;
+		
+		li {
+			display: flex;
+			gap: 20px;
+			font-size: 20px;
+			align-items: baseline;
+
+			i {
+				min-width: 20px;
+				text-align: center;
+			}
+		}
+	}
+
+	&.address-info-dark {
+
+		.address-info-title {
+			color: $white;
+		}
+
+		.address-info-list {
+
+			li {
+				color: $white;
+			}
+		}
+	}
+}
+
+/*****************************
+  Social Info
+*****************************/
+.social-info-wrapper {
+
+	.social-info-title {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		font-size: 16px;
+		line-height: 30px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		background: linear-gradient(90deg, $gradient-1 0%, $gradient-2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		&:after {
+			content: "";
+			width: 50px;
+			height: 1px;
+			background-color: $primary;
+			background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+		}
+	}
+
+	.social-info-list {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		list-style-type: none;
+
+		a {
+			display: inline-block;
+			position: relative;
+			font-size: 16px;
+			line-height: 30px;
+			padding: 3px 15px;
+			color: $body-color;
+			overflow: hidden;
+			box-shadow:inset 0 0 0 1px $border-color;
+			border-radius: $radius-50;
+
+			span {
+				position: relative;
+				z-index: 1;
+			}
+
+			&:before {
+			   content: "";
+			   position: absolute;
+			   left: 0;
+			   right: 0;
+			   top: 0;
+			   bottom: 0;
+			   z-index: 0;
+			   opacity: 0;
+			   transition: $transition-3;
+			   background-color: $primary;
+				background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+			}
+
+			&:hover {
+				color: $white;
+
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.social-info-dark {
+		.social-info-list {
+			a {
+				color: $white;
+				box-shadow:inset 0 0 0 1px $white;
+			}
+		}
+	}
+
+}

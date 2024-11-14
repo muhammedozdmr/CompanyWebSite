@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ConnectionString'i appsettings.json'dan ?ekiyoruz
+// ConnectionString'i appsettings.json'dan çekiyoruz
 builder.Services.AddDbContext<CompanyWebSiteContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

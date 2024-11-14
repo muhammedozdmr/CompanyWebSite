@@ -1,0 +1,76 @@
+/*****************************
+	Our History
+*****************************/
+.history-wrapper {
+	position: relative;
+	padding: 60px 50px;
+	border: 1px solid $border-color-1;
+	border-radius: $radius-10;
+
+	.history-year-sm {
+		font-family: $font-hedding;
+		font-size: 32px;
+		margin-bottom: 30px;
+		background: linear-gradient(160deg, $gradient-1 0%, $gradient-2 20%, $gradient-3 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.history-info {
+		display: flex;
+		gap: 30px;
+
+		.history-year-lg {
+			font-family: $font-hedding;
+			font-size: 110px;
+			writing-mode: vertical-lr;
+			transform: scale(-1);
+			align-self: center;
+			line-height: normal;
+			color: transparent;
+			-webkit-text-stroke: 1px $border-color-1;
+		}
+
+		.history-content {
+			p {
+				margin: 0;
+			}
+
+			blockquote {
+				margin: 20px 0;
+				padding: 0;
+				font-size: inherit;
+				font-weight: normal;
+				line-height: normal;
+				font-style: normal;
+				color: $body-color;
+				border-radius: 0;
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.history-wrapper .history-info {
+		gap: 10px;
+		flex-direction: column;
+	}
+
+	.history-wrapper .history-info .history-year-lg {
+		writing-mode: inherit;
+		transform: inherit;
+	}
+}
+
+@media (max-width: 575px) {
+
+	.history-wrapper {
+		padding: 40px;
+	}
+	.history-wrapper .history-info .history-year-lg {
+		font-size: 80px;
+	}
+}

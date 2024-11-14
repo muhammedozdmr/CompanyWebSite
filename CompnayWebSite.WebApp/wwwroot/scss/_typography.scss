@@ -1,0 +1,416 @@
+/*****************************
+  Typography
+*****************************/
+body {
+	font-family: $font-base;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 18px;
+	color: $body-color;
+	overflow-x: hidden;
+	background-color: $body-bg-color;
+}
+
+a {
+	outline: medium none !important;
+	color: $primary;
+	transition: all 0.3s ease-in-out;
+	text-decoration: none;
+
+	&:focus {
+		color: $black;
+		text-decoration: none !important;
+	}
+
+	&:hover {
+		color: $black;
+		text-decoration: none !important;
+	}
+
+}
+
+a.text-dark {
+	&:focus {
+		color: $primary !important;
+	}
+	&:hover {
+		color: $primary !important;
+	}
+
+}
+
+input {
+	outline: medium none !important;
+	color: $primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-hedding;
+	color: $secondary;
+	margin: 0px 0px 1rem;
+
+	a {
+		color: inherit;
+	}
+}
+
+h1 {
+	font-size: 66px;
+	font-style: normal;
+	line-height: normal;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 70px;
+}
+
+h3 {
+	font-size: 42px;
+	line-height: 52px;
+}
+
+h4 {
+	font-size: 32px;
+	line-height: normal;
+}
+
+h5 {
+	font-size: 26px;
+	line-height: normal;
+}
+
+h6 {
+	font-size: 22px;
+	line-height: normal;
+}
+
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6,
+.bg-black .h1,
+.bg-black .h2,
+.bg-black .h3,
+.bg-black .h4,
+.bg-black .h5,
+.bg-black .h6{
+	color: $white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark .h1,
+.bg-dark .h2,
+.bg-dark .h3,
+.bg-dark .h4,
+.bg-dark .h5,
+.bg-dark .h6{
+	color: $white;
+}
+
+.bg-black p,
+.bg-dark p{
+	color:$body-color;
+}
+
+
+iframe { width: 100%; }
+
+label {
+	font-weight: normal;
+}
+
+*::-moz-selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+::selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+/*----------------------------------*/
+/* Container Fluid */
+/*----------------------------------*/
+.container-fluid.container-space {
+	padding: 0 100px;
+}
+
+@media (min-width: 1399px){
+	.container {
+	    max-width: 1424px;
+	}
+}
+
+@media (max-width: 991px){
+	.container {
+	    max-width: 100%;
+	}
+}
+
+/*----------------------------------*/
+/* Section Title */
+/*----------------------------------*/
+.section-title {
+  margin-bottom: 50px;
+
+	.sub-title {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		background: linear-gradient(60deg, $gradient-1 -20%, $gradient-2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.title {
+		margin-bottom: 25px;
+		text-transform: capitalize;
+	}
+	p {
+		font-size: 20px;
+		margin-bottom: 0;
+		line-height: normal;
+		color: $body-color;
+
+		&+p {
+			margin-top: 20px;
+		}
+	}
+
+	&.section-title-light {
+
+		.title {color: $white;}
+		p {color: $white;}
+	}
+}
+
+/* Title in BG Dark */
+.bg-dark {
+	.section-title {
+		p {
+			color: $body-color;
+		}
+	}
+}
+
+
+/*----------------------------------*/
+/* Breadcrumb */
+/*----------------------------------*/
+.breadcrumb {
+	margin-top: 18px;
+	background: transparent;
+	border-radius: 0;
+	display: inline-flex;
+	padding: 14px 40px;
+	justify-content: center;
+
+	.breadcrumb-item {
+		padding-right: 5px;
+		display: inline-block;
+		font-size: 18px;
+		color: $white;
+
+		a {
+			color:  $primary;
+			&:hover {color: $primary;}
+		}
+
+		&:before {color: $white;}
+	}
+
+	.breadcrumb-item.active {color: $primary;}
+}
+
+/*----------------------------------*/
+/* Dropcaps */
+/*----------------------------------*/
+.dropcap-style-1 {
+  float: left;
+  display: block;
+  background-color: transparent;
+  color: $secondary;
+  font-size: 57px;
+  height: 55px;
+  line-height: 48px;
+  margin: 0;
+  text-align: left;
+  width: auto !important;
+  min-width: 60px;
+  padding-right: 5px;
+  overflow: visible;
+
+}
+.dropcap-style-2 {
+  float: left;
+  display: block;
+  font-size: 47px;
+  padding: 0;
+  color: $white;
+  margin: .15em .4em 0 0;
+  text-align: center;
+  font-weight: 500;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  line-height: 64px;
+  border-radius: 0;
+  background-color: $primary;
+  background: linear-gradient(130deg, $gradient-1 0%, $gradient-2 100%);
+}
+
+/*----------------------------------*/
+/* Blockquote */
+/*----------------------------------*/
+blockquote {
+  font-size: 20px;
+  line-height: 34px;
+  padding: 0px 30px;
+  margin: 0;
+  color: $secondary;
+  border-left: 5px solid $primary;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+
+  cite {
+    display: flex;
+    gap: 10px;
+    line-height: normal;
+    align-items: center;
+    color: $primary;
+
+    &:before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      display: inline-block;
+      background: $primary;
+    }
+  }
+  .blockquote-name{
+  	font-weight: 500;
+  }
+}
+
+/*Blockquote Style 1*/
+
+blockquote.blockquote-style-1{
+	padding: 50px;
+	position: relative;
+	border: 1px solid rgba($white, 0.10);
+	.blockquote-content{
+		display: flex;
+		.quote-icon{
+			width: 100px;
+			flex: 0 0 100px;
+			margin-right: 30px;
+		}
+		p{
+			color: $body-color;
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+  &:before{
+  	position: absolute;
+  	top: -10px;
+  	left: 10px;
+  	height: 100%;
+  	width: 100%;
+  	content: "";
+  	border: 1px solid rgba($white, 0.10);
+  }
+}
+
+
+/*===============================================*/
+/* Responsive CSS */
+/*===============================================*/
+
+@media (max-width: 1200px) {
+
+	h1 {font-size: 62px;}
+	h2 {font-size: 50px;	line-height: 60px;}
+}
+
+@media (max-width: 991px) {
+
+	h1 {font-size: 56px;}
+	h2 {font-size: 42px;	line-height: 52px;}
+	h3 {font-size: 36px;	line-height: 46px;}
+
+}
+
+@media (max-width: 767px) {
+
+	h1 {font-size: 52px;}
+	h2 {font-size: 36px;	line-height: 46px;}
+	h3 {font-size: 30px;	line-height: 42px;}
+	h4 {font-size: 28px;	line-height: normal;}
+	h5 {font-size: 24px;	line-height: normal;}
+	h6 {font-size: 20px;	line-height: normal;}
+
+	/* Breadcrumb */
+	.breadcrumb {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 575px) {
+
+	h1 {font-size: 44px;	line-height: 54px;}
+	h2 {font-size: 30px;	line-height: 40px;}
+	h3 {font-size: 28px;	line-height: 38px;}
+	h4 {font-size: 24px;	line-height: 34px;}
+	h5 {font-size: 20px;	line-height: 30px;}
+	h6 {font-size: 18px;	line-height: 28px;}
+
+	/* Breadcrumb */
+	.breadcrumb {
+		.breadcrumb-item {
+			font-size: 16px;
+		}
+	}
+
+	blockquote.blockquote-style-1{
+		padding: 20px 30px;
+		.blockquote-content  {
+       .quote-icon{
+       	    width: 50px;
+				    flex: 0 0 50px;
+				    margin-right: 15px;
+         }
+	  	}
+	 }
+}

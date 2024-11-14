@@ -1,0 +1,164 @@
+
+/*****************************
+  Action box
+*****************************/
+
+
+.action-box{
+	display: flex;
+  .action-box-content{
+  	span{
+  		font-size: 90px;
+  		line-height: normal;
+  		font-weight: bold;
+  		color: $white;
+  		font-family: $font-hedding;
+  		margin-bottom: 10px;
+  		display: block;
+  	}
+  	p{
+  		font-size: 20px;
+  		margin-bottom: 0px;
+  	}
+  }
+  &.action-box-02{
+		flex-direction: column;
+		align-items: center;
+		width: 60%;
+		margin: 0 auto;
+		.action-box-content{
+			margin-bottom: 30px;
+			span{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.action-box-03{
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		
+		.action-box-content{
+			text-align: center;
+			margin-bottom: 45px;
+			span{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.action-box-section{
+	.action-box-bg{
+		background-color: $primary;
+		padding-top: 100px;
+		padding-bottom: 80px;
+		text-align: center;
+		&.position-absolute{
+			top: 48%;
+			right: 0;
+			width: calc(100% - 100px);
+		}
+	}
+}
+
+@media (max-width: 1399px) {
+	.action-box{
+		&.action-box-02{
+			width: 80%;
+		}
+	}
+	.action-box-section{
+		.action-box-bg{
+			padding-top: 80px;
+			padding-bottom: 60px;
+			&.position-absolute{
+				top: 38%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.action-box{
+		&.action-box-02{
+			.action-box-content{
+		  	span{
+		  		font-size: 70px;
+		  	}
+		  }
+		}
+	}
+
+	.action-box-section{
+		.action-box-bg{
+			padding-top: 60px;
+			padding-bottom: 50px;
+			&.position-absolute{
+				top: 58%;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.action-box{
+	  .action-box-content{
+	  	span{
+	  		font-size: 48px;
+	  	}
+	  }
+
+	  &.action-box-02{
+			.action-box-content{
+		  	span{
+		  		font-size: 48px;
+		  	}
+		  }
+		}
+	}
+
+	.action-box-section{
+		.action-box-bg{
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.action-box{
+		flex-direction: column;
+		.action-box-content{
+			margin-bottom: 30px;
+			span{
+	  		font-size: 30px;
+	  	}
+		}
+		&.action-box-02{
+			width: 100%;
+			.action-box-content{
+		  	span{
+		  		font-size: 30px;
+		  	}
+		  }
+		}
+
+	}
+
+	.action-box-section{
+		margin-bottom: 60px;
+		.action-box-bg{
+			&.position-absolute{
+				top: 0;
+				position: inherit !important;
+				width: 95%;
+				margin-left:auto;
+				margin-top: -50px;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,117 @@
+/*
+
+Template: IT Infinite - IT Solutions and Services HTML Template
+Version: 1.0
+Author: potenzaglobalsolutions
+Design and Developed by: potenzaglobalsolutions.com
+
+NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
+
+*/
+
+/*================================================
+[  Table of contents  ]
+================================================
+
+ :: Typography
+ :: Helper Classes
+ :: Shortcodes
+  	- Accordion
+    - Address Info
+    - Awards
+  	- Button
+    - Blog Post
+  	- Case Study
+    - Countdown
+    - Counter
+    - Feature Info
+    - Form Control
+    - Find Job
+    - History
+    - List style
+    - Location
+    - Marquee
+    - Newsletter
+    - Owl Carousel
+    - Pricing Table
+    - Progress Bar
+    - Range Slider
+    - Workspaces
+    - Steps
+    - Skill
+    - Team
+    - Testimonial
+    - Timeline
+    - Video
+
+ :: Header
+   - Header
+   - Header Style 02
+   - Header Style 03
+   - Header Transparent
+ :: Banner
+   - Banner
+   - banner 02
+   - banner 03
+ :: Layout
+   - Section Title
+   - Sticky column
+   - Header Inner
+ :: Blog
+   - Blog
+   - blog post sticky
+ :: Not Found
+ :: Footer
+ :: Responsive
+
+======================================
+[ End table content ]
+======================================*/
+
+
+
+// Core files
+@import "variables";
+@import "typography";
+@import "helpers";
+
+// Shortcodes
+@import "shortcodes/accordion";
+@import "shortcodes/address-info";
+@import "shortcodes/action-box";
+@import "shortcodes/awards";
+@import "shortcodes/blog-post";
+@import "shortcodes/service";
+@import "shortcodes/team";
+@import "shortcodes/testimonial";
+@import "shortcodes/newsletter";
+@import "shortcodes/find-job";
+@import "shortcodes/counter";
+@import "shortcodes/case-studies";
+@import "shortcodes/owl-carousel";
+@import "shortcodes/pricing";
+@import "shortcodes/countdown";
+@import "shortcodes/button";
+@import "shortcodes/history";
+@import "shortcodes/form-control";
+@import "shortcodes/timeline";
+@import "shortcodes/progress-bar";
+@import "shortcodes/range-slider";
+@import "shortcodes/list";
+@import "shortcodes/location";
+@import "shortcodes/marquee";
+@import "shortcodes/social-icon";
+@import "shortcodes/steps";
+@import "shortcodes/skill";
+@import "shortcodes/select-custom";
+@import "shortcodes/video";
+
+// Structure
+@import "header";
+@import "banner";
+@import "layout";
+
+// Pages
+@import "blog";
+@import "footer";
+@import "widget";

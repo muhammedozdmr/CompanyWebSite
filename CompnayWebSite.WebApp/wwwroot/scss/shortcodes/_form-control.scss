@@ -1,0 +1,91 @@
+/*****************************
+  Form Control
+*****************************/
+form {
+	.form-control {
+		position: relative;
+		font-size: 18px;
+		line-height: normal;
+		border-radius: 0px;
+		padding: 15px 0px;
+		border: none;
+		background: transparent;
+		border-bottom: 1px solid rgba($black,0.2);
+		color: $body-color;
+		margin-bottom: 30px;
+
+		&::-ms-input-placeholder { 
+		  color:$body-color;
+		}
+
+		&::placeholder {
+		  color:$body-color;
+		}
+
+		&:focus {
+		  	color:$body-color;
+	    	box-shadow:none;
+	    	background: transparent;
+	    	border-color:$primary;
+	   }
+
+	   &:active {
+	   	background: transparent;
+	   }
+	}
+
+	textarea {
+		&.form-control {
+			margin-bottom: 50px;
+		}
+	}
+
+	&.form-style-border {
+		.form-control {
+			padding: 15px 20px;
+			border-radius: $radius-6;
+			border: 1px solid rgba($white,0.1);
+
+			&:focus {
+		    	border-color:$primary;
+		    }
+		}
+	}
+
+	&.form-dark {
+		.form-control {
+			color: $white;
+			border-color: rgba($white,0.2);
+
+			&::-ms-input-placeholder { 
+			  color: $white;
+			}
+
+			&::placeholder {
+			  color: $white;
+			}
+
+			&:focus {
+		    	border-color:$primary;
+		   }
+		}
+	}
+}
+
+.form-control:focus {
+	box-shadow:none;
+	background: transparent;
+	border-color:$primary;
+}
+
+.form-check .form-check-input {
+	width: 21px;
+	height: 21px;
+	margin-top: 2px;
+	margin-right: 10px;
+	border: 2px solid $border-color;
+}
+
+.form-check .form-check-input:checked {
+	background-color: $primary;
+}

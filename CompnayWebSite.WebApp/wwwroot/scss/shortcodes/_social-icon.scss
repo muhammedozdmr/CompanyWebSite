@@ -1,0 +1,74 @@
+/*****************************
+  Social Icon
+*****************************/
+
+.social-icon{
+	ul{
+		display: flex;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+	 	li{
+	 		margin: 0 13px;
+		 	a{
+		 		font-size: 20px;
+		 		font-family: $font-base;
+		 		font-weight: normal;
+		 		color: $white;
+		 		transition: $transition-5;
+
+		 		&:hover{
+		 			color:$primary;
+		 		}
+		 	}
+		 	&:first-child{
+		 		margin-left: 0px;
+		 	}
+
+		 	&:last-child{
+		 		margin-right: 0px;
+		 	}
+		 	&.title{
+			 	font-size: 20px;
+		 		font-family: $font-base;
+		 		font-weight: normal;
+		 		color: $white;
+		 		position: relative;
+		 		padding-right: 45px;
+		 		&:before{
+		 			position:absolute;
+		 			content: "";
+		 			height: 2px;
+		 			width: 25px;
+		 			background-color: $white;
+		 			right: 0;
+		 			top: 50%;
+		 			transform: translateY(-50%);
+		 		}
+			}
+	 	}
+	}
+}
+
+/*===============================================*/
+/* Responsive CSS */
+/*===============================================*/
+
+@media (max-width: 767px) {
+
+	.social-icon{
+		ul{
+			li {
+			  margin: 0 8px;
+			  &.title{
+			 		padding-right: 35px;
+			 		&:before{
+			 			width: 20px;
+			 		}
+				}
+			}
+		}
+	}
+
+}

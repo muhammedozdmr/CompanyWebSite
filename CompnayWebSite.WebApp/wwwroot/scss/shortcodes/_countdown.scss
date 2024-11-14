@@ -1,0 +1,115 @@
+/*****************************
+  Countdown
+*****************************/
+.countdown-wrapper {
+	display: flex;
+	gap: 80px;
+	justify-content: center;
+
+	.countdown {
+		position: relative;
+		text-align: center;
+
+		span {
+			font-size: 130px;
+			line-height: 110px;
+			font-weight: 400;
+			display: block;
+			color: $secondary;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 32px;
+			line-height: 40px;
+			font-weight: normal;
+			color: $body-color;
+			text-transform: capitalize;
+			margin-bottom: 0;
+		}
+
+		&:after {
+			content: ":";
+			color: $secondary;
+			position: absolute;
+			right: -50px;
+			top: 0;
+			font-size: 80px;
+			font-weight: 600;
+		}
+
+		&:last-child:after {
+			content: normal;
+		}
+	}
+
+	&.countdown-light {
+		.countdown {
+			span {color: $white;}
+			p {color: $white;}
+			&:after {color: $white;}
+		}
+	}
+}
+
+
+
+@media (max-width: 1200px) {
+
+	.countdown-wrapper .countdown span {
+		font-size: 100px;
+		line-height: 90px;
+	}
+	.countdown-wrapper .countdown p {
+		font-size: 28px;
+		line-height: 34px;
+	}
+}
+
+
+@media (max-width: 991px) {
+
+	.countdown-wrapper {
+		gap: 50px;
+	}
+	.countdown-wrapper .countdown span {
+		font-size: 70px;
+		line-height: 60px;
+	}
+	.countdown-wrapper .countdown p {
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.countdown-wrapper .countdown:after {
+		font-size: 50px;
+		right: -33px;
+		top: -10px;
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.countdown-wrapper {
+		gap: 20px;
+	}
+	.countdown-wrapper .countdown span {
+		font-size: 28px;
+		line-height: 30px;
+		margin-bottom: 0;
+	}
+	.countdown-wrapper .countdown p {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.countdown-wrapper .countdown:after {
+		font-size: 22px;
+      right: -15px;
+      top: -3px;
+	}
+}
+
+
+@media (max-width: 575px) {
+
+}

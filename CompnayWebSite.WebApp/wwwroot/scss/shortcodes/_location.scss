@@ -1,0 +1,80 @@
+/*****************************
+  Location
+*****************************/
+.location-wrapper {
+
+	&.location-style-1 {
+		display: flex;
+		align-items: flex-end;
+		padding: 45px;
+		min-height: 410px;
+		border: 1px solid $border-color-05;
+		border-radius: $radius-10;
+		transition: $transition-3;
+
+		.location-inner {
+			overflow: hidden;
+		}
+
+		.city-image {
+			position: relative;
+		}
+
+		.city-info {
+			margin-top: 20px;
+
+			.city-name {
+				margin-bottom: 20px;
+				transition: $transition-3;
+			}
+		}
+
+		.city-location {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+
+			.location-item {
+				display: flex;
+				align-items: baseline;
+
+				.icon {
+					width: 25px;
+					flex: none;
+					margin-right: 15px;
+				}
+			}
+		}
+
+		&:hover {
+			border-color: $primary;
+			
+			.city-info .city-name {
+				background: linear-gradient(60deg, $gradient-1 -20%, $gradient-2 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}
+
+
+
+/*------------------------------------*/
+/* Responsive CSS */
+/*------------------------------------*/
+@media (max-width: 1399px) {
+			.location-wrapper {
+			&.location-style-1 {
+         padding: 30px;
+			}
+		}
+}
+
+@media (max-width: 1199px) {
+			.location-wrapper {
+			&.location-style-1 {
+         padding: 25px;
+			}
+		}
+}

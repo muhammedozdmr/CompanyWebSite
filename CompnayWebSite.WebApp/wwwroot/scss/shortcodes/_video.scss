@@ -1,0 +1,153 @@
+/*****************************
+	Video Button
+*****************************/
+.video-wrapper {
+	position: relative;
+	z-index: 9;
+
+	.attract-hover {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -75px;
+		margin-top: -75px;
+	}
+
+	.video-btn {
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+		width: 215px;
+		height: 215px;
+		padding: 15px;
+		color: $white;
+		font-size: 42px;
+		line-height: 42px;
+		font-family: $font-hedding;
+		text-align: center;
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 1;
+        transform: translate(-65px, -65px);
+		border-radius: $radius-100;
+		z-index: 1;
+
+		&:after {
+		    content: "";
+		    width: 100%;
+		    height: 100%;
+		    backdrop-filter: blur(10px);
+		    background-color: rgba(255, 255, 255, 0.3);
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    z-index: -1;
+		    border-radius: $radius-100;
+		}
+
+		&:before{
+			position:absolute;
+			content: "";
+			width: 215px;
+			height: 215px;
+			border-radius: $radius-100;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			top: 10px;
+			left: -10px;
+			z-index: -1;
+		}
+	}
+
+	.video-btn.btn-hide {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		opacity: 0;
+		width: auto;
+		height: auto;
+		transform: inherit;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    color: $black;
+		border-radius: 0;
+		cursor: none;
+	}
+}
+
+
+.video-wrapper.wrapper-absolute {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: none;
+}
+
+.video-bg-jarallax{
+    position: relative;
+    z-index: 5;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563ad;
+    background-blend-mode: multiply;
+}
+
+
+
+@media (max-width: 767px) {
+
+	.video-wrapper .video-btn,
+	.video-wrapper .video-btn.btn-hide {
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+		width: 130px;
+		height: 130px;
+		padding: 15px;
+		color: $black;
+		font-size: 18px;
+		font-weight: 500;
+		text-align: center;
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 1;
+        transform: translate(-65px, -65px);
+		backdrop-filter: blur(10px);
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: $radius-100;
+
+		&:before {
+		height: 130px;
+		width: 130px;
+	}
+	}
+
+	
+
+	.video-wrapper .attract-hover {margin: 0}
+}
+
+@media (max-width: 575px) {
+
+	.video-wrapper .video-btn {
+		width: 100px;
+		height: 100px;
+		padding: 10px;
+		font-size: 18px;
+		font-weight: 500;
+        transform: translate(-50px, -50px);
+
+        &:before {
+        	height: 100px;
+        	width: 100px;
+        }
+	}
+}

@@ -1,0 +1,223 @@
+/*****************************
+	Owl Carousel
+*****************************/
+
+.owl-carousel {
+  .owl-nav {
+    
+    button.owl-prev,
+    button.owl-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 60px;
+      height: 60px;
+      padding: 0px;
+      background: $white;
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      top: 0;
+      transform: translate(0px,0px);
+      z-index: 2;
+      overflow: hidden;
+      font-family: $font-hedding;
+      border-radius: $radius-100;
+
+      i {
+        display: none;
+      }
+
+      &.owl-prev {
+        top: 250px;
+        left: 40px;
+
+        &:after {
+          position:absolute;
+          content: "";
+          background: url(../images/svg/owl-arrow-prev.svg);
+          background-repeat: no-repeat;
+          background-size: 22px;
+          height: 21px;
+          width: 22px;
+        }
+      }
+      &.owl-next {
+        right: 40px;
+        top: 250px;
+
+        &:after {
+          position:absolute;
+          content: "";
+          background: url(../images/svg/owl-arrow-next.svg);
+          background-repeat: no-repeat;
+          background-size: 22px;
+          height: 21px;
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+.owl-carousel {
+	.owl-item {
+		img {
+			width: auto;
+			display: inherit;
+		}
+	}
+
+}
+
+.owl-carousel {
+	.owl-dots {
+		text-align: center;
+		margin-top: 20px;
+	}
+	button.owl-dot {
+		width: 9px;
+		height: 9px;
+		background: $black !important;
+		border-radius: 50%;
+		margin-right: 10px;
+		opacity: 0.5;
+	}
+	button.owl-dot.active {
+		background: $primary !important;
+		opacity: 1;
+	}
+}
+
+
+.owl-carousel {
+	&.slider-overflow{
+		.owl-stage-outer{
+			overflow: visible;
+		}
+	}
+}
+
+div[cursor-type="text"] .owl-carousel,
+div[cursor-type="arrow"] .owl-carousel,
+.owl-carousel[cursor-type="text"],
+.owl-carousel[cursor-type="arrow"] {
+  cursor: none;
+}
+
+/*-------------------------*/
+/* Big Arrow */
+/*-------------------------*/
+.owl-carousel.carousel-arrow-big {
+  padding: 0 250px;
+
+  .owl-nav {
+    button {
+      position: absolute;
+      top: 50%;
+      margin-top: -64px;
+      width: 128px;
+      height: 128px;
+      background: transparent;
+      border: 1px solid $primary;
+
+      &.owl-prev {
+        left: 0;
+
+        &:after {
+          height: 38px;
+          width: 41px;
+          background-size: 41px;
+        }
+      }
+
+      &.owl-next {
+        left: auto;
+        right: 0;
+
+        &:after {
+          height: 38px;
+          width: 41px;
+          background-size: 41px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .owl-carousel.carousel-arrow-big {
+    padding: 0 200px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .owl-carousel.carousel-arrow-big {
+      padding: 0 150px;
+
+      .owl-nav {
+         button {
+            width: 100px;
+            height: 100px;
+
+            &.owl-prev{
+              &:after{
+                  height: 30px;
+                  width: 32px;
+                  background-size: cover;
+              }
+            }
+            &.owl-next{
+              &:after{
+                  height: 30px;
+                  width: 32px;
+                  background-size: cover;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+@media (max-width: 991px) {
+
+   .owl-carousel.carousel-arrow-big {
+      padding: 0 130px;
+
+      .owl-nav {
+         button {
+            width: 80px;
+            height: 80px;
+
+            &.owl-prev{
+              &:after{
+                  height: 26px;
+                  width: 28px;
+              }
+            }
+            &.owl-next{
+              &:after{
+                  height: 26px;
+                  width: 28px;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+@media (max-width: 767px) {
+  .owl-carousel{
+    .owl-nav{
+      display: none;
+    }
+  }
+
+   .owl-carousel.carousel-arrow-big {
+      padding: 0 15px;
+   }
+}
+
