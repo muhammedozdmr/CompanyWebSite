@@ -65,6 +65,14 @@ namespace CompanyWebSite.Business.Services
                     {
                         companyInfoDto.WorkingHours = companyInfoTranslation.Value;
                     }
+                    else if(companyInfoTranslation.Key == "CompanySlogan")
+                    {
+                        companyInfoDto.CompanySlogan = companyInfoTranslation.Value;
+                    }
+                    else if(companyInfoTranslation.Key == "HomeButtonName")
+                    {
+                        companyInfoDto.HomeButtonName = companyInfoTranslation.Value;
+                    }
                 }
             }
             return companyInfoDtos;

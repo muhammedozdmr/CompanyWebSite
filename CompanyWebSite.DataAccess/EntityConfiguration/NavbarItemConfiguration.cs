@@ -13,12 +13,12 @@ public class NavbarItemConfiguration : IEntityTypeConfiguration<NavbarItem>
         builder.Property(x => x.Name).IsRequired().HasMaxLength(100);
         builder.Property(x => x.Slug).IsRequired().HasMaxLength(100);
         builder.HasData(
-            new NavbarItem { Id = 1, Name = "Ana Sayfa", Slug = "home" },
-            new NavbarItem { Id = 2, Name = "Hakkımızda", Slug = "about" },
-            new NavbarItem { Id = 3, Name = "Hizmetler", Slug = "services" },
-            new NavbarItem { Id = 4, Name = "Blog", Slug = "blog" },
-            new NavbarItem { Id = 5, Name = "İletişim", Slug = "contact" },
-            new NavbarItem { Id = 6, Name = "SSS", Slug = "faq" }
+            new NavbarItem { Id = 1, Name = "Ana Sayfa", Slug = "home", NavbarControllerName = "Home" },
+            new NavbarItem { Id = 2, Name = "Hakkımızda", Slug = "about", NavbarControllerName = "About" },
+            new NavbarItem { Id = 3, Name = "Hizmetler", Slug = "services", NavbarControllerName = "Service" },
+            new NavbarItem { Id = 4, Name = "Blog", Slug = "blog", NavbarControllerName = "Blog" },
+            new NavbarItem { Id = 5, Name = "İletişim", Slug = "contact", NavbarControllerName = "Contact" },
+            new NavbarItem { Id = 6, Name = "SSS", Slug = "faq", NavbarControllerName = "Faq" }
         );
     }
 }

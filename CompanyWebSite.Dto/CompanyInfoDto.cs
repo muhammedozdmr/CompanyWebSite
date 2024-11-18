@@ -9,6 +9,7 @@ namespace CompanyWebSite.Dto
     public class CompanyInfoDto
     {
         public int Id { get; set; }
+        public string? CompanySlogan { get; set; } // Şirket sloganı
         public string? CompanyLogoUrl { get; set; } // Resim URL'si
         public string? CompanyName { get; set; } // Company Name
         public string? CompanyArea { get; set; } // Şirket Ünvanı
@@ -22,5 +23,6 @@ namespace CompanyWebSite.Dto
         public string? Twitter { get; set; } // Twitter URL'si,
         public string? Facebook { get; set; } // Facebook URL'si
         public string? Instagram { get; set; } // Instagram URL'si
+        public string? HomeButtonName { get; set; } // Ana sayfa buton adı
     }
 }

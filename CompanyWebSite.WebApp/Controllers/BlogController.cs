@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CompnayWebSite.WebApp.Controllers
+namespace CompanyWebSite.WebApp.Controllers
 {
-    public class ServiceController : Controller
+    public class BlogController : Controller
     {
         public IActionResult Index()
         {

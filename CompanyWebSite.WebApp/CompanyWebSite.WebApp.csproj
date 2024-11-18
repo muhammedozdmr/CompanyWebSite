@@ -16,7 +16,6 @@
     <Folder Include="Views\Blog\" />
     <Folder Include="Views\Contact\" />
     <Folder Include="Views\FAQ\" />
-    <Folder Include="Views\NavbarFooterSidePanel\" />
     <Folder Include="Views\Service\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\images\" />

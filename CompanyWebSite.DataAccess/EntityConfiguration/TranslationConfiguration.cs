@@ -4215,7 +4215,142 @@ new Translation
     Key = "SidePanelContactContent",
     Value = "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!",
     LanguageId = 4 // Russian
-}
+},
+                new Translation
+                {
+                    Id=463,
+                    EntityName="CompanyInfo",
+                    EntityId=1,
+                    Key="CompnaySlogan",
+                    Value="Where Creativity Meets Excellence",
+                    LanguageId=2
+                },
+                new Translation
+                {
+                    Id=464,
+                    EntityName="CompanyInfo",
+                    EntityId=1,
+                    Key="CompnaySlogan",
+                    Value="Wo Kreativität Exzellenz Trifft",
+                    LanguageId=3
+                },
+                new Translation
+                {
+                    Id=465,
+                    EntityName="CompanyInfo",
+                    EntityId=1,
+                    Key="CompnaySlogan",
+                    Value="Там, где творчество встречается с превосходством",
+                    LanguageId=4
+                },
+                new Translation
+                {
+                    Id=466,
+                    EntityName="CompanyInfo",
+                    EntityId=1,
+                    Key="HomeButtonName",
+                    Value="Contact Us",
+                    LanguageId=2
+                },
+                new Translation
+                {
+                    Id=467,
+                    EntityName="CompanyInfo",
+                    EntityId=1,
+                    Key="HomeButtonName",
+                    Value="Kontaktieren Sie Uns",
+                    LanguageId=3
+                },
+                new Translation
+                {
+                    Id=468,
+                    EntityName="CompanyInfo",
+                    EntityId=1,
+                    Key="HomeButtonName",
+                    Value="Свяжитесь с нами",
+                    LanguageId=4
+                },
+                new Translation
+                {
+                    Id=469,
+                    EntityName="About",
+                    EntityId=1,
+                    Key="AboutSlogan",
+                    Value="Because You Deserve the Best",
+                    LanguageId=2
+                },
+                new Translation
+                {
+                    Id=470,
+                    EntityName="About",
+                    EntityId=1,
+                    Key="AboutSlogan",
+                    Value="Weil Sie Das Beste Verdienen",
+                    LanguageId=3
+                },
+                new Translation
+                {
+                    Id=471,
+                    EntityName="About",
+                    EntityId=1,
+                    Key="AboutSlogan",
+                    Value="Потому что вы заслуживаете лучшее",
+                    LanguageId=4
+                },
+                new Translation
+                {
+                    Id=472,
+                    EntityName="Service",
+                    EntityId=1,
+                    Key="ServiceSlogan",
+                    Value="Empowering Your Growth Through Digital Excellence",
+                    LanguageId=2
+                },
+                new Translation
+                {
+                    Id=473,
+                    EntityName="Service",
+                    EntityId=1,
+                    Key="ServiceSlogan",
+                    Value="Digitaler Erfolg Für Ihr Unternehmen",
+                    LanguageId=3
+                },
+                new Translation
+                {
+                    Id=474,
+                    EntityName="Service",
+                    EntityId=1,
+                    Key="ServiceSlogan",
+                    Value="Цифровые решения для вашего успеха",
+                    LanguageId=4
+                },
+                new Translation
+                {
+                    Id=475,
+                    EntityName="Service",
+                    EntityId=1,
+                    Key="ServiceHomeTitle",
+                    Value="Our Steps",
+                    LanguageId=2
+                },
+                new Translation
+                {
+                    Id=476,
+                    EntityName="Service",
+                    EntityId=1,
+                    Key="ServiceHomeTitle",
+                    Value="Unser Prozess",
+                    LanguageId=3
+                },
+                new Translation
+                {
+                    Id=477,
+                    EntityName="Service",
+                    EntityId=1,
+                    Key="ServiceHomeTitle",
+                    Value="Наш Процесс",
+                    LanguageId=4
+                }
             );
         }
 

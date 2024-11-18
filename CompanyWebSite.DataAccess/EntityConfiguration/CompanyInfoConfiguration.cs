@@ -32,6 +32,7 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                 new CompanyInfo
                 {
                     Id = 1,
+                    CompanySlogan = "Yaratıcılığın Mükemmellikle Buluştuğu Yer",
                     CompanyLogoUrl = "images/company_logo.jpg",
                     CompanyName = "TechLiberty",
                     CompanyArea = "Sağlık ve Teknoloji Hizmetleri Limited Şirketi",
@@ -44,7 +45,8 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
                     LinkedIn = "https://linkedin.com/company/techlibertyco",
                     Twitter = "https://twitter.com/techlibertyco",
                     Facebook = "https://facebook.com/techlibertyco",
-                    Instagram = "https://instagram.com/techlibertyco"
+                    Instagram = "https://instagram.com/techlibertyco",
+                    HomeButtonName = "İletişim"
                 });
         }
     }

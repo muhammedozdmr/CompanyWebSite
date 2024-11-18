@@ -79,6 +79,10 @@ namespace CompanyWebSite.Business.Services
                     {
                         aboutDto.Summary = aboutTranslation.Value;
                     }
+                    else if (aboutTranslation.Key == "AboutSlogan")
+                    {
+                        aboutDto.AboutSlogan = aboutTranslation.Value;
+                    }
                 }
                 var translatedHistories = new List<HistoryDto>();
 

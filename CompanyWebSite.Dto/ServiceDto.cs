@@ -9,8 +9,10 @@ namespace CompanyWebSite.Dto
     public class ServiceDto
     {
         public int Id { get; set; }
+        public string? ServiceSlogan { get; set; }
         public string? DefaultTitle { get; set; }
         public string? DefaultContent { get; set; }
+        public string? ServiceHomeTitle { get; set; }
         public string? Summary { get; set; }
         public IEnumerable<HighlightDto>? ServiceHighlights { get; set; }
         public IEnumerable<ServiceCategoryDto>? ServiceCategories { get; set; }

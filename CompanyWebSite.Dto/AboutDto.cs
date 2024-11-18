@@ -9,6 +9,7 @@ namespace CompanyWebSite.Dto
     public class AboutDto
     {
         public int Id { get; set; }
+        public string? AboutSlogan { get; set; }
         public string? DefaultTitle { get; set; }
         public string? DefaultContent { get; set; }
         public bool IsActive { get; set; }

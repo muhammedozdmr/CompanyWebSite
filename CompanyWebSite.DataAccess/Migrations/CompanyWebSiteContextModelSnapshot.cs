@@ -107,6 +107,9 @@ namespace CompanyWebSite.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AboutSlogan")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CompanyInfoId")
                         .HasColumnType("int");
 
@@ -142,6 +145,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                         new
                         {
                             Id = 1,
+                            AboutSlogan = "En İyisi Sizin İçin",
                             CompanyInfoId = 1,
                             DefaultContent = "TechLiberty Software Solutions olarak, 29 Ekim 2023 tarihinde kurulan şirketimiz, müşterilerine teknolojik çözümler sunma misyonunu benimsemiştir. Dijital çağın gereksinimlerine uygun olarak mobil uygulamalar, web projeleri, oyun geliştirme, proje yönetimi, SEO optimizasyonu, API servisleri, CRM ve ERP hizmetleri, veri tabanı yönetim sistemleri ve sistem analizi gibi geniş bir yelpazede profesyonel çözümler sunmaktayız. Deneyimli ve yenilikçi ekibimizle, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağı olarak yer alıyoruz. Amacımız, müşterilerimize sürdürülebilir başarıyı getirecek, verimli ve ölçeklenebilir çözümler sunarak değer katmaktır.",
                             DefaultTitle = "Hakkımızda",
@@ -405,6 +409,9 @@ namespace CompanyWebSite.DataAccess.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("CompanySlogan")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("CreateDate")
                         .IsRequired()
                         .HasColumnType("datetime2");
@@ -416,6 +423,9 @@ namespace CompanyWebSite.DataAccess.Migrations
                     b.Property<string>("Facebook")
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("HomeButtonName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Instagram")
                         .HasMaxLength(200)
@@ -452,9 +462,11 @@ namespace CompanyWebSite.DataAccess.Migrations
                             CompanyArea = "Sağlık ve Teknoloji Hizmetleri Limited Şirketi",
                             CompanyLogoUrl = "images/company_logo.jpg",
                             CompanyName = "TechLiberty",
+                            CompanySlogan = "Yaratıcılığın Mükemmellikle Buluştuğu Yer",
                             CreateDate = new DateTime(2023, 10, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "info@techliberty.co",
                             Facebook = "https://facebook.com/techlibertyco",
+                            HomeButtonName = "İletişim",
                             Instagram = "https://instagram.com/techlibertyco",
                             LinkedIn = "https://linkedin.com/company/techlibertyco",
                             Phone = "+90 (543) 233 33 32",
@@ -1234,6 +1246,9 @@ namespace CompanyWebSite.DataAccess.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("NavbarControllerName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Slug")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -1248,36 +1263,42 @@ namespace CompanyWebSite.DataAccess.Migrations
                         {
                             Id = 1,
                             Name = "Ana Sayfa",
+                            NavbarControllerName = "Home",
                             Slug = "home"
                         },
                         new
                         {
                             Id = 2,
                             Name = "Hakkımızda",
+                            NavbarControllerName = "About",
                             Slug = "about"
                         },
                         new
                         {
                             Id = 3,
                             Name = "Hizmetler",
+                            NavbarControllerName = "Service",
                             Slug = "services"
                         },
                         new
                         {
                             Id = 4,
                             Name = "Blog",
+                            NavbarControllerName = "Blog",
                             Slug = "blog"
                         },
                         new
                         {
                             Id = 5,
                             Name = "İletişim",
+                            NavbarControllerName = "Contact",
                             Slug = "contact"
                         },
                         new
                         {
                             Id = 6,
                             Name = "SSS",
+                            NavbarControllerName = "Faq",
                             Slug = "faq"
                         });
                 });
@@ -1328,6 +1349,12 @@ namespace CompanyWebSite.DataAccess.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
 
+                    b.Property<string>("ServiceHomeTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ServiceSlogan")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ServiceSummary")
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
@@ -1349,6 +1376,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Web geliştirme, işletmelerin dijital varlığını güçlendirmek için stratejik bir süreçtir. İhtiyaçlarınızı ve hedeflerinizi analiz ederek kullanıcı dostu, modern ve ölçeklenebilir web çözümleri sunuyoruz. Tasarım ve kullanıcı deneyiminden performansa kadar tüm aşamalarda yanınızdayız. Kod kalitesi, SEO uyumu ve güvenlik önceliklerimiz arasında yer alır. Profesyonel ekibimiz, işletmenizin çevrimiçi ortamda başarıya ulaşması için en uygun çözümleri sunmaya hazırdır.",
                             DefaultTitle = "Web Geliştirme",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "Profesyonel web geliştirme ile modern, kullanıcı dostu ve ölçeklenebilir web siteleri sunuyoruz.",
                             Slug = "web-development"
                         },
@@ -1358,6 +1387,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Mobil cihazlar günümüzde kullanıcı deneyiminin merkezi haline gelmiştir. İOS ve Android platformlarında yüksek performanslı, kullanıcı dostu uygulamalar geliştiriyoruz. Kullanıcı alışkanlıklarını analiz ederek, etkileşimi artıracak ve kullanıcıyı çeken tasarımlar sunuyoruz. Uygulamalarımız, güvenlik ve hız odaklı geliştirilirken, kolay güncellenebilir ve ölçeklenebilir yapısıyla da uzun vadeli bir çözüm sağlar. Dijital dünyada işinizi büyütmeniz için yanınızdayız.",
                             DefaultTitle = "Mobil Uygulama Geliştirme",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "iOS ve Android platformlarına uygun, kullanıcı odaklı mobil uygulama geliştirme hizmetleri sağlıyoruz.",
                             Slug = "mobile-app-development"
                         },
@@ -1367,6 +1398,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Oyun geliştirme, hem teknik hem de yaratıcı bir süreçtir. Eğlenceli, etkileyici ve yüksek performanslı oyunlar yaratmak için gelişmiş teknolojilerden yararlanıyoruz. Unity ve Unreal Engine gibi güçlü araçlarla çalışarak, hedef kitlenizin beklentilerini karşılayacak grafik kalitesine ve akıcı oynanışa sahip oyunlar geliştiriyoruz. Oyuncuların ilgisini çeken, duygusal bağ kurabilecekleri ve tekrar oynama isteği uyandıran oyunlar yaratma sürecinde her aşamada yanınızdayız.",
                             DefaultTitle = "Oyun Geliştirme",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "İleri teknolojilerle oyun tasarımı yaparak eğlenceli ve etkileşimli oyun deneyimleri sunuyoruz.",
                             Slug = "game-development"
                         },
@@ -1376,6 +1409,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "API entegrasyonu, farklı sistemlerin birbiriyle güvenli ve verimli bir şekilde iletişim kurmasını sağlar. İşletmenizdeki veri akışını optimize ederek süreçleri daha etkin hale getirmek için API geliştirme ve entegrasyon hizmetleri sunuyoruz. Kapsamlı güvenlik önlemleri ile hassas verilerinizi koruyarak verimli bir altyapı oluşturuyoruz. Tüm sistemlerinizin uyum içinde çalışmasını sağlayarak iş akışlarınızı hızlandırıyor ve maliyetlerinizi düşürüyoruz.",
                             DefaultTitle = "API Entegrasyonu",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "API entegrasyonu ile veri akışını optimize ediyor, sistemler arası bağlantıları güvenli hale getiriyoruz.",
                             Slug = "api-integration"
                         },
@@ -1385,6 +1420,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Müşteri ilişkileri yönetimi, başarılı bir işin temelidir. Müşterilerinizle güçlü ve uzun vadeli ilişkiler kurmanıza yardımcı olan CRM çözümlerimiz, müşteri memnuniyetini artırarak işinizi büyütür. Satış, pazarlama ve müşteri hizmetleri süreçlerinizi optimize eden, tüm müşteri verilerini tek bir platformda toplayan ve analiz eden bir sistem sunuyoruz. İşinizi daha iyi tanımanızı ve hedeflerinize daha hızlı ulaşmanızı sağlamak için buradayız.",
                             DefaultTitle = "CRM Çözümleri",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "Müşteri ilişkilerini yönetmek için kapsamlı ve kullanımı kolay CRM çözümleri sunuyoruz.",
                             Slug = "crm-solutions"
                         },
@@ -1394,6 +1431,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "İş süreçlerinizi dijitalleştirerek yönetiminizi kolaylaştıran ERP çözümlerimizle işletmenizin verimliliğini artırıyoruz. Finans, insan kaynakları, tedarik zinciri gibi departmanları tek bir sistemde birleştirerek iş süreçlerinizi optimize ediyoruz. ERP çözümlerimiz sayesinde maliyetleri düşürürken, karar alma sürecinizi hızlandırıyor ve departmanlar arasında anlık veri paylaşımını mümkün kılıyoruz. Sürdürülebilir büyüme için ideal bir çözüm sunuyoruz.",
                             DefaultTitle = "ERP Çözümleri",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "Verimliliği artıran ve iş süreçlerini optimize eden, esnek ve güçlü ERP çözümleri sunuyoruz.",
                             Slug = "erp-solutions"
                         },
@@ -1403,6 +1442,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Verilerin güvenliği ve erişilebilirliği her işletme için kritik öneme sahiptir. Güçlü, güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin bir şekilde yönetmenize yardımcı oluyoruz. Veritabanı yapılarınızı optimize ederek performansı artırırken, verilerinizi sürekli erişilebilir ve güvenli tutmak için gelişmiş güvenlik protokollerini kullanıyoruz. İşletmenizin büyümesi ve karar süreçlerini hızlandırması için verilerinizi en iyi şekilde yönetiyoruz.",
                             DefaultTitle = "Veritabanı Yönetim Sistemleri",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "Güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin şekilde yönetmenize yardımcı oluyoruz.",
                             Slug = "database-management"
                         },
@@ -1412,6 +1453,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "İşletmenizin ihtiyaçlarına uygun sistemler tasarlamak için kapsamlı bir analiz süreci yürütüyoruz. Mevcut süreçlerinizi değerlendirerek iş akışınızı optimize edecek sistem çözümleri sunuyoruz. İhtiyaçlarınıza göre özel olarak tasarlanmış, kullanımı kolay ve sürdürülebilir sistemler geliştiriyoruz. Sistem tasarımı sırasında performans, güvenlik ve ölçeklenebilirlik gibi unsurları önceliklendirerek, işletmenizin dijital dönüşüm sürecine katkıda bulunuyoruz.",
                             DefaultTitle = "Sistem Analizi ve Tasarımı",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "İş süreçlerinize uygun sistem tasarımı yaparak, etkin ve ölçeklenebilir çözümler sunuyoruz.",
                             Slug = "system-analysis"
                         },
@@ -1421,6 +1464,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Projelerinizi başarıyla tamamlamanızı sağlayacak stratejik proje yönetim çözümlerimizle, kaynaklarınızı etkin bir şekilde kullanmanızı sağlıyoruz. Planlama, izleme, kontrol ve kapanış süreçlerinde size destek olarak hedeflerinize ulaşmanıza yardımcı oluyoruz. Ekibinizle yakın çalışarak zamanında ve bütçe dahilinde projeler tamamlamanızı sağlarken, kaliteyi de garanti ediyoruz. Başarılı projeler için tüm adımlarda yanınızdayız.",
                             DefaultTitle = "Proje Yönetimi",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "Projelerinizi planlamak, takip etmek ve başarıya ulaştırmak için profesyonel yönetim çözümleri sağlıyoruz.",
                             Slug = "project-management"
                         },
@@ -1430,6 +1475,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                             DefaultContent = "Dijital veri depolama ve yönetimi için güvenli ve ölçeklenebilir bulut çözümleri sunuyoruz. Verilerinize her yerden kolayca erişim sağlarken, güvenlik ve maliyet avantajı sunan bulut altyapılarımızla işinizi büyütmenize destek oluyoruz. İş yükünüzü hafifletmek ve esneklik sağlamak için bulut çözümlerimizde en son teknolojileri kullanıyoruz. Bulut altyapımız sayesinde verilerinizi güvenle saklayın ve işletmenizi daha çevik hale getirin.",
                             DefaultTitle = "Bulut Çözümleri",
                             IsActive = true,
+                            ServiceHomeTitle = "Sürecimiz",
+                            ServiceSlogan = "Başarınızı Artıran Dijital Stratejiler",
                             ServiceSummary = "Güvenilir, esnek ve ölçeklenebilir bulut çözümlerimizle verilerinizi güvenle yönetmenizi sağlıyoruz.",
                             Slug = "cloud-solutions"
                         });
@@ -5767,6 +5814,141 @@ namespace CompanyWebSite.DataAccess.Migrations
                             Key = "SidePanelContactContent",
                             LanguageId = 4,
                             Value = "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!"
+                        },
+                        new
+                        {
+                            Id = 463,
+                            EntityId = 1,
+                            EntityName = "CompanyInfo",
+                            Key = "CompnaySlogan",
+                            LanguageId = 2,
+                            Value = "Where Creativity Meets Excellence"
+                        },
+                        new
+                        {
+                            Id = 464,
+                            EntityId = 1,
+                            EntityName = "CompanyInfo",
+                            Key = "CompnaySlogan",
+                            LanguageId = 3,
+                            Value = "Wo Kreativität Exzellenz Trifft"
+                        },
+                        new
+                        {
+                            Id = 465,
+                            EntityId = 1,
+                            EntityName = "CompanyInfo",
+                            Key = "CompnaySlogan",
+                            LanguageId = 4,
+                            Value = "Там, где творчество встречается с превосходством"
+                        },
+                        new
+                        {
+                            Id = 466,
+                            EntityId = 1,
+                            EntityName = "CompanyInfo",
+                            Key = "HomeButtonName",
+                            LanguageId = 2,
+                            Value = "Contact Us"
+                        },
+                        new
+                        {
+                            Id = 467,
+                            EntityId = 1,
+                            EntityName = "CompanyInfo",
+                            Key = "HomeButtonName",
+                            LanguageId = 3,
+                            Value = "Kontaktieren Sie Uns"
+                        },
+                        new
+                        {
+                            Id = 468,
+                            EntityId = 1,
+                            EntityName = "CompanyInfo",
+                            Key = "HomeButtonName",
+                            LanguageId = 4,
+                            Value = "Свяжитесь с нами"
+                        },
+                        new
+                        {
+                            Id = 469,
+                            EntityId = 1,
+                            EntityName = "About",
+                            Key = "AboutSlogan",
+                            LanguageId = 2,
+                            Value = "Because You Deserve the Best"
+                        },
+                        new
+                        {
+                            Id = 470,
+                            EntityId = 1,
+                            EntityName = "About",
+                            Key = "AboutSlogan",
+                            LanguageId = 3,
+                            Value = "Weil Sie Das Beste Verdienen"
+                        },
+                        new
+                        {
+                            Id = 471,
+                            EntityId = 1,
+                            EntityName = "About",
+                            Key = "AboutSlogan",
+                            LanguageId = 4,
+                            Value = "Потому что вы заслуживаете лучшее"
+                        },
+                        new
+                        {
+                            Id = 472,
+                            EntityId = 1,
+                            EntityName = "Service",
+                            Key = "ServiceSlogan",
+                            LanguageId = 2,
+                            Value = "Empowering Your Growth Through Digital Excellence"
+                        },
+                        new
+                        {
+                            Id = 473,
+                            EntityId = 1,
+                            EntityName = "Service",
+                            Key = "ServiceSlogan",
+                            LanguageId = 3,
+                            Value = "Digitaler Erfolg Für Ihr Unternehmen"
+                        },
+                        new
+                        {
+                            Id = 474,
+                            EntityId = 1,
+                            EntityName = "Service",
+                            Key = "ServiceSlogan",
+                            LanguageId = 4,
+                            Value = "Цифровые решения для вашего успеха"
+                        },
+                        new
+                        {
+                            Id = 475,
+                            EntityId = 1,
+                            EntityName = "Service",
+                            Key = "ServiceHomeTitle",
+                            LanguageId = 2,
+                            Value = "Our Steps"
+                        },
+                        new
+                        {
+                            Id = 476,
+                            EntityId = 1,
+                            EntityName = "Service",
+                            Key = "ServiceHomeTitle",
+                            LanguageId = 3,
+                            Value = "Unser Prozess"
+                        },
+                        new
+                        {
+                            Id = 477,
+                            EntityId = 1,
+                            EntityName = "Service",
+                            Key = "ServiceHomeTitle",
+                            LanguageId = 4,
+                            Value = "Наш Процесс"
                         });
                 });
 

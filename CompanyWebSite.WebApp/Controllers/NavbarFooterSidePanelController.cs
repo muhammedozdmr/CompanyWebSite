@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace CompnayWebSite.WebApp.Controllers
+namespace CompanyWebSite.WebApp.Controllers
 {
     public class NavbarFooterSidePanelController : Controller
     {

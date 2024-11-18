@@ -16,8 +16,9 @@ namespace CompanyWebSite.Dto
         public string? ButtonName { get; set; }
         public int CustomerCount { get; set; } = 15;
         public int CustomerSatisfaction { get; set; } = 100;
-        
-      
-   
+        public IEnumerable<SidePanelDto>? SidePanels { get; set; }
+        public IEnumerable<CompanyInfoDto>? CompanyInfos { get; set; }
+        public IEnumerable<NavbarFooterSidePanelDto>? NavbarFooterSidePanels { get; set; }
+        public IEnumerable<NewsletterDto>? Newsletters { get; set; }
     }
 }

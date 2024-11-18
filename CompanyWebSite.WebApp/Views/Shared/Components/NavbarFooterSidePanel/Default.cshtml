@@ -1,0 +1,68 @@
+@model List<NavbarFooterSidePanelDto>
+
+<header class="header header-default header-sticky header-absolute">
+    <div class="header-inner">
+        <div class="site-logo">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img class="img-fluid" src="images/techliberty-images/White_logo_no_background_yatay.svg" alt="logo" />
+            </a>
+        </div>
+        <div class="site-menu d-none d-xl-block">
+            <ul class="main-menu">
+                @foreach (var item in Model)
+                {
+                    foreach (var navbarItem in item.NavbarItems)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="@navbarItem.NavbarControllerName" asp-action="Index">@navbarItem.Name</a>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="language-selector dropdown ms-auto">
+            <a class="nav-link dropdown-toggle" href="?lang=tr" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://flagcdn.com/w20/tr.png" alt="Turkish" /> Türkçe
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="English" /> English</a></li>
+                <li><a class="dropdown-item" href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="German" /> Deutsch</a></li>
+                <li><a class="dropdown-item" href="?lang=ru"><img src="https://flagcdn.com/w20/ru.png" alt="Russian" /> Русский</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<footer class="site-footer footer-dark">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-5">
+                    <div class="widget widget-address-info">
+                        @foreach (var item in Model)
+                        {
+                            foreach (var footer in item.Footers)
+                            {
+                                <h5 class="widget-title">@footer.CompanyInfoTitle</h5>
+                            }
+                        }
+                        <ul class="address-info-list">
+                            <li><i class="icon"><img class="img-fluid" src="images/svg/address-info-contacts.svg" alt=""/></i><span class="info">...</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-md-7">
+                    <div class="widget">
+                        @foreach (var item in Model)
+                        {
+                            foreach (var footer in item.Footers)
+                            {
+                                <h5 class="widget-title">@footer.NewsletterTitle</h5>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

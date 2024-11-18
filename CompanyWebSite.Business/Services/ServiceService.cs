@@ -92,6 +92,14 @@ namespace CompanyWebSite.Business.Services
                     {
                         serviceDto.Summary = serviceTranslation.Value;
                     }
+                    else if (serviceTranslation.Key == "ServiceSlogan")
+                    {
+                        serviceDto.ServiceSlogan = serviceTranslation.Value;
+                    }
+                    else if (serviceTranslation.Key == "ServiceHomeTitle")
+                    {
+                        serviceDto.ServiceHomeTitle = serviceTranslation.Value;
+                    }
                 }
 
                 var translatedServiceCategories = new List<ServiceCategoryDto>();
