@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyWebSite.Tests", "Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyWebSite.Dto", "CompanyWebSite.Dto\CompanyWebSite.Dto.csproj", "{F7FB602A-0557-4BB5-A046-6A6EB150398E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyWebSite.WebApp", "CompanyWebSite.WebApp\CompanyWebSite.WebApp.csproj", "{845883A5-BA00-4C0D-BF9A-CC9B824082CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyWebSite.WebApp", "CompanyWebSite.WebApp\CompanyWebSite.WebApp.csproj", "{845883A5-BA00-4C0D-BF9A-CC9B824082CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

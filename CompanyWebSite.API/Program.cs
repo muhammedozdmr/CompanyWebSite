@@ -36,6 +36,9 @@ builder.Services.AddScoped<INewsletterService,NewsletterService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
 builder.Services.AddScoped<IFooterService,FooterService>();
 builder.Services.AddScoped<ISidePanelService, SidePanelService>();
+builder.Services.AddScoped<IHeaderComponentService, HeaderComponentService>();
+builder.Services.AddScoped<IFooterComponentService, FooterComponentService>();
+builder.Services.AddScoped<IHeaderSidePanelComponentService, HeaderSidePanelComponentService>();
 
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 

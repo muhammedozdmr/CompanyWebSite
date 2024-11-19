@@ -1,0 +1,53 @@
+@model List<HeaderSidePanelComponentDto>
+
+<!--=================================
+  Header Side Panel -->
+<div class="offcanvas offcanvas-end sidepanel-offcanvas" tabindex="-1" id="offcanvasRight">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div class="body-inner">
+            <div class="about-info">
+                @foreach (var item in Model)
+                {
+                    foreach (var sidePanel in item.SidePanels)
+                    {
+                        <h4 class="title">@sidePanel.SidePanelMainTitle</h4>
+                        <p>@sidePanel.SidePanelMainContent</p>
+                    }
+                }
+            </div>
+            <div class="socail-info">
+                <ul class="socail-list-item">
+                    @foreach (var item in Model)
+                    {
+                        foreach (var sidePanel in item.CompanyInfos)
+                        {
+                            <li><a href="@sidePanel.Facebook"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+                            <li><a href="@sidePanel.Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                            <li><a href="@sidePanel.Twitter"><i class="fa-brands fa-x-twitter"></i>X</a></li>
+                            <li><a href="@sidePanel.LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="contact-info">
+                @foreach (var item in Model)
+                {
+                    foreach (var companyInfo in item.CompanyInfos)
+                    {
+                        <span class="number" href="tel:@companyInfo.Phone">@companyInfo.Phone</span>
+                        <a class="mail" href="mailto:@companyInfo.Email"><i class="fa-regular fa-envelope"></i>@companyInfo.Email</a>
+                    }
+                    foreach (var sidePanel in item.SidePanels)
+                    {
+                        <h6 class="text">@sidePanel.SidePanelContactTitle</h6>
+                        <span class="text">@sidePanel.SidePanelContactContent</span>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+﻿@model List<HeaderComponentDto>
+
+<header class="header header-default header-sticky header-absolute">
+    <div class="header-inner">
+        <div class="site-logo">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="images/techliberty-images/White_logo_no_background_yatay.svg" alt="logo" /></a>
+        </div>
+        <div class="site-menu d-none d-xl-block">
+            <ul class="main-menu">
+                @foreach (var item in Model)
+                {
+                    foreach (var navbarItem in item.NavbarItems)
+                    {
+                        <li class="nav-item"><a class="nav-link" asp-controller="@navbarItem.NavbarControllerName" asp-action="Index">@navbarItem.Name</a></li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="language-selector dropdown ms-auto">
+            <a class="nav-link dropdown-toggle" href="?lang=tr" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://flagcdn.com/w20/tr.png" alt="Turkish" /> Türkçe
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="?lang=en"><img src="https://flagcdn.com/w20/us.png" alt="English" /> English</a></li>
+                <li><a class="dropdown-item" href="?lang=de"><img src="https://flagcdn.com/w20/de.png" alt="German" /> Deutsch</a></li>
+                <li><a class="dropdown-item" href="?lang=ru"><img src="https://flagcdn.com/w20/ru.png" alt="Russian" /> Русский</a></li>
+            </ul>
+        </div>
+        <div class="site-action d-none d-xl-block">
+            <div class="action-hamburger">
+                <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span class="hamburger-container">
+                        <span class="hamburger-inner"></span>
+                        <span class="hamburger-hidden"></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-action d-block d-xl-none">
+            <div class="mobile-hamburger">
+                <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+                    <span class="hamburger-container">
+                        <span class="hamburger-inner"></span>
+                        <span class="hamburger-hidden"></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--=================================
+Main Menu OffCanvas -->
+<div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+    <div class="offcanvas-header">
+        <a id="menuOffcanvasLabel" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="images/logo.svg" alt="logo" /></a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="body-inner">
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    @foreach (var item in Model)
+                    {
+                        foreach (var navbarItem in item.NavbarItems)
+                        {
+                            <li class="nav-item"><a class="nav-link" asp-controller="@navbarItem.NavbarControllerName" asp-action="Index">@navbarItem.Name</a></li>
+                        }
+                    }
+                </ul>
+            </nav>
+            <div class="bottom-info">
+                <div class="contact-info">
+                    @foreach (var itemCompany in Model)
+                    {
+                        foreach (var companyInfo in itemCompany.CompanyInfos)
+                        {
+                            <span class="number" href="tel:@companyInfo.Phone">@companyInfo.Phone</span>
+                            <a class="mail" href="mailto:@companyInfo.Email"><i class="fa-regular fa-envelope"></i>@companyInfo.Email</a>
+                        }
+                    }
+                    <span class="text">
+                        @foreach (var item in Model)
+                        {
+                            foreach (var sidePanel in item.SidePanels)
+                            {
+                                @sidePanel.SidePanelContactTitle
+                                @sidePanel.SidePanelContactContent
+                            }
+                        }
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

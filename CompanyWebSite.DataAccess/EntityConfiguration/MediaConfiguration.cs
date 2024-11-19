@@ -19,6 +19,8 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
             builder.Property(x => x.MediaType).IsRequired().HasMaxLength(50);
             builder.HasOne(x => x.Service).WithMany(x => x.MediaItems).HasForeignKey(x => x.ServiceId);
             builder.HasData(
+                //TODO: iconları yeniden bul ve tasarla
+                //TODO: icon hex kodları: #00d1ff #3663d8 #77beff boyut 60x60
                  new Media { Id = 1, FilePath = "images/web-dev-icon.jpg", MediaType = "icon", ServiceId = 1 },
                 new Media { Id = 2, FilePath = "images/web-dev-image.jpg", MediaType = "image", ServiceId = 1 },
                 new Media { Id = 3, FilePath = "images/mobile-dev-icon.jpg", MediaType = "icon", ServiceId = 2 },

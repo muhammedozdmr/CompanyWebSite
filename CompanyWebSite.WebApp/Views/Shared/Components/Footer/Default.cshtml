@@ -1,0 +1,95 @@
+﻿@model List<FooterComponentDto>
+
+<footer class="site-footer footer-dark">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-5">
+                    <div class="widget widget-address-info">
+                        @foreach (var item in Model)
+                        {
+                            foreach (var footer in item.Footers)
+                            {
+                                <h5 class="widget-title">@footer.CompanyInfoTitle</h5>
+                                <ul class="address-info-list"></ul>
+                            }
+                        }
+
+                        <h5 class="widget-title">Where To Find Us</h5>
+                        <ul class="address-info-list">
+                            <li><i class="icon"><img class="img-fluid" src="images/svg/address-info-contacts.svg" alt="" /></i><span class="info"><span>17504 Carlton Cuevas Rd </span>Gulfport, MS, 39503</span></li>
+                            <li><i class="icon"><img class="img-fluid" src="images/svg/address-info-headphone.svg" alt="" /></i><span class="info"><span>001123456789 </span>Mon-fri 8:30am 6:30pm</span></li>
+                            <li><i class="icon"><img class="img-fluid" src="images/svg/address-info-email.svg" alt="" /></i><span class="info"><span>Info@example.com </span>24x7 online support</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-md-7">
+                    <div class="widget">
+                        @foreach (var item in Model)
+                        {
+                            foreach (var footer in item.Footers)
+                            {
+                                <h5 class="widget-title">@footer.NewsletterTitle</h5>
+                            }
+                        }
+                        <div class="widget widget-newsletter mb-4 pb-2">
+                            <form class="newsletter-form">
+                                @foreach (var item in Model)
+                                {
+                                    foreach (var footer in item.Footers)
+                                    {
+                                        <input type="text" class="form-control" placeholder="@footer.NewsletterPlaceholder">
+                                    }
+                                }
+                                <button type="submit" class="subscribe-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                        <div class="widget widget-menu">
+                            @foreach (var item in Model)
+                            {
+                                foreach (var footer in item.Footers)
+                                {
+                                    <h6 class="widget-title">@footer.QuickLinksTitle</h6>
+                                }
+                            }
+                            <ul class="list-unstyled list-col-3 mb-0">
+                                @foreach (var navbar in Model)
+                                {
+                                    foreach (var navbarItem in navbar.NavbarItems)
+                                    {
+                                        <li><a asp-controller="@navbarItem.NavbarControllerName" asp-action="Index">@navbarItem.Name</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-12 ms-auto">
+                    <div class="widget-socail">
+                        <ul class="socail-icon">
+                            @foreach (var item in Model)
+                            {
+                                foreach (var companyInfo in item.CompanyInfos)
+                                {
+                                    <li><a href="@companyInfo.Facebook"><img src="images\svg\facebooklogo.svg" alt="Facebook Logo" /></a></li>
+                                    <li><a href="@companyInfo.Instagram"><img src="images\svg\instagramlogo.svg" alt="Instagram Logo" /></a></li>
+                                    <li><a href="@companyInfo.LinkedIn"><img src="images\svg\linkedinlogo.svg" alt="Linkedin Logo" /></a></li>
+                                    <li><a href="@companyInfo.Twitter"><img src="images\svg\twitter-x.svg" alt="X Logo" /></a></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6"><p><a class="footer-logo" asp-controller="Home" asp-action="Index"><img class="img-fluid" src="images/techliberty-images/White_logo_no_background_yatay.svg" alt="logo" /></a></p></div>
+                <div class="col-lg-6 text-lg-end"><p>Develop and design by <a href="#">TechLiberty Software Solutions</a></p></div>
+            </div>
+        </div>
+    </div>
+</footer>

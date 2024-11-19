@@ -33,11 +33,11 @@ Cursor -->
 
     <!--=================================
     Header -->
-    @await Component.InvokeAsync("Default", new { languageCode = "tr", section = "header" })
+        @await Component.InvokeAsync("Header", new { languageCode = "tr" });
 
     <!--=================================
     Side Panel -->
-    @await Component.InvokeAsync("Default", new { languageCode = "tr", section = "sidepanel" })
+        @await Component.InvokeAsync("HeaderSidePanel", new { languageCode = "tr" });
 
     <!--=================================
     Main Content -->
@@ -58,7 +58,7 @@ Cursor -->
 
     <!--=================================
     Footer -->
-    @await Component.InvokeAsync("Default", new { languageCode = "tr", section = "footer" })
+    @await Component.InvokeAsync("Footer", new {languageCode = "tr"});
 
     <!--=================================
     Back To Top -->
