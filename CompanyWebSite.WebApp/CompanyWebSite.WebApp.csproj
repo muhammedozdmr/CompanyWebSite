@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Service\" />
     <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\images\techliberty-images\about\" />
     <Folder Include="wwwroot\images\techliberty-images\blog\" />

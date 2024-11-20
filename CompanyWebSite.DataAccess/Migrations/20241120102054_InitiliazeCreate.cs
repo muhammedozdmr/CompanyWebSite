@@ -46,6 +46,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    CompanySlogan = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CompanyLogoUrl = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
                     CompanyName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     CompanyArea = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
@@ -58,7 +59,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                     LinkedIn = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Twitter = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Facebook = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    Instagram = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true)
+                    Instagram = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    HomeButtonName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -154,7 +156,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Slug = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                    Slug = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    NavbarControllerName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -239,6 +242,8 @@ namespace CompanyWebSite.DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ServiceSummary = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
+                    ServiceSlogan = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ServiceHomeTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CategoryId = table.Column<int>(type: "int", nullable: true),
                     DefaultTitle = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
                     DefaultContent = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
@@ -262,6 +267,7 @@ namespace CompanyWebSite.DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Summary = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    AboutSlogan = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CompanyInfoId = table.Column<int>(type: "int", nullable: false),
                     DefaultTitle = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     DefaultContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -484,8 +490,8 @@ namespace CompanyWebSite.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "CompanyInfo",
-                columns: new[] { "Id", "Address", "CompanyArea", "CompanyLogoUrl", "CompanyName", "CreateDate", "Email", "Facebook", "Instagram", "LinkedIn", "Phone", "Residence", "Twitter", "WorkingHours" },
-                values: new object[] { 1, "Küplüce Mahallesi 5. Zeytinlik Sokak No:13/A 34676 Üsküdar", "Sağlık ve Teknoloji Hizmetleri Limited Şirketi", "images/company_logo.jpg", "TechLiberty", new DateTime(2023, 10, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "info@techliberty.co", "https://facebook.com/techlibertyco", "https://instagram.com/techlibertyco", "https://linkedin.com/company/techlibertyco", "+90 (543) 233 33 32", "İstanbul / Türkiye", "https://twitter.com/techlibertyco", "Pazartesi - Cuma: 09:00 - 18:00" });
+                columns: new[] { "Id", "Address", "CompanyArea", "CompanyLogoUrl", "CompanyName", "CompanySlogan", "CreateDate", "Email", "Facebook", "HomeButtonName", "Instagram", "LinkedIn", "Phone", "Residence", "Twitter", "WorkingHours" },
+                values: new object[] { 1, "Küplüce Mahallesi 5. Zeytinlik Sokak No:13/A 34676 Üsküdar", "Sağlık ve Teknoloji Hizmetleri Limited Şirketi", "images/company_logo.jpg", "TechLiberty", "Yaratıcılığın Mükemmellikle Buluştuğu Yer", new DateTime(2023, 10, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "info@techliberty.co", "https://facebook.com/techlibertyco", "İletişim", "https://instagram.com/techlibertyco", "https://linkedin.com/company/techlibertyco", "+90 (543) 233 33 32", "İstanbul / Türkiye", "https://twitter.com/techlibertyco", "Pazartesi - Cuma: 09:00 - 18:00" });
 
             migrationBuilder.InsertData(
                 table: "FAQ",
@@ -522,32 +528,32 @@ namespace CompanyWebSite.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "NavbarItem",
-                columns: new[] { "Id", "Name", "Slug" },
+                columns: new[] { "Id", "Name", "NavbarControllerName", "Slug" },
                 values: new object[,]
                 {
-                    { 1, "Ana Sayfa", "home" },
-                    { 2, "Hakkımızda", "about" },
-                    { 3, "Hizmetler", "services" },
-                    { 4, "Blog", "blog" },
-                    { 5, "İletişim", "contact" },
-                    { 6, "SSS", "faq" }
+                    { 1, "Ana Sayfa", "Home", "home" },
+                    { 2, "Hakkımızda", "About", "about" },
+                    { 3, "Hizmetler", "Service", "services" },
+                    { 4, "Blog", "Blog", "blog" },
+                    { 5, "İletişim", "Contact", "contact" },
+                    { 6, "SSS", "Faq", "faq" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Service",
-                columns: new[] { "Id", "CategoryId", "DefaultContent", "DefaultTitle", "IsActive", "ServiceSummary", "Slug" },
+                columns: new[] { "Id", "CategoryId", "DefaultContent", "DefaultTitle", "IsActive", "ServiceHomeTitle", "ServiceSlogan", "ServiceSummary", "Slug" },
                 values: new object[,]
                 {
-                    { 1, null, "Web geliştirme, işletmelerin dijital varlığını güçlendirmek için stratejik bir süreçtir. İhtiyaçlarınızı ve hedeflerinizi analiz ederek kullanıcı dostu, modern ve ölçeklenebilir web çözümleri sunuyoruz. Tasarım ve kullanıcı deneyiminden performansa kadar tüm aşamalarda yanınızdayız. Kod kalitesi, SEO uyumu ve güvenlik önceliklerimiz arasında yer alır. Profesyonel ekibimiz, işletmenizin çevrimiçi ortamda başarıya ulaşması için en uygun çözümleri sunmaya hazırdır.", "Web Geliştirme", true, "Profesyonel web geliştirme ile modern, kullanıcı dostu ve ölçeklenebilir web siteleri sunuyoruz.", "web-development" },
-                    { 2, null, "Mobil cihazlar günümüzde kullanıcı deneyiminin merkezi haline gelmiştir. İOS ve Android platformlarında yüksek performanslı, kullanıcı dostu uygulamalar geliştiriyoruz. Kullanıcı alışkanlıklarını analiz ederek, etkileşimi artıracak ve kullanıcıyı çeken tasarımlar sunuyoruz. Uygulamalarımız, güvenlik ve hız odaklı geliştirilirken, kolay güncellenebilir ve ölçeklenebilir yapısıyla da uzun vadeli bir çözüm sağlar. Dijital dünyada işinizi büyütmeniz için yanınızdayız.", "Mobil Uygulama Geliştirme", true, "iOS ve Android platformlarına uygun, kullanıcı odaklı mobil uygulama geliştirme hizmetleri sağlıyoruz.", "mobile-app-development" },
-                    { 3, null, "Oyun geliştirme, hem teknik hem de yaratıcı bir süreçtir. Eğlenceli, etkileyici ve yüksek performanslı oyunlar yaratmak için gelişmiş teknolojilerden yararlanıyoruz. Unity ve Unreal Engine gibi güçlü araçlarla çalışarak, hedef kitlenizin beklentilerini karşılayacak grafik kalitesine ve akıcı oynanışa sahip oyunlar geliştiriyoruz. Oyuncuların ilgisini çeken, duygusal bağ kurabilecekleri ve tekrar oynama isteği uyandıran oyunlar yaratma sürecinde her aşamada yanınızdayız.", "Oyun Geliştirme", true, "İleri teknolojilerle oyun tasarımı yaparak eğlenceli ve etkileşimli oyun deneyimleri sunuyoruz.", "game-development" },
-                    { 4, null, "API entegrasyonu, farklı sistemlerin birbiriyle güvenli ve verimli bir şekilde iletişim kurmasını sağlar. İşletmenizdeki veri akışını optimize ederek süreçleri daha etkin hale getirmek için API geliştirme ve entegrasyon hizmetleri sunuyoruz. Kapsamlı güvenlik önlemleri ile hassas verilerinizi koruyarak verimli bir altyapı oluşturuyoruz. Tüm sistemlerinizin uyum içinde çalışmasını sağlayarak iş akışlarınızı hızlandırıyor ve maliyetlerinizi düşürüyoruz.", "API Entegrasyonu", true, "API entegrasyonu ile veri akışını optimize ediyor, sistemler arası bağlantıları güvenli hale getiriyoruz.", "api-integration" },
-                    { 5, null, "Müşteri ilişkileri yönetimi, başarılı bir işin temelidir. Müşterilerinizle güçlü ve uzun vadeli ilişkiler kurmanıza yardımcı olan CRM çözümlerimiz, müşteri memnuniyetini artırarak işinizi büyütür. Satış, pazarlama ve müşteri hizmetleri süreçlerinizi optimize eden, tüm müşteri verilerini tek bir platformda toplayan ve analiz eden bir sistem sunuyoruz. İşinizi daha iyi tanımanızı ve hedeflerinize daha hızlı ulaşmanızı sağlamak için buradayız.", "CRM Çözümleri", true, "Müşteri ilişkilerini yönetmek için kapsamlı ve kullanımı kolay CRM çözümleri sunuyoruz.", "crm-solutions" },
-                    { 6, null, "İş süreçlerinizi dijitalleştirerek yönetiminizi kolaylaştıran ERP çözümlerimizle işletmenizin verimliliğini artırıyoruz. Finans, insan kaynakları, tedarik zinciri gibi departmanları tek bir sistemde birleştirerek iş süreçlerinizi optimize ediyoruz. ERP çözümlerimiz sayesinde maliyetleri düşürürken, karar alma sürecinizi hızlandırıyor ve departmanlar arasında anlık veri paylaşımını mümkün kılıyoruz. Sürdürülebilir büyüme için ideal bir çözüm sunuyoruz.", "ERP Çözümleri", true, "Verimliliği artıran ve iş süreçlerini optimize eden, esnek ve güçlü ERP çözümleri sunuyoruz.", "erp-solutions" },
-                    { 7, null, "Verilerin güvenliği ve erişilebilirliği her işletme için kritik öneme sahiptir. Güçlü, güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin bir şekilde yönetmenize yardımcı oluyoruz. Veritabanı yapılarınızı optimize ederek performansı artırırken, verilerinizi sürekli erişilebilir ve güvenli tutmak için gelişmiş güvenlik protokollerini kullanıyoruz. İşletmenizin büyümesi ve karar süreçlerini hızlandırması için verilerinizi en iyi şekilde yönetiyoruz.", "Veritabanı Yönetim Sistemleri", true, "Güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin şekilde yönetmenize yardımcı oluyoruz.", "database-management" },
-                    { 8, null, "İşletmenizin ihtiyaçlarına uygun sistemler tasarlamak için kapsamlı bir analiz süreci yürütüyoruz. Mevcut süreçlerinizi değerlendirerek iş akışınızı optimize edecek sistem çözümleri sunuyoruz. İhtiyaçlarınıza göre özel olarak tasarlanmış, kullanımı kolay ve sürdürülebilir sistemler geliştiriyoruz. Sistem tasarımı sırasında performans, güvenlik ve ölçeklenebilirlik gibi unsurları önceliklendirerek, işletmenizin dijital dönüşüm sürecine katkıda bulunuyoruz.", "Sistem Analizi ve Tasarımı", true, "İş süreçlerinize uygun sistem tasarımı yaparak, etkin ve ölçeklenebilir çözümler sunuyoruz.", "system-analysis" },
-                    { 9, null, "Projelerinizi başarıyla tamamlamanızı sağlayacak stratejik proje yönetim çözümlerimizle, kaynaklarınızı etkin bir şekilde kullanmanızı sağlıyoruz. Planlama, izleme, kontrol ve kapanış süreçlerinde size destek olarak hedeflerinize ulaşmanıza yardımcı oluyoruz. Ekibinizle yakın çalışarak zamanında ve bütçe dahilinde projeler tamamlamanızı sağlarken, kaliteyi de garanti ediyoruz. Başarılı projeler için tüm adımlarda yanınızdayız.", "Proje Yönetimi", true, "Projelerinizi planlamak, takip etmek ve başarıya ulaştırmak için profesyonel yönetim çözümleri sağlıyoruz.", "project-management" },
-                    { 10, null, "Dijital veri depolama ve yönetimi için güvenli ve ölçeklenebilir bulut çözümleri sunuyoruz. Verilerinize her yerden kolayca erişim sağlarken, güvenlik ve maliyet avantajı sunan bulut altyapılarımızla işinizi büyütmenize destek oluyoruz. İş yükünüzü hafifletmek ve esneklik sağlamak için bulut çözümlerimizde en son teknolojileri kullanıyoruz. Bulut altyapımız sayesinde verilerinizi güvenle saklayın ve işletmenizi daha çevik hale getirin.", "Bulut Çözümleri", true, "Güvenilir, esnek ve ölçeklenebilir bulut çözümlerimizle verilerinizi güvenle yönetmenizi sağlıyoruz.", "cloud-solutions" }
+                    { 1, null, "Web geliştirme, işletmelerin dijital varlığını güçlendirmek için stratejik bir süreçtir. İhtiyaçlarınızı ve hedeflerinizi analiz ederek kullanıcı dostu, modern ve ölçeklenebilir web çözümleri sunuyoruz. Tasarım ve kullanıcı deneyiminden performansa kadar tüm aşamalarda yanınızdayız. Kod kalitesi, SEO uyumu ve güvenlik önceliklerimiz arasında yer alır. Profesyonel ekibimiz, işletmenizin çevrimiçi ortamda başarıya ulaşması için en uygun çözümleri sunmaya hazırdır.", "Web Geliştirme", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "Profesyonel web geliştirme ile modern, kullanıcı dostu ve ölçeklenebilir web siteleri sunuyoruz.", "web-development" },
+                    { 2, null, "Mobil cihazlar günümüzde kullanıcı deneyiminin merkezi haline gelmiştir. İOS ve Android platformlarında yüksek performanslı, kullanıcı dostu uygulamalar geliştiriyoruz. Kullanıcı alışkanlıklarını analiz ederek, etkileşimi artıracak ve kullanıcıyı çeken tasarımlar sunuyoruz. Uygulamalarımız, güvenlik ve hız odaklı geliştirilirken, kolay güncellenebilir ve ölçeklenebilir yapısıyla da uzun vadeli bir çözüm sağlar. Dijital dünyada işinizi büyütmeniz için yanınızdayız.", "Mobil Uygulama Geliştirme", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "iOS ve Android platformlarına uygun, kullanıcı odaklı mobil uygulama geliştirme hizmetleri sağlıyoruz.", "mobile-app-development" },
+                    { 3, null, "Oyun geliştirme, hem teknik hem de yaratıcı bir süreçtir. Eğlenceli, etkileyici ve yüksek performanslı oyunlar yaratmak için gelişmiş teknolojilerden yararlanıyoruz. Unity ve Unreal Engine gibi güçlü araçlarla çalışarak, hedef kitlenizin beklentilerini karşılayacak grafik kalitesine ve akıcı oynanışa sahip oyunlar geliştiriyoruz. Oyuncuların ilgisini çeken, duygusal bağ kurabilecekleri ve tekrar oynama isteği uyandıran oyunlar yaratma sürecinde her aşamada yanınızdayız.", "Oyun Geliştirme", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "İleri teknolojilerle oyun tasarımı yaparak eğlenceli ve etkileşimli oyun deneyimleri sunuyoruz.", "game-development" },
+                    { 4, null, "API entegrasyonu, farklı sistemlerin birbiriyle güvenli ve verimli bir şekilde iletişim kurmasını sağlar. İşletmenizdeki veri akışını optimize ederek süreçleri daha etkin hale getirmek için API geliştirme ve entegrasyon hizmetleri sunuyoruz. Kapsamlı güvenlik önlemleri ile hassas verilerinizi koruyarak verimli bir altyapı oluşturuyoruz. Tüm sistemlerinizin uyum içinde çalışmasını sağlayarak iş akışlarınızı hızlandırıyor ve maliyetlerinizi düşürüyoruz.", "API Entegrasyonu", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "API entegrasyonu ile veri akışını optimize ediyor, sistemler arası bağlantıları güvenli hale getiriyoruz.", "api-integration" },
+                    { 5, null, "Müşteri ilişkileri yönetimi, başarılı bir işin temelidir. Müşterilerinizle güçlü ve uzun vadeli ilişkiler kurmanıza yardımcı olan CRM çözümlerimiz, müşteri memnuniyetini artırarak işinizi büyütür. Satış, pazarlama ve müşteri hizmetleri süreçlerinizi optimize eden, tüm müşteri verilerini tek bir platformda toplayan ve analiz eden bir sistem sunuyoruz. İşinizi daha iyi tanımanızı ve hedeflerinize daha hızlı ulaşmanızı sağlamak için buradayız.", "CRM Çözümleri", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "Müşteri ilişkilerini yönetmek için kapsamlı ve kullanımı kolay CRM çözümleri sunuyoruz.", "crm-solutions" },
+                    { 6, null, "İş süreçlerinizi dijitalleştirerek yönetiminizi kolaylaştıran ERP çözümlerimizle işletmenizin verimliliğini artırıyoruz. Finans, insan kaynakları, tedarik zinciri gibi departmanları tek bir sistemde birleştirerek iş süreçlerinizi optimize ediyoruz. ERP çözümlerimiz sayesinde maliyetleri düşürürken, karar alma sürecinizi hızlandırıyor ve departmanlar arasında anlık veri paylaşımını mümkün kılıyoruz. Sürdürülebilir büyüme için ideal bir çözüm sunuyoruz.", "ERP Çözümleri", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "Verimliliği artıran ve iş süreçlerini optimize eden, esnek ve güçlü ERP çözümleri sunuyoruz.", "erp-solutions" },
+                    { 7, null, "Verilerin güvenliği ve erişilebilirliği her işletme için kritik öneme sahiptir. Güçlü, güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin bir şekilde yönetmenize yardımcı oluyoruz. Veritabanı yapılarınızı optimize ederek performansı artırırken, verilerinizi sürekli erişilebilir ve güvenli tutmak için gelişmiş güvenlik protokollerini kullanıyoruz. İşletmenizin büyümesi ve karar süreçlerini hızlandırması için verilerinizi en iyi şekilde yönetiyoruz.", "Veritabanı Yönetim Sistemleri", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "Güvenli ve ölçeklenebilir veritabanı çözümlerimizle verilerinizi etkin şekilde yönetmenize yardımcı oluyoruz.", "database-management" },
+                    { 8, null, "İşletmenizin ihtiyaçlarına uygun sistemler tasarlamak için kapsamlı bir analiz süreci yürütüyoruz. Mevcut süreçlerinizi değerlendirerek iş akışınızı optimize edecek sistem çözümleri sunuyoruz. İhtiyaçlarınıza göre özel olarak tasarlanmış, kullanımı kolay ve sürdürülebilir sistemler geliştiriyoruz. Sistem tasarımı sırasında performans, güvenlik ve ölçeklenebilirlik gibi unsurları önceliklendirerek, işletmenizin dijital dönüşüm sürecine katkıda bulunuyoruz.", "Sistem Analizi ve Tasarımı", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "İş süreçlerinize uygun sistem tasarımı yaparak, etkin ve ölçeklenebilir çözümler sunuyoruz.", "system-analysis" },
+                    { 9, null, "Projelerinizi başarıyla tamamlamanızı sağlayacak stratejik proje yönetim çözümlerimizle, kaynaklarınızı etkin bir şekilde kullanmanızı sağlıyoruz. Planlama, izleme, kontrol ve kapanış süreçlerinde size destek olarak hedeflerinize ulaşmanıza yardımcı oluyoruz. Ekibinizle yakın çalışarak zamanında ve bütçe dahilinde projeler tamamlamanızı sağlarken, kaliteyi de garanti ediyoruz. Başarılı projeler için tüm adımlarda yanınızdayız.", "Proje Yönetimi", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "Projelerinizi planlamak, takip etmek ve başarıya ulaştırmak için profesyonel yönetim çözümleri sağlıyoruz.", "project-management" },
+                    { 10, null, "Dijital veri depolama ve yönetimi için güvenli ve ölçeklenebilir bulut çözümleri sunuyoruz. Verilerinize her yerden kolayca erişim sağlarken, güvenlik ve maliyet avantajı sunan bulut altyapılarımızla işinizi büyütmenize destek oluyoruz. İş yükünüzü hafifletmek ve esneklik sağlamak için bulut çözümlerimizde en son teknolojileri kullanıyoruz. Bulut altyapımız sayesinde verilerinizi güvenle saklayın ve işletmenizi daha çevik hale getirin.", "Bulut Çözümleri", true, "Sürecimiz", "Başarınızı Artıran Dijital Stratejiler", "Güvenilir, esnek ve ölçeklenebilir bulut çözümlerimizle verilerinizi güvenle yönetmenizi sağlıyoruz.", "cloud-solutions" }
                 });
 
             migrationBuilder.InsertData(
@@ -574,8 +580,8 @@ namespace CompanyWebSite.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "About",
-                columns: new[] { "Id", "CompanyInfoId", "DefaultContent", "DefaultTitle", "IsActive", "Slug", "Summary" },
-                values: new object[] { 1, 1, "TechLiberty Software Solutions olarak, 29 Ekim 2023 tarihinde kurulan şirketimiz, müşterilerine teknolojik çözümler sunma misyonunu benimsemiştir. Dijital çağın gereksinimlerine uygun olarak mobil uygulamalar, web projeleri, oyun geliştirme, proje yönetimi, SEO optimizasyonu, API servisleri, CRM ve ERP hizmetleri, veri tabanı yönetim sistemleri ve sistem analizi gibi geniş bir yelpazede profesyonel çözümler sunmaktayız. Deneyimli ve yenilikçi ekibimizle, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağı olarak yer alıyoruz. Amacımız, müşterilerimize sürdürülebilir başarıyı getirecek, verimli ve ölçeklenebilir çözümler sunarak değer katmaktır.", "Hakkımızda", true, "about-us", "TechLiberty Software Solutions, mobil uygulamalar, web projeleri, oyun geliştirme ve kurumsal çözümler sunarak işletmelerin dijital dönüşüm süreçlerinde güvenilir bir iş ortağıdır." });
+                columns: new[] { "Id", "AboutSlogan", "CompanyInfoId", "DefaultContent", "DefaultTitle", "IsActive", "Slug", "Summary" },
+                values: new object[] { 1, "En İyisi Sizin İçin", 1, "TechLiberty Software Solutions olarak, 29 Ekim 2023 tarihinde kurulan şirketimiz, müşterilerine teknolojik çözümler sunma misyonunu benimsemiştir. Dijital çağın gereksinimlerine uygun olarak mobil uygulamalar, web projeleri, oyun geliştirme, proje yönetimi, SEO optimizasyonu, API servisleri, CRM ve ERP hizmetleri, veri tabanı yönetim sistemleri ve sistem analizi gibi geniş bir yelpazede profesyonel çözümler sunmaktayız. Deneyimli ve yenilikçi ekibimizle, işletmelerin dijital dönüşüm yolculuğunda güvenilir bir iş ortağı olarak yer alıyoruz. Amacımız, müşterilerimize sürdürülebilir başarıyı getirecek, verimli ve ölçeklenebilir çözümler sunarak değer katmaktır.", "Hakkımızda", true, "about-us", "TechLiberty Software Solutions, mobil uygulamalar, web projeleri, oyun geliştirme ve kurumsal çözümler sunarak işletmelerin dijital dönüşüm süreçlerinde güvenilir bir iş ortağıdır." });
 
             migrationBuilder.InsertData(
                 table: "BlogCategoryMapping",
@@ -1143,7 +1149,22 @@ namespace CompanyWebSite.DataAccess.Migrations
                     { 459, null, null, 1, "SidePanel", null, null, "SidePanelMainTitle", 4, null, null, "Приготовьтесь к росту с масштабируемыми решениями" },
                     { 460, null, null, 1, "SidePanel", null, null, "SidePanelMainContent", 4, null, null, "Развивайте свой бизнес с помощью цифровых решений и получите преимущество перед конкурентами. Будь вы стартап или корпоративная компания, мы добавляем ценность вашему бизнесу с масштабируемыми и эффективными решениями. Реализуйте свои проекты с командой экспертов TechLiberty." },
                     { 461, null, null, 1, "SidePanel", null, null, "SidePanelContactTitle", 4, null, null, "Давайте вместе формировать цифровое будущее" },
-                    { 462, null, null, 1, "SidePanel", null, null, "SidePanelContactContent", 4, null, null, "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!" }
+                    { 462, null, null, 1, "SidePanel", null, null, "SidePanelContactContent", 4, null, null, "Ищете поддержку для нового проекта? Команда TechLiberty здесь, чтобы создавать креативные и масштабируемые решения, адаптированные к вашим потребностям. Позвольте нам быть вашим гидом на пути цифровой трансформации. Свяжитесь с нами, чтобы обсудить возможности сотрудничества, которые поднимут ваш бизнес на новый уровень!" },
+                    { 463, null, null, 1, "CompanyInfo", null, null, "CompnaySlogan", 2, null, null, "Where Creativity Meets Excellence" },
+                    { 464, null, null, 1, "CompanyInfo", null, null, "CompnaySlogan", 3, null, null, "Wo Kreativität Exzellenz Trifft" },
+                    { 465, null, null, 1, "CompanyInfo", null, null, "CompnaySlogan", 4, null, null, "Там, где творчество встречается с превосходством" },
+                    { 466, null, null, 1, "CompanyInfo", null, null, "HomeButtonName", 2, null, null, "Contact Us" },
+                    { 467, null, null, 1, "CompanyInfo", null, null, "HomeButtonName", 3, null, null, "Kontaktieren Sie Uns" },
+                    { 468, null, null, 1, "CompanyInfo", null, null, "HomeButtonName", 4, null, null, "Свяжитесь с нами" },
+                    { 469, null, null, 1, "About", null, null, "AboutSlogan", 2, null, null, "Because You Deserve the Best" },
+                    { 470, null, null, 1, "About", null, null, "AboutSlogan", 3, null, null, "Weil Sie Das Beste Verdienen" },
+                    { 471, null, null, 1, "About", null, null, "AboutSlogan", 4, null, null, "Потому что вы заслуживаете лучшее" },
+                    { 472, null, null, 1, "Service", null, null, "ServiceSlogan", 2, null, null, "Empowering Your Growth Through Digital Excellence" },
+                    { 473, null, null, 1, "Service", null, null, "ServiceSlogan", 3, null, null, "Digitaler Erfolg Für Ihr Unternehmen" },
+                    { 474, null, null, 1, "Service", null, null, "ServiceSlogan", 4, null, null, "Цифровые решения для вашего успеха" },
+                    { 475, null, null, 1, "Service", null, null, "ServiceHomeTitle", 2, null, null, "Our Steps" },
+                    { 476, null, null, 1, "Service", null, null, "ServiceHomeTitle", 3, null, null, "Unser Prozess" },
+                    { 477, null, null, 1, "Service", null, null, "ServiceHomeTitle", 4, null, null, "Наш Процесс" }
                 });
 
             migrationBuilder.InsertData(

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CompanyWebSite.API.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class FooterComponentAPIController : Controller
     {
         private readonly IFooterComponentService _footerComponentService;
@@ -11,6 +13,8 @@ namespace CompanyWebSite.API.Controllers
         {
             _footerComponentService = footerComponentService;
         }
+
+        [HttpGet]
         public async Task<IEnumerable<FooterComponentDto>> Index(string languageCode = "tr")
         {
             return await _footerComponentService.GetFooterComponentAllAsync(languageCode);

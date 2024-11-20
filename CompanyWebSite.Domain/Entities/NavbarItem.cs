@@ -7,4 +7,5 @@ public class NavbarItem
     public string? Slug { get; set; }
     public string? NavbarControllerName { get; set; }
     public IEnumerable<Translation> Translations { get; set; }
+    public IEnumerable<Page> Pages { get; set; }
 }
