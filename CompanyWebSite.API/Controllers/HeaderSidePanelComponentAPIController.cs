@@ -6,6 +6,8 @@ namespace CompanyWebSite.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+
+    //TODO: Api verileri çekemiyor 500 hatası dönüyor !
     public class HeaderSidePanelComponentAPIController : Controller
     {
         private readonly IHeaderSidePanelComponentService _headerSidePanelComponentService;
