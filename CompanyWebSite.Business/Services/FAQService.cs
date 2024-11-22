@@ -66,6 +66,32 @@ namespace CompanyWebSite.Business.Services
                         faqDto.Answer = faqTranslation.Value;
                     }
                 }
+
+                var pages = await _translationService.GetTranslationAsync("Page", 6, language.Code);
+                var pageDto = new PageDto
+                {
+                    Id = 6
+                };
+                foreach (var pagesTranslation in pages)
+                {
+                   
+                    switch (pagesTranslation.Key)
+                    {
+                        case "PageHeaderTitle":
+                            pageDto.PageHeaderTitle = pagesTranslation.Value;
+                            break;
+                        case "PageHeaderSubtitle":
+                            pageDto.PageHeaderSubtitle = pagesTranslation.Value;
+                            break;
+                        case "PageMainSlogan":
+                            pageDto.PageMainSlogan = pagesTranslation.Value;
+                            break;
+                        case "PageSubSlogan":
+                            pageDto.PageSubSlogan = pagesTranslation.Value;
+                            break;
+                    }
+                }
+                faqDto.Pages = new List<PageDto> { pageDto };
             }
             return faqDtos;
         }

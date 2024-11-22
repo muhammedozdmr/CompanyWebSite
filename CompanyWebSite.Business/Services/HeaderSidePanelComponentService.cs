@@ -19,15 +19,15 @@ namespace CompanyWebSite.Business.Services
         }
         public async Task<IEnumerable<HeaderSidePanelComponentDto>> GetHeaderSidePanelComponentAllAsync(string languageCode)
         {
-            var sidePanel = _sidePanelService.GetSidePanelAllAsync(languageCode);
-            var companyInfo = _companyService.GetCompanyInfoAllAsync(languageCode);
+            var sidePanel = await _sidePanelService.GetSidePanelAllAsync(languageCode);
+            var companyInfo = await _companyService.GetCompanyInfoAllAsync(languageCode);
 
             var headerSidePanelItems = new List<HeaderSidePanelComponentDto>
             {
                 new HeaderSidePanelComponentDto
                 {
-                    CompanyInfos = companyInfo.Result,
-                    SidePanels = sidePanel.Result
+                    CompanyInfos = companyInfo,
+                    SidePanels = sidePanel
                 }
             };
             return headerSidePanelItems;

@@ -66,15 +66,39 @@ namespace CompanyWebSite.Business.Services
                 var blogTranslations = await _translationService.GetTranslationAsync("Blog", blogDto.Id, language.Code);
                 foreach (var blogTranslation in blogTranslations)
                 {
-                    if (blogTranslation.Key == "DefaultTitle")
+                    switch (blogTranslation.Key)
                     {
-                        blogDto.DefaultTitle = blogTranslation.Value;
-                    }
-                    else if (blogTranslation.Value == "Default Content")
-                    {
-                        blogDto.DefaultContent = blogTranslation.Value;
+                        case "DefaultTitle":
+                            blogDto.DefaultTitle = blogTranslation.Value;
+                            break;
+                        case "DefaultContent":
+                            blogDto.DefaultContent = blogTranslation.Value;
+                            break;
                     }
                 }
+
+                //Page çevirileri
+                var pageTranslations = await _translationService.GetTranslationAsync("Page", 3, language.Code);
+                var pageDto = new PageDto
+                {
+                    Id = 3
+                };
+                foreach (var pageTranslation in pageTranslations)
+                {
+
+
+                    switch (pageTranslation.Key)
+                    {
+                        case "PageHeaderTitle":
+                            pageDto.PageHeaderTitle = pageTranslation.Value;
+                            break;
+                        case "PageHeaderSubtitle":
+                            pageDto.PageHeaderSubtitle = pageTranslation.Value;
+                            break;
+                    }
+                }
+                blogDto.Pages = new List<PageDto> { pageDto };
+
                 var translatedBlogCategories = new List<BlogCategoryDto>();
                 foreach (var blogCategoryDto in blogCategoryDtos)
                 {
@@ -93,11 +117,63 @@ namespace CompanyWebSite.Business.Services
             return blogDtos;
         }
 
-        public async Task<BlogDto> GetBlogByIdAsync(int id)
+        public async Task<BlogDto> GetBlogByIdAsync(string languageCode, int id)
         {
+            // Blog nesnesini veri tabanından al
             var blog = await _baseBlogRepository.GetByIdAsync(id);
-            return _mapper.Map<BlogDto>(blog);
+
+            // Eğer dil Türkçe ise, doğrudan mapper ile dön
+            if (languageCode == "tr")
+            {
+                return _mapper.Map<BlogDto>(blog);
+            }
+
+            // İlgili dil kodunu kontrol et
+            var language = await _languageRepository.GetByCodeAsync(languageCode);
+            if (language == null)
+            {
+                throw new Exception("Language not found");
+            }
+
+            // Blog nesnesini DTO'ya map et
+            var blogDto = _mapper.Map<BlogDto>(blog);
+
+            // Çeviriler için TranslationService'i kullan
+            var blogTranslations = await _translationService.GetTranslationAsync("Blog", blogDto.Id, language.Code);
+            foreach (var blogTranslation in blogTranslations)
+            {
+                if (blogTranslation.Key == "DefaultTitle")
+                {
+                    blogDto.DefaultTitle = blogTranslation.Value;
+                }
+                else if (blogTranslation.Key == "DefaultContent")
+                {
+                    blogDto.DefaultContent = blogTranslation.Value;
+                }
+            }
+            var pageTranslations = await _translationService.GetTranslationAsync("Page", 4, language.Code);
+            var pageDto = new PageDto
+            {
+                Id = 4
+            };
+            foreach (var pageTranslation in pageTranslations)
+            {
+                
+                switch (pageTranslation.Key)
+                {
+                    case "PageHeaderTitle":
+                        pageDto.PageHeaderTitle = pageTranslation.Value;
+                        break;
+                    case "PageHeaderSubtitle":
+                        pageDto.PageHeaderSubtitle = pageTranslation.Value;
+                        break;
+                }
+            }
+            blogDto.Pages = new List<PageDto> { pageDto };
+
+            return blogDto;
         }
+
 
         public async Task UpdateBlogAsync(BlogDto blogDto)
         {

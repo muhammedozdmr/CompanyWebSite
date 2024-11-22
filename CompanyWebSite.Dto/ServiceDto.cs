@@ -17,7 +17,6 @@ namespace CompanyWebSite.Dto
         public IEnumerable<HighlightDto>? ServiceHighlights { get; set; }
         public IEnumerable<ServiceCategoryDto>? ServiceCategories { get; set; }
         public IEnumerable<MediaDto>? ServiceMediaItems { get; set; }
-
-
+        public IEnumerable<PageDto>? Pages { get; set; }
     }
 }

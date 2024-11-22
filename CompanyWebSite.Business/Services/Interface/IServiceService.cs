@@ -10,7 +10,7 @@ namespace CompanyWebSite.Business.Services.Interface
     public interface IServiceService
     {
         Task<IEnumerable<ServiceDto>> GetServiceAllAsync(string languageCode);
-        Task<ServiceDto> GetServiceByIdAsync(int id);
+        Task<ServiceDto> GetServiceByIdAsync(string languageCode, int id);
         Task AddServiceAsync(ServiceDto serviceDto);
         Task UpdateServiceAsync(ServiceDto serviceDto);
         Task DeleteServiceAsync(int id);

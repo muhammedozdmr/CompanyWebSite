@@ -17,5 +17,7 @@ namespace CompanyWebSite.Dto
         public IEnumerable<BlogCategoryDto> Categories { get; set; } // Blog kategorileri
         public string ImageUrl { get; set; } // Blog kapağı görseli
         public string AuthorImageUrl { get; set; } // Yazarın görseli
+
+        public IEnumerable<PageDto> Pages { get; set; }
     }
 }

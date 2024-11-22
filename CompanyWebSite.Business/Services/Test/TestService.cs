@@ -75,9 +75,9 @@ public class TestService : ITestService
         return await _blogService.GetBlogAllAsync(languageCode);
     }
 
-    public async Task<BlogDto> GetBlogByIdAsync(int id)
+    public async Task<BlogDto> GetBlogByIdAsync(string language,int id)
     {
-        return await _blogService.GetBlogByIdAsync(id);
+        return await _blogService.GetBlogByIdAsync(language, id);
     }
 
     public async Task AddBlogAsync(BlogDto blogDto)
@@ -220,9 +220,9 @@ public class TestService : ITestService
         return await _serviceService.GetServiceAllAsync(languageCode);
     }
 
-    public async Task<ServiceDto> GetServiceByIdAsync(int id)
+    public async Task<ServiceDto> GetServiceByIdAsync(string languageCode, int id)
     {
-        return await _serviceService.GetServiceByIdAsync(id);
+        return await _serviceService.GetServiceByIdAsync(languageCode,id);
     }
 
     public async Task AddServiceAsync(ServiceDto serviceDto)

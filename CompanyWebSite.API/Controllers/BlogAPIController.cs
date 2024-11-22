@@ -21,10 +21,12 @@ namespace CompanyWebSite.API.Controllers
             return await _blogService.GetBlogAllAsync(languageCode);
         }
 
+
+        //Bunu düzenle dil bilgisi de alman gerek !
         [HttpGet("{id}")]
-        public async Task<ActionResult<BlogDto>> GetBlogById(int id)
+        public async Task<ActionResult<BlogDto>> GetBlogById(string languageCode, int id)
         {
-            var blog = await _blogService.GetBlogByIdAsync(id);
+            var blog = await _blogService.GetBlogByIdAsync(languageCode,id);
             if (blog == null)
             {
                 return NotFound();

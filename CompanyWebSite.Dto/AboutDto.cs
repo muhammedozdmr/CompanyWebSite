@@ -20,5 +20,6 @@ namespace CompanyWebSite.Dto
         public int CustomerSatisfaction { get; set; } = 100;
         public int? CompanyInfoId { get; set; }
         public IEnumerable<HistoryDto>? Histories { get; set; }
+        public IEnumerable<PageDto>? Pages { get; set; }
     }
 }

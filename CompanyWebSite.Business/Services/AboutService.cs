@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Azure;
 using CompanyWebSite.Business.Helpers;
 using CompanyWebSite.Business.Repository.Interface;
 using CompanyWebSite.Business.Services.Interface;
@@ -44,6 +45,7 @@ namespace CompanyWebSite.Business.Services
         {
             var abouts = await _baseAboutRepository.GetAllAsync();
             var histories = await _baseHistoryRepository.GetAllAsync();
+
             if (languageCode == "tr")
             {
                 var aboutDtosMap = _mapper.Map<IEnumerable<AboutDto>>(abouts);
@@ -53,64 +55,100 @@ namespace CompanyWebSite.Business.Services
                     aboutDto.Histories = historyMap;
                 }
                 return aboutDtosMap;
-
             }
+
             var language = await _languageRepository.GetByCodeAsync(languageCode);
             if (language == null)
             {
                 throw new Exception("Language not found");
             }
+
             var aboutDtos = _mapper.Map<IEnumerable<AboutDto>>(abouts).ToList();
             var historyDtos = _mapper.Map<IEnumerable<HistoryDto>>(histories).ToList();
+
             foreach (var aboutDto in aboutDtos)
             {
+                // About çevirileri
                 var aboutTranslations = await _translationService.GetTranslationAsync("About", aboutDto.Id, language.Code);
-                foreach (var aboutTranslation in aboutTranslations)
+                foreach (var translation in aboutTranslations)
                 {
-                    if (aboutTranslation.Key == "DefaultTitle")
+                    switch (translation.Key)
                     {
-                        aboutDto.DefaultTitle = aboutTranslation.Value;
-                    }
-                    else if (aboutTranslation.Key == "DefaultContent")
-                    {
-                        aboutDto.DefaultContent = aboutTranslation.Value;
-                    }
-                    else if(aboutTranslation.Key == "Summary")
-                    {
-                        aboutDto.Summary = aboutTranslation.Value;
-                    }
-                    else if (aboutTranslation.Key == "AboutSlogan")
-                    {
-                        aboutDto.AboutSlogan = aboutTranslation.Value;
+                        case "DefaultTitle":
+                            aboutDto.DefaultTitle = translation.Value;
+                            break;
+                        case "DefaultContent":
+                            aboutDto.DefaultContent = translation.Value;
+                            break;
+                        case "Summary":
+                            aboutDto.Summary = translation.Value;
+                            break;
+                        case "AboutSlogan":
+                            aboutDto.AboutSlogan = translation.Value;
+                            break;
                     }
                 }
-                var translatedHistories = new List<HistoryDto>();
 
+                // Page çevirileri
+                var pages = await _translationService.GetTranslationAsync("Page", 1, language.Code);
+                var pageDto = new PageDto
+                {
+                    Id = 1 // Her page için ID'yi belirtin
+                };
+                foreach (var pageTranslation in pages)
+                {
+
+
+                    switch (pageTranslation.Key)
+                    {
+                        case "PageHeaderTitle":
+                            pageDto.PageHeaderTitle = pageTranslation.Value;
+                            break;
+                        case "PageHeaderSubtitle":
+                            pageDto.PageHeaderSubtitle = pageTranslation.Value;
+                            break;
+                        case "PageMainSlogan":
+                            pageDto.PageMainSlogan = pageTranslation.Value;
+                            break;
+                        case "PageSubSlogan":
+                            pageDto.PageSubSlogan = pageTranslation.Value;
+                            break;
+                    }
+
+                }
+                aboutDto.Pages = new List<PageDto> { pageDto };
+
+                // History çevirileri
+                var translatedHistories = new List<HistoryDto>();
                 foreach (var historyDto in historyDtos)
                 {
                     var historyTranslations = await _translationService.GetTranslationAsync("History", aboutDto.Id, language.Code);
 
-                    foreach (var historyTranslation in historyTranslations)
+                    foreach (var translation in historyTranslations)
                     {
-                        if (historyTranslation.Key == "DefaultTitle")
+                        switch (translation.Key)
                         {
-                            historyDto.DefaultTitle = historyTranslation.Value;
-                        }
-                        else if (historyTranslation.Key == "DefaultContent")
-                        {
-                            historyDto.DefaultContent = historyTranslation.Value;
-                        }
-                        else if (historyTranslation.Key == "YearDescription")
-                        {
-                            historyDto.YearDescription = historyTranslation.Value;
+                            case "DefaultTitle":
+                                historyDto.DefaultTitle = translation.Value;
+                                break;
+                            case "DefaultContent":
+                                historyDto.DefaultContent = translation.Value;
+                                break;
+                            case "YearDescription":
+                                historyDto.YearDescription = translation.Value;
+                                break;
                         }
                     }
+
                     translatedHistories.Add(historyDto);
                 }
+
                 aboutDto.Histories = translatedHistories;
             }
+
             return aboutDtos;
         }
+
 
         public async Task<AboutDto> GetAboutByIdAsync(int id)
         {

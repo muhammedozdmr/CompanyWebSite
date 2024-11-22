@@ -45,6 +45,7 @@ namespace CompanyWebSite.Business
             CreateMap<CompanyInfo, CompanyInfoDto>().ReverseMap();
             CreateMap<Footer, FooterDto>().ReverseMap();
             CreateMap<SidePanel, SidePanelDto>().ReverseMap();
+            CreateMap<Page, PageDto>().ReverseMap();
         }
     }
 }

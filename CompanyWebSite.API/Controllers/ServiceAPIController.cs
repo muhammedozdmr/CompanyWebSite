@@ -21,9 +21,9 @@ namespace CompanyWebSite.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ServiceDto>> GetServiceById(int id)
+        public async Task<ActionResult<ServiceDto>> GetServiceById(string languageCode, int id)
         {
-            var service = await _serviceService.GetServiceByIdAsync(id);
+            var service = await _serviceService.GetServiceByIdAsync(languageCode, id);
             if (service == null)
             {
                 return NotFound();

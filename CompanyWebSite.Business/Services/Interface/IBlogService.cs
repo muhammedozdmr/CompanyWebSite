@@ -10,7 +10,7 @@ namespace CompanyWebSite.Business.Services.Interface
     public interface IBlogService
     {
         Task<IEnumerable<BlogDto>> GetBlogAllAsync(string languageCode);
-        Task<BlogDto> GetBlogByIdAsync(int id);
+        Task<BlogDto> GetBlogByIdAsync(string languageCode,int id);
         Task AddBlogAsync(BlogDto blogDto);
         Task UpdateBlogAsync(BlogDto blogDto);
         Task DeleteBlogAsync(int id);

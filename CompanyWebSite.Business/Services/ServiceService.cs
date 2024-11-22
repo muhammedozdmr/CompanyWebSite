@@ -102,6 +102,26 @@ namespace CompanyWebSite.Business.Services
                     }
                 }
 
+                var pages = await _translationService.GetTranslationAsync("Page", 2, language.Code);
+                var pageDto = new PageDto
+                {
+                    Id = 2
+                };
+                foreach (var pageTranslation in pages)
+                {
+                    
+                    switch (pageTranslation.Key)
+                    {
+                        case "PageHeaderTitle":
+                            pageDto.PageHeaderTitle = pageTranslation.Value;
+                            break;
+                        case "PageHeaderSubtitle":
+                            pageDto.PageHeaderSubtitle = pageTranslation.Value;
+                            break;
+                    }
+                }
+                serviceDto.Pages = new List<PageDto> { pageDto };
+
                 var translatedServiceCategories = new List<ServiceCategoryDto>();
                 var traslatedHighlights = new List<HighlightDto>();
                 foreach (var serviceCategoryDto in serviceCategoryDtos)
@@ -116,7 +136,7 @@ namespace CompanyWebSite.Business.Services
                     }
                     translatedServiceCategories.Add(serviceCategoryDto);
                 }
-                foreach(var highlightDto in highlightDtos)
+                foreach (var highlightDto in highlightDtos)
                 {
                     var highlightTranslations = await _translationService.GetTranslationAsync("Highlight", highlightDto.Id, language.Code);
                     foreach (var highlightTranslation in highlightTranslations)
@@ -135,11 +155,50 @@ namespace CompanyWebSite.Business.Services
         }
 
 
-        
-        public async Task<ServiceDto> GetServiceByIdAsync(int id)
+
+        public async Task<ServiceDto> GetServiceByIdAsync(string languageCode, int id)
         {
             var service = await _baseServiceRepository.GetByIdAsync(id);
-            return _mapper.Map<ServiceDto>(service);
+            if (languageCode == "tr")
+            {
+                return _mapper.Map<ServiceDto>(service);
+            }
+
+            var language = await _languageRepository.GetByCodeAsync(languageCode);
+            if (language == null)
+            {
+                throw new Exception("Language not found");
+            }
+            var serviceDto = _mapper.Map<ServiceDto>(service);
+            var serviceTranslations = await _translationService.GetTranslationAsync("Service", serviceDto.Id, language.Code);
+            var serviceDefaultTranslationTitles = await _translationService.GetTranslationAsync("Service", 1, language.Code);
+            foreach (var serviceTranslation in serviceTranslations)
+            {
+                if (serviceTranslation.Key == "DefaultTitle")
+                {
+                    serviceDto.DefaultTitle = serviceTranslation.Value;
+                }
+                else if (serviceTranslation.Key == "DefaultContent")
+                {
+                    serviceDto.DefaultContent = serviceTranslation.Value;
+                }
+                else if (serviceTranslation.Key == "Summary")
+                {
+                    serviceDto.Summary = serviceTranslation.Value;
+                }
+            }
+            foreach (var serviceDefaultTranslationTitle in serviceDefaultTranslationTitles)
+            {
+                if (serviceDefaultTranslationTitle.Key == "ServiceSlogan")
+                {
+                    serviceDto.ServiceSlogan = serviceDefaultTranslationTitle.Value;
+                }
+                else if (serviceDefaultTranslationTitle.Key == "ServiceHomeTitle")
+                {
+                    serviceDto.ServiceHomeTitle = serviceDefaultTranslationTitle.Value;
+                }
+            }
+            return serviceDto;
         }
 
         public async Task UpdateServiceAsync(ServiceDto serviceDto)
@@ -150,7 +209,7 @@ namespace CompanyWebSite.Business.Services
                 _mapper.Map(serviceDto, service);
                 await _baseServiceRepository.UpdateAsync(service);
 
-                if(serviceDto.ServiceCategories == null || serviceDto.ServiceMediaItems == null || serviceDto.ServiceHighlights == null)
+                if (serviceDto.ServiceCategories == null || serviceDto.ServiceMediaItems == null || serviceDto.ServiceHighlights == null)
                 {
                     throw new Exception("Service Categories or Media Items or Highlights is null");
                 }
@@ -169,7 +228,7 @@ namespace CompanyWebSite.Business.Services
                         await _baseServiceCategoryRepository.AddAsync(newCategory);
                     }
                 }
-                foreach(var serviceMediaDto in serviceDto.ServiceMediaItems)
+                foreach (var serviceMediaDto in serviceDto.ServiceMediaItems)
                 {
                     var media = await _baseMediaRepository.GetByIdAsync(serviceMediaDto.Id);
                     if (media != null)

@@ -15,5 +15,7 @@ namespace CompanyWebSite.Dto
         public string? Slug { get; set; }
         public string? Question { get; set; }
         public string? Answer { get; set; }
+
+        public IEnumerable<PageDto>? Pages { get; set; }
     }
 }
