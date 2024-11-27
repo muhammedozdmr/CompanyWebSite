@@ -10,6 +10,7 @@ namespace CompanyWebSite.Domain.Entities
     {
         public int Id { get; set; }
         public int? NavbarId { get; set; }
+        public string? PageContentTitle { get; set; }
         public string? PageHeaderTitle { get; set; }
         public string? PageHeaderSubtitle { get; set; }
         public string? PageMainSlogan { get; set; }

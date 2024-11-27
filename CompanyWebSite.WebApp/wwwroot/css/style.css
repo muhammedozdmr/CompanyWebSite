@@ -4491,18 +4491,16 @@ form.form-dark .form-control:focus {
 *****************************/
 .marquee-wrapper {
   overflow: hidden;
-  position: relative;
-  white-space: nowrap;
 }
 
 .marquee-wrapper .marquee-inner {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 60px;
   width: 100%;
   position: relative;
   white-space: nowrap;
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marquee-wrapper .marquee-inner .marquee-item {
@@ -4564,7 +4562,7 @@ form.form-dark .form-control:focus {
     transform: translateX(0);
   }
   100% {
-    transform: translatex(-50%);
+    transform: translatex(-100%);
   }
 }
 
@@ -5049,12 +5047,18 @@ form.form-dark .form-control:focus {
 }
 
 .header-default .site-logo {
-  min-width: 250px;
+  min-width: 150px; /* Daha uygun bir minimum genişlik belirleyin */
 }
 
 .header-default .site-logo .navbar-brand {
   display: block;
-  padding: 30px 0;
+  padding: 15px 0; /* Üst ve alt boşlukları küçültün */
+}
+
+.header-default .site-logo .navbar-brand img {
+  max-width: 100%; /* Görüntünün kutuya sığmasını sağlar */
+  height: auto;    /* Oranları koruyarak yüksekliği otomatik ayarlar */
+  max-height: 75px; /* Maksimum yüksekliği sınırlandırır */
 }
 
 .header-default .site-menu .main-menu {
@@ -6663,6 +6667,12 @@ form.form-dark .form-control:focus {
   flex-direction: column;
 }
 
+.inner-content .logo{
+  width: 400px; /* İstediğiniz genişlik */
+    height: auto; /* Yüksekliği orantılı tutmak için */
+    max-width: 100%; /* Responsive tasarım için */
+}
+
 .coming-soon-title {
   font-size: 60px;
   line-height: normal;
@@ -7425,6 +7435,16 @@ form.form-dark .form-control:focus {
   /* Footer Copyright */
 }
 
+.site-footer.footer-dark .footer-copyright p {
+  font-size: 14px; /* Yazı boyutu */
+  color: rgba(255, 255, 255, 0.8); /* Daha açık renk */
+}
+.site-footer.footer-dark .footer-copyright a {
+  font-weight: 500;
+  text-decoration: underline; /* Alt çizgi ekleyin */
+}
+
+
 .site-footer.footer-dark .widget .widget-title {
   color: #ffffff;
 }
@@ -7495,6 +7515,20 @@ form.form-dark .form-control:focus {
   right: 0;
   bottom: 0;
   z-index: 0;
+}
+.footer-logo img {
+  max-width: 150px; /* Maksimum genişlik */
+  height: auto; /* Oranı koru */
+}
+@media (max-width: 991px) {
+  .footer-logo img {
+    max-width: 120px;
+  }
+}
+@media (max-width: 479px) {
+  .footer-logo img {
+    max-width: 100px;
+  }
 }
 
 /*************************
@@ -8071,9 +8105,15 @@ form.form-dark .form-control:focus {
     border-right: 1px solid rgba(255, 255, 255, 0.15);
   }
   .widget-socail .socail-icon li a {
-    padding: 30px 0;
-    font-size: 0;
+    padding: 10px; /* Dikey padding */
+    margin: 5px; /* İkonlar arası boşluk */
   }
+  @media (max-width: 767px) {
+    .widget-socail .socail-icon li a {
+      padding: 8px;
+      margin: 3px;
+    }
+  }  
   .widget-socail .socail-icon li a i {
     opacity: 1;
     font-size: 35px;
@@ -8124,55 +8164,3 @@ form.form-dark .form-control:focus {
     font-size: 26px;
   }
 }
-
-.language-selector {
-  display: flex;
-  align-items: center;
-}
-
-.language-selector .dropdown-toggle {
-  font-size: 16px; /* Diğer nav öğeleri ile uyumlu font boyutu */
-  padding: 10px 15px; /* Diğer nav öğeleri ile uyumlu padding */
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-}
-
-.language-selector .dropdown-toggle img {
-  margin-right: 8px; /* Bayrak ile metin arasına boşluk ekler */
-  width: 20px; /* Bayrakların boyutunu ayarlar */
-  height: auto;
-}
-
-.language-selector .dropdown-menu {
-  min-width: 120px;
-}
-
-.language-selector .dropdown-item {
-  font-size: 16px; /* Diğer nav öğeleri ile uyumlu font boyutu */
-  display: flex;
-  align-items: center;
-}
-
-.language-selector .dropdown-item img {
-  margin-right: 8px; /* Bayrak ile metin arasına boşluk ekler */
-  width: 20px; /* Bayrakların boyutunu ayarlar */
-  height: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .language-selector .dropdown-toggle {
-      padding: 0.3rem 0.6rem;
-      font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .language-selector .dropdown-toggle {
-      padding: 0.2rem 0.5rem;
-      font-size: 0.8rem;
-  }
-}
-
-

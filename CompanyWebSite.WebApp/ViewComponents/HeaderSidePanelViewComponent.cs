@@ -7,6 +7,7 @@ namespace CompanyWebSite.WebApp.ViewComponents
     public class HeaderSidePanelViewComponent : ViewComponent
     {
         private readonly HttpClient _httpClient;
+
         public HeaderSidePanelViewComponent(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -14,9 +15,13 @@ namespace CompanyWebSite.WebApp.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync(string languageCode = "tr")
         {
-            using var client = new HttpClient
+            var handler = new HttpClientHandler
             {
-                BaseAddress = new Uri("https://localhost:5129/") // API Base Address
+                ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+            };
+            using var client = new HttpClient(handler)
+            {
+                BaseAddress = new Uri("http://localhost:5129/") // API Base Address
             };
             var response = await client.GetAsync($"api/HeaderSidePanelComponentAPI/Index?languageCode={languageCode}");
             if (response.IsSuccessStatusCode)

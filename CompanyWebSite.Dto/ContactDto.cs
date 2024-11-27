@@ -12,6 +12,6 @@ namespace CompanyWebSite.Dto
         public int Id { get; set; }
         public IEnumerable<CompanyInfoDto>? CompanyInfos { get; set; }
         public IEnumerable<ContactFormDto>? ContactForms { get; set; }
-        public IEnumerable<PageDto>? Pages { get; set; }
+        public List<PageDto>? Pages { get; set; }
     }
 }

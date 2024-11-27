@@ -18,6 +18,6 @@ namespace CompanyWebSite.Dto
         public string ImageUrl { get; set; } // Blog kapağı görseli
         public string AuthorImageUrl { get; set; } // Yazarın görseli
 
-        public IEnumerable<PageDto> Pages { get; set; }
+        public List<PageDto> Pages { get; set; }
     }
 }

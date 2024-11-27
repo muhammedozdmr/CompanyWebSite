@@ -20,5 +20,6 @@ namespace CompanyWebSite.Dto
         public IEnumerable<CompanyInfoDto>? CompanyInfos { get; set; }
         public IEnumerable<NavbarFooterSidePanelDto>? NavbarFooterSidePanels { get; set; }
         public IEnumerable<NewsletterDto>? Newsletters { get; set; }
+        public List<PageDto>? Pages { get; set; }    
     }
 }

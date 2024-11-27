@@ -195,16 +195,20 @@ namespace CompanyWebSite.Tests
             _blogService.Verify(x => x.GetBlogAllAsync(languageCode), Times.Once); // GetBlogAllAsync metodunun yalnızca bir kez çağrıldığını doğrula
         }
 
-        [Fact]
-        public async Task GetBlogByIdAsync_Should_Return_Blog()
+        [Theory]
+        [InlineData("tr")]
+        [InlineData("en")]
+        [InlineData("de")]
+        [InlineData("ru")]
+        public async Task GetBlogByIdAsync_Should_Return_Blog(string languageCode)
         {
             // Arrange
             var id = 1;
             var mockBlog = GetMockBlogData().FirstOrDefault(x => x.Id == id);
-            _blogService.Setup(x => x.GetBlogByIdAsync(id)).ReturnsAsync(mockBlog);
+            _blogService.Setup(x => x.GetBlogByIdAsync(languageCode,id)).ReturnsAsync(mockBlog);
 
             // Act
-            var result = await _testService.GetBlogByIdAsync(id);
+            var result = await _testService.GetBlogByIdAsync(languageCode,id);
 
             // Assert
             Assert.NotNull(result); // Sonucun null olmadığını doğrula
@@ -727,16 +731,20 @@ namespace CompanyWebSite.Tests
             _serviceService.Verify(x => x.GetServiceAllAsync(languageCode), Times.Once); // GetServiceAllAsync metodunun yalnızca bir kez çağrıldığını doğrula
         }
 
-        [Fact]
-        public async Task GetServiceByIdAsync_Should_Return_Service()
+        [Theory]
+        [InlineData("tr")]
+        [InlineData("en")]
+        [InlineData("de")]
+        [InlineData("ru")]
+        public async Task GetServiceByIdAsync_Should_Return_Service(string languageCode)
         {
             //Arrange
             var id = 1;
             var mockService = GetMockServiceData().FirstOrDefault(x => x.Id == id);
-            _serviceService.Setup(x => x.GetServiceByIdAsync(id)).ReturnsAsync(mockService);
+            _serviceService.Setup(x => x.GetServiceByIdAsync(languageCode,id)).ReturnsAsync(mockService);
 
             //Act
-            var result = await _testService.GetServiceByIdAsync(id);
+            var result = await _testService.GetServiceByIdAsync(languageCode,id);
 
             //Assert
             Assert.NotNull(result); // Sonucun null olmadığını doğrula

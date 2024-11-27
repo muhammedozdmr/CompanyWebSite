@@ -38,7 +38,16 @@ Main Banner -->
                                     <span>@home.HomeButtonName</span>
                                 }
                             }
-                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_59_253)"><path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/></g><defs><clipPath id="clip0_59_253"><rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/></clipPath></defs></svg>
+                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_59_253)">
+                                    <path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_59_253">
+                                        <rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -49,387 +58,355 @@ Main Banner -->
 
 <div class="content-wrapper">
 
-    <!--=================================
-    About Info -->
-    <section class="space-pt">
-        <div class="container">
-            <div class="row justify-content-between">
+<!--=================================
+About Info -->
+<section class="space-pt">
+    <div class="container">
+        <div class="row justify-content-between">
 
-                <div class="col-lg-7 mb-5 mb-lg-0">
-                    <div class="section-title pb-0 pb-lg-4">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+                <div class="section-title pb-0 pb-lg-4">
+                    @foreach (var item in Model)
+                    {
+                        foreach (var about in item.About)
+                        {
+                            var firstPage = about.Pages.FirstOrDefault(x => x.Id == 1);
+                            if (firstPage != null)
+                            {
+                                <span class="sub-title">
+                                    <img class="img-fluid" src="images/subtitle-icon.png" alt=""> @firstPage.PageContentTitle
+                                </span>
+                                <h2 class="title"> @firstPage.PageMainSlogan</h2>
+                            }
+                        }
+                    }
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img class="img-fluid" src="images/about/about-03.jpg" alt="#">
+                    </div>
+                    <div class="col-sm-8">
                         @foreach (var item in Model)
                         {
                             foreach (var about in item.About)
                             {
-                                <span class="sub-title"><img class="img-fluid" src="images/subtitle-icon.png" alt=""> @about.DefaultTitle</span>
-                                <h2 class="title"> @about.AboutSlogan</h2>
+                                <p class="ps-lg-3 mt-4 mt-sm-0">@about.Summary</p>
                             }
                         }
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img class="img-fluid" src="images/about/about-03.jpg" alt="#">
-                        </div>
-                        <div class="col-sm-8">
-                            @foreach (var item in Model)
-                            {
-                                foreach (var about in item.About)
+                        <div class="d-flex justify-content-center mt-5 ms-sm-5 ms-0">
+                            <a class="btn btn-effect" asp-controller="About" asp-action="Index">
+                                @foreach (var item in Model)
                                 {
-                                    <p class="ps-lg-3 mt-4 mt-sm-0">@about.Summary</p>
-                                }
-                            }
-                            <div class="d-flex justify-content-center mt-5 ms-sm-5 ms-0">
-                                <a class="btn btn-effect" asp-controller="About" asp-action="Index">
-                                    @foreach (var item in Model)
+                                    foreach (var about in item.About)
                                     {
-                                        foreach (var about in item.About)
-                                        {
-                                            <span>@about.DefaultTitle</span>
-                                        }
+                                        <span>@about.DefaultTitle</span>
                                     }
-                                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_59_254)"><path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/></g><defs><clipPath id="clip0_59_254"><rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/></clipPath></defs></svg>
-                                </a>
-                            </div>
+                                }
+                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_59_254)">
+                                        <path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_59_254">
+                                            <rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="row mt-4 mt-sm-5">
-                        <div class="col-sm-6">
-                            <div class="counter counter-style-1">
-                                <div class="counter-number"><span class="timer mb-0" data-to="240" data-speed="2000">240</span><span class="suffix">+</span></div>
-                                <div class="counter-info"><span class="counter-title">Business Peoples</span></div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
-                <div class="col-lg-5">
-                    <img class="img-fluid ps-lg-5" src="images/about/about-01.jpg" alt="#">
+                <div class="row mt-4 mt-sm-5">
+                    <div class="col-sm-6">
+                        <div class="counter counter-style-1">
+                            <div class="counter-number">
+                                <span class="timer mb-0" data-to="240" data-speed="2000">240</span><span class="suffix">+</span>
+                            </div>
+                            <div class="counter-info">
+                                <span class="counter-title">Business Peoples</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            <div class="col-lg-5">
+                <img class="img-fluid ps-lg-5" src="images/about/about-01.jpg" alt="#">
+            </div>
+
         </div>
-    </section>
-    <!--=================================
-    About Info -->
-    <!--=================================
-    Client Logo -->
-    <div class="space-medium-ptb ">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <div class="marquee-wrapper">
-                        <div class="marquee-inner">
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon1.png" alt="" /></span>
-                                <span class="title">Web Design</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon2.png" alt="" /></span>
-                                <span class="title">UI/UX Design</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon3.png" alt="" /></span>
-                                <span class="title">Developer</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon4.png" alt="" /></span>
-                                <span class="title">ISO Developer</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon5.png" alt="" /></span>
-                                <span class="title">Digital Agency</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon1.png" alt="" /></span>
-                                <span class="title">Web Design</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon2.png" alt="" /></span>
-                                <span class="title">UI/UX Design</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon3.png" alt="" /></span>
-                                <span class="title">Developer</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon4.png" alt="" /></span>
-                                <span class="title">ISO Developer</span>
-                            </div>
-                            <div class="marquee-item">
-                                <span class="icon"><img class="img-fluid" src="images/client-logo/brand-icon5.png" alt="" /></span>
-                                <span class="title">Digital Agency</span>
-                            </div>
+    </div>
+</section>
+<!--=================================
+About Info -->
+<!--=================================
+Client Logo -->
+<div class="space-medium-ptb ">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-md-12">
+                <div class="marquee-wrapper">
+                    <div class="marquee-inner">
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon1.png" alt=""/>
+                            </span>
+                            <span class="title">Web Design</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon2.png" alt=""/>
+                            </span>
+                            <span class="title">UI/UX Design</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon3.png" alt=""/>
+                            </span>
+                            <span class="title">Developer</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon4.png" alt=""/>
+                            </span>
+                            <span class="title">ISO Developer</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon5.png" alt=""/>
+                            </span>
+                            <span class="title">Digital Agency</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon1.png" alt=""/>
+                            </span>
+                            <span class="title">Web Design</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon2.png" alt=""/>
+                            </span>
+                            <span class="title">UI/UX Design</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon3.png" alt=""/>
+                            </span>
+                            <span class="title">Developer</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon4.png" alt=""/>
+                            </span>
+                            <span class="title">ISO Developer</span>
+                        </div>
+                        <div class="marquee-item">
+                            <span class="icon">
+                                <img class="img-fluid" src="images/client-logo/brand-icon5.png" alt=""/>
+                            </span>
+                            <span class="title">Digital Agency</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--=================================
-    Client Logo -->
-    <!--=================================
-    Our Services -->
-    <section class="space-pt bg-black z-index-2 ellipse-top">
-        <div class="space-pb ellipse-bottom">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xxl-5 col-xl-5 mb-5 mb-xl-0">
-                        <div class="sticky-top" style="top: 80px;">
-                            <div class="section-title">
+</div>
+<!--=================================
+Client Logo -->
+<!--=================================
+Our Services -->
+<section class="space-pt bg-black z-index-2 ellipse-top">
+    <div class="space-pb ellipse-bottom">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xxl-5 col-xl-5 mb-5 mb-xl-0">
+                    <div class="sticky-top" style="top: 80px;">
+                        <div class="section-title">
+                            @foreach (var item in Model)
+                            {
+                                foreach (var service in item.Services)
+                                {
+                                    var firstPage = service.Pages.FirstOrDefault(x => x.Id == 9);
+                                    if (firstPage != null)
+                                    {
+                                        <span class="sub-title">
+                                            <img class="img-fluid" src="images/subtitle-icon.png" alt=""> @firstPage.PageContentTitle
+                                        </span>
+                                        <h2 class="title"> @firstPage.PageMainSlogan</h2>
+                                        <div class="ps-xxl-5 ms-0 ms-md-5">
+                                            <p>@firstPage.PageSubSlogan</p>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-7">
+                    <div class="row">
+                        @for (int i = 0; i < 2; i++)
+                        {
+                            
+                            <div class="col-sm-6">
                                 @foreach (var item in Model)
                                 {
-                                    foreach (var service in item.Services)
+                                    foreach (var serviceItem in item.Services)
                                     {
-                                        <span class="sub-title"><img class="img-fluid" src="images/subtitle-icon.png" alt=""> @service.ServiceHomeTitle[0]</span>
-                                        <h2 class="title"> @service.ServiceSlogan[0]</h2>
+                                        <div class="services grid-wrapper">
+                                            <div class="service-wrapper service-style-1">
+                                                <div class="service-inner">
+                                                    @foreach (var media in serviceItem.ServiceMediaItems)
+                                                    {
+                                                        if (media.MediaType == "image")
+                                                        {
+                                                            <div class="service-icon">
+                                                                <img class="img-fluid" src="@media.FilePath" alt="#">
+                                                            </div>
+                                                        }
+                                                        else if (media.MediaType == "icon")
+                                                        {
+                                                            <div class="bg-icon">
+                                                                <img class="img-fluid" src="images/svg/services/color-icon/Information-Security.svg" alt="#">
+                                                            </div>
+                                                        }
+                                                    }
+                                                    <div class ="service-content" >
+                                                        <h5 class ="service-title" > @serviceItem.DefaultTitle</h5 >
+                                                        <p > @serviceItem.Summary</p>
+                                                        <div class ="service-links" >
+                                                            <a class ="btn-arrow" href = "#" >
+                                                                <svg width = "17" height = "16" viewBox = "0 0 17 16" fill = "none" xmlns = "http://www.w3.org/2000/svg" >
+                                                                    <g clip - path = "url(#clip0_923_133)" >
+                                                                        <path d = "M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke = "inherit" stroke - width = "2" /><path d = "M15.7602 8.12158H0.1875" stroke = "inherit" stroke - width = "2" />
+                                                                    </g >
+                                                                    <defs >
+                                                                        <clipPath id = "clip0_923_133" >
+                                                                            <rect width = "15.904" height = "14.8437" fill = "inherit" transform = "translate(0.1875 0.578125)" />
+                                                                        </clipPath >
+                                                                    </defs >
+                                                                </svg >
+                                                            </a >
+                                                        </div >
+                                                    </div >
+                                                </div >
+                                            </div >
+                                        </div>
                                     }
                                 }
                             </div>
-                            <div class="ps-xxl-5 ms-0 ms-md-5">
-                                <p>We all know that nothing moves until someone makes a decision. The first action is always in making the decision to proceed. which most people overlook, we don’t do it intentionally or with malice.</p>
-                            </div>
-                        </div>
+                        }
                     </div>
-                    <div class="col-xxl-6 col-xl-7">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="services grid-wrapper">
-                                    <div class="service-wrapper service-style-1">
-                                        <div class="service-inner">
-                                            <div class="service-icon">
-                                                <img class="img-fluid" src="images/svg/services/Information-Security.svg" alt="#">
-                                            </div>
-                                            <div class="bg-icon">
-                                                <img class="img-fluid" src="images/svg/services/color-icon/Information-Security.svg" alt="#">
-                                            </div>
-                                            <div class="service-content">
-                                                <h5 class="service-title">Information Security</h5>
-                                                <p>Remind yourself of someone you know who died suddenly and the fact that there is no guarantee that tomorrow</p>
-                                                <div class="service-links">
-                                                    <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_133)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2" /><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2" /></g><defs><clipPath id="clip0_923_133"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)" /></clipPath></defs></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="service-wrapper service-style-1">
-                                        <div class="service-inner">
-                                            <div class="service-icon">
-                                                <img class="img-fluid" src="images/svg/services/Data-Synchronization.svg" alt="#">
-                                            </div>
-                                            <div class="bg-icon">
-                                                <img class="img-fluid" src="images/svg/services/color-icon/Data-Synchronization.svg" alt="#">
-                                            </div>
-                                            <div class="service-content">
-                                                <h5 class="service-title">Data Synchronization</h5>
-                                                <p>Remind yourself of someone you know who died suddenly and the fact that there is no guarantee that tomorrow</p>
-                                                <div class="service-links">
-                                                    <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_134)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2" /><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2" /></g><defs><clipPath id="clip0_923_134"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)" /></clipPath></defs></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="service-wrapper service-style-1">
-                                        <div class="service-inner">
-                                            <div class="service-icon">
-                                                <img class="img-fluid" src="images/svg/services/Mobile-Platforms.svg" alt="#">
-                                            </div>
-                                            <div class="bg-icon">
-                                                <img class="img-fluid" src="images/svg/services/color-icon/Mobile-Platforms.svg" alt="#">
-                                            </div>
-                                            <div class="service-content">
-                                                <h5 class="service-title">Mobile Platforms</h5>
-                                                <p>There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing.</p>
-                                                <div class="service-links">
-                                                    <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_135)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2" /><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2" /></g><defs><clipPath id="clip0_923_135"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)" /></clipPath></defs></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="services grid-wrapper service-top-space">
-                                    <div class="service-wrapper service-style-1">
-                                        <div class="service-inner">
-                                            <div class="service-icon">
-                                                <img class="img-fluid" src="images/svg/services/Process-Automation.svg" alt="#">
-                                            </div>
-                                            <div class="bg-icon">
-                                                <!-- TODO: Buradan devam et iconları kontrol et ! -->
-                                                @foreach (var item in Model)
-                                                {
-                                                    foreach (var service in item.Services)
-                                                    {
-                                                        foreach (var serviceIcon in service.ServiceMediaItems)
-                                                        {
-                                                            if (serviceIcon.MediaType == "icon")
-                                                            {
-                                                                <img class="img-fluid" src="@serviceIcon.FilePath" alt="#">
-                                                            }
-                                                            else
-                                                            {
-                                                                <img class="img-fluid" src="images/svg/services/color-icon/Process-Automation.svg" alt="#">
-                                                            }
-                                                        }
-                                                    }
-                                                }
-
-                                                <img class="img-fluid" src="images/svg/services/color-icon/Process-Automation.svg" alt="#">
-                                            </div>
-                                            <div class="service-content">
-                                                <h5 class="service-title">Process Automation</h5>
-                                                <p>It must come from the natural product of your desire to achieve something and your belief that you are capable.</p>
-                                                <div class="service-links">
-                                                    <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_136)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2" /><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2" /></g><defs><clipPath id="clip0_923_136"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)" /></clipPath></defs></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="service-wrapper service-style-1">
-                                        <div class="service-inner">
-                                            <div class="service-icon">
-                                                <img class="img-fluid" src="images/svg/services/Mobile-Platforms.svg" alt="#">
-                                            </div>
-                                            <div class="bg-icon">
-                                                <img class="img-fluid" src="images/svg/services/color-icon/Mobile-Platforms.svg" alt="#">
-                                            </div>
-                                            <div class="service-content">
-                                                <h5 class="service-title">Mobile Platforms</h5>
-                                                <p>There is really no magic to it and it’s not reserved only for a select few people. As such, success really has nothing.</p>
-                                                <div class="service-links">
-                                                    <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_137)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2" /><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2" /></g><defs><clipPath id="clip0_923_137"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)" /></clipPath></defs></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="service-wrapper service-style-1">
-                                        <div class="service-inner">
-                                            <div class="service-icon">
-                                                <img class="img-fluid" src="images/svg/services/Process-Automation.svg" alt="#">
-                                            </div>
-                                            <div class="bg-icon">
-                                                <img class="img-fluid" src="images/svg/services/color-icon/Process-Automation.svg" alt="#">
-                                            </div>
-                                            <div class="service-content">
-                                                <h5 class="service-title">Process Automation</h5>
-                                                <p>It must come from the natural product of your desire to achieve something and your belief that you are capable.</p>
-                                                <div class="service-links">
-                                                    <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_138)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2" /><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2" /></g><defs><clipPath id="clip0_923_138"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)" /></clipPath></defs></svg></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=================================
-    Our Services -->
-    <!--=================================
-    FAQ -->
-    <section class="space-pt ellipse-top">
-        <div class="space-pb ellipse-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="section-title">
-                            <span class="sub-title justify-content-center"><img class="img-fluid" src="images/subtitle-icon.png" alt=""> FAQ</span>
-                            <h2 class="title mb-0">Frequently Asked Questions</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="accordion" id="pgsaccordion">
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">01. It turned out to be the Hope Diamond?</button>
-                                </h5>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pgsaccordion">
-                                    <div class="accordion-body">Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today. As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative path.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        02. So why do we do it?
-                                    </button>
-                                </h5>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pgsaccordion">
-                                    <div class="accordion-body">Step out on to the path to your left. Where there is no change. Instead, you continue doing what you have in the past. What will life be like about staying on this path. Walk out into your future to the 10 year point.</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">03. I am worried about e-mail scams...</button>
-                                </h5>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pgsaccordion">
-                                    <div class="accordion-body"> Walk out 10 years into your future and feel how it feels to carry on doing the same thing. I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date. What will your daily life  be like? </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">04. Why IT Staff Management?</button>
-                                </h5>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pgsaccordion">
-                                    <div class="accordion-body">Really experience that. See what you see, hear what you hear, feel the feelings. Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change. Drift back to where the path splits.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-4 mt-md-0">
-                        <div class="accordion" id="pgsaccordion1">
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">05. It turned out to be the Hope Diamond?</button>
-                                </h5>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#pgsaccordion1">
-                                    <div class="accordion-body">Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today. As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative path.</div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        06. So why do we do it?
-                                    </button>
-                                </h5>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#pgsaccordion1">
-                                    <div class="accordion-body">Step out on to the path to your left. Where there is no change. Instead, you continue doing what you have in the past. What will life be like about staying on this path. Walk out into your future to the 10 year point.</div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingSeven">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">07. I am worried about e-mail scams...</button>
-                                </h5>
-                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#pgsaccordion1">
-                                    <div class="accordion-body"> Walk out 10 years into your future and feel how it feels to carry on doing the same thing. I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date. What will your daily life  be like? </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingEight">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">08. Why IT Staff Management?</button>
-                                </h5>
-                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#pgsaccordion1">
-                                    <div class="accordion-body">Really experience that. See what you see, hear what you hear, feel the feelings. Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change. Drift back to where the path splits.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=================================
-    FAQ -->
-
-</div>
+                </div >
+            </div >
+        </div >
+    </div >
+</section >
+</div >
+                <!--================================ =
+            Our Services -->
+                <!--================================ =
+            FAQ-- >
+                <section class ="space-pt ellipse-top" >
+                <div class ="space-pb ellipse-bottom" >
+                <div class ="container" >
+                <div class ="row" >
+                <div class ="col-md-12 text-center" >
+                <div class ="section-title" >
+                <span class ="sub-title justify-content-center" ><img class ="img-fluid" src = "images/subtitle-icon.png" alt = "" > FAQ </span >
+                <h2 class ="title mb-0" > Frequently Asked Questions</
+            h2 >
+                </div >
+                </div >
+                </div >
+                <div class ="row" >
+                <div class ="col-md-6" >
+                <div class ="accordion" id = "pgsaccordion" >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingOne" >
+                <button class ="accordion-button" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseOne" aria - expanded = "true" aria - controls = "collapseOne" > 01.It turned out to be the Hope Diamond ?</button >
+                </h5 >
+                <div id = "collapseOne" class ="accordion-collapse collapse show" aria - labelledby = "headingOne" data - bs - parent = "#pgsaccordion" >
+                <div class ="accordion-body" > Imagine reaching deep inside you for all the
+            strength and wisdom that you need to make this decision today.As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative path.</div >
+                </div >
+                </div >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingTwo" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseTwo" aria - expanded = "false" aria - controls = "collapseTwo" >
+                                                                                                                                                                                            02.So why do we do
+                it ?
+                    </button >
+                </h5 >
+                <div id = "collapseTwo" class ="accordion-collapse collapse" aria - labelledby = "headingTwo" data - bs - parent = "#pgsaccordion" >
+                <div class ="accordion-body" > Step out on to the path to your left.Where there is no change. Instead, you continue doing what you have in the past.What will life be like about staying on this path.Walk out into your future to the 10 year point.</div >
+                </div >
+                </div >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingThree" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseThree" aria - expanded = "false" aria - controls = "collapseThree" > 03.I am worried about e - mail scams...</button >
+                </h5 >
+                <div id = "collapseThree" class ="accordion-collapse collapse" aria - labelledby = "headingThree" data - bs - parent = "#pgsaccordion" >
+                <div class ="accordion-body" > Walk out 10 years into your future and feel how it feels to carry on doing the same thing.I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date.What will your daily life be like ? </div >
+                </div >
+                </div >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingFour" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseFour" aria - expanded = "false" aria - controls = "collapseThree" > 04.Why IT Staff Management ?</button >
+                </h5 >
+                <div id = "collapseFour" class ="accordion-collapse collapse" aria - labelledby = "headingFour" data - bs - parent = "#pgsaccordion" >
+                <div class ="accordion-body" > Really experience that.See what you see, hear what you hear, feel the feelings.Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change.Drift back to where the path splits.</div >
+                </div >
+                </div >
+                </div >
+                </div >
+                <div class ="col-md-6 mt-4 mt-md-0" >
+                <div class ="accordion" id = "pgsaccordion1" >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingFive" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseFive" aria - expanded = "false" aria - controls = "collapseFive" > 05.It turned out to be the Hope Diamond ?</button >
+                </h5 >
+                <div id = "collapseFive" class ="accordion-collapse collapse" aria - labelledby = "headingFive" data - bs - parent = "#pgsaccordion1" >
+                <div class ="accordion-body" > Imagine reaching deep inside you for all the
+            strength and wisdom that you need to make this decision today.As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative path.</div >
+                </div >
+                </div >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingSix" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseSix" aria - expanded = "false" aria - controls = "collapseSix" >
+                                                                                                                                                                                            06.So why do we do
+                it ?
+                    </button >
+                </h5 >
+                <div id = "collapseSix" class ="accordion-collapse collapse" aria - labelledby = "headingSix" data - bs - parent = "#pgsaccordion1" >
+                <div class ="accordion-body" > Step out on to the path to your left.Where there is no change. Instead, you continue doing what you have in the past.What will life be like about staying on this path.Walk out into your future to the 10 year point.</div >
+                </div >
+                </div >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingSeven" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseSeven" aria - expanded = "false" aria - controls = "collapseSeven" > 07.I am worried about e - mail scams...</button >
+                </h5 >
+                <div id = "collapseSeven" class ="accordion-collapse collapse" aria - labelledby = "headingSeven" data - bs - parent = "#pgsaccordion1" >
+                <div class ="accordion-body" > Walk out 10 years into your future and feel how it feels to carry on doing the same thing.I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date.What will your daily life be like ? </div >
+                </div >
+                </div >
+                <div class ="accordion-item" >
+                <h5 class ="accordion-header" id = "headingEight" >
+                <button class ="accordion-button collapsed" type = "button" data - bs - toggle = "collapse" data - bs - target = "#collapseEight" aria - expanded = "false" aria - controls = "collapseThree" > 08.Why IT Staff Management ?</button >
+                </h5 >
+                <div id = "collapseEight" class ="accordion-collapse collapse" aria - labelledby = "headingEight" data - bs - parent = "#pgsaccordion1" >
+                <div class ="accordion-body" > Really experience that.See what you see, hear what you hear, feel the feelings.Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change.Drift back to where the path splits.</div >
+                </div >
+                </div >
+                </div >
+                </div >
+                </div >
+                </div >
+                </div >
+                </section >
+                <!-= ============================== = =
+            FAQ-- >
+                </div >

@@ -16,16 +16,18 @@ namespace CompanyWebSite.Business.Services
     {
         private readonly IBaseRepository<Blog> _baseBlogRepository;
         public readonly IBaseRepository<BlogCategory> _baseBlogCategoryRepository;
+        private readonly IBaseRepository<Page> _basePageRepository;
         private readonly ITranslationService _translationService;
         private readonly ILanguageRepository _languageRepository;
         private IMapper _mapper;
-        public BlogService(IBaseRepository<Blog> baseBlogRepository, IBaseRepository<BlogCategory> baseBlogCategoryRepository, ITranslationService translationService, ILanguageRepository languageRepository, IMapper mapper)
+        public BlogService(IBaseRepository<Blog> baseBlogRepository, IBaseRepository<BlogCategory> baseBlogCategoryRepository, ITranslationService translationService, ILanguageRepository languageRepository, IMapper mapper, IBaseRepository<Page> basePageRepository)
         {
             _baseBlogRepository = baseBlogRepository;
             _baseBlogCategoryRepository = baseBlogCategoryRepository;
             _translationService = translationService;
             _languageRepository = languageRepository;
             _mapper = mapper;
+            _basePageRepository = basePageRepository;
         }
         public async Task AddBlogAsync(BlogDto blogDto)
         {
@@ -44,13 +46,16 @@ namespace CompanyWebSite.Business.Services
         {
             var blogs = await _baseBlogRepository.GetAllAsync();
             var blogCategories = await _baseBlogCategoryRepository.GetAllAsync();
+            var pagesAll = await _basePageRepository.GetAllAsync();
             if (languageCode == "tr")
             {
                 var blogDtosMap = _mapper.Map<IEnumerable<BlogDto>>(blogs);
                 var blogCategoryMap = _mapper.Map<IEnumerable<BlogCategoryDto>>(blogCategories);
+                var pageMap = _mapper.Map<IEnumerable<PageDto>>(pagesAll);
                 foreach (var blogDto in blogDtosMap)
                 {
                     blogDto.Categories = blogCategoryMap;
+                    blogDto.Pages = pageMap.Where(x => x.Id == 3).ToList();
                 }
                 return blogDtosMap;
             }
@@ -89,6 +94,9 @@ namespace CompanyWebSite.Business.Services
 
                     switch (pageTranslation.Key)
                     {
+                        case "PageContentTitle":
+                            pageDto.PageContentTitle = pageTranslation.Value;
+                            break;
                         case "PageHeaderTitle":
                             pageDto.PageHeaderTitle = pageTranslation.Value;
                             break;
@@ -121,11 +129,14 @@ namespace CompanyWebSite.Business.Services
         {
             // Blog nesnesini veri tabanından al
             var blog = await _baseBlogRepository.GetByIdAsync(id);
-
+            var pagesAll = await _basePageRepository.GetAllAsync();
+            var blogPages = pagesAll.Where(x => x.Id == 4).ToList();
             // Eğer dil Türkçe ise, doğrudan mapper ile dön
             if (languageCode == "tr")
             {
-                return _mapper.Map<BlogDto>(blog);
+                var blogDtoMap = _mapper.Map<BlogDto>(blog);
+                blogDtoMap.Pages = _mapper.Map<List<PageDto>>(blogPages);
+                return blogDtoMap;
             }
 
             // İlgili dil kodunu kontrol et
@@ -161,6 +172,9 @@ namespace CompanyWebSite.Business.Services
                 
                 switch (pageTranslation.Key)
                 {
+                    case "PageContentTitle":
+                        pageDto.PageContentTitle = pageTranslation.Value;
+                        break;
                     case "PageHeaderTitle":
                         pageDto.PageHeaderTitle = pageTranslation.Value;
                         break;

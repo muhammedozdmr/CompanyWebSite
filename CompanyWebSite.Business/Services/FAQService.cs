@@ -15,16 +15,18 @@ namespace CompanyWebSite.Business.Services
     public class FAQService : IFAQService
     {
         private readonly IBaseRepository<FAQ> _baseFAQRepository;
+        private readonly IBaseRepository<Page> _basePageRepository;
         private readonly ILanguageRepository _languageRepository;
         private readonly ITranslationService _translationService;
         private readonly IMapper _mapper;
 
-        public FAQService(IBaseRepository<FAQ> baseFAQRepository,ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper)
+        public FAQService(IBaseRepository<FAQ> baseFAQRepository,ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper, IBaseRepository<Page> basePageRepository)
         {
             _baseFAQRepository = baseFAQRepository;
             _languageRepository = languageRepository;
             _translationService = translationService;
             _mapper = mapper;
+            _basePageRepository = basePageRepository;
         }
         public async Task AddFAQAsync(FAQDto faqDto)
         {
@@ -41,10 +43,16 @@ namespace CompanyWebSite.Business.Services
         public async Task<IEnumerable<FAQDto>> GetFAQAllAsync(string languageCode)
         {
             var faqs = await _baseFAQRepository.GetAllAsync();
+            var pagesAll = await _basePageRepository.GetAllAsync();
             if (languageCode == "tr")
             {
                var faqDtosMap = _mapper.Map<IEnumerable<FAQDto>>(faqs);
-               return faqDtosMap;
+                var pageMap = _mapper.Map<IEnumerable<PageDto>>(pagesAll);
+                foreach (var faqDto in faqDtosMap)
+                {
+                    faqDto.Pages = pageMap.Where(x => x.Id == 6).ToList();
+                }
+                return faqDtosMap;
             }
             var language = await _languageRepository.GetByCodeAsync(languageCode);
             if (language == null)
@@ -77,6 +85,9 @@ namespace CompanyWebSite.Business.Services
                    
                     switch (pagesTranslation.Key)
                     {
+                        case "PageContentTitle":
+                            pageDto.PageContentTitle = pagesTranslation.Value;
+                            break;
                         case "PageHeaderTitle":
                             pageDto.PageHeaderTitle = pagesTranslation.Value;
                             break;

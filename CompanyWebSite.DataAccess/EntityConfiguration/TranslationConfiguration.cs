@@ -4351,60 +4351,81 @@ new Translation
                     Value = "Наш Процесс",
                     LanguageId = 4
                 },
-// About Us - Page 1
-new Translation { Id = 478, EntityName = "Page", EntityId = 1, Key = "PageHeaderTitle", Value = "About Us", LanguageId = 2 }, // English
-new Translation { Id = 479, EntityName = "Page", EntityId = 1, Key = "PageHeaderTitle", Value = "Über uns", LanguageId = 3 }, // German
-new Translation { Id = 480, EntityName = "Page", EntityId = 1, Key = "PageHeaderTitle", Value = "О нас", LanguageId = 4 }, // Russian
-new Translation { Id = 481, EntityName = "Page", EntityId = 1, Key = "PageHeaderSubtitle", Value = "Discover our expertise. Explore our success stories.", LanguageId = 2 }, // English
-new Translation { Id = 482, EntityName = "Page", EntityId = 1, Key = "PageHeaderSubtitle", Value = "Entdecken Sie unsere Expertise. Erforschen Sie unsere Erfolgsgeschichten.", LanguageId = 3 }, // German
-new Translation { Id = 483, EntityName = "Page", EntityId = 1, Key = "PageHeaderSubtitle", Value = "Откройте для себя наш опыт. Изучите наши истории успеха.", LanguageId = 4 }, // Russian
+                // About Us - Page 1
+new Translation { Id = 478, EntityName = "Page", EntityId = 1, Key = "PageContentTitle", Value = "About Us", LanguageId = 2 }, // English
+new Translation { Id = 479, EntityName = "Page", EntityId = 1, Key = "PageContentTitle", Value = "Über uns", LanguageId = 3 }, // German
+new Translation { Id = 480, EntityName = "Page", EntityId = 1, Key = "PageContentTitle", Value = "О нас", LanguageId = 4 }, // Russian
+new Translation { Id = 481, EntityName = "Page", EntityId = 1, Key = "PageHeaderTitle", Value = "About Us", LanguageId = 2 }, // English
+new Translation { Id = 482, EntityName = "Page", EntityId = 1, Key = "PageHeaderTitle", Value = "Über uns", LanguageId = 3 }, // German
+new Translation { Id = 483, EntityName = "Page", EntityId = 1, Key = "PageHeaderTitle", Value = "О нас", LanguageId = 4 }, // Russian
+new Translation { Id = 484, EntityName = "Page", EntityId = 1, Key = "PageHeaderSubtitle", Value = "Discover our expertise. Explore our success stories.", LanguageId = 2 }, // English
+new Translation { Id = 485, EntityName = "Page", EntityId = 1, Key = "PageHeaderSubtitle", Value = "Entdecken Sie unsere Expertise. Erforschen Sie unsere Erfolgsgeschichten.", LanguageId = 3 }, // German
+new Translation { Id = 486, EntityName = "Page", EntityId = 1, Key = "PageHeaderSubtitle", Value = "Откройте для себя наш опыт. Изучите наши истории успеха.", LanguageId = 4 }, // Russian
+new Translation { Id = 487, EntityName = "Page", EntityId = 1, Key = "PageMainSlogan", Value = "The Best for You.", LanguageId = 2 }, // English
+new Translation { Id = 488, EntityName = "Page", EntityId = 1, Key = "PageMainSlogan", Value = "Das Beste für Sie.", LanguageId = 3 }, // German
+new Translation { Id = 489, EntityName = "Page", EntityId = 1, Key = "PageMainSlogan", Value = "Лучшее для вас.", LanguageId = 4 }, // Russian
 
 // Services - Page 2
-new Translation { Id = 484, EntityName = "Page", EntityId = 2, Key = "PageHeaderTitle", Value = "Services", LanguageId = 2 }, // English
-new Translation { Id = 485, EntityName = "Page", EntityId = 2, Key = "PageHeaderTitle", Value = "Dienstleistungen", LanguageId = 3 }, // German
-new Translation { Id = 486, EntityName = "Page", EntityId = 2, Key = "PageHeaderTitle", Value = "Услуги", LanguageId = 4 }, // Russian
-new Translation { Id = 487, EntityName = "Page", EntityId = 2, Key = "PageHeaderSubtitle", Value = "Creative services to bring your digital vision to life.", LanguageId = 2 }, // English
-new Translation { Id = 488, EntityName = "Page", EntityId = 2, Key = "PageHeaderSubtitle", Value = "Kreative Dienstleistungen, um Ihre digitale Vision zu verwirklichen.", LanguageId = 3 }, // German
-new Translation { Id = 489, EntityName = "Page", EntityId = 2, Key = "PageHeaderSubtitle", Value = "Креативные услуги для воплощения вашей цифровой мечты.", LanguageId = 4 }, // Russian
+new Translation { Id = 490, EntityName = "Page", EntityId = 2, Key = "PageContentTitle", Value = "Services", LanguageId = 2 }, // English
+new Translation { Id = 491, EntityName = "Page", EntityId = 2, Key = "PageContentTitle", Value = "Dienstleistungen", LanguageId = 3 }, // German
+new Translation { Id = 492, EntityName = "Page", EntityId = 2, Key = "PageContentTitle", Value = "Услуги", LanguageId = 4 }, // Russian
+new Translation { Id = 493, EntityName = "Page", EntityId = 2, Key = "PageHeaderTitle", Value = "Services", LanguageId = 2 }, // English
+new Translation { Id = 494, EntityName = "Page", EntityId = 2, Key = "PageHeaderTitle", Value = "Dienstleistungen", LanguageId = 3 }, // German
+new Translation { Id = 495, EntityName = "Page", EntityId = 2, Key = "PageHeaderTitle", Value = "Услуги", LanguageId = 4 }, // Russian
+new Translation { Id = 496, EntityName = "Page", EntityId = 2, Key = "PageHeaderSubtitle", Value = "Creative services to bring your digital vision to life.", LanguageId = 2 }, // English
+new Translation { Id = 497, EntityName = "Page", EntityId = 2, Key = "PageHeaderSubtitle", Value = "Kreative Dienstleistungen, um Ihre digitale Vision zu verwirklichen.", LanguageId = 3 }, // German
+new Translation { Id = 498, EntityName = "Page", EntityId = 2, Key = "PageHeaderSubtitle", Value = "Креативные услуги для воплощения вашей цифровой мечты.", LanguageId = 4 }, // Russian
 
 // Blog - Page 3
-new Translation { Id = 490, EntityName = "Page", EntityId = 3, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 2 }, // English
-new Translation { Id = 491, EntityName = "Page", EntityId = 3, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 3 }, // German
-new Translation { Id = 492, EntityName = "Page", EntityId = 3, Key = "PageHeaderTitle", Value = "Блог", LanguageId = 4 }, // Russian
-new Translation { Id = 493, EntityName = "Page", EntityId = 3, Key = "PageHeaderSubtitle", Value = "Inspiring stories and expert insights.", LanguageId = 2 }, // English
-new Translation { Id = 494, EntityName = "Page", EntityId = 3, Key = "PageHeaderSubtitle", Value = "Inspirierende Geschichten und Experteneinblicke.", LanguageId = 3 }, // German
-new Translation { Id = 495, EntityName = "Page", EntityId = 3, Key = "PageHeaderSubtitle", Value = "Вдохновляющие истории и экспертные мнения.", LanguageId = 4 }, // Russian
-
+new Translation { Id = 499, EntityName = "Page", EntityId = 3, Key = "PageContentTitle", Value = "Blog", LanguageId = 2 }, // English
+new Translation { Id = 500, EntityName = "Page", EntityId = 3, Key = "PageContentTitle", Value = "Blog", LanguageId = 3 }, // German
+new Translation { Id = 501, EntityName = "Page", EntityId = 3, Key = "PageContentTitle", Value = "Блог", LanguageId = 4 }, // Russian
+new Translation { Id = 502, EntityName = "Page", EntityId = 3, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 2 }, // English
+new Translation { Id = 503, EntityName = "Page", EntityId = 3, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 3 }, // German
+new Translation { Id = 504, EntityName = "Page", EntityId = 3, Key = "PageHeaderTitle", Value = "Блог", LanguageId = 4 }, // Russian
+new Translation { Id = 505, EntityName = "Page", EntityId = 3, Key = "PageHeaderSubtitle", Value = "Inspiring stories and expert insights.", LanguageId = 2 }, // English
+new Translation { Id = 506, EntityName = "Page", EntityId = 3, Key = "PageHeaderSubtitle", Value = "Inspirierende Geschichten und Experteneinblicke.", LanguageId = 3 }, // German
+new Translation { Id = 507, EntityName = "Page", EntityId = 3, Key = "PageHeaderSubtitle", Value = "Вдохновляющие истории и экспертные мнения.", LanguageId = 4 }, // Russian
 // Blog Details - Page 4
-new Translation { Id = 496, EntityName = "Page", EntityId = 4, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 2 }, // English
-new Translation { Id = 497, EntityName = "Page", EntityId = 4, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 3 }, // German
-new Translation { Id = 498, EntityName = "Page", EntityId = 4, Key = "PageHeaderTitle", Value = "Блог", LanguageId = 4 }, // Russian
-new Translation { Id = 499, EntityName = "Page", EntityId = 4, Key = "PageHeaderSubtitle", Value = "Discover the details behind the story.", LanguageId = 2 }, // English
-new Translation { Id = 500, EntityName = "Page", EntityId = 4, Key = "PageHeaderSubtitle", Value = "Entdecken Sie die Details hinter der Geschichte.", LanguageId = 3 }, // German
-new Translation { Id = 501, EntityName = "Page", EntityId = 4, Key = "PageHeaderSubtitle", Value = "Узнайте подробности за историей.", LanguageId = 4 }, // Russian
+new Translation { Id = 508, EntityName = "Page", EntityId = 4, Key = "PageContentTitle", Value = "Blog", LanguageId = 2 }, // English
+new Translation { Id = 509, EntityName = "Page", EntityId = 4, Key = "PageContentTitle", Value = "Blog", LanguageId = 3 }, // German
+new Translation { Id = 510, EntityName = "Page", EntityId = 4, Key = "PageContentTitle", Value = "Блог", LanguageId = 4 }, // Russian
+new Translation { Id = 511, EntityName = "Page", EntityId = 4, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 2 }, // English
+new Translation { Id = 512, EntityName = "Page", EntityId = 4, Key = "PageHeaderTitle", Value = "Blog", LanguageId = 3 }, // German
+new Translation { Id = 513, EntityName = "Page", EntityId = 4, Key = "PageHeaderTitle", Value = "Блог", LanguageId = 4 }, // Russian
+new Translation { Id = 514, EntityName = "Page", EntityId = 4, Key = "PageHeaderSubtitle", Value = "Discover the details behind the story.", LanguageId = 2 }, // English
+new Translation { Id = 515, EntityName = "Page", EntityId = 4, Key = "PageHeaderSubtitle", Value = "Entdecken Sie die Details hinter der Geschichte.", LanguageId = 3 }, // German
+new Translation { Id = 516, EntityName = "Page", EntityId = 4, Key = "PageHeaderSubtitle", Value = "Узнайте подробности за историей.", LanguageId = 4 }, // Russian
 
 // Contact - Page 5
-new Translation { Id = 502, EntityName = "Page", EntityId = 5, Key = "PageHeaderTitle", Value = "Contact", LanguageId = 2 }, // English
-new Translation { Id = 503, EntityName = "Page", EntityId = 5, Key = "PageHeaderTitle", Value = "Kontakt", LanguageId = 3 }, // German
-new Translation { Id = 504, EntityName = "Page", EntityId = 5, Key = "PageHeaderTitle", Value = "Контакт", LanguageId = 4 }, // Russian
-new Translation { Id = 505, EntityName = "Page", EntityId = 5, Key = "PageHeaderSubtitle", Value = "We’re here to answer your questions and support you.", LanguageId = 2 }, // English
-new Translation { Id = 506, EntityName = "Page", EntityId = 5, Key = "PageHeaderSubtitle", Value = "Wir sind hier, um Ihre Fragen zu beantworten und Sie zu unterstützen.", LanguageId = 3 }, // German
-new Translation { Id = 507, EntityName = "Page", EntityId = 5, Key = "PageHeaderSubtitle", Value = "Мы здесь, чтобы ответить на ваши вопросы и поддержать вас.", LanguageId = 4 }, // Russian
-new Translation { Id = 508, EntityName = "Page", EntityId = 5, Key = "PageMainSlogan", Value = "Reach out to us. Let’s build the future with digital solutions.", LanguageId = 2 }, // English
-new Translation { Id = 509, EntityName = "Page", EntityId = 5, Key = "PageMainSlogan", Value = "Kontaktieren Sie uns. Lassen Sie uns die Zukunft mit digitalen Lösungen gestalten.", LanguageId = 3 }, // German
-new Translation { Id = 510, EntityName = "Page", EntityId = 5, Key = "PageMainSlogan", Value = "Свяжитесь с нами. Давайте строить будущее с цифровыми решениями.", LanguageId = 4 }, // Russian
-new Translation { Id = 511, EntityName = "Page", EntityId = 5, Key = "PageSubSlogan", Value = "Every great success starts with a step. Take that step now.", LanguageId = 2 }, // English
-new Translation { Id = 512, EntityName = "Page", EntityId = 5, Key = "PageSubSlogan", Value = "Jeder große Erfolg beginnt mit einem Schritt. Machen Sie diesen Schritt jetzt.", LanguageId = 3 }, // German
-new Translation { Id = 513, EntityName = "Page", EntityId = 5, Key = "PageSubSlogan", Value = "Каждый великий успех начинается с шага. Сделайте этот шаг сейчас.", LanguageId = 4 }, // Russian
+new Translation { Id = 517, EntityName = "Page", EntityId = 5, Key = "PageContentTitle", Value = "Contact Us", LanguageId = 2 }, // English
+new Translation { Id = 518, EntityName = "Page", EntityId = 5, Key = "PageContentTitle", Value = "Kontaktieren Sie uns", LanguageId = 3 }, // German
+new Translation { Id = 519, EntityName = "Page", EntityId = 5, Key = "PageContentTitle", Value = "Связаться с нами", LanguageId = 4 }, // Russian
+new Translation { Id = 520, EntityName = "Page", EntityId = 5, Key = "PageHeaderTitle", Value = "Contact", LanguageId = 2 }, // English
+new Translation { Id = 521, EntityName = "Page", EntityId = 5, Key = "PageHeaderTitle", Value = "Kontakt", LanguageId = 3 }, // German
+new Translation { Id = 522, EntityName = "Page", EntityId = 5, Key = "PageHeaderTitle", Value = "Контакт", LanguageId = 4 }, // Russian
+new Translation { Id = 523, EntityName = "Page", EntityId = 5, Key = "PageHeaderSubtitle", Value = "We’re here to answer your questions and support you.", LanguageId = 2 }, // English
+new Translation { Id = 524, EntityName = "Page", EntityId = 5, Key = "PageHeaderSubtitle", Value = "Wir sind hier, um Ihre Fragen zu beantworten und Sie zu unterstützen.", LanguageId = 3 }, // German
+new Translation { Id = 525, EntityName = "Page", EntityId = 5, Key = "PageHeaderSubtitle", Value = "Мы здесь, чтобы ответить на ваши вопросы и поддержать вас.", LanguageId = 4 }, // Russian
+new Translation { Id = 526, EntityName = "Page", EntityId = 5, Key = "PageMainSlogan", Value = "Reach out to us. Let’s build the future with digital solutions.", LanguageId = 2 }, // English
+new Translation { Id = 527, EntityName = "Page", EntityId = 5, Key = "PageMainSlogan", Value = "Kontaktieren Sie uns. Lassen Sie uns die Zukunft mit digitalen Lösungen gestalten.", LanguageId = 3 }, // German
+new Translation { Id = 528, EntityName = "Page", EntityId = 5, Key = "PageMainSlogan", Value = "Свяжитесь с нами. Давайте строить будущее с цифровыми решениями.", LanguageId = 4 }, // Russian
+new Translation { Id = 529, EntityName = "Page", EntityId = 5, Key = "PageSubSlogan", Value = "Every great success starts with a step. Take that step now.", LanguageId = 2 }, // English
+new Translation { Id = 530, EntityName = "Page", EntityId = 5, Key = "PageSubSlogan", Value = "Jeder große Erfolg beginnt mit einem Schritt. Machen Sie diesen Schritt jetzt.", LanguageId = 3 }, // German
+new Translation { Id = 531, EntityName = "Page", EntityId = 5, Key = "PageSubSlogan", Value = "Каждый великий успех начинается с шага. Сделайте этот шаг сейчас.", LanguageId = 4 }, // Russian
 
 // FAQ - Page 6
-new Translation { Id = 514, EntityName = "Page", EntityId = 6, Key = "PageHeaderTitle", Value = "FAQ", LanguageId = 2 }, // English
-new Translation { Id = 515, EntityName = "Page", EntityId = 6, Key = "PageHeaderTitle", Value = "FAQ", LanguageId = 3 }, // German
-new Translation { Id = 516, EntityName = "Page", EntityId = 6, Key = "PageHeaderTitle", Value = "Часто задаваемые вопросы", LanguageId = 4 }, // Russian
-new Translation { Id = 517, EntityName = "Page", EntityId = 6, Key = "PageHeaderSubtitle", Value = "You’re in the right place to find answers to your questions.", LanguageId = 2 }, // English
-new Translation { Id = 518, EntityName = "Page", EntityId = 6, Key = "PageHeaderSubtitle", Value = "Hier sind Sie richtig, um Antworten auf Ihre Fragen zu finden.", LanguageId = 3 }, // German
-new Translation { Id = 519, EntityName = "Page", EntityId = 6, Key = "PageHeaderSubtitle", Value = "Вы находитесь в правильном месте, чтобы найти ответы на свои вопросы.", LanguageId = 4 } // Russian
-            );
+new Translation { Id = 532, EntityName = "Page", EntityId = 6, Key = "PageContentTitle", Value = "FAQ", LanguageId = 2 }, // English
+new Translation { Id = 533, EntityName = "Page", EntityId = 6, Key = "PageContentTitle", Value = "FAQ", LanguageId = 3 }, // German
+new Translation { Id = 534, EntityName = "Page", EntityId = 6, Key = "PageContentTitle", Value = "Часто задаваемые вопросы", LanguageId = 4 }, // Russian
+new Translation { Id = 535, EntityName = "Page", EntityId = 6, Key = "PageHeaderTitle", Value = "FAQ", LanguageId = 2 }, // English
+new Translation { Id = 536, EntityName = "Page", EntityId = 6, Key = "PageHeaderTitle", Value = "FAQ", LanguageId = 3 }, // German
+new Translation { Id = 537, EntityName = "Page", EntityId = 6, Key = "PageHeaderTitle", Value = "Часто задаваемые вопросы", LanguageId = 4 }, // Russian
+new Translation { Id = 538, EntityName = "Page", EntityId = 6, Key = "PageHeaderSubtitle", Value = "You’re in the right place to find answers to your questions.", LanguageId = 2 }, // English
+new Translation { Id = 539, EntityName = "Page", EntityId = 6, Key = "PageHeaderSubtitle", Value = "Hier sind Sie richtig, um Antworten auf Ihre Fragen zu finden.", LanguageId = 3 }, // German
+new Translation { Id = 540, EntityName = "Page", EntityId = 6, Key = "PageHeaderSubtitle", Value = "Вы находитесь в правильном месте, чтобы найти ответы на свои вопросы.", LanguageId = 4 } // Russian
+
+);
         }
 
     }

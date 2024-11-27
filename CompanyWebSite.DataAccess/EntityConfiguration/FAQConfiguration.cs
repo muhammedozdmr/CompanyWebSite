@@ -15,8 +15,8 @@ namespace CompanyWebSite.DataAccess.EntityConfiguration
         {
             builder.ToTable(nameof(FAQ));
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.DefaultTitle).HasMaxLength(100).IsRequired();
-            builder.Property(x => x.DefaultContent).HasColumnType("nvarchar(max)").IsRequired();
+            builder.Property(x => x.DefaultTitle).HasMaxLength(100);
+            builder.Property(x => x.DefaultContent).HasColumnType("nvarchar(max)");
             builder.Property(x => x.IsActive).IsRequired();
             builder.Property(x => x.Slug).HasMaxLength(300).IsRequired();
             builder.Property(x => x.Question).IsRequired().HasMaxLength(350);

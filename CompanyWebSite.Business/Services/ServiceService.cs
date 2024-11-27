@@ -22,8 +22,9 @@ namespace CompanyWebSite.Business.Services
         private readonly ILanguageRepository _languageRepository;
         private readonly ITranslationService _translationService;
         private readonly IMapper _mapper;
+        private readonly IBaseRepository<Page> _basePageRepository;
 
-        public ServiceService(IBaseRepository<Service> baseServiceRepository, IBaseRepository<ServiceCategory> baseServiceCategoryRepository, IBaseRepository<Media> baseMediaRepository, IBaseRepository<Highlight> baseHighlightRepository, ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper)
+        public ServiceService(IBaseRepository<Service> baseServiceRepository, IBaseRepository<ServiceCategory> baseServiceCategoryRepository, IBaseRepository<Media> baseMediaRepository, IBaseRepository<Highlight> baseHighlightRepository, ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper, IBaseRepository<Page> basePageRepository)
         {
             _mapper = mapper;
             _baseServiceRepository = baseServiceRepository;
@@ -32,6 +33,7 @@ namespace CompanyWebSite.Business.Services
             _baseHighlightRepository = baseHighlightRepository;
             _languageRepository = languageRepository;
             _translationService = translationService;
+            _basePageRepository = basePageRepository;
         }
         public async Task AddServiceAsync(ServiceDto serviceDto)
         {
@@ -51,17 +53,20 @@ namespace CompanyWebSite.Business.Services
             var serviceCategories = await _baseServiceCategoryRepository.GetAllAsync();
             var medias = await _baseMediaRepository.GetAllAsync();
             var highlights = await _baseHighlightRepository.GetAllAsync();
+            var pagesAll = await _basePageRepository.GetAllAsync();
             if (languageCode == "tr")
             {
                 var serviceDtosMap = _mapper.Map<IEnumerable<ServiceDto>>(services);
                 var serviceCategoryMap = _mapper.Map<IEnumerable<ServiceCategoryDto>>(serviceCategories);
                 var mediaMap = _mapper.Map<IEnumerable<MediaDto>>(medias);
                 var highlightMap = _mapper.Map<IEnumerable<HighlightDto>>(highlights);
+                var pageMap = _mapper.Map<IEnumerable<PageDto>>(pagesAll);
                 foreach (var serviceDto in serviceDtosMap)
                 {
                     serviceDto.ServiceCategories = serviceCategoryMap;
                     serviceDto.ServiceMediaItems = mediaMap;
                     serviceDto.ServiceHighlights = highlightMap;
+                    serviceDto.Pages = pageMap.Where(x => x.Id == 2 || x.Id == 9).ToList();
                 }
                 return serviceDtosMap;
             }
@@ -92,16 +97,9 @@ namespace CompanyWebSite.Business.Services
                     {
                         serviceDto.Summary = serviceTranslation.Value;
                     }
-                    else if (serviceTranslation.Key == "ServiceSlogan")
-                    {
-                        serviceDto.ServiceSlogan = serviceTranslation.Value;
-                    }
-                    else if (serviceTranslation.Key == "ServiceHomeTitle")
-                    {
-                        serviceDto.ServiceHomeTitle = serviceTranslation.Value;
-                    }
                 }
-
+                
+                serviceDto.Pages = new List<PageDto>();
                 var pages = await _translationService.GetTranslationAsync("Page", 2, language.Code);
                 var pageDto = new PageDto
                 {
@@ -112,6 +110,9 @@ namespace CompanyWebSite.Business.Services
                     
                     switch (pageTranslation.Key)
                     {
+                        case "PageContentTitle":
+                            pageDto.PageContentTitle = pageTranslation.Value;
+                            break;
                         case "PageHeaderTitle":
                             pageDto.PageHeaderTitle = pageTranslation.Value;
                             break;
@@ -120,7 +121,31 @@ namespace CompanyWebSite.Business.Services
                             break;
                     }
                 }
-                serviceDto.Pages = new List<PageDto> { pageDto };
+
+                serviceDto.Pages.Add(pageDto);
+                
+                var pagesSteps = await _translationService.GetTranslationAsync("Page", 9, language.Code);
+                var pageStepsDto = new PageDto
+                {
+                    Id = 9
+                };
+                foreach (var pageTranslation in pagesSteps)
+                {
+                    
+                    switch (pageTranslation.Key)
+                    {
+                        case "PageContentTitle":
+                            pageStepsDto.PageContentTitle = pageTranslation.Value;
+                            break;
+                        case "PageMainSlogan":
+                            pageStepsDto.PageHeaderTitle = pageTranslation.Value;
+                            break;
+                        case "PageSubSlogan":
+                            pageStepsDto.PageHeaderSubtitle = pageTranslation.Value;
+                            break;
+                    }
+                }
+                
 
                 var translatedServiceCategories = new List<ServiceCategoryDto>();
                 var traslatedHighlights = new List<HighlightDto>();
@@ -171,7 +196,6 @@ namespace CompanyWebSite.Business.Services
             }
             var serviceDto = _mapper.Map<ServiceDto>(service);
             var serviceTranslations = await _translationService.GetTranslationAsync("Service", serviceDto.Id, language.Code);
-            var serviceDefaultTranslationTitles = await _translationService.GetTranslationAsync("Service", 1, language.Code);
             foreach (var serviceTranslation in serviceTranslations)
             {
                 if (serviceTranslation.Key == "DefaultTitle")
@@ -185,17 +209,6 @@ namespace CompanyWebSite.Business.Services
                 else if (serviceTranslation.Key == "Summary")
                 {
                     serviceDto.Summary = serviceTranslation.Value;
-                }
-            }
-            foreach (var serviceDefaultTranslationTitle in serviceDefaultTranslationTitles)
-            {
-                if (serviceDefaultTranslationTitle.Key == "ServiceSlogan")
-                {
-                    serviceDto.ServiceSlogan = serviceDefaultTranslationTitle.Value;
-                }
-                else if (serviceDefaultTranslationTitle.Key == "ServiceHomeTitle")
-                {
-                    serviceDto.ServiceHomeTitle = serviceDefaultTranslationTitle.Value;
                 }
             }
             return serviceDto;

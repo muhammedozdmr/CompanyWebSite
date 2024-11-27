@@ -17,17 +17,19 @@ namespace CompanyWebSite.Business.Services
     {
         private readonly IBaseRepository<About> _baseAboutRepository;
         private readonly IBaseRepository<History> _baseHistoryRepository;
+        private readonly IBaseRepository<Page> _basePageRepository;
         private readonly ILanguageRepository _languageRepository;
         private readonly ITranslationService _translationService;
         private readonly IMapper _mapper;
 
-        public AboutService(IBaseRepository<About> baseAboutRepository, IBaseRepository<History> baseHistoryRepository, ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper)
+        public AboutService(IBaseRepository<About> baseAboutRepository, IBaseRepository<History> baseHistoryRepository, ILanguageRepository languageRepository, ITranslationService translationService, IMapper mapper, IBaseRepository<Page> basePageRepository)
         {
             _mapper = mapper;
             _baseAboutRepository = baseAboutRepository;
             _baseHistoryRepository = baseHistoryRepository;
             _languageRepository = languageRepository;
             _translationService = translationService;
+            _basePageRepository = basePageRepository;
         }
         public async Task AddAboutAsync(AboutDto aboutDto)
         {
@@ -45,14 +47,17 @@ namespace CompanyWebSite.Business.Services
         {
             var abouts = await _baseAboutRepository.GetAllAsync();
             var histories = await _baseHistoryRepository.GetAllAsync();
+            var pagesAll = await _basePageRepository.GetAllAsync();
 
             if (languageCode == "tr")
             {
                 var aboutDtosMap = _mapper.Map<IEnumerable<AboutDto>>(abouts);
                 var historyMap = _mapper.Map<IEnumerable<HistoryDto>>(histories);
-                foreach (var aboutDto in aboutDtosMap)
+                var pageMap = _mapper.Map<IEnumerable<PageDto>>(pagesAll);
+                foreach (var aboutDtolocal in aboutDtosMap)
                 {
-                    aboutDto.Histories = historyMap;
+                    aboutDtolocal.Histories = historyMap;
+                    aboutDtolocal.Pages = pageMap.Where(x=>x.Id == 1 || x.Id == 7).ToList();
                 }
                 return aboutDtosMap;
             }
@@ -69,7 +74,8 @@ namespace CompanyWebSite.Business.Services
             foreach (var aboutDto in aboutDtos)
             {
                 // About çevirileri
-                var aboutTranslations = await _translationService.GetTranslationAsync("About", aboutDto.Id, language.Code);
+                var aboutTranslations =
+                    await _translationService.GetTranslationAsync("About", aboutDto.Id, language.Code);
                 foreach (var translation in aboutTranslations)
                 {
                     switch (translation.Key)
@@ -83,13 +89,13 @@ namespace CompanyWebSite.Business.Services
                         case "Summary":
                             aboutDto.Summary = translation.Value;
                             break;
-                        case "AboutSlogan":
-                            aboutDto.AboutSlogan = translation.Value;
-                            break;
                     }
                 }
 
                 // Page çevirileri
+                // Page DTO listesi başlatılıyor
+                aboutDto.Pages = new List<PageDto>();
+                
                 var pages = await _translationService.GetTranslationAsync("Page", 1, language.Code);
                 var pageDto = new PageDto
                 {
@@ -101,6 +107,9 @@ namespace CompanyWebSite.Business.Services
 
                     switch (pageTranslation.Key)
                     {
+                        case "PageContentTitle":
+                            pageDto.PageContentTitle = pageTranslation.Value;
+                            break;
                         case "PageHeaderTitle":
                             pageDto.PageHeaderTitle = pageTranslation.Value;
                             break;
@@ -116,7 +125,32 @@ namespace CompanyWebSite.Business.Services
                     }
 
                 }
-                aboutDto.Pages = new List<PageDto> { pageDto };
+
+                aboutDto.Pages.Add(pageDto);
+                
+                var pagesHistory = await _translationService.GetTranslationAsync("Page", 7, language.Code);
+                var pageHistoryDto = new PageDto
+                {
+                    Id = 7 // Her page için ID'yi belirtin
+                };
+                foreach (var pagesTranslation in pagesHistory)
+                {
+                
+                    switch (pagesTranslation.Key)
+                    {
+                        case "PageContentTitle":
+                            pageHistoryDto.PageContentTitle = pagesTranslation.Value;
+                            break;
+                        case "PageMainSlogan":
+                            pageHistoryDto.PageMainSlogan = pagesTranslation.Value;
+                            break;
+                        case "PageSubSlogan":
+                            pageHistoryDto.PageSubSlogan = pagesTranslation.Value;
+                            break;
+                    }
+                }
+                
+                aboutDto.Pages.Add(pageHistoryDto);
 
                 // History çevirileri
                 var translatedHistories = new List<HistoryDto>();

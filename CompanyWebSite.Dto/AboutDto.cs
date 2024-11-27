@@ -9,7 +9,6 @@ namespace CompanyWebSite.Dto
     public class AboutDto
     {
         public int Id { get; set; }
-        public string? AboutSlogan { get; set; }
         public string? DefaultTitle { get; set; }
         public string? DefaultContent { get; set; }
         public bool IsActive { get; set; }
@@ -20,6 +19,6 @@ namespace CompanyWebSite.Dto
         public int CustomerSatisfaction { get; set; } = 100;
         public int? CompanyInfoId { get; set; }
         public IEnumerable<HistoryDto>? Histories { get; set; }
-        public IEnumerable<PageDto>? Pages { get; set; }
+        public List<PageDto>? Pages { get; set; }
     }
 }

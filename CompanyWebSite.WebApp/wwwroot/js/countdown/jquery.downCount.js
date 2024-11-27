@@ -7,10 +7,9 @@
 
     $.fn.downCount = function (options, callback) {
         var settings = $.extend({
-                date: null,
-                offset: null
+                date: '2024-12-01T00:00:00',
+                offset: 3
             }, options);
-
         // Throw error if date is not set
         if (!settings.date) {
             $.error('Date is not defined.');
@@ -18,7 +17,7 @@
 
         // Throw error if date is set incorectly
         if (!Date.parse(settings.date)) {
-            $.error('Incorrect date format, it should look like this, 12/24/2012 12:00:00.');
+            $.error('Incorrect date format, it should look like this, 01/12/2024 12:00:00.');
         }
 
         // Save container
@@ -44,7 +43,7 @@
          * Main downCount function that calculates everything
          */
         function countdown () {
-            var target_date = new Date(settings.date), // set target date
+            var target_date = new Date('2024-12-01T00:00:00'), // set target date
                 current_date = currentDate(); // get fixed current date
 
             // difference of dates
